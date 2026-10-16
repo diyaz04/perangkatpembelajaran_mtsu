@@ -148,7 +148,7 @@ export function AppSidebar({ profile }: AppSidebarProps) {
   return (
     <Sidebar
       collapsible="icon"
-      className="border-r border-[#04281e] bg-[#063b2c] text-white overflow-hidden relative"
+      className="border-r border-[#04281e] bg-[#063b2c] text-white"
     >
       {/* Watermark Siluet Kubah / Arsitektur Madrasah di Latar Bawah */}
       <div className="absolute -bottom-8 -left-6 w-48 h-56 pointer-events-none opacity-10 text-emerald-300">
@@ -305,11 +305,11 @@ export function AppSidebar({ profile }: AppSidebarProps) {
           <div className="w-8 h-8 rounded-full bg-emerald-800 text-emerald-300 flex items-center justify-center shrink-0 shadow-2xs">
             <School className="w-4 h-4" />
           </div>
-          <div className="overflow-hidden">
+          <div className="overflow-hidden min-w-0">
             <p className="font-bold text-xs text-white leading-tight uppercase truncate">
               {profile?.role ? profile.role.replace("_", " ") : "ADMIN"} - KMA 1503/2025
             </p>
-            <p className="text-[10px] text-emerald-200/80 leading-tight mt-0.5 truncate">
+            <p className="text-[11px] text-emerald-200/90 leading-tight mt-1">
               Fase D (MTs) · MTs KH A Wahab Muhsin
             </p>
           </div>
