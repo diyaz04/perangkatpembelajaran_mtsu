@@ -1,0 +1,828 @@
+{
+  "mapel": "Bahasa Arab",
+  "slug": "bahasa-arab",
+  "kelompok": "Bahasa Arab",
+  "fase": "D",
+  "sumber_cp": {
+    "regulasi_kode": "SK-DIRJEN-PENDIS-9941-2025",
+    "halaman": "Halaman 73–88",
+    "url": "https://pendis.kemenag.go.id/kurikulum",
+    "diakses": "2026-10-14"
+  },
+  "rasional": "Bahasa Arab merupakan bahasa kitab suci Al-Qur'an dan Hadis, bahasa ibadah shalat dan doa, sekaligus bahasa komunikasi internasional resmi dunia yang menghubungkan peradaban umat manusia. Pembelajaran Bahasa Arab di madrasah diarahkan untuk mengembangkan empat kemahiran berbahasa (istima', kalam, qira'ah, dan kitabah) secara integratif, komunikatif, dan fungsional. Melalui penguasaan bahasa Arab, murid memperkokoh kecintaan kepada agama, memperluas wawasan keilmuan Islam klasik maupun kontemporer, serta memiliki kecakapan literasi global yang unggul dan santun.",
+  "tujuan_mapel": [
+    "Mengembangkan kemahiran menyimak (istima') teks lisan bahasa Arab secara akurat mengenai topik personal, madrasah, dan sosial.",
+    "Membangun keterampilan berbicara (kalam) secara fasih, santun, dan percaya diri dalam percakapan (hiwar) dan presentasi lisan.",
+    "Memahami, mengeksplorasi, dan merefleksi teks bacaan (qira'ah) berbahasa Arab dengan kaidah tata bahasa (qawa'id) yang benar.",
+    "Menyusun kalimat sempurna dan paragraf sederhana (kitabah/insya') dengan ejaan baku (imla') dan struktur gramatikal yang runtut.",
+    "Menumbuhkan rasa bangga dan cinta mempelajari bahasa Arab sebagai kunci memahami ajaran Islam dan jendela peradaban dunia.",
+    "Membiasakan etika komunikasi islami dalam berinteraksi dengan sesama teman, guru, dan masyarakat global."
+  ],
+  "capaian_umum_fase_d": "Pada akhir Fase D, peserta didik memiliki kemampuan mengeksplorasi informasi dan membangun interaksi menggunakan teks bahasa Arab lisan dan tulis sesuai konteks sosialnya; mampu memahami, merefleksi, dan mengevaluasi makna tersurat dan tersirat dari teks multimodal terkait topik: perkenalan, fasilitas madrasah, peralatan sekolah, alamat, rumah, keluarga, jam/waktu, aktivitas sehari-hari, hobi, profesi/pekerjaan, kesehatan, hari-hari besar Islam, keindahan alam, dan pariwisata; serta mampu menyusun paragraf sederhana yang logis dan terhubung menggunakan susunan gramatikal yang ditentukan (mubtada'-khabar, khabar muqaddam-mubtada' muakhkhar, arqam/adad tartibi, tashrif mudhari', jumlah ismiyah-fi'liyah, huruf nashab, fi'il madhi/amr/mudhari', dll.).",
+  "elemen": [
+    {
+      "kode": "E1",
+      "nama": "Menyimak (Istimā')",
+      "deskripsi_cp": "Peserta didik mampu mengeksplorasi informasi yang didengar, memahami ide pokok dan detail informasi tersurat maupun tersirat dari ujaran monolog, dialog (hiwar), atau audio visual berbahasa Arab mengenai topik perkenalan, madrasah, keluarga, jam, kegiatan harian, hobi, profesi, hari besar Islam, dan lingkungan sekitar dengan struktur tata bahasa yang sesuai."
+    },
+    {
+      "kode": "E2",
+      "nama": "Berbicara (Kalām)",
+      "deskripsi_cp": "Peserta didik mampu membangun interaksi komunikatif lisan dengan santun dan percaya diri, bertanya-jawab, mengungkapkan ide, perasaan, dan gagasan dalam bahasa Arab yang fasih mengenai topik-topik keseharian, mendeskripsikan gambar/kegiatan, serta mempresentasikan narasi sederhana menggunakan unsur gramatikal yang dipelajari."
+    },
+    {
+      "kode": "E3",
+      "nama": "Membaca dan Memirsa (Qirā'ah)",
+      "deskripsi_cp": "Peserta didik mampu membaca teks bahasa Arab secara lancar dan berintonasi benar, memahami kosakata (mufradat), menangkap makna tersurat dan tersirat, menemukan gagasan utama, serta merefleksikan pesan moral dari teks wacana deskriptif, naratif, maupun ekspositori multimodal."
+    },
+    {
+      "kode": "E4",
+      "nama": "Menulis dan Mempresentasikan (Kitābah wa 'Ardh)",
+      "deskripsi_cp": "Peserta didik mampu menyalin, menyusun kata menjadi kalimat sempurna (jumlah mufidah), mengonstruksi paragraf sederhana (insya' muwajjah), serta memaparkan karya tulisnya secara lisan atau visual dengan menerapkan kaidah ejaan Arab (imla') dan tata bahasa (qawa'id) yang tepat."
+    }
+  ],
+  "materi": [
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Ad-Dars 1: At-Ta'aruf (Perkenalan)",
+      "subbab": [
+        "A. Kosakata (Mufradat) dan Ungkapan Sapaan Perkenalan (Tahiyyat wa Ta'aruf)",
+        "B. Percakapan (Hiwar) Menanyakan Asal Daerah dan Identitas Diri",
+        "C. Kaidah Tata Bahasa (Tarkib): Kata Ganti (Dhamir Munfashil) dan Kata Tanya (Hal, Min Aina, Ma)",
+        "D. Latihan Membaca Nyaring (Qira'ah) dan Menulis Kartu Biodata Pelajar"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Arab MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "1–24",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Berkenalan dengan bahasa yang santun menumbuhkan kasih sayang dan ukhuwah islamiyah sesama santri."
+        }
+      ],
+      "saran_dpl": [
+        5,
+        8
+      ],
+      "deskripsi": "Berkenalan dengan bahasa yang santun menumbuhkan kasih sayang dan ukhuwah islamiyah sesama santri.",
+      "kata_kunci": [
+        "at-ta'aruf",
+        "perkenalan",
+        "kosakata",
+        "mufradat",
+        "ungkapan sapaan perkenalan"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Ad-Dars 2: Al-Marafiq al-Madrasiyyah (Fasilitas di Madrasah)",
+      "subbab": [
+        "A. Mufradat Fasilitas Madrasah: Perpustakaan, Laboratorium, Lapangan, Masjid, Kantin",
+        "B. Hiwar Menunjukkan Denah dan Lokasi Ruang-Ruang Madrasah",
+        "C. Tarkib: Kata Tunjuk Dekat dan Jauh (Isim Isyarah: Hadza/Hadzihi, Dzalika/Tilka) + Isim Sifat",
+        "D. Menulis Deskripsi Singkat Keasrian dan Kebersihan Lingkungan Madrasah"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Arab MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "25–50",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Menjaga kebersihan fasilitas madrasah mencerminkan cinta lingkungan dan adab penuntut ilmu."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        8
+      ],
+      "deskripsi": "Menjaga kebersihan fasilitas madrasah mencerminkan cinta lingkungan dan adab penuntut ilmu.",
+      "kata_kunci": [
+        "al-marafiq al-madrasiyyah",
+        "fasilitas di madrasah",
+        "mufradat fasilitas madrasah",
+        "perpustakaan",
+        "laboratorium"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Ad-Dars 3: Al-Adawat al-Madrasiyyah (Peralatan Belajar)",
+      "subbab": [
+        "A. Mufradat Peralatan Belajar di Tas dan Kelas: Buku, Pulpen, Penggaris, Papan Tulis",
+        "B. Hiwar Meminjam dan Menyebutkan Benda Kepemilikan di Kelas",
+        "C. Tarkib: Kepemilikan (Dhamir Muttashil: Kitabi, Kitabuka, Kitabuha)",
+        "D. Membaca Teks Qira'ah tentang Perlengkapan Belajar Santri yang Rapi"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Arab MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "51–74",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Merawat buku dan alat tulis secara rapi adalah cerminan cinta ilmu dan rasa tanggung jawab."
+        }
+      ],
+      "saran_dpl": [
+        6,
+        8
+      ],
+      "deskripsi": "Merawat buku dan alat tulis secara rapi adalah cerminan cinta ilmu dan rasa tanggung jawab.",
+      "kata_kunci": [
+        "al-adawat al-madrasiyyah",
+        "peralatan belajar",
+        "kelas",
+        "buku",
+        "pulpen"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Ad-Dars 4: Al-'Unwan (Alamat dan Bilangan)",
+      "subbab": [
+        "A. Mufradat Nama Jalan, Nomor Rumah, Nomor Telepon, Desa, Kota",
+        "B. Bilangan Arab (Al-Arqam 1–100) dan Penerapannya dalam Menjawab Alamat",
+        "C. Tarkib: Kata Depan (Huruf Jar: Fi, 'Ala, Min, Ila, Bi, Li) dan Huruf 'Athaf",
+        "D. Simulasi Percakapan Menanyakan Alamat Domisili Kawan"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Arab MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "75–100",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Saling mengetahui alamat rumah memudahkan silaturahmi dan tolong-menolong antarteman."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        8
+      ],
+      "deskripsi": "Saling mengetahui alamat rumah memudahkan silaturahmi dan tolong-menolong antarteman.",
+      "kata_kunci": [
+        "al-'unwan",
+        "alamat",
+        "bilangan",
+        "mufradat nama jalan",
+        "nomor rumah"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Ad-Dars 5: Al-Bait (Rumah Tempat Tinggal)",
+      "subbab": [
+        "A. Mufradat Ruangan di Rumah: Ruang Tamu, Kamar Tidur, Ruang Belajar, Dapur, Halaman",
+        "B. Tarkib: Keterangan Tempat (Zharaf Makan: Amama, Wara'a, Fauqa, Tahta, Janiba)",
+        "C. Qira'ah: Gambaran Rumah yang Asri, Bersih, Penuh Kehangatan (Baiti Jannati)",
+        "D. Menyusun Kalimat Mendeskripsikan Ruang Belajar di Rumah Sendiri"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Arab MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "101–126",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Menjaga rumah tetap bersih dan asri menumbuhkan cinta lingkungan sejak lingkungan keluarga."
+        }
+      ],
+      "saran_dpl": [
+        6,
+        8
+      ],
+      "deskripsi": "Menjaga rumah tetap bersih dan asri menumbuhkan cinta lingkungan sejak lingkungan keluarga.",
+      "kata_kunci": [
+        "al-bait",
+        "rumah tempat tinggal",
+        "mufradat ruangan di rumah",
+        "ruang tamu",
+        "kamar tidur"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Ad-Dars 6: Al-Usrah (Keluarga Tercinta)",
+      "subbab": [
+        "A. Silsilah Keluarga: Kakek, Nenek, Ayah, Ibu, Paman, Bibi, Saudara Laki-Laki/Perempuan",
+        "B. Nama-Nama Profesi Anggota Keluarga: Guru, Dokter, Petani, Pedagang, Pegawai",
+        "C. Tarkib: Hubungan Kata Sifat (Na'at wa Man'ut) dan Mubtada' Muakkhar",
+        "D. Menulis Paragraf Kasih Sayang dan Pengorbanan Orang Tua bagi Anak"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Arab MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "127–154",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Mendeskripsikan keluarga dalam bahasa Arab menumbuhkan rasa syukur, birrul walidain, dan cinta keluarga."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        8
+      ],
+      "deskripsi": "Mendeskripsikan keluarga dalam bahasa Arab menumbuhkan rasa syukur, birrul walidain, dan cinta keluarga.",
+      "kata_kunci": [
+        "al-usrah",
+        "keluarga tercinta",
+        "silsilah keluarga",
+        "kakek",
+        "nenek"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Ad-Dars 1: As-Sa'ah (Waktu dan Jam)",
+      "subbab": [
+        "A. Mufradat Bilangan Jam: As-Sa'atul Wahidah s.d. Ats-Tsaniyah 'Asyarah",
+        "B. Kosakata Menunjukkan Menit (An-Nishf, Ar-Rub'u, Illa) dan Waktu (Shabahan, Naharan, Masa-an, Lailan)",
+        "C. Tarkib: Bilangan Bertingkat (Al-'Adad at-Tartibi)",
+        "D. Hiwar Menanyakan Jam dan Jadwal Kegiatan Harian Pelajar"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Arab MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "1–26",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Memahami waktu mendidik disiplin jadwal belajar yang menjadi fondasi cinta ilmu."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        6
+      ],
+      "deskripsi": "Memahami waktu mendidik disiplin jadwal belajar yang menjadi fondasi cinta ilmu.",
+      "kata_kunci": [
+        "as-sa'ah",
+        "waktu",
+        "mufradat bilangan jam",
+        "kosakata menunjukkan menit",
+        "an-nishf"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Ad-Dars 2: Yaumiyyatuna fi al-Bait wa al-Madrasah (Aktivitas Harian)",
+      "subbab": [
+        "A. Mufradat Aktivitas: Bangun Tidur, Shalat Subuh, Berwudhu, Belajar, Membantu Orang Tua",
+        "B. Tarkib: Kalimat Berawalan Kata Benda (Al-Jumlah al-Ismiyyah: Mubtada' wa Khabar Fi'li)",
+        "C. Qira'ah: Rutinitas Harian Santri Madrasah yang Produktif dan Mandiri",
+        "D. Menulis Karangan Pengalaman Keseharian Sejak Pagi hingga Malam"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Arab MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "27–54",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Memulai aktivitas harian dengan shalat subuh dan doa menanamkan cinta kepada Allah."
+        }
+      ],
+      "saran_dpl": [
+        6,
+        8
+      ],
+      "deskripsi": "Memulai aktivitas harian dengan shalat subuh dan doa menanamkan cinta kepada Allah.",
+      "kata_kunci": [
+        "aktivitas harian",
+        "mufradat aktivitas",
+        "bangun tidur",
+        "shalat subuh",
+        "berwudhu"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Ad-Dars 3: Al-Hiwayah (Hobi dan Kegemaran)",
+      "subbab": [
+        "A. Mufradat Macam-Macam Hobi: Membaca, Menulis, Melukis, Fotografi, Kaligrafi, Pramuka",
+        "B. Tarkib: Kalimat Berawalan Kata Kerja (Al-Jumlah al-Fi'liyyah: Fi'il Mudhari' wa Fa'il)",
+        "C. Hiwar Menanyakan Kegemaran Teman dan Pameran Hasil Karya Seni Madrasah",
+        "D. Menyajikan Presentasi Lisan tentang Hobi dan Cita-Cita Masa Depan"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Arab MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "55–80",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Hobi membaca dan menulis kaligrafi memperkaya kecintaan pada sastra dan ilmu."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        8
+      ],
+      "deskripsi": "Hobi membaca dan menulis kaligrafi memperkaya kecintaan pada sastra dan ilmu.",
+      "kata_kunci": [
+        "al-hiwayah",
+        "hobi",
+        "kegemaran",
+        "mufradat macam-macam hobi",
+        "membaca"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Ad-Dars 4: Ar-Riyadhah (Olahraga dan Kebugaran)",
+      "subbab": [
+        "A. Mufradat Cabang Olahraga: Sepak Bola, Bola Voli, Bulu Tangkis, Renang, Memanah",
+        "B. Tarkib: Huruf Nashab (An, Lan, Li) yang Mempengaruhi Harakat Akhir Fi'il Mudhari'",
+        "C. Qira'ah: Pentingnya Menjaga Kebugaran Fisik (Al-'Aqlus Salim fil Jismis Salim)",
+        "D. Menulis Rencana Latihan Olahraga Mingguan untuk Menjaga Stamina"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Arab MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "81–108",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Berolahraga teratur menjaga kebugaran jasmani sebagai wujud syukur dan cinta diri."
+        }
+      ],
+      "saran_dpl": [
+        7,
+        8
+      ],
+      "deskripsi": "Berolahraga teratur menjaga kebugaran jasmani sebagai wujud syukur dan cinta diri.",
+      "kata_kunci": [
+        "ar-riyadhah",
+        "olahraga",
+        "kebugaran",
+        "mufradat cabang olahraga",
+        "sepak bola"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Ad-Dars 5: Al-Mihnah wa al-Mustasyfa (Profesi dan Rumah Sakit)",
+      "subbab": [
+        "A. Mufradat Tenaga Medis dan Fasilitas Kesehatan: Dokter, Perawat, Apotek, Resep Obat",
+        "B. Tarkib: Fi'il Madhi (Bentuk Kata Kerja Lampau) dan Perubahan Subjeknya (Tashrif)",
+        "C. Percakapan Dialog Pemeriksaan Pasien di Klinik/Rumah Sakit",
+        "D. Membaca Teks Pengabdian Paramedis Menolong Korban Bencana"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Arab MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "109–134",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Profesi dokter dan perawat menjadi teladan kemanusiaan cinta dan empati pada sesama."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        7
+      ],
+      "deskripsi": "Profesi dokter dan perawat menjadi teladan kemanusiaan cinta dan empati pada sesama.",
+      "kata_kunci": [
+        "al-mihnah wa al-mustasyfa",
+        "profesi",
+        "rumah sakit",
+        "mufradat tenaga medis",
+        "fasilitas kesehatan"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Ad-Dars 6: 'Iyadatul Maridh (Menjenguk Orang Sakit)",
+      "subbab": [
+        "A. Adab Islami Menjenguk Orang Sakit: Mendoakan Kesembuhan (Syafakallah)",
+        "B. Tarkib: Kalimat Tanya Perintah dan Larangan (Fi'il Amr wa Laa an-Nahiyah)",
+        "C. Qira'ah: Hikmah Sakit sebagai Penggugur Dosa dan Latihan Sabar",
+        "D. Menulis Kartu Ucapan Doa Kesembuhan Berbahasa Arab untuk Sahabat"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Arab MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "135–160",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Menjenguk teman yang sakit menghangatkan ukhuwah dan membuktikan rasa peduli sesama."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        5
+      ],
+      "deskripsi": "Menjenguk teman yang sakit menghangatkan ukhuwah dan membuktikan rasa peduli sesama.",
+      "kata_kunci": [
+        "'iyadatul maridh",
+        "menjenguk orang sakit",
+        "mendoakan kesembuhan",
+        "syafakallah",
+        "tarkib"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Ad-Dars 1: Ra'sus Sanah al-Hijriyyah (Tahun Baru Hijriyah)",
+      "subbab": [
+        "A. Mufradat Bulan-Bulan Qomariyah dan Peristiwa Penting Hijrah Nabawiyyah",
+        "B. Tarkib: Konjugasi Fi'il Madhi Berdasarkan Dhamir Jamak dan Mufrad",
+        "C. Qira'ah: Mengambil Ibrah Semangat Hijrah Menuju Pribadi yang Lebih Bertakwa",
+        "D. Menyusun Paragraf Reflektif Resolusi Kebaikan di Tahun Baru Hijriyah"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Arab MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "1–26",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Menghayati peristiwa hijrah memperkuat keimanan dan cinta keteladanan kepada Rasulullah SAW."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        2
+      ],
+      "deskripsi": "Menghayati peristiwa hijrah memperkuat keimanan dan cinta keteladanan kepada Rasulullah SAW.",
+      "kata_kunci": [
+        "ra'sus sanah al-hijriyyah",
+        "tahun baru hijriyah",
+        "mufradat bulan-bulan qomariyah",
+        "tarkib",
+        "mufrad"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Ad-Dars 2: Al-Hafl bi Maulid ar-Rasul (Peringatan Maulid Nabi SAW)",
+      "subbab": [
+        "A. Kosakata Peringatan Maulid Nabi: Sholawat, Ceramah Agama, Panitia, Keberkahan",
+        "B. Tarkib: Kana wa Akhwatuha (Kaana, Dzhalla, Baata, Ashbaha) dan Pengaruh Harakatnya",
+        "C. Hiwar Wawancara Perencanaan Acara Peringatan Maulid Nabi di OSIS Madrasah",
+        "D. Membaca Teks Sejarah Keagungan Budi Pekerti Rasulullah SAW (Uswatun Hasanah)"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Arab MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "27–52",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Memperingati kelahiran Nabi SAW menumbuhkan kerinduan mahabbah kepada junjungan mulia."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        8
+      ],
+      "deskripsi": "Memperingati kelahiran Nabi SAW menumbuhkan kerinduan mahabbah kepada junjungan mulia.",
+      "kata_kunci": [
+        "al-hafl bi maulid ar-rasul",
+        "peringatan maulid nabi saw",
+        "sholawat",
+        "ceramah agama",
+        "panitia"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Ad-Dars 3: Nuzulul Qur'an wa Iedani (Nuzulul Qur'an dan Dua Hari Raya)",
+      "subbab": [
+        "A. Mufradat Malam Lailatul Qadar, Nuzulul Qur'an, Idul Fitri, dan Idul Adha",
+        "B. Tarkib: Kata Sambung (Isim Maushul: Alladzi, Allati, Alladzina, Allati)",
+        "C. Qira'ah: Tradisi Silaturahmi Halalbihalal Lebaran Nusantara dan Shalat 'Ied",
+        "D. Menulis Kartu Ucapan Selamat Hari Raya Idul Fitri dalam Bahasa Arab Indah"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Arab MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "53–78",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Momen Idul Fitri saling memaafkan memperkokoh keharmonisan cinta dan ukhuwah insaniyyah."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        5
+      ],
+      "deskripsi": "Momen Idul Fitri saling memaafkan memperkokoh keharmonisan cinta dan ukhuwah insaniyyah.",
+      "kata_kunci": [
+        "nuzulul qur'an wa iedani",
+        "nuzulul qur'an",
+        "dua hari raya",
+        "mufradat malam lailatul qadar",
+        "idul fitri"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Ad-Dars 4: Jamaluth Thabi'ah (Keindahan Alam Nusantara)",
+      "subbab": [
+        "A. Mufradat Bentang Alam: Gunung, Laut, Pantai, Danau, Sawah, Air Terjun",
+        "B. Tarkib: Tingkat Perbandingan Kata Sifat (Isim Tafdhil: Af'ala min / Kebangetan)",
+        "C. Qira'ah: Wisata Alam Bahari dan Dataran Tinggi Kepulauan Indonesia",
+        "D. Menulis Deskripsi Brosur Pariwisata Indonesia dalam Bahasa Arab Komunikatif"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Arab MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "79–104",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Mengagumi keindahan bentang alam nusantara membangkitkan rasa syukur cinta lingkungan."
+        },
+        {
+          "id": 4,
+          "alasan": "Mempromosikan pariwisata nusantara ke dunia internasional adalah wujud cinta tanah air."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        4
+      ],
+      "deskripsi": "Mengagumi keindahan bentang alam nusantara membangkitkan rasa syukur cinta lingkungan.",
+      "kata_kunci": [
+        "jamaluth thabi'ah",
+        "keindahan alam nusantara",
+        "mufradat bentang alam",
+        "gunung",
+        "laut"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Ad-Dars 5: Khalaqallahu al-'Alama (Penciptaan Alam Semesta)",
+      "subbab": [
+        "A. Kosakata Benda Langit: Matahari, Bulan, Bintang, Awan, Atmosfer, Hujan",
+        "B. Tarkib: Kata Kerja Bentuk Pasif (Al-Fi'il al-Mabni lil Majhul)",
+        "C. Qira'ah: Ayat Kauniyyah Penciptaan Langit dan Bumi dalam Enam Masa",
+        "D. Menyusun Kalimat Tadabur Keagungan Penciptaan Semesta Raya"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Arab MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "105–130",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Tadabur penciptaan alam semesta menguatkan tauhid dan cinta takwa kepada Allah Al-Khaliq."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        3
+      ],
+      "deskripsi": "Tadabur penciptaan alam semesta menguatkan tauhid dan cinta takwa kepada Allah Al-Khaliq.",
+      "kata_kunci": [
+        "khalaqallahu al-'alama",
+        "penciptaan alam semesta",
+        "kosakata benda langit",
+        "matahari",
+        "bulan"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Ad-Dars 6: Al-Hifazhu 'ala al-Bi'ah (Menjaga Kelestarian Lingkungan Hidup)",
+      "subbab": [
+        "A. Mufradat Lingkungan: Penghijauan, Polusi Udara, Daur Ulang, Sampah Plastik, Konservasi",
+        "B. Tarkib: Bentuk Kata Benda Asal (Al-Mashdar ash-Sharih)",
+        "C. Qira'ah: Tanggung Jawab Manusia Merawat Bumi dan Larangan Berbuat Kerusakan",
+        "D. Menyusun Poster Slogan Kampanye Hijau Berbahasa Arab di Madrasah"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Arab MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "131–160",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Aksi menjaga bumi dari kerusakan adalah amanah ekologis cinta lingkungan madrasah asri."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        5
+      ],
+      "deskripsi": "Aksi menjaga bumi dari kerusakan adalah amanah ekologis cinta lingkungan madrasah asri.",
+      "kata_kunci": [
+        "al-hifazhu 'ala al-bi'ah",
+        "kelestarian lingkungan hidup",
+        "mufradat lingkungan",
+        "penghijauan",
+        "polusi udara"
+      ]
+    }
+  ],
+  "status": "LENGKAP",
+  "catatan": "CP verbatim mengacu pada SK Dirjen Pendis No. 9941 Tahun 2025 Lampiran Mata Pelajaran Bahasa Arab Fase D (4 Elemen: Menyimak, Berbicara, Membaca dan Memirsa, Menulis dan Mempresentasikan). Materi per dars dirangkum dari Buku Siswa Kemenag RI Kelas VII, VIII, dan IX. Saran integrasi Panca Cinta dan DPL lengkap di setiap dars.",
+  "diverifikasi_oleh": null,
+  "tanggal_verifikasi": null
+}

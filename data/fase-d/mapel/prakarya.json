@@ -1,0 +1,1081 @@
+{
+  "mapel": "Prakarya",
+  "slug": "prakarya",
+  "kelompok": "umum",
+  "fase": "D",
+  "sumber_cp": {
+    "regulasi_kode": "BSKAP-046-2025",
+    "halaman": "Halaman 141–160",
+    "url": "https://kurikulum.kemendikdasmen.go.id/unduhan",
+    "diakses": "2026-10-14"
+  },
+  "rasional": "Prakarya merupakan mata pelajaran yang mengembangkan kecakapan hidup (life skills), daya cipta, kemandirian berusaha, dan inovasi melalui eksplorasi empat aspek utama: Kerajinan, Rekayasa, Budi Daya, dan Pengolahan. Di madrasah, Prakarya melatih etos kerja keras bernilai ibadah (amal saleh), pemanfaatan sumber daya alam tanpa berlaku mubazir (tasharruf bi al-hikmah), kepastian kehalalan dan higienitas produk, serta penumbuhan jiwa kewirausahaan berakhlak mulia.",
+  "tujuan_mapel": [
+    "Mengembangkan kepekaan dan apresiasi terhadap potensi bahan alam, buatan, dan limbah di lingkungan sekitar untuk diolah menjadi produk bernilai guna dan estetis.",
+    "Menguasai prinsip perancangan, tahapan pembuatan, teknik produksi, dan pengemasan produk kerajinan, rekayasa, budi daya, dan olahan pangan halal-thayyib.",
+    "Menumbuhkan ketelitian teknis, kepatuhan prosedur keselamatan dan kesehatan kerja (K3), serta ketahanan kerja dalam berkarya.",
+    "Membiasakan sikap mandiri, hemat, tekun, bertanggung jawab, dan gotong royong dalam tim kerja.",
+    "Menumbuhkan jiwa kewirausahaan (entrepreneurship) yang etis melalui perhitungan biaya produksi, analisis nilai tambah, dan strategi pemasaran sederhana."
+  ],
+  "capaian_umum_fase_d": "Pada akhir Fase D, peserta didik mampu mengeksplorasi bahan, alat, teknik, dan prosedur pembuatan produk dari aspek kerajinan, rekayasa, budi daya, atau pengolahan; merancang desain produk dan rencana kerja berdasarkan analisis kebutuhan dan potensi daerah; memproduksi produk kerajinan/teknologi rekayasa/hasil budi daya/olahan pangan yang aman, higienis, dan ergonomis; menyajikan dan mengemas produk secara menarik; serta merefleksikan proses kerja, mengevaluasi mutu produk, dan menyusun perhitungan biaya produksi sederhana untuk peluang wirausaha.",
+  "elemen": [
+    {
+      "kode": "E1",
+      "nama": "Observasi dan Eksplorasi",
+      "deskripsi_cp": "Peserta didik mengamati dan mengeksplorasi karakteristik bahan, alat, teknik, dan prosedur pembuatan produk kerajinan, rekayasa, budi daya, atau pengolahan yang bersumber dari potensi lokal nusantara maupun global."
+    },
+    {
+      "kode": "E2",
+      "nama": "Desain / Perencanaan",
+      "deskripsi_cp": "Peserta didik merancang produk, membuat sketsa gambar kerja, memilih bahan dan alat yang tepat, serta menyusun rencana tahapan produksi dengan mempertimbangkan aspek fungsi, ergonomi, estetika, keamanan kerja, dan efisiensi biaya."
+    },
+    {
+      "kode": "E3",
+      "nama": "Produksi",
+      "deskripsi_cp": "Peserta didik membuat produk kerajinan, rekayasa, budi daya, atau olahan pangan sesuai rancangan kerja; menggunakan alat kerja secara aman dan tepat guna; menjaga higienitas dan keselamatan kerja; serta menyajikan atau mengemas produk dengan kemasan yang menarik dan ramah lingkungan."
+    },
+    {
+      "kode": "E4",
+      "nama": "Refleksi dan Evaluasi",
+      "deskripsi_cp": "Peserta didik menguji dan mengevaluasi kelebihan dan kelemahan produk yang dihasilkan berdasarkan kriteria fungsi, ketahanan, estetika, dan higienitas; merefleksikan proses kerja mandiri maupun kelompok; serta merumuskan rencana perbaikan dan potensi nilai ekonomi/wirausaha produk."
+    }
+  ],
+  "materi": [
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Kerajinan Bahan Serat Alam dan Tekstil",
+      "subbab": [
+        "A. Karakteristik Jenis Serat Tumbuhan (Kapas, Jute, Sabut Kelapa, Pelepah Pisang)",
+        "B. Karakteristik Serat Hewan (Bulu Domba/Wol dan Sutra Ulat)",
+        "C. Teknik Pengolahan: Memintal, Menenun, dan Merajut Sederhana",
+        "D. Perancangan dan Pembuatan Produk Kerajinan Serat Alam Nusantara"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Prakarya untuk SMP/MTs Kelas VII Semester 1",
+        "penerbit": "Pusat Kurikulum dan Perbukuan Kemendikbud",
+        "tahun": 2021,
+        "halaman": "1–48",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Memanfaatkan serat tumbuhan alami mengurangi limbah sintetis dan mencerminkan cinta kelestarian alam ciptaan Allah."
+        }
+      ],
+      "saran_dpl": [
+        6,
+        8
+      ],
+      "deskripsi": "Memanfaatkan serat tumbuhan alami mengurangi limbah sintetis dan mencerminkan cinta kelestarian alam ciptaan Allah.",
+      "kata_kunci": [
+        "kerajinan bahan serat alam",
+        "tekstil",
+        "kapas",
+        "jute",
+        "sabut kelapa"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Rekayasa Teknologi Konstruksi Miniatur Bangunan",
+      "subbab": [
+        "A. Mengenal Perkembangan Teknologi Konstruksi dan Rumah Adat Tradisional",
+        "B. Jenis Bahan (Kayu, Bambu, Karton) dan Alat Pemotong/Perekat Konstruksi",
+        "C. Merancang Sketsa Gambar Kerja Miniatur Rumah Adat Ramah Gempa",
+        "D. Perakitan Miniatur Rumah dan Pengujian Kekokohan Struktur"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Prakarya untuk SMP/MTs Kelas VII Semester 1",
+        "penerbit": "Pusat Kurikulum dan Perbukuan Kemendikbud",
+        "tahun": 2021,
+        "halaman": "49–88",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Mempelajari rancang bangun miniatur melatih kecerdasan spasial dan kecintaan pada ilmu teknik terapan."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Mempelajari rancang bangun miniatur melatih kecerdasan spasial dan kecintaan pada ilmu teknik terapan.",
+      "kata_kunci": [
+        "rumah adat tradisional",
+        "jenis bahan",
+        "kayu",
+        "bambu",
+        "karton"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Budi Daya Tanaman Sayuran",
+      "subbab": [
+        "A. Karakteristik dan Jenis Sayuran Daun, Buah, Akar, dan Polong",
+        "B. Persiapan Media Tanam Organik dan Teknik Penanaman di Polybag",
+        "C. Pemeliharaan Tanaman: Penyiraman, Penyiangan, dan Pemupukan Kompos Alami",
+        "D. Pemanenan Sayuran Segar dan Penanganan Pascapanen Higienis"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Prakarya untuk SMP/MTs Kelas VII Semester 1",
+        "penerbit": "Pusat Kurikulum dan Perbukuan Kemendikbud",
+        "tahun": 2021,
+        "halaman": "89–134",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Menanam dan merawat sayuran mendidik jiwa peduli bumi, kesabaran, dan rasa cinta lingkungan hidup."
+        }
+      ],
+      "saran_dpl": [
+        7,
+        8
+      ],
+      "deskripsi": "Menanam dan merawat sayuran mendidik jiwa peduli bumi, kesabaran, dan rasa cinta lingkungan hidup.",
+      "kata_kunci": [
+        "budi daya tanaman sayuran",
+        "karakteristik",
+        "jenis sayuran daun",
+        "buah",
+        "akar"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 4,
+      "bab": "Bab 4: Pengolahan Buah Segar Menjadi Makanan dan Minuman",
+      "subbab": [
+        "A. Karakteristik Buah Musiman dan Buah Sepanjang Tahun di Indonesia",
+        "B. Kandungan Vitamin dan Manfaat Buah bagi Kesehatan Tubuh",
+        "C. Pembuatan Olahan Buah Segar: Jus Alami, Rujak, dan Salad Buah Halal",
+        "D. Teknik Penyajian, Pengemasan Ramah Lingkungan, dan Sanitasi Dapur"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Prakarya untuk SMP/MTs Kelas VII Semester 1",
+        "penerbit": "Pusat Kurikulum dan Perbukuan Kemendikbud",
+        "tahun": 2021,
+        "halaman": "135–182",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Mengolah dan mengonsumsi makanan sehat halal-thayyib adalah manifestasi syukur dan cinta kepada Allah SWT."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        8
+      ],
+      "deskripsi": "Mengolah dan mengonsumsi makanan sehat halal-thayyib adalah manifestasi syukur dan cinta kepada Allah SWT.",
+      "kata_kunci": [
+        "minuman",
+        "karakteristik buah musiman",
+        "kandungan vitamin",
+        "pembuatan olahan buah segar",
+        "jus alami"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Kerajinan Bahan Limbah Lunak",
+      "subbab": [
+        "A. Pengelompokan Limbah Lunak Organik (Kertas, Kulit Jagung, Pelepah) dan Anorganik (Plastik, Kain Perca)",
+        "B. Prinsip 3R (Reduce, Reuse, Recycle) dalam Pengurangan Sampah",
+        "C. Perancangan dan Pembuatan Produk Fungsional dari Kertas dan Perca",
+        "D. Evaluasi Kerapian Produk dan Peluang Penjualan di Madrasah"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Prakarya untuk SMP/MTs Kelas VII Semester 2",
+        "penerbit": "Pusat Kurikulum dan Perbukuan Kemendikbud",
+        "tahun": 2021,
+        "halaman": "1–52",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Mendaur ulang limbah lunak menjadi kerajinan berguna membuktikan cinta kebersihan dan kelestarian alam."
+        }
+      ],
+      "saran_dpl": [
+        6,
+        8
+      ],
+      "deskripsi": "Mendaur ulang limbah lunak menjadi kerajinan berguna membuktikan cinta kebersihan dan kelestarian alam.",
+      "kata_kunci": [
+        "kerajinan bahan limbah lunak",
+        "kertas",
+        "kulit jagung",
+        "pelepah",
+        "anorganik"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Rekayasa Alat Penjernih Air Sederhana",
+      "subbab": [
+        "A. Sumber Air Bersih dan Masalah Pencemaran Air di Sekitar Kita",
+        "B. Material Penyaring Alami: Pasir Silika, Kerikil, Ijuk, dan Arang Batok Kelapa",
+        "C. Perancangan dan Perakitan Tabung Filtrasi Air Bertingkat",
+        "D. Pengujian Kekeruhan, Bau, dan pH Air Hasil Saringan"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Prakarya untuk SMP/MTs Kelas VII Semester 2",
+        "penerbit": "Pusat Kurikulum dan Perbukuan Kemendikbud",
+        "tahun": 2021,
+        "halaman": "53–94",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Menyediakan air bersih melalui filtrasi sederhana melatih tanggung jawab menjaga sumber air kehidupan."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        7
+      ],
+      "deskripsi": "Menyediakan air bersih melalui filtrasi sederhana melatih tanggung jawab menjaga sumber air kehidupan.",
+      "kata_kunci": [
+        "sumber air bersih",
+        "material penyaring alami",
+        "pasir silika",
+        "kerikil",
+        "ijuk"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 7,
+      "bab": "Bab 7: Budi Daya Tanaman Obat Keluarga (TOGA)",
+      "subbab": [
+        "A. Ragam Tanaman Obat Rimpang Tradisional (Jahe, Kunyit, Kencur, Temulawak)",
+        "B. Manfaat Farmakologis Herbal untuk Kesehatan dan Imunitas Alami",
+        "C. Tahapan Penanaman TOGA di Lahan Madrasah atau Pot Rumah",
+        "D. Pemeliharaan dan Pembuatan Minuman Jamu Herbal Segar"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Prakarya untuk SMP/MTs Kelas VII Semester 2",
+        "penerbit": "Pusat Kurikulum dan Perbukuan Kemendikbud",
+        "tahun": 2021,
+        "halaman": "95–138",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Membudidayakan tanaman obat tradisional memadukan kearifan lokal dengan rasa cinta lingkungan hijau."
+        }
+      ],
+      "saran_dpl": [
+        7,
+        8
+      ],
+      "deskripsi": "Membudidayakan tanaman obat tradisional memadukan kearifan lokal dengan rasa cinta lingkungan hijau.",
+      "kata_kunci": [
+        "budi daya tanaman obat keluarga",
+        "toga",
+        "jahe",
+        "kunyit",
+        "kencur"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 8,
+      "bab": "Bab 8: Pengolahan Bahan Pangan Sayuran Sehat",
+      "subbab": [
+        "A. Mengolah Sayuran Menjadi Kudapan Bergizi (Keripik Bayam, Sup Sehat, Pastel Sayur)",
+        "B. Pengolahan Hasil Samping Sayuran (Kulit Umbi, Daun Batang Brokoli)",
+        "C. Prinsip Memasak Halal, Menjaga Kadar Nutrisi, dan Tidak Boros",
+        "D. Perhitungan Biaya Bahan dan Penjualan Bazar Madrasah"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Prakarya untuk SMP/MTs Kelas VII Semester 2",
+        "penerbit": "Pusat Kurikulum dan Perbukuan Kemendikbud",
+        "tahun": 2021,
+        "halaman": "139–186",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Memasak makanan sehat untuk keluarga dan teman melatih kepedulian kasih sayang dan cinta sesama."
+        }
+      ],
+      "saran_dpl": [
+        5,
+        8
+      ],
+      "deskripsi": "Memasak makanan sehat untuk keluarga dan teman melatih kepedulian kasih sayang dan cinta sesama.",
+      "kata_kunci": [
+        "keripik bayam",
+        "sup sehat",
+        "pastel sayur",
+        "kulit umbi",
+        "daun batang brokoli"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Kerajinan Bahan Lunak Alami dan Buatan",
+      "subbab": [
+        "A. Karakteristik Bahan Lunak Alami (Tanah Liat, Flour Clay, Getah Nyatu)",
+        "B. Karakteristik Bahan Lunak Buatan (Polymer Clay, Parafin, Sabun Batang, Gips)",
+        "C. Teknik Pijat Tekan, Pilin, Lempengan, dan Ukir Sabun",
+        "D. Pembuatan Produk Souvenir Kerajinan Bernilai Jual"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Prakarya untuk SMP/MTs Kelas VIII Semester 1",
+        "penerbit": "Pusat Kurikulum dan Perbukuan Kemendikbud",
+        "tahun": 2021,
+        "halaman": "1–50",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Membentuk tanah liat mengingatkan asal muasal penciptaan insan dan menanamkan kerendahan hati di hadapan Allah."
+        }
+      ],
+      "saran_dpl": [
+        6,
+        8
+      ],
+      "deskripsi": "Membentuk tanah liat mengingatkan asal muasal penciptaan insan dan menanamkan kerendahan hati di hadapan Allah.",
+      "kata_kunci": [
+        "kerajinan bahan lunak alami",
+        "buatan",
+        "tanah liat",
+        "flour clay",
+        "getah nyatu"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Rekayasa Bel Listrik dan Rangkaian Elektronika",
+      "subbab": [
+        "A. Prinsip Rangkaian Arus Listrik Searah (DC) Seri dan Paralel",
+        "B. Komponen: Sakelar, Resistor, Buzzer/Bel Listrik, Baterai",
+        "C. Perakitan Bel Listrik Pintu Rumah / Bel Madrasah Sederhana",
+        "D. Prosedur Keselamatan Kerja Listrik dan Troubleshooting Rangkaian"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Prakarya untuk SMP/MTs Kelas VIII Semester 1",
+        "penerbit": "Pusat Kurikulum dan Perbukuan Kemendikbud",
+        "tahun": 2021,
+        "halaman": "51–92",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Merangkai perangkat kelistrikan dasar mengasah ketelitian berpikir ilmiah dan kecintaan pada ilmu pengetahuan."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        7
+      ],
+      "deskripsi": "Merangkai perangkat kelistrikan dasar mengasah ketelitian berpikir ilmiah dan kecintaan pada ilmu pengetahuan.",
+      "kata_kunci": [
+        "rekayasa bel listrik",
+        "rangkaian elektronika",
+        "rangkaian arus listrik searah",
+        "seri",
+        "paralel"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Budi Daya Ternak Kesayangan",
+      "subbab": [
+        "A. Mengenal Jenis Hewan Kesayangan (Kelinci, Hamster, Burung Berkicau, Kucing)",
+        "B. Persyaratan Kandang Bersih, Pencahayaan, dan Sirkulasi Udara Sehat",
+        "C. Pemberian Pakan Halal, Bernutrisi, dan Vaksinasi Perawatan",
+        "D. Meneladani Sunnah Nabi dalam Bersikap Lemah Lembut dan Menyayangi Binatang"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Prakarya untuk SMP/MTs Kelas VIII Semester 1",
+        "penerbit": "Pusat Kurikulum dan Perbukuan Kemendikbud",
+        "tahun": 2021,
+        "halaman": "93–136",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Menyayangi dan merawat hewan peliharaan secara ihsan adalah bukti cinta kepada sesama makhluk hidup ciptaan Allah."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        7
+      ],
+      "deskripsi": "Menyayangi dan merawat hewan peliharaan secara ihsan adalah bukti cinta kepada sesama makhluk hidup ciptaan Allah.",
+      "kata_kunci": [
+        "budi daya ternak kesayangan",
+        "jenis hewan kesayangan",
+        "kelinci",
+        "hamster",
+        "burung berkicau"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 4,
+      "bab": "Bab 4: Pengolahan Serealia, Kacang-kacangan, dan Umbi",
+      "subbab": [
+        "A. Ragam Komoditas Pangan Lokal: Padi, Jagung, Gandum, Kedelai, Singkong, Ubi Jalar",
+        "B. Teknik Pengolahan: Merebus, Mengukus, Menggoreng, dan Memanggang",
+        "C. Pembuatan Makanan Tradisional Nusantara Berbasis Umbi dan Kacang",
+        "D. Pengemasan Produk Pangan Higienis dan Menarik Minat Konsumen"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Prakarya untuk SMP/MTs Kelas VIII Semester 1",
+        "penerbit": "Pusat Kurikulum dan Perbukuan Kemendikbud",
+        "tahun": 2021,
+        "halaman": "137–188",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Mengolah hasil bumi pangan lokal mengukuhkan kedaulatan pangan dan cinta produk tanah air Indonesia."
+        }
+      ],
+      "saran_dpl": [
+        5,
+        8
+      ],
+      "deskripsi": "Mengolah hasil bumi pangan lokal mengukuhkan kedaulatan pangan dan cinta produk tanah air Indonesia.",
+      "kata_kunci": [
+        "pengolahan serealia",
+        "kacang-kacangan",
+        "umbi",
+        "ragam komoditas pangan lokal",
+        "padi"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Kerajinan Bahan Limbah Keras",
+      "subbab": [
+        "A. Karakteristik Limbah Keras Organik (Tempurung Kelapa, Sisik Ikan, Cangkang Kerang)",
+        "B. Karakteristik Limbah Keras Anorganik (Pecahan Kaca, Kaleng, Botol Plastik Keras)",
+        "C. Teknik Pemotongan, Pengamplasan, dan Finishing Pewarnaan",
+        "D. Pembuatan Produk Kerajinan Wadah Fungsional dan Cinderamata"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Prakarya untuk SMP/MTs Kelas VIII Semester 2",
+        "penerbit": "Pusat Kurikulum dan Perbukuan Kemendikbud",
+        "tahun": 2021,
+        "halaman": "1–56",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Mengolah limbah keras menjadi produk bernilai ekonomis menyelamatkan lingkungan dari tumpukan sampah."
+        }
+      ],
+      "saran_dpl": [
+        6,
+        8
+      ],
+      "deskripsi": "Mengolah limbah keras menjadi produk bernilai ekonomis menyelamatkan lingkungan dari tumpukan sampah.",
+      "kata_kunci": [
+        "kerajinan bahan limbah keras",
+        "tempurung kelapa",
+        "sisik ikan",
+        "cangkang kerang",
+        "pecahan kaca"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Rekayasa Alat Pengubah Energi dan Kincir Mini",
+      "subbab": [
+        "A. Prinsip Energi Terbarukan: Tenaga Angin, Air, dan Sinar Matahari",
+        "B. Merancang Model Kincir Angin Mini / Kincir Air Edukatif",
+        "C. Uji Coba Konversi Energi Mekanik Menjadi Energi Listrik Sederhana",
+        "D. Edukasi Hemat Energi dan Transisi Energi Bersih di Madrasah"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Prakarya untuk SMP/MTs Kelas VIII Semester 2",
+        "penerbit": "Pusat Kurikulum dan Perbukuan Kemendikbud",
+        "tahun": 2021,
+        "halaman": "57–98",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Mengeksplorasi energi terbarukan ramah lingkungan adalah komitmen cinta masa depan bumi."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        7
+      ],
+      "deskripsi": "Mengeksplorasi energi terbarukan ramah lingkungan adalah komitmen cinta masa depan bumi.",
+      "kata_kunci": [
+        "rekayasa alat pengubah energi",
+        "kincir mini",
+        "energi terbarukan",
+        "tenaga angin",
+        "sinar matahari"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 7,
+      "bab": "Bab 7: Budi Daya Satwa Harapan",
+      "subbab": [
+        "A. Mengenal Satwa Harapan (Jangkrik Pakan, Lebah Madu, Cacing Tanah, Ulat Sutra)",
+        "B. Siklus Hidup dan Kebutuhan Tempat Pembiakan",
+        "C. Pemeliharaan, Pengendalian Hama, dan Penanganan Panen Produk (Madu/Pakan)",
+        "D. Analisis Prospek Usaha Budi Daya Satwa Harapan Skala Rumah Tangga"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Prakarya untuk SMP/MTs Kelas VIII Semester 2",
+        "penerbit": "Pusat Kurikulum dan Perbukuan Kemendikbud",
+        "tahun": 2021,
+        "halaman": "99–140",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Mengamati keunikan lebah dan satwa harapan membuktikan kebesaran Allah dan cinta keanekaragaman fauna."
+        }
+      ],
+      "saran_dpl": [
+        7,
+        8
+      ],
+      "deskripsi": "Mengamati keunikan lebah dan satwa harapan membuktikan kebesaran Allah dan cinta keanekaragaman fauna.",
+      "kata_kunci": [
+        "budi daya satwa harapan",
+        "satwa harapan",
+        "jangkrik pakan",
+        "lebah madu",
+        "cacing tanah"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 8,
+      "bab": "Bab 8: Pengolahan Hasil Samping Serealia dan Umbi",
+      "subbab": [
+        "A. Karakteristik Hasil Samping (Bekatul, Ampas Kelapa, Kulit Singkong, Daun Ubi)",
+        "B. Mengolah Hasil Samping Menjadi Keripik Kulit Singkong dan Kue Bekatul Bergizi",
+        "C. Konsep Nol Sampah Makanan (Zero Food Waste) dalam Syariat Islam",
+        "D. Pemasaran Produk Hasil Samping Berbasis Wirausaha Hijau"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Prakarya untuk SMP/MTs Kelas VIII Semester 2",
+        "penerbit": "Pusat Kurikulum dan Perbukuan Kemendikbud",
+        "tahun": 2021,
+        "halaman": "141–184",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Memanfaatkan bagian makanan yang sering terbuang mencegah kemubaziran dan menumbuhkan cinta lingkungan."
+        }
+      ],
+      "saran_dpl": [
+        6,
+        8
+      ],
+      "deskripsi": "Memanfaatkan bagian makanan yang sering terbuang mencegah kemubaziran dan menumbuhkan cinta lingkungan.",
+      "kata_kunci": [
+        "umbi",
+        "karakteristik hasil samping",
+        "bekatul",
+        "ampas kelapa",
+        "kulit singkong"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Kerajinan Bahan Keras Alami dan Buatan",
+      "subbab": [
+        "A. Karakteristik Bahan Keras Alami: Kayu, Bambu, dan Rotan Khas Nusantara",
+        "B. Karakteristik Bahan Keras Buatan: Kaca, Logam Kaleng, dan Tembaga",
+        "C. Teknik Pertukangan: Memotong, Memahat, Mengukir, Menyambung, dan Finishing Plitur",
+        "D. Pembuatan Produk Perabot dan Aksesori Rumah Tangga Tradisional Modern"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Prakarya untuk SMP/MTs Kelas IX Semester 1",
+        "penerbit": "Pusat Kurikulum dan Perbukuan Kemendikbud",
+        "tahun": 2021,
+        "halaman": "1–54",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Mengolah kayu dan bambu nusantara mengangkat potensi kriya leluhur dan mempertebal cinta tanah air."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Mengolah kayu dan bambu nusantara mengangkat potensi kriya leluhur dan mempertebal cinta tanah air.",
+      "kata_kunci": [
+        "kerajinan bahan keras alami",
+        "buatan",
+        "kayu",
+        "bambu",
+        "rotan khas nusantara"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Rekayasa Peralatan Elektronika Otomatis",
+      "subbab": [
+        "A. Komponen Sensor Elektronik: LDR (Light Dependent Resistor) dan Sensor Gerak",
+        "B. Rangkaian Sakelar Lampu Otomatis Sensor Cahaya untuk Madrasah",
+        "C. Perakitan PCB dan Penyolderan Komponen secara Teliti dan Aman",
+        "D. Pengujian Kinerja Sensor dan Pemecahan Masalah Rangkaian"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Prakarya untuk SMP/MTs Kelas IX Semester 1",
+        "penerbit": "Pusat Kurikulum dan Perbukuan Kemendikbud",
+        "tahun": 2021,
+        "halaman": "55–96",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Mengembangkan peralatan otomatis hemat daya mencerminkan kecintaan pada ilmu rekayasa masa kini."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        7
+      ],
+      "deskripsi": "Mengembangkan peralatan otomatis hemat daya mencerminkan kecintaan pada ilmu rekayasa masa kini.",
+      "kata_kunci": [
+        "komponen sensor elektronik",
+        "light dependent resistor",
+        "sensor gerak",
+        "perakitan pcb",
+        "aman"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Budi Daya Ikan Konsumsi Air Tawar",
+      "subbab": [
+        "A. Mengenal Komoditas Ikan Konsumsi: Ikan Lele, Nila, Mas, dan Gurame",
+        "B. Wadah Budi Daya Kolam Terpal dan Sistem Bioflok Sederhana",
+        "C. Manajemen Kualitas Air, Pakan Pelet Halal, dan Pencegahan Jamur/Bakteri",
+        "D. Pemanenan Ikan Segar dan Analisis Kelayakan Usaha Perikanan"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Prakarya untuk SMP/MTs Kelas IX Semester 1",
+        "penerbit": "Pusat Kurikulum dan Perbukuan Kemendikbud",
+        "tahun": 2021,
+        "halaman": "97–142",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Merawat ekosistem kolam ikan mengajarkan cinta lingkungan dan pemanfaatan sumber protein hewani halal."
+        }
+      ],
+      "saran_dpl": [
+        7,
+        8
+      ],
+      "deskripsi": "Merawat ekosistem kolam ikan mengajarkan cinta lingkungan dan pemanfaatan sumber protein hewani halal.",
+      "kata_kunci": [
+        "komoditas ikan konsumsi",
+        "ikan lele",
+        "nila",
+        "gurame",
+        "wadah budi daya kolam terpal"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 4,
+      "bab": "Bab 4: Pengolahan Hasil Peternakan dan Perikanan",
+      "subbab": [
+        "A. Karakteristik Daging Sapi, Ayam, Telur, dan Ikan Segar",
+        "B. Standar Penyembelihan Halal (Zabiha Syar'i) dan Higienitas Pengolahan Makanan",
+        "C. Pembuatan Olahan Daging dan Ikan (Bakso Halal, Nugget Ikan Sehat, Rendang)",
+        "D. Teknik Pengawetan Alami: Pembekuan, Pengasapan, dan Pengeringan Garam"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Prakarya untuk SMP/MTs Kelas IX Semester 1",
+        "penerbit": "Pusat Kurikulum dan Perbukuan Kemendikbud",
+        "tahun": 2021,
+        "halaman": "143–194",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Memastikan kehalalan dan kebersihan makanan adalah amanah cinta takwa kepada Allah dan Rasul-Nya."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        8
+      ],
+      "deskripsi": "Memastikan kehalalan dan kebersihan makanan adalah amanah cinta takwa kepada Allah dan Rasul-Nya.",
+      "kata_kunci": [
+        "pengolahan hasil peternakan",
+        "perikanan",
+        "karakteristik daging sapi",
+        "ayam",
+        "telur"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Kerajinan Media Campuran (Mixed Media)",
+      "subbab": [
+        "A. Prinsip Mengombinasikan Logam, Kayu, Batu Akik, dan Resin Bening",
+        "B. Penyederhanaan dan Deformasi Bentuk Karya Kerajinan",
+        "C. Pembuatan Produk Perhiasan dan Dekorasi Interior Ruang",
+        "D. Pengemasan Eksklusif untuk Produk Kerajinan Ekspor / Wisata"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Prakarya untuk SMP/MTs Kelas IX Semester 2",
+        "penerbit": "Pusat Kurikulum dan Perbukuan Kemendikbud",
+        "tahun": 2021,
+        "halaman": "1–52",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Memadukan berbagai material membutuhkan inovasi dan daya eksperimen berbasis cinta ilmu."
+        }
+      ],
+      "saran_dpl": [
+        6,
+        8
+      ],
+      "deskripsi": "Memadukan berbagai material membutuhkan inovasi dan daya eksperimen berbasis cinta ilmu.",
+      "kata_kunci": [
+        "kerajinan media campuran",
+        "mixed media",
+        "mengombinasikan logam",
+        "kayu",
+        "batu akik"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Rekayasa Instalasi Kelistrikan Rumah Tangga",
+      "subbab": [
+        "A. Diagram Jalur Kelistrikan Rumah Tinggal (MCB, Stop Kontak, Sakelar Ganda)",
+        "B. Pengenalan Pembangkit Listrik Tenaga Surya (PLTS) Panel Mini",
+        "C. Praktik Pemasangan Instalasi Sakelar dan Fitting Lampu Hemat Energi",
+        "D. Standar Operasional Prosedur (SOP) Pencegahan Korsleting dan Bahaya Kebakaran"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Prakarya untuk SMP/MTs Kelas IX Semester 2",
+        "penerbit": "Pusat Kurikulum dan Perbukuan Kemendikbud",
+        "tahun": 2021,
+        "halaman": "53–94",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Memasang instalasi listrik hemat daya mendukung kelestarian bumi dan cinta lingkungan madrasah."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        7
+      ],
+      "deskripsi": "Memasang instalasi listrik hemat daya mendukung kelestarian bumi dan cinta lingkungan madrasah.",
+      "kata_kunci": [
+        "stop kontak",
+        "sakelar ganda",
+        "plts",
+        "panel mini",
+        "fitting lampu hemat energi"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 7,
+      "bab": "Bab 7: Budi Daya Ikan Hias Air Tawar dan Aquascape",
+      "subbab": [
+        "A. Ragam Jenis Ikan Hias Favorit (Cupang, Guppy, Mas Koki, Discus)",
+        "B. Perancangan Ekosistem Aquascape: Tanaman Air, Substrat, dan Filter",
+        "C. Teknik Pemijahan Alami Ikan Hias dan Perawatan Burayak",
+        "D. Pemasaran Digital Ikan Hias Melalui Komunitas Daring"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Prakarya untuk SMP/MTs Kelas IX Semester 2",
+        "penerbit": "Pusat Kurikulum dan Perbukuan Kemendikbud",
+        "tahun": 2021,
+        "halaman": "95–136",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Menciptakan ekosistem aquascape yang asri mengajarkan ketenangan batin dan cinta keindahan alam ciptaan-Nya."
+        }
+      ],
+      "saran_dpl": [
+        6,
+        8
+      ],
+      "deskripsi": "Menciptakan ekosistem aquascape yang asri mengajarkan ketenangan batin dan cinta keindahan alam ciptaan-Nya.",
+      "kata_kunci": [
+        "budi daya ikan hias air tawar",
+        "aquascape",
+        "ragam jenis ikan hias favorit",
+        "cupang",
+        "guppy"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 8,
+      "bab": "Bab 8: Pengolahan Hasil Samping dan Wirausaha Pangan",
+      "subbab": [
+        "A. Karakteristik Hasil Samping Hewani (Tulang Ikan, Ceker Ayam, Kulit Sapi)",
+        "B. Pembuatan Kerupuk Tulang Ikan Kaya Kalsium dan Keripik Kulit Halal",
+        "C. Penyusunan Rencana Usaha Pangan (Harga Pokok Produksi, Titik Impas / BEP)",
+        "D. Desain Kemasan Food-Grade, Pendaftaran Label Halal, dan Promosi Media Sosial"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Prakarya untuk SMP/MTs Kelas IX Semester 2",
+        "penerbit": "Pusat Kurikulum dan Perbukuan Kemendikbud",
+        "tahun": 2021,
+        "halaman": "137–188",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Membangun usaha halal yang membuka manfaat bagi orang lain adalah pengamalan cinta diri dan sesama manusia."
+        }
+      ],
+      "saran_dpl": [
+        6,
+        8
+      ],
+      "deskripsi": "Membangun usaha halal yang membuka manfaat bagi orang lain adalah pengamalan cinta diri dan sesama manusia.",
+      "kata_kunci": [
+        "pengolahan hasil samping",
+        "wirausaha pangan",
+        "tulang ikan",
+        "ceker ayam",
+        "kulit sapi"
+      ]
+    }
+  ],
+  "status": "LENGKAP",
+  "catatan": "CP verbatim mengacu pada Keputusan Kepala BSKAP No. 046/H/KR/2025 Lampiran Mata Pelajaran Prakarya Fase D (mencakup 4 elemen inti yang diintegrasikan ke 4 aspek: Kerajinan, Rekayasa, Budi Daya, dan Pengolahan). Materi per bab dan subbab dirangkum dari Buku Teks Utama Prakarya Pusat Perbukuan Kemendikbudristek Kelas VII, VIII, dan IX. Saran Panca Cinta dan DPL telah dipetakan kontekstual.",
+  "diverifikasi_oleh": null,
+  "tanggal_verifikasi": null
+}

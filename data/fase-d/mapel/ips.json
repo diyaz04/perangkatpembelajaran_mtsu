@@ -1,0 +1,571 @@
+{
+  "mapel": "Ilmu Pengetahuan Sosial (IPS)",
+  "slug": "ips",
+  "kelompok": "umum",
+  "fase": "D",
+  "sumber_cp": {
+    "regulasi_kode": "BSKAP-046-2025",
+    "halaman": "Halaman 71–86",
+    "url": "https://kurikulum.kemendikdasmen.go.id/unduhan",
+    "diakses": "2026-10-14"
+  },
+  "rasional": "Ilmu Pengetahuan Sosial (IPS) merupakan integrasi multidisipliner dari disiplin geografi, sosiologi, ekonomi, dan sejarah yang mengkaji interaksi dinamis antara manusia, ruang, dan waktu dalam pranata sosial. Pembelajaran IPS di madrasah bertujuan membentuk murid yang memiliki wawasan kebangsaan yang kokoh, peka terhadap realitas kemanusiaan, adil dalam berekonomi, menjunjung ukhuwah insaniyyah, serta aktif berkontribusi dalam menjaga kelestarian lingkungan dan perdamaian dunia.",
+  "tujuan_mapel": [
+    "Memahami konsep dasar keruangan, konektivitas antarwilayah, kondisi geografis maritim, dan potensi sumber daya alam Indonesia.",
+    "Mengembangkan kepekaan sosial, empati, dan kepedulian terhadap dinamika interaksi, kelompok sosial, serta keragaman budaya nusantara.",
+    "Menganalisis prinsip-prinsip ekonomi, peran pasar, lembaga keuangan, serta literasi ekonomi digital berbasis etika kejujuran dan keadilan.",
+    "Menelusuri dan menghayati kronologi sejarah perjuangan bangsa dari masa peradaban kuno, kerajaan Islam, kolonialisme, hingga revolusi kemerdekaan.",
+    "Menerapkan metode inkuiri ilmiah sosial untuk menginvestigasi persoalan kemasyarakatan dan merumuskan aksi nyata yang solutif bagi kemaslahatan umat."
+  ],
+  "capaian_umum_fase_d": "Pada akhir Fase D, peserta didik memahami realitas kehidupan manusia dalam konteks keruangan dan waktu terpadu (geografi, sosiologi, ekonomi, sejarah); memahami konektivitas antarruang, potensi SDA dan kemaritiman Indonesia, kependudukan, serta mitigasi bencana; memahami dinamika interaksi sosial, lembaga sosial, sosialisasi, dan keragaman sosial budaya; memahami aktivitas ekonomi (kebutuhan, kelangkaan, pasar, pelaku ekonomi, lembaga keuangan, perdagangan internasional, ekonomi digital); memahami kronologi sejarah Indonesia dari praaksara hingga kontemporer; serta memahami perubahan sosial, modernisasi, globalisasi, kearifan lokal, dan pembangunan berkelanjutan (SDGs). Peserta didik terampil melakukan inkuiri sosial: mengamati gejala sosial, merumuskan pertanyaan kritis, mengumpulkan dan menganalisis informasi, menarik kesimpulan, serta menyusun rekomendasi dan aksi nyata pemecahan masalah sosial di lingkungan sekitar.",
+  "elemen": [
+    {
+      "kode": "E1",
+      "nama": "Pemahaman Konsep",
+      "deskripsi_cp": "Peserta didik memahami keberadaan diri dan keluarga di tengah lingkungan sosial terdekatnya; menganalisis hubungan antara kondisi geografis nusantara terhadap pembentukan keragaman budaya, pola pemukiman, dan aktivitas ekonomi masyarakat; memahami konektivitas antarruang dan dampaknya terhadap perdagangan dan mobilitas penduduk; memahami proses sosialisasi, peran lembaga sosial, dan dinamika interaksi sosial dalam masyarakat yang majemuk; memahami konsep kelangkaan, kebutuhan manusia, tindakan, motif, dan prinsip ekonomi; menganalisis peran pelaku ekonomi, pasar, lembaga keuangan, serta perkembangan ekonomi digital dan literasi finansial; menelusuri kronologi sejarah perjuangan bangsa Indonesia dari masa praaksara, masa kerajaan Hindu-Buddha, masa kerajaan Islam, masa kolonialisme dan imperialisme, masa pergerakan nasional, masa kemerdekaan, hingga dinamika pembangunan kontemporer; serta menganalisis perubahan sosial, modernisasi, pengaruh globalisasi, pentingnya melestarikan kearifan lokal, dan keterlibatan Indonesia dalam kerja sama internasional untuk mendukung pembangunan berkelanjutan (SDGs)."
+    },
+    {
+      "kode": "E2",
+      "nama": "Keterampilan Proses",
+      "deskripsi_cp": "Peserta didik mampu menerapkan langkah-langkah inkuiri ilmiah sosial yang mencakup: (1) Mengamati: mengamati fenomena sosial, keruangan, dan lingkungan secara kritis dengan memanfaatkan peta, data statistik, atau observasi lapangan; (2) Menanya: menyusun rumusan pertanyaan kritis dan logis (5W1H) terkait isu sosial-lingkungan kontemporer; (3) Mengumpulkan Informasi: menghimpun data primer dan sekunder melalui wawancara, observasi, survei sederhana, atau studi dokumen terpercaya; (4) Mengorganisasikan dan Menganalisis Informasi: mengelompokkan data, menyajikannya dalam bentuk tabel, grafik, infografis, atau peta tematik, serta mengaitkan fakta empiris dengan konsep ilmu sosial; (5) Menarik Kesimpulan dan Rekomendasi: merumuskan simpulan objektif dan menyusun alternatif solusi yang aplikatif atas persoalan yang diteliti; (6) Refleksi dan Aksi Nyata: merefleksikan nilai-nilai kemanusiaan dari hasil pembelajaran serta menginisiasi proyek aksi sosial atau pelestarian lingkungan secara kolaboratif."
+    }
+  ],
+  "materi": [
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Tema 01: Kehidupan Sosial dan Kondisi Lingkungan Sekitar (Keluarga Awal Kehidupan)",
+      "subbab": [
+        "A. Mengenal Lokasi Tempat Tinggal: Pemahaman Lokasi Melalui Peta dan Kondisi Wilayah",
+        "B. Keberadaan Diri dan Keluarga: Silsilah Keluarga dan Pembentukan Nilai Karakter",
+        "C. Sosialisasi dalam Masyarakat: Norma Sosial, Peran Lembaga Keluarga dan Agama",
+        "D. Aktivitas Memenuhi Kebutuhan: Kelangkaan, Skala Prioritas, Tindakan dan Motif Ekonomi"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Sosial untuk SMP Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "1–68",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Memahami silsilah keluarga menumbuhkan rasa kasih sayang, birrul walidain, dan penghargaan martabat sesama."
+        },
+        {
+          "id": 1,
+          "alasan": "Lembaga keluarga dan agama menanamkan nilai tauhid dan akhlak mulia sejak dini."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        2
+      ],
+      "deskripsi": "Memahami silsilah keluarga menumbuhkan rasa kasih sayang, birrul walidain, dan penghargaan martabat sesama.",
+      "kata_kunci": [
+        "kehidupan sosial",
+        "kondisi lingkungan sekitar",
+        "keluarga awal kehidupan",
+        "lokasi tempat tinggal",
+        "pemahaman lokasi melalui peta"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Tema 02: Keberagaman Lingkungan Sekitar",
+      "subbab": [
+        "A. Berkenalan dengan Alam: Bentang Alam, Iklim, dan Potensi Geologis Indonesia",
+        "B. Pembiasaan Manusia Zaman Praaksara dalam Berinteraksi dengan Alam",
+        "C. Jejarah Perkembangan Masyarakat Masa Kerajaan Hindu-Buddha dan Islam (Jalur Rempah)",
+        "D. Keberagaman Sosial Budaya Nusantara dan Harmoni Hidup Bertetangga"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Sosial untuk SMP Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "69–136",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Mengenal bentang alam nusantara melahirkan kesadaran menjaga kelestarian bumi amanah Allah."
+        },
+        {
+          "id": 4,
+          "alasan": "Menelusuri sejarah jalur rempah mengagumi kejayaan bahari dan perdagangan leluhur bangsa."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        3
+      ],
+      "deskripsi": "Mengenal bentang alam nusantara melahirkan kesadaran menjaga kelestarian bumi amanah Allah.",
+      "kata_kunci": [
+        "keberagaman lingkungan sekitar",
+        "berkenalan dengan alam",
+        "bentang alam",
+        "iklim",
+        "potensi geologis indonesia"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 3,
+      "bab": "Tema 03: Potensi Ekonomi Lingkungan",
+      "subbab": [
+        "A. Potensi dan Pelestarian Sumber Daya Alam (Hutan, Tambang, Kemaritiman)",
+        "B. Toponimi Daerah dan Keterkaitannya dengan Kegiatan Ekonomi Lokal",
+        "C. Peran Pelaku Ekonomi: Produsen, Konsumen, Distributor, dan Pemerintah",
+        "D. Peranan Pasar dan IPTEK dalam Meningkatkan Kesejahteraan Masyarakat"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Sosial untuk SMP Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "137–208",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Pemanfaatan SDA wajib berpedoman pada prinsip keberlanjutan dan tidak merusak alam."
+        },
+        {
+          "id": 2,
+          "alasan": "IPTEK ekonomi diterapkan secara kreatif untuk memajukan taraf hidup umat."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        5
+      ],
+      "deskripsi": "Pemanfaatan SDA wajib berpedoman pada prinsip keberlanjutan dan tidak merusak alam.",
+      "kata_kunci": [
+        "potensi ekonomi lingkungan",
+        "potensi",
+        "pelestarian sumber daya alam",
+        "hutan",
+        "tambang"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Tema 04: Pemberdayaan Masyarakat",
+      "subbab": [
+        "A. Dinamika Keberagaman Sosial Budaya di Tengah Modernisasi",
+        "B. Permasalahan Sosial Budaya: Kesenjangan, Pengangguran, dan Kenakalan Remaja",
+        "C. Konsep Pemberdayaan Masyarakat Berbasis Komunitas dan UMKM Lokal",
+        "D. Peran Komunitas Pemuda dan Madrasah dalam Mengentaskan Kemiskinan"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Sosial untuk SMP Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "209–276",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Pemberdayaan sosial adalah aplikasi nyata nilai ta'awun dan kasih sayang mengangkat martabat sesama manusia."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        5
+      ],
+      "deskripsi": "Pemberdayaan sosial adalah aplikasi nyata nilai ta'awun dan kasih sayang mengangkat martabat sesama manusia.",
+      "kata_kunci": [
+        "pemberdayaan masyarakat",
+        "permasalahan sosial budaya",
+        "kesenjangan",
+        "pengangguran",
+        "kenakalan remaja"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Tema 01: Kondisi Geografis dan Pelestarian Sumber Daya Alam",
+      "subbab": [
+        "A. Letak Geografis dan Geologis Indonesia serta Pengaruhnya terhadap Alam dan Budaya",
+        "B. Pemanfaatan Sumber Daya Alam: Kehutanan, Kelautan, dan Pertambangan",
+        "C. Sumber Daya Manusia: Kualitas Pendidikan, Kesehatan, dan Ketenagakerjaan",
+        "D. Peran Lembaga Sosial dalam Konservasi Alam dan Pengembangan SDM",
+        "E. Posisi Geostrategis Nusantara dalam Jalur Pelayaran dan Perdagangan Dunia"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Sosial untuk SMP Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "1–68",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Menjaga kelestarian sumber daya hutan dan laut nusantara sebagai amanah ekologi generasi masa depan."
+        },
+        {
+          "id": 4,
+          "alasan": "Menyadari posisi geostrategis Indonesia membangkitkan rasa bangga dan cinta tanah air."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        5
+      ],
+      "deskripsi": "Menjaga kelestarian sumber daya hutan dan laut nusantara sebagai amanah ekologi generasi masa depan.",
+      "kata_kunci": [
+        "kondisi geografis",
+        "pelestarian sumber daya alam",
+        "letak geografis",
+        "geologis indonesia",
+        "pengaruhnya terhadap alam"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Tema 02: Kemajemukan Masyarakat Indonesia",
+      "subbab": [
+        "A. Keragaman Aktivitas Ekonomi di Berbagai Bentang Lahan",
+        "B. Mobilitas Sosial: Bentuk, Saluran, dan Faktor Pendorong/Penghambat",
+        "C. Keragaman Kelompok Etnis, Bahasa Daerah, dan Tradisi di Indonesia",
+        "D. Konflik Sosial, Mediasi Damai, dan Integrasi Bangsa dalam Bingkai Kebinekaan"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Sosial untuk SMP Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "69–142",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Merawat integrasi bangsa di tengah kemajemukan adalah wujud nyata komitmen cinta tanah air."
+        },
+        {
+          "id": 5,
+          "alasan": "Menyelesaikan konflik sosial secara damai mencerminkan budaya ukhuwah dan kasih sayang."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        5
+      ],
+      "deskripsi": "Merawat integrasi bangsa di tengah kemajemukan adalah wujud nyata komitmen cinta tanah air.",
+      "kata_kunci": [
+        "kemajemukan masyarakat indonesia",
+        "mobilitas sosial",
+        "bentuk",
+        "saluran",
+        "faktor pendorong penghambat"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 3,
+      "bab": "Tema 03: Nasionalisme dan Jati Diri Bangsa",
+      "subbab": [
+        "A. Penjelajahan Samudra, Monopoli Perdagangan, dan Penjajahan Bangsa Barat",
+        "B. Perlawanan Rakyat dan Tokoh Pahlawan di Berbagai Daerah Melawan Kolonialisme",
+        "C. Tumbuhnya Kesadaran Kebangsaan, Organisasi Pergerakan Nasional, dan Sumpah Pemuda",
+        "D. Pendudukan Jepang, Proklamasi Kemerdekaan, dan Mempertahankan Kedaulatan Bangsa"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Sosial untuk SMP Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "143–216",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Meneladani kegigihan para pahlawan dan ulama pejuang kemerdekaan mengobarkan jiwa patriotisme cinta tanah air."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        2
+      ],
+      "deskripsi": "Meneladani kegigihan para pahlawan dan ulama pejuang kemerdekaan mengobarkan jiwa patriotisme cinta tanah air.",
+      "kata_kunci": [
+        "nasionalisme",
+        "jati diri bangsa",
+        "penjelajahan samudra",
+        "monopoli perdagangan",
+        "penjajahan bangsa barat"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Tema 04: Pembangunan Perekonomian Indonesia",
+      "subbab": [
+        "A. Lembaga Keuangan Bank, Non-Bank, dan Pasar Modal",
+        "B. Perdagangan Antarpulau dan Perdagangan Internasional: Ekspor dan Impor",
+        "C. Dinamika Kependudukan Indonesia dan Tantangan Bonus Demografi",
+        "D. Strategi Mengembangkan Ekonomi Kreatif Berbasis Kearifan Lokal"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Sosial untuk SMP Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "217–288",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Literasi keuangan dan investasi halal membina kecerdasan mengelola rezeki sesuai cinta ilmu."
+        },
+        {
+          "id": 5,
+          "alasan": "Keadilan distribusi ekonomi mencegah monopoli dan kesenjangan sosial di masyarakat."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        6
+      ],
+      "deskripsi": "Literasi keuangan dan investasi halal membina kecerdasan mengelola rezeki sesuai cinta ilmu.",
+      "kata_kunci": [
+        "lembaga keuangan bank",
+        "non-bank",
+        "pasar modal",
+        "perdagangan antarpulau",
+        "perdagangan internasional"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Tema 01: Manusia dan Perubahan",
+      "subbab": [
+        "A. Konsep Perubahan Sosial: Bentuk, Faktor Pendorong, dan Faktor Penghambat",
+        "B. Modernisasi Masyarakat Indonesia di Berbagai Bidang Kehidupan",
+        "C. Globalisasi: Arus Informasi, Konsumerisme, dan Pengaruh Budaya Asing",
+        "D. Penguatan Kearifan Lokal sebagai Benteng Moral dan Identitas Bangsa"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Sosial untuk SMP Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "1–64",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Nalar kritis membantu memilah inovasi modern yang maslahat dari dampak negatif pergaulan bebas global."
+        },
+        {
+          "id": 4,
+          "alasan": "Merawat tradisi dan kearifan lokal memperteguh kebanggaan pada jati diri bangsa."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        3
+      ],
+      "deskripsi": "Nalar kritis membantu memilah inovasi modern yang maslahat dari dampak negatif pergaulan bebas global.",
+      "kata_kunci": [
+        "manusia",
+        "perubahan",
+        "konsep perubahan sosial",
+        "bentuk",
+        "faktor pendorong"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Tema 02: Perkembangan Ekonomi Digital",
+      "subbab": [
+        "A. Evolusi Sistem Pembayaran: Dari Barter, Uang Logam/Kertas, hingga Dompet Digital",
+        "B. Perdagangan Elektronik (E-Commerce) dan Marketplace",
+        "C. Literasi Finansial di Era Digital: Pengelolaan Anggaran dan Waspada Pinjaman Ilegal",
+        "D. Peluang Wirausaha Digital bagi Generasi Muda Madrasah yang Berintegritas"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Sosial untuk SMP Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "65–124",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Menguasai teknologi finansial secara cermat membuktikan keterbukaan terhadap sains dan cinta ilmu."
+        },
+        {
+          "id": 5,
+          "alasan": "Keamanan data pribadi dan kejujuran berbisnis daring mencerminkan adab memuliakan sesama."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        6
+      ],
+      "deskripsi": "Menguasai teknologi finansial secara cermat membuktikan keterbukaan terhadap sains dan cinta ilmu.",
+      "kata_kunci": [
+        "perkembangan ekonomi digital",
+        "evolusi sistem pembayaran",
+        "dari barter",
+        "uang logam kertas",
+        "hingga dompet digital"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 3,
+      "bab": "Tema 03: Tantangan Pembangunan Indonesia",
+      "subbab": [
+        "A. Potensi Geografis dan Keberagaman SDA sebagai Modal Dasar Pembangunan Nasional",
+        "B. Tantangan Pembangunan Berkelanjutan (Sustainable Development Goals / SDGs)",
+        "C. Mengatasi Kesenjangan Antarwilayah: Pemerataan Infrastruktur Indonesia Barat dan Timur",
+        "D. Pemanfaatan Bonus Demografi Menuju Visi Indonesia Emas 2045"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Sosial untuk SMP Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "125–188",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Bertekad mengisi pembangunan nasional demi mewujudkan kejayaan cita-cita kemerdekaan bangsa."
+        },
+        {
+          "id": 3,
+          "alasan": "Pembangunan berwawasan lingkungan menjamin kelangsungan hidup bumi yang lestari."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        5
+      ],
+      "deskripsi": "Bertekad mengisi pembangunan nasional demi mewujudkan kejayaan cita-cita kemerdekaan bangsa.",
+      "kata_kunci": [
+        "tantangan pembangunan indonesia",
+        "potensi geografis",
+        "keberagaman sda",
+        "timur"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Tema 04: Kerja Sama Dunia",
+      "subbab": [
+        "A. Isu-Isu Lingkungan dan Kemanusiaan Global (Perubahan Iklim, Kelaparan, Pengungsi)",
+        "B. Bentuk Kerja Sama Internasional: Bilateral, Regional (ASEAN), dan Multilateral (PBB, G20)",
+        "C. Peran Aktif dan Diplomasi Perdamaian Indonesia di Forum Internasional",
+        "D. Kontribusi Murid Madrasah sebagai Warga Global yang Berakhlak Mulia"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Sosial untuk SMP Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "189–248",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Menyuarakan perdamaian dunia dan keadilan kemanusiaan mewujudkan ukhuwah insaniyyah global."
+        },
+        {
+          "id": 3,
+          "alasan": "Kerja sama global mengatasi perubahan iklim adalah tanggung jawab kolektif menjaga bumi."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        8
+      ],
+      "deskripsi": "Menyuarakan perdamaian dunia dan keadilan kemanusiaan mewujudkan ukhuwah insaniyyah global.",
+      "kata_kunci": [
+        "kerja sama dunia",
+        "isu-isu lingkungan",
+        "kemanusiaan global",
+        "perubahan iklim",
+        "kelaparan"
+      ]
+    }
+  ],
+  "status": "LENGKAP",
+  "catatan": "CP verbatim mengacu pada Keputusan Kepala BSKAP No. 046/H/KR/2025 Lampiran Mata Pelajaran IPS Fase D (2 Elemen terpadu: Pemahaman Konsep dan Keterampilan Proses). Materi per tema dirangkum dari Buku Siswa Kemendikbudristek Kelas VII, VIII, dan IX. Saran integrasi Panca Cinta dan DPL lengkap di setiap tema.",
+  "diverifikasi_oleh": null,
+  "tanggal_verifikasi": null
+}

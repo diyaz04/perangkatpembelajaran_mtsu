@@ -1,26 +1,216 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Inter font dari Google Fonts (via next/font di layout.tsx) */
+
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-inter);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ============================================================
+   TEMA KBC — Putih bersih, aksen emerald-600, border slate-200
+   Tanpa dark mode, tanpa gradien
+   ============================================================ */
+:root {
+  /* Background & foreground */
+  --background: #ffffff;
+  --foreground: #0f172a; /* slate-900 */
+
+  /* Card */
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+
+  /* Popover */
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+
+  /* Primary = emerald-600 */
+  --primary: #059669;
+  --primary-foreground: #ffffff;
+
+  /* Secondary = slate-100 */
+  --secondary: #f1f5f9;
+  --secondary-foreground: #0f172a;
+
+  /* Muted = slate-100 */
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b; /* slate-500 */
+
+  /* Accent = emerald-50 */
+  --accent: #ecfdf5;
+  --accent-foreground: #065f46; /* emerald-800 */
+
+  /* Destructive */
+  --destructive: oklch(0.577 0.245 27.325);
+
+  /* Border & input = slate-200 */
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+
+  /* Ring = emerald-300 */
+  --ring: #6ee7b7;
+
+  /* Radius = 8px */
+  --radius: 0.5rem;
+
+  /* Sidebar */
+  --sidebar: #f8fafc; /* slate-50 */
+  --sidebar-foreground: #0f172a;
+  --sidebar-primary: #059669;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ecfdf5;
+  --sidebar-accent-foreground: #065f46;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #6ee7b7;
+
+  /* Chart */
+  --chart-1: #059669;
+  --chart-2: #0ea5e9;
+  --chart-3: #f59e0b;
+  --chart-4: #8b5cf6;
+  --chart-5: #ef4444;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  html {
+    @apply font-sans;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Utility: emerald focus ring untuk aksesibilitas */
+@layer utilities {
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  }
+}
+
+/* ============================================================
+   PRINT STYLES — Format Cetak A4 / F4 & Watermark DRAF
+   ============================================================ */
+@media print {
+  /* Sembunyikan semua elemen navigasi dan kontrol layar */
+  .print\:hidden,
+  aside,
+  header,
+  nav,
+  [data-sidebar="sidebar"],
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Header tabel berulang di setiap halaman cetak */
+  thead {
+    display: table-header-group !important;
+  }
+
+  tr {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Perbaikan garis batas tabel kanan hilang di Chromium Print to PDF */
+  table {
+    border-collapse: collapse !important;
+    box-sizing: border-box !important;
+  }
+
+  .print-landscape-container table {
+    width: calc(100% - 2px) !important;
+    max-width: calc(100% - 2px) !important;
+    margin-right: auto !important;
+  }
+
+  th:last-child,
+  td:last-child {
+    border-right: 1.5px solid #0f172a !important;
+  }
+  th:first-child,
+  td:first-child {
+    border-left: 1.5px solid #0f172a !important;
+  }
+
+  .page-break {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  .no-break {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Watermark DRAF cetak di setiap halaman */
+  .watermark-draf-print {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) rotate(-45deg) !important;
+    font-size: 7.5rem !important;
+    font-weight: 900 !important;
+    color: rgba(148, 163, 184, 0.22) !important;
+    border: 6px dashed rgba(148, 163, 184, 0.28) !important;
+    padding: 10px 40px !important;
+    border-radius: 20px !important;
+    pointer-events: none !important;
+    z-index: 9999 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.15em !important;
+    user-select: none !important;
+    display: block !important;
+  }
 }

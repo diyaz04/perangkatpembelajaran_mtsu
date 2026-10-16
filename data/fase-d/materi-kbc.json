@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "topik_panca_cinta_id": 1,
+    "topik_panca_cinta_kode": "PC1",
+    "topik_panca_cinta_nama": "Cinta Allah dan Rasul",
+    "judul": "Tauhid Kognitif dan Integrasi Nilai Ketuhanan dalam Sains dan Humaniora",
+    "ringkasan": "Mengaitkan segala fenomena keteraturan alam semesta, keteraturan hukum fisika-matematika, keindahan bahasa, dan ketertiban hukum sosial sebagai ayat kauniyyah yang menuntun pada pengakuan atas keagungan dan kasih sayang Allah SWT, serta meneladani kejujuran dan amanah Rasulullah SAW.",
+    "dalil_hikmah": "QS. Ali 'Imran: 190-191 (Tadabur ciptaan langit dan bumi) & Hadis riwayat Muslim tentang keutamaan ilmu yang bermanfaat.",
+    "aplikasi_pembelajaran": [
+      "Mengawali dan mengakhiri kegiatan saintifik dengan rasa syukur dan kekaguman atas kebesaran Sang Pencipta.",
+      "Menumbuhkan kejujuran ilmiah, ketepatan pengukuran data, dan tanggung jawab amanah dalam setiap penugasan.",
+      "Menemukan keteraturan matematis dan hukum alam sebagai cerminan sifat Maha Teratur (Al-Bari, Al-Hakeem)."
+    ],
+    "sumber": {
+      "dokumen": "Kepdirjen Pendis No. 6077 Tahun 2025 Bab III Modul Integrasi KBC",
+      "halaman": "18-24"
+    }
+  },
+  {
+    "id": 2,
+    "topik_panca_cinta_id": 2,
+    "topik_panca_cinta_kode": "PC2",
+    "topik_panca_cinta_nama": "Cinta Ilmu",
+    "judul": "Pembudayaan Nalar Kritis, Rasa Ingin Tahu, dan Adab Menuntut Ilmu",
+    "ringkasan": "Membangun kecintaan mendalam pada ilmu pengetahuan melalui budaya literasi baca-tulis, riset inkuiri, validasi sumber informasi, tabayun terhadap berita hoaks di era digital, dan menjunjung tinggi adab kesantunan terhadap guru dan sesama pencari ilmu.",
+    "dalil_hikmah": "QS. Al-Mujadilah: 11 (Tingginya derajat orang berilmu) & QS. Al-Hujurat: 6 (Prinsip tabayun memverifikasi kabar).",
+    "aplikasi_pembelajaran": [
+      "Menumbuhkan kemampuan analisis kritis dalam membedakan data faktual dan opini subjektif.",
+      "Melakukan investigasi pemecahan masalah secara matematis dan saintifik dengan metode ilmiah yang valid.",
+      "Menghargai kekayaan literasi, menyusun tulisan ilmiah populer, serta menghindari plagiarisme."
+    ],
+    "sumber": {
+      "dokumen": "Kepdirjen Pendis No. 6077 Tahun 2025 Bab III Modul Integrasi KBC",
+      "halaman": "25-32"
+    }
+  },
+  {
+    "id": 3,
+    "topik_panca_cinta_id": 3,
+    "topik_panca_cinta_kode": "PC3",
+    "topik_panca_cinta_nama": "Cinta Lingkungan",
+    "judul": "Etika Ekologis Islam: Tanggung Jawab Khalifah fil Ardh dan Mitigasi Iklim",
+    "ringkasan": "Menanamkan kesadaran bahwa bumi adalah amanah Allah yang wajib dijaga dari kerusakan. Peserta didik dilatih untuk mengamati dampak aktivitas manusia terhadap biosfer, mempraktikkan konservasi air dan energi, menerapkan pemilahan sampah, serta menginisiasi aksi adaptasi perubahan iklim di madrasah dan pemukiman.",
+    "dalil_hikmah": "QS. Ar-Rum: 41 (Kerusakan di darat dan di laut akibat ulah tangan manusia) & Hadis tentang larangan mubazir.",
+    "aplikasi_pembelajaran": [
+      "Mengintegrasikan kepedulian ekologis dalam pengamatan keanekaragaman hayati dan rantai makanan pada materi IPA.",
+      "Menganalisis keterkaitan kondisi geografis, pemanfaatan sumber daya alam, dan krisis lingkungan pada materi IPS.",
+      "Membuat teks laporan hasil observasi dan kampanye poster pelestarian bumi pada materi Bahasa Indonesia."
+    ],
+    "sumber": {
+      "dokumen": "Kepdirjen Pendis No. 6077 Tahun 2025 Bab III Modul Integrasi KBC",
+      "halaman": "33-41"
+    }
+  },
+  {
+    "id": 4,
+    "topik_panca_cinta_id": 4,
+    "topik_panca_cinta_kode": "PC4",
+    "topik_panca_cinta_nama": "Cinta Tanah Air",
+    "judul": "Karakter Kebangsaan, Moderasi Beragama, dan Penghormatan Kebinekaan",
+    "ringkasan": "Mengukuhkan rasa cinta pada bangsa dan negara (hubbul wathan minal iman), kesetiaan terhadap Pancasila dan UUD 1945, pemahaman sejarah perjuangan para pahlawan dan ulama, serta pembiasaan sikap toleransi, antikekerasan, dan moderasi beragama dalam menyikapi kemajemukan bangsa.",
+    "dalil_hikmah": "QS. Al-Hujurat: 13 (Penciptaan manusia bersuku-suku untuk saling mengenal / lita'arafu) & Piagam Madinah.",
+    "aplikasi_pembelajaran": [
+      "Menelaah sejarah kelahiran Pancasila, konstitusi, dan bentuk NKRI dengan kesadaran sejarah patriotik.",
+      "Mengeksplorasi keberagaman budaya, adat, bahasa nusantara melalui teks deskripsi dan penelusuran sejarah lokal.",
+      "Mengembangkan sikap saling menghargai antarsesama warga negara dalam bingkai persatuan nasional."
+    ],
+    "sumber": {
+      "dokumen": "Kepdirjen Pendis No. 6077 Tahun 2025 Bab III Modul Integrasi KBC",
+      "halaman": "42-50"
+    }
+  },
+  {
+    "id": 5,
+    "topik_panca_cinta_id": 5,
+    "topik_panca_cinta_kode": "PC5",
+    "topik_panca_cinta_nama": "Cinta Diri dan Sesama",
+    "judul": "Ukhuwah Insaniyyah, Penghargaan Martabat Diri, dan Budaya Kasih Sayang Antisesama",
+    "ringkasan": "Mengembangkan pemahaman mendalam tentang martabat diri sebagai hamba Allah yang mulia, menjaga kesehatan jasmani dan mental, menghargai sesama tanpa diskriminasi, menolak segala bentuk perundungan (bullying), serta membiasakan sikap empati, tolong-menolong, dan komunikasi yang santun.",
+    "dalil_hikmah": "QS. Al-Ma'idah: 2 (Tolong-menolong dalam kebajikan dan takwa) & Hadis: 'Tidak beriman salah seorang di antara kalian hingga mencintai saudaranya seperti mencintai dirinya sendiri'.",
+    "aplikasi_pembelajaran": [
+      "Memahami fungsi organ tubuh manusia dan sistem pencernaan/reproduksi dengan komitmen menjaga kesehatan diri (self-care).",
+      "Membangun kerja sama kooperatif dalam menyelesaikan investigasi data statistik, proyek sosial, dan simulasi pemecahan masalah.",
+      "Mempraktikkan etika komunikasi santun dalam berpendapat, menyusun surat, pidato, dan berinteraksi di media digital."
+    ],
+    "sumber": {
+      "dokumen": "Kepdirjen Pendis No. 6077 Tahun 2025 Bab III Modul Integrasi KBC",
+      "halaman": "51-58"
+    }
+  }
+]

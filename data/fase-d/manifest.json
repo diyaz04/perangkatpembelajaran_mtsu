@@ -1,0 +1,137 @@
+{
+  "versi": "2026-2027-v1",
+  "tanggal_kumpul": "2026-10-14",
+  "tahun_ajaran": "2026/2027",
+  "fase": "D",
+  "jenjang": "MTs / SMP (Kelas VII, VIII, IX)",
+  "sesi_selesai": [
+    "Sesi 1 (Pondasi: regulasi, struktur, panca-cinta, materi-kbc, dpl, kko)",
+    "Sesi 2 (PAI & Bahasa Arab: Al-Qur'an Hadis, Akidah Akhlak, Fikih, SKI, Bahasa Arab)",
+    "Sesi 3 (Mapel Umum 1: Pendidikan Pancasila, Bahasa Indonesia, Matematika, IPA, IPS)",
+    "Sesi 4 (Mapel Umum 2 & Mulok: Bahasa Inggris, PJOK, Seni Budaya, Informatika, Prakarya, Bahasa Sunda)"
+  ],
+  "daftar_file": [
+    "data/fase-d/manifest.json",
+    "data/fase-d/regulasi.json",
+    "data/fase-d/struktur-kurikulum.json",
+    "data/fase-d/panca-cinta.json",
+    "data/fase-d/dpl.json",
+    "data/fase-d/materi-kbc.json",
+    "data/fase-d/kko.json",
+    "data/fase-d/mapel/al-quran-hadis.json",
+    "data/fase-d/mapel/akidah-akhlak.json",
+    "data/fase-d/mapel/fikih.json",
+    "data/fase-d/mapel/ski.json",
+    "data/fase-d/mapel/bahasa-arab.json",
+    "data/fase-d/mapel/pendidikan-pancasila.json",
+    "data/fase-d/mapel/bahasa-indonesia.json",
+    "data/fase-d/mapel/matematika.json",
+    "data/fase-d/mapel/ipa.json",
+    "data/fase-d/mapel/ips.json",
+    "data/fase-d/mapel/bahasa-inggris.json",
+    "data/fase-d/mapel/pjok.json",
+    "data/fase-d/mapel/seni-budaya.json",
+    "data/fase-d/mapel/informatika.json",
+    "data/fase-d/mapel/prakarya.json",
+    "data/fase-d/mapel/bahasa-sunda.json",
+    "data/fase-d/LAPORAN.md"
+  ],
+  "status_per_mapel": {
+    "al-quran-hadis": {
+      "nama": "Al-Qur'an Hadis",
+      "status": "LENGKAP",
+      "sesi": 2,
+      "sumber_regulasi": "SK-DIRJEN-PENDIS-9941-2025"
+    },
+    "akidah-akhlak": {
+      "nama": "Akidah Akhlak",
+      "status": "LENGKAP",
+      "sesi": 2,
+      "sumber_regulasi": "SK-DIRJEN-PENDIS-9941-2025"
+    },
+    "fikih": {
+      "nama": "Fikih",
+      "status": "LENGKAP",
+      "sesi": 2,
+      "sumber_regulasi": "SK-DIRJEN-PENDIS-9941-2025"
+    },
+    "ski": {
+      "nama": "Sejarah Kebudayaan Islam (SKI)",
+      "status": "LENGKAP",
+      "sesi": 2,
+      "sumber_regulasi": "SK-DIRJEN-PENDIS-9941-2025"
+    },
+    "bahasa-arab": {
+      "nama": "Bahasa Arab",
+      "status": "LENGKAP",
+      "sesi": 2,
+      "sumber_regulasi": "SK-DIRJEN-PENDIS-9941-2025"
+    },
+    "pendidikan-pancasila": {
+      "nama": "Pendidikan Pancasila",
+      "status": "LENGKAP",
+      "sesi": 3,
+      "sumber_regulasi": "BSKAP-046-2025"
+    },
+    "bahasa-indonesia": {
+      "nama": "Bahasa Indonesia",
+      "status": "LENGKAP",
+      "sesi": 3,
+      "sumber_regulasi": "BSKAP-046-2025"
+    },
+    "matematika": {
+      "nama": "Matematika",
+      "status": "LENGKAP",
+      "sesi": 3,
+      "sumber_regulasi": "BSKAP-046-2025"
+    },
+    "ipa": {
+      "nama": "Ilmu Pengetahuan Alam (IPA)",
+      "status": "LENGKAP",
+      "sesi": 3,
+      "sumber_regulasi": "BSKAP-046-2025"
+    },
+    "ips": {
+      "nama": "Ilmu Pengetahuan Sosial (IPS)",
+      "status": "LENGKAP",
+      "sesi": 3,
+      "sumber_regulasi": "BSKAP-046-2025"
+    },
+    "bahasa-inggris": {
+      "nama": "Bahasa Inggris",
+      "status": "LENGKAP",
+      "sesi": 4,
+      "sumber_regulasi": "BSKAP-046-2025"
+    },
+    "pjok": {
+      "nama": "Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK)",
+      "status": "LENGKAP",
+      "sesi": 4,
+      "sumber_regulasi": "BSKAP-046-2025"
+    },
+    "seni-budaya": {
+      "nama": "Seni Budaya",
+      "status": "LENGKAP",
+      "sesi": 4,
+      "sumber_regulasi": "BSKAP-046-2025"
+    },
+    "informatika": {
+      "nama": "Informatika",
+      "status": "LENGKAP",
+      "sesi": 4,
+      "sumber_regulasi": "BSKAP-046-2025"
+    },
+    "prakarya": {
+      "nama": "Prakarya",
+      "status": "LENGKAP",
+      "sesi": 4,
+      "sumber_regulasi": "BSKAP-046-2025"
+    },
+    "bahasa-sunda": {
+      "nama": "Muatan Lokal (Bahasa Sunda)",
+      "status": "LENGKAP",
+      "sesi": 4,
+      "sumber_regulasi": "PERGUB-JABAR-173-2014"
+    }
+  }
+}

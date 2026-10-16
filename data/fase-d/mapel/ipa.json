@@ -1,0 +1,894 @@
+{
+  "mapel": "Ilmu Pengetahuan Alam (IPA)",
+  "slug": "ipa",
+  "kelompok": "umum",
+  "fase": "D",
+  "sumber_cp": {
+    "regulasi_kode": "BSKAP-046-2025",
+    "halaman": "Halaman 55–70",
+    "url": "https://kurikulum.kemendikdasmen.go.id/unduhan",
+    "diakses": "2026-10-14"
+  },
+  "rasional": "Ilmu Pengetahuan Alam (IPA) adalah kajian saintifik terpadu tentang alam semesta, keteraturan hukum alam (sunnatullah), materi dan perubahannya, makhluk hidup, energi, serta dinamika bumi dan antariksa. Pembelajaran IPA di madrasah memadukan metode ilmiah empiris dengan penghayatan tauhid kognitif, sehingga menumbuhkan nalar kritis, sikap ilmiah, kecintaan pada riset, dan komitmen menjaga keseimbangan ekologis bumi sebagai amanah khalifah fil ardh.",
+  "tujuan_mapel": [
+    "Mengagumi kebesaran, keteraturan, dan kasih sayang Allah SWT melalui pemahaman atas ayat-ayat kauniyyah di alam semesta.",
+    "Menguasai konsep-konsep esensial sains secara holistik dan terpadu untuk menjelaskan fenomena alam dan teknologi.",
+    "Mengembangkan keterampilan proses sains: mengamati, merumuskan masalah, bereksperimen, menganalisis data, dan menarik kesimpulan.",
+    "Menumbuhkan sikap ilmiah yang jujur, teliti, terbuka, objektif, tekun, dan mematuhi keselamatan kerja laboratorium.",
+    "Berpartisipasi aktif dalam mitigasi perubahan iklim, konservasi keanekaragaman hayati nusantara, dan pemanfaatan energi terbarukan."
+  ],
+  "capaian_umum_fase_d": "Pada akhir Fase D, peserta didik memahami konsep-konsep sains yang terpadu mengenai makhluk hidup dan karakteristiknya, zat dan perubahannya, energi, gaya, dan gerak, sistem organisasi kehidupan dan sistem organ, interaksi antar makhluk hidup dan lingkungan serta mitigasi perubahan iklim, pewarisan sifat dan bioteknologi, pengukuran aspek fisis, serta struktur bumi dan tata surya. Peserta didik mampu merencanakan dan melakukan penyelidikan ilmiah secara mandiri dan kolaboratif, memproses dan menganalisis data, menarik kesimpulan, mengevaluasi proses penyelidikan, serta mengomunikasikan hasilnya secara lisan dan tertulis.",
+  "elemen": [
+    {
+      "kode": "E1",
+      "nama": "Pemahaman IPA",
+      "deskripsi_cp": "Peserta didik memahami proses identifikasi makhluk hidup sesuai dengan karakteristiknya; sifat dan karakteristik zat, perubahan fisika dan kimia, serta pemisahan campuran sederhana; sistem organisasi kehidupan, fungsi serta kelainan atau gangguan yang muncul pada sistem organ; interaksi antar makhluk hidup dan lingkungannya dalam merancang upaya-upaya untuk mencegah dan mengatasi perubahan iklim; konsep pewarisan sifat dan penerapan bioteknologi dalam kehidupan sehari-hari; konsep pengukuran terhadap aspek fisis yang mereka temui; gerak, gaya, usaha, pesawat sederhana, dan tekanan; getaran, gelombang, serta pemanfaatannya dalam sistem teknologi; kelistrikan, kemagnetan, dan pemanfaatannya dalam produk teknologi ramah lingkungan; serta posisi relatif bumi-bulan-matahari dalam sistem tata surya dan struktur lapisan bumi untuk merumuskan upaya mitigasi bencana."
+    },
+    {
+      "kode": "E2",
+      "nama": "Keterampilan Proses",
+      "deskripsi_cp": "Peserta didik mampu melakukan keterampilan proses ilmiah yang meliputi: (1) Mengamati: mengamati fenomena dan peristiwa secara cermat dan sistematis menggunakan pancaindra atau alat ukur; (2) Mempertanyakan dan Memprediksi: mengidentifikasi pertanyaan ilmiah dan merumuskan hipotesis yang dapat diuji; (3) Merencanakan dan Melakukan Penyelidikan: merancang langkah-langkah kerja, memilih dan menggunakan instrumen pengukur secara tepat, aman, dan memperhatikan keselamatan kerja; (4) Memproses, Menganalisis Data dan Informasi: menyajikan data dalam bentuk tabel, grafik, atau diagram, serta membandingkan data dengan teori untuk menarik simpulan logis; (5) Mengevaluasi dan Refleksi: mengidentifikasi sumber kekeliruan data, menilai keabsahan metode kerja, dan menyarankan perbaikan; (6) Mengomunikasikan Hasil: menyampaikan simpulan dan laporan penyelidikan secara lisan dan tertulis menggunakan media yang tepat."
+    }
+  ],
+  "materi": [
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Hakikat Ilmu Sains dan Metode Ilmiah",
+      "subbab": [
+        "A. Apa Itu Sains dan Cabang-Cabang Ilmu Sains",
+        "B. Laboratorium IPA dan Aturan Keselamatan Kerja",
+        "C. Merancang Percobaan: Variabel Bebas, Terikat, dan Kontrol",
+        "D. Pengukuran Besaran Pokok dan Besaran Turunan dengan Alat Ukur Baku",
+        "E. Pelaporan Hasil Investigasi Sains Berdasarkan Data Empiris"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Alam untuk SMP Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "1–40",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Menguasai metode ilmiah menumbuhkan kecintaan pada proses mencari kebenaran data dan tradisi cinta ilmu."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        6
+      ],
+      "deskripsi": "Menguasai metode ilmiah menumbuhkan kecintaan pada proses mencari kebenaran data dan tradisi cinta ilmu.",
+      "kata_kunci": [
+        "ilmu sains",
+        "metode ilmiah",
+        "apa itu sains",
+        "cabang-cabang ilmu sains",
+        "laboratorium ipa"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Zat dan Perubahannya",
+      "subbab": [
+        "A. Wujud Zat dan Model Partikel (Padat, Cair, Gas)",
+        "B. Perubahan Wujud Zat dan Kurva Pemanasan",
+        "C. Sifat Fisika dan Sifat Kimia Zat",
+        "D. Perubahan Fisika dan Perubahan Kimia dalam Keseharian",
+        "E. Konsep Kerapatan Zat (Massa Jenis) dan Penentuan Volume Benda Tak Beraturan"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Alam untuk SMP Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "41–78",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Memahami kerapatan materi dan hukum alam meneguhkan keimanan pada ketetapan sunnatullah ciptaan Allah SWT."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        4
+      ],
+      "deskripsi": "Memahami kerapatan materi dan hukum alam meneguhkan keimanan pada ketetapan sunnatullah ciptaan Allah SWT.",
+      "kata_kunci": [
+        "perubahannya",
+        "wujud zat",
+        "model partikel",
+        "padat",
+        "cair"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Suhu, Kalor, dan Pemuaian",
+      "subbab": [
+        "A. Konsep Suhu dan Konversi Skala Termometer (Celsius, Reamur, Fahrenheit, Kelvin)",
+        "B. Kalor dan Perubahan Suhu/Wujud Benda (Asas Black)",
+        "C. Perpindahan Kalor: Konduksi, Konveksi, dan Radiasi",
+        "D. Pemuaian Panjang, Luas, dan Volume Zat Padat, Cair, dan Gas",
+        "E. Penerapan Konsep Termal pada Desain Ventilasi dan Insulator Termos"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Alam untuk SMP Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "79–114",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Eksplorasi kalor mengajarkan pemanfaatan energi panas secara bijak dan efisien demi kemaslahatan hidup."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        4
+      ],
+      "deskripsi": "Eksplorasi kalor mengajarkan pemanfaatan energi panas secara bijak dan efisien demi kemaslahatan hidup.",
+      "kata_kunci": [
+        "suhu",
+        "kalor",
+        "pemuaian",
+        "konsep suhu",
+        "konversi skala termometer"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 4,
+      "bab": "Bab 4: Gerak dan Gaya",
+      "subbab": [
+        "A. Gerak Lurus: Jarak, Perpindahan, Kelajuan, dan Kecepatan",
+        "B. Gerak Lurus Beraturan (GLB) dan Berubah Beraturan (GLBB)",
+        "C. Konsep Gaya, Resultan Gaya, dan Gaya Gesek",
+        "D. Hukum I, II, dan III Newton tentang Gerak",
+        "E. Penerapan Hukum Newton dalam Keselamatan Berkendara dan Sabuk Pengaman"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Alam untuk SMP Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "115–150",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Kaidah aksi-reaksi dan keselamatan gerak menyadarkan perlunya kehati-hatian menjaga keselamatan diri dan pengguna jalan lain."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        7
+      ],
+      "deskripsi": "Kaidah aksi-reaksi dan keselamatan gerak menyadarkan perlunya kehati-hatian menjaga keselamatan diri dan pengguna jalan lain.",
+      "kata_kunci": [
+        "gerak",
+        "gaya",
+        "gerak lurus",
+        "jarak",
+        "perpindahan"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Klasifikasi Makhluk Hidup",
+      "subbab": [
+        "A. Ciri-Ciri Makhluk Hidup (Bernapas, Tumbuh, Berkembang Biak, dll.)",
+        "B. Dasar Klasifikasi Makhluk Hidup dan Sistem Binomial Nomenklatur",
+        "C. Kunci Determinasi dan Kunci Dikotomi",
+        "D. Mengenal Kingdom Makhluk Hidup: Monera, Protista, Fungi, Plantae, Animalia"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Alam untuk SMP Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "151–192",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Kekompleksan dan keanekaragaman flora fauna menjadi tanda keagungan Sang Maha Pencipta (Al-Khaliq)."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        3
+      ],
+      "deskripsi": "Kekompleksan dan keanekaragaman flora fauna menjadi tanda keagungan Sang Maha Pencipta (Al-Khaliq).",
+      "kata_kunci": [
+        "klasifikasi makhluk hidup",
+        "ciri-ciri makhluk hidup",
+        "bernapas",
+        "tumbuh",
+        "berkembang biak"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Ekologi dan Keanekaragaman Hayati Indonesia",
+      "subbab": [
+        "A. Komponen Biotik dan Abiotik dalam Ekosistem",
+        "B. Interaksi Antar-Organisme: Rantai Makanan, Jaring-Jaring, dan Simbiosis",
+        "C. Daur Biogeokimia dan Keseimbangan Ekosistem",
+        "D. Keanekaragaman Hayati Endemik Indonesia dan Ancaman Kepunahan",
+        "E. Konservasi Lingkungan Hidup dan Mitigasi Pencemaran di Sekitar Madrasah"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Alam untuk SMP Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "193–236",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Menjaga keseimbangan ekosistem adalah amanah khalifah fil ardh agar tidak menimbulkan kerusakan di muka bumi."
+        },
+        {
+          "id": 4,
+          "alasan": "Bangga pada megabiodiversitas flora-fauna nusantara yang melimpah."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        5
+      ],
+      "deskripsi": "Menjaga keseimbangan ekosistem adalah amanah khalifah fil ardh agar tidak menimbulkan kerusakan di muka bumi.",
+      "kata_kunci": [
+        "ekologi",
+        "keanekaragaman hayati indonesia",
+        "komponen biotik",
+        "abiotik dalam ekosistem",
+        "interaksi antar-organisme"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 7,
+      "bab": "Bab 7: Bumi dan Tata Surya",
+      "subbab": [
+        "A. Sistem Tata Surya dan Karakteristik Planet",
+        "B. Gerak Rotasi, Revolusi Bumi, dan Dampaknya (Pergantian Musim dan Waktu)",
+        "C. Gerak Bulan, Fase Bulan, Pasang Surut Air Laut, dan Gerhana",
+        "D. Struktur Lapisan Bumi: Kerak, Mantel, dan Inti Bumi",
+        "E. Mitigasi Risiko Bencana Gempa Bumi dan Gunung Berapi"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Alam untuk SMP Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "237–274",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Tadabur peredaran matahari dan bulan pada porosnya menumbuhkan takwa dan kekaguman atas firman Allah dalam Al-Qur'an."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        3
+      ],
+      "deskripsi": "Tadabur peredaran matahari dan bulan pada porosnya menumbuhkan takwa dan kekaguman atas firman Allah dalam Al-Qur'an.",
+      "kata_kunci": [
+        "bumi",
+        "tata surya",
+        "sistem tata surya",
+        "karakteristik planet",
+        "gerak rotasi"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Pengenalan Sel",
+      "subbab": [
+        "A. Penemuan Sel dan Penggunaan Mikroskop Cahaya",
+        "B. Struktur dan Fungsi Organel Sel Tumbuhan dan Sel Hewan",
+        "C. Spesialisasi Sel dan Diferensiasi Jaringan",
+        "D. Tingkat Organisasi Kehidupan: Sel, Jaringan, Organ, Sistem Organ, Organisme"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Alam untuk SMP Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "1–34",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Kecanggihan unit terkecil sel yang menyusun kehidupan menyingkap kesempurnaan ciptaan Sang Maha Perancang."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        3
+      ],
+      "deskripsi": "Kecanggihan unit terkecil sel yang menyusun kehidupan menyingkap kesempurnaan ciptaan Sang Maha Perancang.",
+      "kata_kunci": [
+        "pengenalan sel",
+        "penemuan sel",
+        "penggunaan mikroskop cahaya",
+        "struktur",
+        "organel sel tumbuhan"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Struktur dan Fungsi Tubuh Makhluk Hidup",
+      "subbab": [
+        "A. Zat Gizi Makanan, Uji Makanan, dan Sistem Pencernaan Manusia",
+        "B. Komponen Darah, Jantung, dan Sistem Peredaran Darah",
+        "C. Organ Pernapasan, Mekanisme Pertukaran Gas, dan Bahaya Merokok/Polusi",
+        "D. Organ Ekskresi (Ginjal, Kulit, Paru-paru, Hati) dan Menjaga Pola Hidup Sehat"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Alam untuk SMP Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "35–88",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Menjaga kesehatan organ tubuh dengan asupan bergizi halal-thayyib adalah bentuk rasa syukur dan cinta pada diri sendiri."
+        }
+      ],
+      "saran_dpl": [
+        6,
+        7
+      ],
+      "deskripsi": "Menjaga kesehatan organ tubuh dengan asupan bergizi halal-thayyib adalah bentuk rasa syukur dan cinta pada diri sendiri.",
+      "kata_kunci": [
+        "struktur",
+        "tubuh makhluk hidup",
+        "zat gizi makanan",
+        "uji makanan",
+        "sistem pencernaan manusia"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Usaha, Energi, dan Pesawat Sederhana",
+      "subbab": [
+        "A. Konsep Usaha dan Hubungannya dengan Perpindahan",
+        "B. Bentuk Energi, Perubahan Energi, dan Hukum Kekekalan Energi",
+        "C. Daya dan Efisiensi Energi",
+        "D. Jenis-Jenis Pesawat Sederhana: Tuas, Bidang Miring, Katrol, dan Roda Berporos",
+        "E. Prinsip Pesawat Sederhana pada Sistem Rangka dan Otot Manusia"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Alam untuk SMP Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "89–130",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Memanfaatkan prinsip mekanika pesawat sederhana melatih daya cipta teknologi untuk meringankan beban sesama."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        4
+      ],
+      "deskripsi": "Memanfaatkan prinsip mekanika pesawat sederhana melatih daya cipta teknologi untuk meringankan beban sesama.",
+      "kata_kunci": [
+        "usaha",
+        "energi",
+        "pesawat sederhana",
+        "konsep usaha",
+        "hubungannya dengan perpindahan"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Bab 4: Getaran, Gelombang, dan Cahaya",
+      "subbab": [
+        "A. Karakteristik Getaran: Frekuensi, Periode, dan Amplitudo",
+        "B. Gelombang Transversal, Longitudinal, dan Cepat Rambat Gelombang",
+        "C. Gelombang Bunyi, Resonansi, dan Struktur Indera Pendengaran (Telinga)",
+        "D. Sifat-Sifat Cahaya, Pembiasan, Cermin, dan Lensa",
+        "E. Struktur Indera Penglihatan (Mata) dan Alat-Alat Optik (Kamera, Lup, Mikroskop)"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Alam untuk SMP Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "131–180",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Nikmat mata untuk melihat cahaya dan telinga mendengar bunyi membangkitkan rasa syukur mendalam pada Sang Pemberi Anugerah."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        3
+      ],
+      "deskripsi": "Nikmat mata untuk melihat cahaya dan telinga mendengar bunyi membangkitkan rasa syukur mendalam pada Sang Pemberi Anugerah.",
+      "kata_kunci": [
+        "getaran",
+        "gelombang",
+        "cahaya",
+        "karakteristik getaran",
+        "frekuensi"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Unsur, Senyawa, dan Campuran",
+      "subbab": [
+        "A. Konsep Unsur Logam dan Non-logam",
+        "B. Pembentukan Senyawa Kimia dan Rumus Molekul Sederhana",
+        "C. Campuran Homogen (Larutan) dan Campuran Heterogen (Suspensi, Koloid)",
+        "D. Konsep Asam, Basa, Garam, dan Indikator Alami",
+        "E. Metode Pemisahan Campuran: Filtrasi, Evaporasi, Distilasi, dan Kromatografi"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Alam untuk SMP Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "181–224",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Teknik pemisahan zat menumbuhkan keterampilan laboratorium yang presisi dan kehausan akan ilmu terapan."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        4
+      ],
+      "deskripsi": "Teknik pemisahan zat menumbuhkan keterampilan laboratorium yang presisi dan kehausan akan ilmu terapan.",
+      "kata_kunci": [
+        "unsur",
+        "senyawa",
+        "campuran",
+        "konsep unsur logam",
+        "non-logam"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Struktur Bumi dan Perkembangannya",
+      "subbab": [
+        "A. Litosfer, Hidrosfer, dan Atmosfer Bumi",
+        "B. Teori Lempeng Tektonik dan Pergerakannya di Kepulauan Indonesia",
+        "C. Gempa Bumi (Seismik) dan Potensi Tsunami",
+        "D. Vulkanisme dan Manfaat Tanah Subur Sekitar Gunung Api",
+        "E. Manajemen Mitigasi Bencana dan Sikap Tanggap Darurat Bencana Madrasah"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Alam untuk SMP Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "225–266",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Memahami dinamika bumi Indonesia membangun kepedulian lingkungan dan ketangguhan mitigasi bencana."
+        },
+        {
+          "id": 5,
+          "alasan": "Simulasi evakuasi bencana melatih jiwa tolong-menolong dan peduli keselamatan sesama manusia."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        5
+      ],
+      "deskripsi": "Memahami dinamika bumi Indonesia membangun kepedulian lingkungan dan ketangguhan mitigasi bencana.",
+      "kata_kunci": [
+        "struktur bumi",
+        "perkembangannya",
+        "litosfer",
+        "hidrosfer",
+        "atmosfer bumi"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Pertumbuhan dan Perkembangan",
+      "subbab": [
+        "A. Konsep Pertumbuhan dan Perkembangan pada Tumbuhan",
+        "B. Metamorfosis dan Perkembangan pada Hewan",
+        "C. Tahap Tumbuh Kembang Manusia: Balita, Remaja (Pubertas), Dewasa, Lansia",
+        "D. Faktor Internal (Gen, Hormon) dan Faktor Eksternal (Nutrisi, Lingkungan)"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Alam untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "1–40",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Menghadapi masa pubertas dengan bijak dan menjaga pergaulan sesuai adab moral dan kesehatan jasmani."
+        }
+      ],
+      "saran_dpl": [
+        6,
+        7
+      ],
+      "deskripsi": "Menghadapi masa pubertas dengan bijak dan menjaga pergaulan sesuai adab moral dan kesehatan jasmani.",
+      "kata_kunci": [
+        "pertumbuhan",
+        "perkembangan",
+        "konsep pertumbuhan",
+        "perkembangan pada tumbuhan",
+        "metamorfosis"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Sistem Koordinasi, Reproduksi, dan Homeostasis Manusia",
+      "subbab": [
+        "A. Sistem Saraf: Neuron, Otak, Sumsum Tulang Belakang, dan Gerak Refleks",
+        "B. Sistem Endokrin (Hormon) dan Pengaruhnya terhadap Emosi serta Tubuh",
+        "C. Sistem Reproduksi Pria dan Wanita serta Kesehatan Organ Reproduksi",
+        "D. Mekanisme Homeostasis: Pengaturan Suhu Tubuh dan Keseimbangan Cairan"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Alam untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "41–86",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Keseimbangan otomatis sistem saraf dan hormon (homeostasis) adalah manifestasi keadilan dan kasih sayang Allah SWT."
+        },
+        {
+          "id": 5,
+          "alasan": "Menjaga kehormatan organ reproduksi dan menghindari pergaulan bebas merupakan komitmen cinta diri dan moral agama."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        7
+      ],
+      "deskripsi": "Keseimbangan otomatis sistem saraf dan hormon (homeostasis) adalah manifestasi keadilan dan kasih sayang Allah SWT.",
+      "kata_kunci": [
+        "sistem koordinasi",
+        "reproduksi",
+        "homeostasis manusia",
+        "sistem saraf",
+        "neuron"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Tekanan",
+      "subbab": [
+        "A. Tekanan Zat Padat dan Luas Bidang Sentuh",
+        "B. Tekanan Hidrostatis pada Zat Cair",
+        "C. Hukum Pascal dan Penerapannya pada Pompa Hidrolik",
+        "D. Hukum Archimedes (Terapung, Melayang, Tenggelam) dan Kapal Selam",
+        "E. Tekanan Gas, Barometer, dan Transportasi Air/Nutrisi pada Tumbuhan"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Alam untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "87–128",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Membuktikan hukum fluida mekanika mempertajam logika deduktif dan antusiasme cinta sains."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        4
+      ],
+      "deskripsi": "Membuktikan hukum fluida mekanika mempertajam logika deduktif dan antusiasme cinta sains.",
+      "kata_kunci": [
+        "tekanan",
+        "tekanan zat padat",
+        "luas bidang sentuh",
+        "hukum pascal",
+        "hukum archimedes"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 4,
+      "bab": "Bab 4: Listrik, Magnet, dan Sumber Energi Alternatif",
+      "subbab": [
+        "A. Listrik Statis, Muatan Listrik, dan Hukum Coulomb",
+        "B. Arus Listrik Dinamis, Rangkaian Seri-Paralel, dan Hukum Ohm",
+        "C. Gaya Magnet, Medan Magnet, dan Induksi Elektromagnetik (Generator/Trafo)",
+        "D. Sumber Energi Terbarukan: Tenaga Surya, Angin, Air, dan Biomassa",
+        "E. Perilaku Hemat Listrik dan Teknologi Ramah Lingkungan"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Alam untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "129–180",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Mengembangkan energi alternatif ramah lingkungan membuktikan komitmen menjaga kelestarian bumi dan hemat energi."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        4
+      ],
+      "deskripsi": "Mengembangkan energi alternatif ramah lingkungan membuktikan komitmen menjaga kelestarian bumi dan hemat energi.",
+      "kata_kunci": [
+        "listrik",
+        "magnet",
+        "sumber energi alternatif",
+        "listrik statis",
+        "muatan listrik"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Reaksi-Reaksi Kimia dan Dinamikanya",
+      "subbab": [
+        "A. Ciri dan Indikator Terjadinya Reaksi Kimia",
+        "B. Persamaan Reaksi Kimia dan Penyetaraannya Sederhana",
+        "C. Reaksi Pembakaran, Pengkaratan, dan Penguraian",
+        "D. Reaksi Endoterm dan Eksoterm dalam Kehidupan",
+        "E. Dampak Limbah Kimia Rumah Tangga dan Industri terhadap Kualitas Air"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Alam untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "181–218",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Memahami dampak polusi kimia melatih kepedulian mengelola limbah rumah tangga agar tidak merusak ekosistem sungai."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        5
+      ],
+      "deskripsi": "Memahami dampak polusi kimia melatih kepedulian mengelola limbah rumah tangga agar tidak merusak ekosistem sungai.",
+      "kata_kunci": [
+        "reaksi-reaksi kimia",
+        "dinamikanya",
+        "ciri",
+        "persamaan reaksi kimia",
+        "penyetaraannya sederhana"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Pewarisan Sifat dan Bioteknologi",
+      "subbab": [
+        "A. Materi Genetik: Kromosom, DNA, dan Gen",
+        "B. Hukum Mendel tentang Persilangan Monohibrid dan Dihibrid",
+        "C. Pewarisan Sifat Fisik dan Kelainan Genetik pada Manusia",
+        "D. Bioteknologi Konvensional: Fermentasi Pembuatan Tempe, Yogurt, dan Roti",
+        "E. Bioteknologi Modern dan Etika Sains dalam Rekayasa Genetika"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Alam untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "219–262",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Kerumitan kode genetik DNA membuktikan rancangan cerdas Sang Pencipta yang melarang pengubahan fitrah semena-mena."
+        },
+        {
+          "id": 2,
+          "alasan": "Praktik bioteknologi fermentasi makanan tradisional menggabungkan kearifan lokal dan sains terapan."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        4
+      ],
+      "deskripsi": "Kerumitan kode genetik DNA membuktikan rancangan cerdas Sang Pencipta yang melarang pengubahan fitrah semena-mena.",
+      "kata_kunci": [
+        "pewarisan sifat",
+        "bioteknologi",
+        "materi genetik",
+        "kromosom",
+        "dihibrid"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 7,
+      "bab": "Bab 7: Isu-Isu Lingkungan dan Pembangunan Berkelanjutan",
+      "subbab": [
+        "A. Pemanasan Global dan Efek Rumah Kaca",
+        "B. Krisis Sampah Plastik dan Pencemaran Mikroplastik di Laut",
+        "C. Hilangnya Keanekaragaman Hayati dan Deforestasi",
+        "D. Konsep Pembangunan Berkelanjutan (SDGs) dan Ekonomi Sirkular",
+        "E. Aksi Kolaboratif Pelajar Madrasah Peduli Iklim dan Zero Waste"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Ilmu Pengetahuan Alam untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "263–304",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Aksi penanaman pohon dan pengurangan sampah plastik di madrasah mewujudkan pilar cinta lingkungan secara nyata."
+        },
+        {
+          "id": 4,
+          "alasan": "Melindungi kelestarian tanah dan air nusantara demi keberlangsungan masa depan bangsa."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        5
+      ],
+      "deskripsi": "Aksi penanaman pohon dan pengurangan sampah plastik di madrasah mewujudkan pilar cinta lingkungan secara nyata.",
+      "kata_kunci": [
+        "isu-isu lingkungan",
+        "pembangunan berkelanjutan",
+        "pemanasan global",
+        "efek rumah kaca",
+        "krisis sampah plastik"
+      ]
+    }
+  ],
+  "status": "LENGKAP",
+  "catatan": "CP verbatim mengacu pada Keputusan Kepala BSKAP No. 046/H/KR/2025 Lampiran Mata Pelajaran IPA Fase D (2 Elemen terpadu: Pemahaman IPA dan Keterampilan Proses). Materi per bab dirangkum dari Buku Siswa Kemendikbudristek Kelas VII, VIII, dan IX. Saran integrasi Panca Cinta dan DPL lengkap di setiap bab.",
+  "diverifikasi_oleh": null,
+  "tanggal_verifikasi": null
+}

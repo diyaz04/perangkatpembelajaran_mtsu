@@ -1,0 +1,794 @@
+{
+  "mapel": "Sejarah Kebudayaan Islam (SKI)",
+  "slug": "ski",
+  "kelompok": "PAI",
+  "fase": "D",
+  "sumber_cp": {
+    "regulasi_kode": "SK-DIRJEN-PENDIS-9941-2025",
+    "halaman": "Halaman 57–72",
+    "url": "https://pendis.kemenag.go.id/kurikulum",
+    "diakses": "2026-10-14"
+  },
+  "rasional": "Sejarah Kebudayaan Islam (SKI) merupakan rekaman kronologis perjuangan umat Islam dalam membangun peradaban adiluhung yang rahmatan lil 'alamin. Pembelajaran SKI di madrasah bukan sekadar mengingat rentetan tahun dan peristiwa, melainkan mengambil ibrah (pelajaran hikmah) dari dakwah Rasulullah SAW, keteladanan Khulafaur Rasyidin, kecemerlangan intelektual Daulah Umayyah dan Abbasiyah, kepahlawanan Salahuddin Al-Ayyubi, serta kearifan dakwah Walisanga dan pesantren di Nusantara. Melalui SKI, murid menumbuhkan rasa bangga pada peradaban Islam, memperteguh cinta tanah air, merawat kebinekaan, serta mengembangkan wawasan keilmuan yang inklusif.",
+  "tujuan_mapel": [
+    "Memahami sejarah perjuangan dakwah Nabi Muhammad SAW di Makkah dan Madinah sebagai teladan pembawa rahmat bagi seluruh alam.",
+    "Menganalisis sistem kepemimpinan demokratis Khulafaur Rasyidin dalam memelihara keutuhan umat dan keadilan sosial.",
+    "Mengapresiasi kejayaan sains dan kebudayaan masa Daulah Umayyah, Abbasiyah, dan Ayyubiyah serta kontribusi para ilmuwan muslim dunia.",
+    "Meneladani sikap ksatria, kesederhanaan, dan toleransi para tokoh peradaban Islam (seperti Umar bin Abdul Aziz dan Salahuddin Al-Ayyubi).",
+    "Menganalisis sejarah masuknya Islam di Nusantara, peran kultural Walisanga, serta kontribusi pesantren dalam membela kemerdekaan Indonesia.",
+    "Menumbuhkan komitmen moderasi beragama (wasathiyyah) dan rasa cinta tanah air (hubbul wathan) berlandaskan kearifan sejarah bangsa."
+  ],
+  "capaian_umum_fase_d": "Pada akhir Fase D, peserta didik mampu menganalisis misi dan strategi dakwah Rasulullah SAW di Makkah dan Madinah sebagai rahmat bagi seluruh alam serta kepemimpinan Khulafaur Rasyidin; menganalisis sejarah berdirinya dan perkembangan peradaban serta ilmu pengetahuan pada masa Daulah Umayyah di Damaskus, Daulah Abbasiyah di Baghdad, serta Daulah Ayyubiyah; meneladani kepemimpinan Umar bin Abdul Aziz dan Salahuddin Al-Ayyubi; serta menganalisis sejarah penyebaran Islam di Nusantara, peran Walisanga, pesantren, kearifan lokal, dan biografi tokoh pendiri organisasi Islam di Indonesia.",
+  "elemen": [
+    {
+      "kode": "E1",
+      "nama": "Periode Rasulullah SAW",
+      "deskripsi_cp": "Peserta didik mampu menganalisis kondisi masyarakat Arab pra-Islam, misi dan strategi dakwah Rasulullah SAW di Makkah dan Madinah sebagai rahmat bagi seluruh alam, peristiwa hijrah, serta pembentukan Piagam Madinah sebagai landasan kerukunan hidup berbangsa dan bernegara."
+    },
+    {
+      "kode": "E2",
+      "nama": "Periode Khulafaur Rasyidin",
+      "deskripsi_cp": "Peserta didik mampu menganalisis proses pemilihan, prestasi kepemimpinan, dan kebijakan pemerintahan Abu Bakar ash-Shiddiq, Umar bin al-Khattab, Usman bin Affan, dan Ali bin Abi Thalib dalam membangun tatanan sosial, hukum, dan perluasan dakwah Islam."
+    },
+    {
+      "kode": "E3",
+      "nama": "Periode Klasik (Daulah Umayyah dan Abbasiyah)",
+      "deskripsi_cp": "Peserta didik mampu menganalisis sejarah berdirinya Daulah Umayyah di Damaskus dan Daulah Abbasiyah di Baghdad, kemajuan peradaban di bidang pemerintahan, militer, ekonomi, dan arsitektur, kepemimpinan Khalifah Umar bin Abdul Aziz, serta kontribusi emas para ilmuwan muslim dan ulama dalam memajukan ilmu pengetahuan dan teknologi dunia."
+    },
+    {
+      "kode": "E4",
+      "nama": "Periode Pertengahan (Daulah Ayyubiyah dan Mamluk)",
+      "deskripsi_cp": "Peserta didik mampu menganalisis sejarah berdirinya Daulah Ayyubiyah, kepemimpinan dan sikap toleransi Salahuddin al-Ayyubi dalam Perang Salib, kemajuan pendidikan dan kebudayaan Islam di Mesir dan Syam, serta kontribusi Daulah Mamluk."
+    },
+    {
+      "kode": "E5",
+      "nama": "Periode Islam di Nusantara",
+      "deskripsi_cp": "Peserta didik mampu menganalisis alur sejarah masuknya Islam ke Indonesia, peran kerajaan-kerajaan Islam, dakwah kultural Walisanga, peran pesantren dalam transmisi keilmuan dan perjuangan kemerdekaan, akulturasi nilai Islam dengan kearifan lokal nusantara, serta keteladanan para ulama dan tokoh pendiri organisasi keagamaan di Indonesia."
+    }
+  ],
+  "materi": [
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Nabi Muhammad Saw. Sebagai Rahmat Bagi Seluruh Alam Semesta",
+      "subbab": [
+        "A. Kondisi Sosial, Agama, dan Politik Masyarakat Arab Jahiliyyah Pra-Islam",
+        "B. Riwayat Kelahiran, Masa Muda, dan Pengangkatan Muhammad SAW Menjadi Rasul",
+        "C. Strategi Dakwah di Makkah: Tahap Rahasia (Sirriyah) dan Terang-Terangan (Jahriyyah)",
+        "D. Respon Kaum Quraisy dan Kunci Ketabahan Dakwah Menghadapi Pemboikotan"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Sejarah Kebudayaan Islam MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "1–26",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Meneladani keagungan akhlak Rasulullah SAW membakar mahabbah cinta sejati kepada Nabi."
+        },
+        {
+          "id": 5,
+          "alasan": "Dakwah Rasulullah yang penuh kasih sayang meruntuhkan kekerasan tradisi jahiliyah."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        2
+      ],
+      "deskripsi": "Meneladani keagungan akhlak Rasulullah SAW membakar mahabbah cinta sejati kepada Nabi.",
+      "kata_kunci": [
+        "kondisi sosial",
+        "agama",
+        "riwayat kelahiran",
+        "masa muda",
+        "strategi dakwah di makkah"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Perjuangan Nabi Muhammad Saw. Melakukan Perubahan di Madinah",
+      "subbab": [
+        "A. Kondisi Kota Yatsrib Sebelum Kedatangan Kaum Muslimin",
+        "B. Peristiwa Hijrah Nabi Muhammad SAW dan Makna Historisnya",
+        "C. Membangun Peradaban Madinah: Mendirikan Masjid Nabawi dan Mempersaudarakan Muhajirin-Anshar",
+        "D. Piagam Madinah sebagai Konsensus Konstitusi Pertama Perlindungan Hak Asasi dan Kebinekaan"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Sejarah Kebudayaan Islam MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "27–56",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Piagam Madinah adalah rujukan luhur kerukunan lintas agama dan cinta tanah air."
+        },
+        {
+          "id": 5,
+          "alasan": "Persaudaraan kaum Muhajirin dan Anshar mencontohkan cinta sesama yang tulus tanpa pamrih."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        5
+      ],
+      "deskripsi": "Piagam Madinah adalah rujukan luhur kerukunan lintas agama dan cinta tanah air.",
+      "kata_kunci": [
+        "makna historisnya",
+        "membangun peradaban madinah",
+        "mendirikan masjid nabawi",
+        "piagam madinah",
+        "kebinekaan"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Khulafaur Rasyidin Penerus Perjuangan Rasulullah",
+      "subbab": [
+        "A. Proses Musyawarah Pemilihan dan Prestasi Khalifah Abu Bakar ash-Shiddiq",
+        "B. Kepemimpinan Umar bin al-Khattab: Penataan Administrasi Negara dan Keadilan Hukum",
+        "C. Khalifah Usman bin Affan: Kodifikasi Al-Qur'an dan Kedermawanan Armada Laut",
+        "D. Khalifah Ali bin Abi Thalib: Ketegasan Prinsip Keadilan dan Keluasan Ilmu Pengetahuan"
+      ],
+      "elemen_kode": [
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Sejarah Kebudayaan Islam MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "57–90",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Kepemimpinan Khulafaur Rasyidin mengutamakan integritas pelayanan publik dan kesetiaan pada negara."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        2
+      ],
+      "deskripsi": "Kepemimpinan Khulafaur Rasyidin mengutamakan integritas pelayanan publik dan kesetiaan pada negara.",
+      "kata_kunci": [
+        "proses musyawarah pemilihan",
+        "penataan administrasi negara",
+        "keadilan hukum",
+        "khalifah usman bin affan",
+        "kodifikasi al-qur'an"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Bab 4: Daulah Umayyah Membangun Peradaban Islam",
+      "subbab": [
+        "A. Sejarah Berdirinya Daulah Umayyah di Damaskus oleh Muawiyah bin Abi Sufyan",
+        "B. Silsilah dan Khalifah-Khalifah Berpengaruh Daulah Umayyah",
+        "C. Perkembangan Peradaban: Ilmu Agama, Kodifikasi Hadis, Bahasa, dan Arsitektur Masjid Damaskus",
+        "D. Kemunduran dan Keruntuhan Daulah Umayyah sebagai Ibrah Sejarah"
+      ],
+      "elemen_kode": [
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Sejarah Kebudayaan Islam MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "91–124",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Kodifikasi hadis dan pembangunan pusat peradaban menunjukkan kegigihan cinta ilmu."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        4
+      ],
+      "deskripsi": "Kodifikasi hadis dan pembangunan pusat peradaban menunjukkan kegigihan cinta ilmu.",
+      "kata_kunci": [
+        "daulah umayyah",
+        "peradaban islam",
+        "silsilah",
+        "perkembangan peradaban",
+        "ilmu agama"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Gaya Kepemimpinan Umar bin Abdul Aziz",
+      "subbab": [
+        "A. Biografi Singkat dan Latar Belakang Kehidupan Khalifah Umar bin Abdul Aziz",
+        "B. Kebijakan Anti-Korupsi, Mengembalikan Harta Dinasti ke Baitul Mal, dan Hidup Sederhana",
+        "C. Menghapus Diskriminasi Kaum Mawali dan Membangun Kesejahteraan Rakyat yang Adil",
+        "D. Relevansi Nilai Integritas Kepemimpinan Umar bin Abdul Aziz di Era Kontemporer"
+      ],
+      "elemen_kode": [
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Sejarah Kebudayaan Islam MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "125–154",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Ketakwaan dan takutnya Khalifah Umar kepada hisab Allah adalah teladan cinta Allah yang hakiki."
+        },
+        {
+          "id": 5,
+          "alasan": "Kepedulian beliau pada fakir miskin membuktikan cinta dan kasih sayang kepada rakyatnya."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        2
+      ],
+      "deskripsi": "Ketakwaan dan takutnya Khalifah Umar kepada hisab Allah adalah teladan cinta Allah yang hakiki.",
+      "kata_kunci": [
+        "biografi singkat",
+        "kebijakan anti-korupsi",
+        "hidup sederhana"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Daulah Abbasiyah Membangun Peradaban Islam",
+      "subbab": [
+        "A. Sejarah Berdirinya Daulah Abbasiyah Menggantikan Dinasti Umayyah",
+        "B. Tokoh Pendiri dan Para Khalifah Terkenal: Abu Abbas, Al-Manshur, Harun Ar-Rasyid, Al-Ma'mun",
+        "C. Kota Baghdad sebagai Pusat Peradaban dan Kemakmuran Dunia",
+        "D. Kemajuan di Bidang Militer, Administrasi Pemerintahan, dan Perdagangan Internasional"
+      ],
+      "elemen_kode": [
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Sejarah Kebudayaan Islam MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "1–28",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Masa keemasan Abbasiyah (The Golden Age) membuktikan kejayaan Islam dibangun di atas cinta ilmu."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        4
+      ],
+      "deskripsi": "Masa keemasan Abbasiyah (The Golden Age) membuktikan kejayaan Islam dibangun di atas cinta ilmu.",
+      "kata_kunci": [
+        "daulah abbasiyah",
+        "peradaban islam",
+        "berdirinya daulah abbasiyah",
+        "dinasti umayyah",
+        "tokoh pendiri"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Kejayaan Intelektual Ilmuwan dan Ulama Daulah Abbasiyah",
+      "subbab": [
+        "A. Baitul Hikmah (Perpustakaan & Pusat Penerjemahan Naskah Dunia)",
+        "B. Tokoh Ilmuwan Muslim: Ibnu Sina (Kedokteran), Al-Khawarizmi (Aljabar), Al-Kindi (Filsafat), Jabir bin Hayyan (Kimia)",
+        "C. Tokoh Ulama Mazhab Fikih (Hanafi, Maliki, Syafi'i, Hambali) dan Ulama Hadis (Kutubus Sittah)",
+        "D. Integrasi Keilmuan Agama dan Sains Eksakta yang Memantik Renaisans Dunia"
+      ],
+      "elemen_kode": [
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Sejarah Kebudayaan Islam MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "29–64",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Ketekunan riset Ibnu Sina dan Al-Khawarizmi membangkitkan inspirasi tradisi cinta ilmu dan inovasi sains."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        4
+      ],
+      "deskripsi": "Ketekunan riset Ibnu Sina dan Al-Khawarizmi membangkitkan inspirasi tradisi cinta ilmu dan inovasi sains.",
+      "kata_kunci": [
+        "kejayaan intelektual ilmuwan",
+        "ulama daulah abbasiyah",
+        "baitul hikmah",
+        "tokoh ilmuwan muslim",
+        "ibnu sina"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Meneladani Semangat Keilmuan Para Cendekiawan Muslim",
+      "subbab": [
+        "A. Faktor Pendorong Kemajuan Riset dan Budaya Membaca pada Masa Klasik",
+        "B. Menghargai Penerjemahan Karya Asing dengan Nilai-Nilai Kritis (Filterisasi)",
+        "C. Menjaga Integritas Akademik dan Adab Keilmuan Para Fuqaha",
+        "D. Menumbuhkan Kembali Gairah Riset dan Budaya Literasi di Madrasah"
+      ],
+      "elemen_kode": [
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Sejarah Kebudayaan Islam MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "65–90",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Mengadopsi tradisi ilmiah Baitul Hikmah untuk membangkitkan etos cinta ilmu generasi muda madrasah."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        6
+      ],
+      "deskripsi": "Mengadopsi tradisi ilmiah Baitul Hikmah untuk membangkitkan etos cinta ilmu generasi muda madrasah.",
+      "kata_kunci": [
+        "filterisasi",
+        "integritas akademik",
+        "adab keilmuan para fuqaha",
+        "budaya literasi di madrasah"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Bab 4: Perkembangan Peradaban Islam Masa Daulah Ayyubiyah",
+      "subbab": [
+        "A. Sejarah Berdirinya Daulah Ayyubiyah di Mesir oleh Shalahuddin Al-Ayyubi",
+        "B. Para Penguasa Besar Dinasti Ayyubiyah dan Kebijakan Pendidikannya",
+        "C. Pembangunan Benteng Qal'atul Jabal dan Madrasah-Madrasah Sunni",
+        "D. Kemajuan Peradaban di Bidang Kesehatan, Pertanian, dan Perdagangan"
+      ],
+      "elemen_kode": [
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Sejarah Kebudayaan Islam MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "91–118",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Mendirikan madrasah dan rumah sakit gratis bagi rakyat adalah wujud cinta ilmu dan peradaban."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        4
+      ],
+      "deskripsi": "Mendirikan madrasah dan rumah sakit gratis bagi rakyat adalah wujud cinta ilmu dan peradaban.",
+      "kata_kunci": [
+        "kebijakan pendidikannya",
+        "madrasah-madrasah sunni",
+        "pertanian",
+        "perdagangan"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Shalahuddin Al-Ayyubi Pahlawan Ksatria Berhati Mulia",
+      "subbab": [
+        "A. Riwayat Hidup, Kepribadian, dan Karakter Ksatria Shalahuddin Al-Ayyubi",
+        "B. Pembebasan Baitul Maqdis (Yerusalem) dalam Perang Salib",
+        "C. Sikap Toleransi, Pengampunan, dan Melindungi Warga Non-Muslim di Yerusalem",
+        "D. Meneladani Nilai Kemanusiaan dan Keperwiraan Shalahuddin di Era Modern"
+      ],
+      "elemen_kode": [
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Sejarah Kebudayaan Islam MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "119–146",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Kepahlawanan membela tanah air dengan tetap menjunjung etika perang dan perdamaian."
+        },
+        {
+          "id": 5,
+          "alasan": "Perlakuan manusiawi kepada tawanan perang menunjukkan puncak akhlak cinta sesama."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        2
+      ],
+      "deskripsi": "Kepahlawanan membela tanah air dengan tetap menjunjung etika perang dan perdamaian.",
+      "kata_kunci": [
+        "riwayat hidup",
+        "kepribadian",
+        "pembebasan baitul maqdis",
+        "yerusalem",
+        "dalam perang salib"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Kontribusi Ilmuwan dan Ulama Masa Daulah Ayyubiyah",
+      "subbab": [
+        "A. Tokoh Ilmuwan Muslim Bidang Kedokteran, Geografi, dan Sastra",
+        "B. Peran Al-Azhar yang Dialihfungsikan Menjadi Pusat Keilmuan Sunni Terbesar",
+        "C. Hubungan Diplomatik dan Transmisi Kebudayaan Islam ke Eropa",
+        "D. Mengambil Hikmah Kebangkitan Kembali Dinasti Islam dari Keterpurukan"
+      ],
+      "elemen_kode": [
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Sejarah Kebudayaan Islam MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "147–174",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Universitas Al-Azhar menjadi mercusuar peradaban dunia atas dedikasi cinta ilmu para ulama."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        4
+      ],
+      "deskripsi": "Universitas Al-Azhar menjadi mercusuar peradaban dunia atas dedikasi cinta ilmu para ulama.",
+      "kata_kunci": [
+        "kontribusi ilmuwan",
+        "ulama masa daulah ayyubiyah",
+        "geografi",
+        "sastra",
+        "hubungan diplomatik"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Sejarah Masuknya Islam di Indonesia",
+      "subbab": [
+        "A. Teori Masuknya Islam ke Nusantara: Teori Gujarat, Makkah, Persia, dan China",
+        "B. Bukti Sejarah Masuknya Islam: Makam Fatimah binti Maimun, Catatan Marcopolo, dll.",
+        "C. Saluran Penyebaran Islam: Perdagangan, Perkawinan, Tasawuf, Pendidikan, Kesenian",
+        "D. Karakteristik Islam Nusantara yang Damai, Toleran, dan Rahmatan lil 'Alamin"
+      ],
+      "elemen_kode": [
+        "E5"
+      ],
+      "sumber": {
+        "buku": "Sejarah Kebudayaan Islam MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "1–30",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Menelusuri sejarah Islam nusantara menumbuhkan kebanggaan atas peradaban luhur tanah air."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        3
+      ],
+      "deskripsi": "Menelusuri sejarah Islam nusantara menumbuhkan kebanggaan atas peradaban luhur tanah air.",
+      "kata_kunci": [
+        "masuknya islam di indonesia",
+        "teori gujarat",
+        "makkah",
+        "persia",
+        "china"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Kerajaan-Kerajaan Islam di Indonesia",
+      "subbab": [
+        "A. Kerajaan Islam di Sumatera: Samudera Pasai dan Kesultanan Aceh Darussalam",
+        "B. Kerajaan Islam di Jawa: Kesultanan Demak, Mataram Islam, Cirebon, dan Banten",
+        "C. Kerajaan Islam di Maluku, Sulawesi, dan Kalimantan (Ternate-Tidore, Gowa-Tallo, Banjar)",
+        "D. Peran Kesultanan Nusantara dalam Melawan Penjajahan Bangsa Barat dan Menjaga Kedaulatan"
+      ],
+      "elemen_kode": [
+        "E5"
+      ],
+      "sumber": {
+        "buku": "Sejarah Kebudayaan Islam MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "31–68",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Perlawanan para Sultan melawan penjajah mengobarkan jiwa patriotisme membela tumpah darah bangsa."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        4
+      ],
+      "deskripsi": "Perlawanan para Sultan melawan penjajah mengobarkan jiwa patriotisme membela tumpah darah bangsa.",
+      "kata_kunci": [
+        "kerajaan islam di sumatera",
+        "samudera pasai",
+        "kesultanan aceh darussalam",
+        "kerajaan islam di jawa",
+        "kesultanan demak"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Peran Pesantren dalam Dakwah Islam di Indonesia",
+      "subbab": [
+        "A. Asal-Usul dan Unsur-Unsur Utama Pesantren: Kyai, Santri, Pondok, Masjid, Kitab Kuning",
+        "B. Peran Pesantren sebagai Pusat Transmisi Keilmuan Tafaqquh Fiddin",
+        "C. Peran Santri dan Ulama Pesantren dalam Mempertahankan Kemerdekaan (Resolusi Jihad 1945)",
+        "D. Transformasi Pesantren Modern dalam Membangun Kemandirian Ekonomi dan Sains"
+      ],
+      "elemen_kode": [
+        "E5"
+      ],
+      "sumber": {
+        "buku": "Sejarah Kebudayaan Islam MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "69–96",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Pesantren mengakar sebagai kawah candradimuka tradisi keilmuan dan cinta ilmu agama."
+        },
+        {
+          "id": 4,
+          "alasan": "Resolusi Jihad membuktikan kecintaan ulama dan santri membela kedaulatan tanah air."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        2
+      ],
+      "deskripsi": "Pesantren mengakar sebagai kawah candradimuka tradisi keilmuan dan cinta ilmu agama.",
+      "kata_kunci": [
+        "pesantren",
+        "dakwah islam di indonesia",
+        "asal-usul",
+        "unsur-unsur utama pesantren",
+        "kyai"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 4,
+      "bab": "Bab 4: Nilai-Nilai Islam dan Kearifan Lokal Berbagai Suku di Indonesia",
+      "subbab": [
+        "A. Konsep Pribumisasi Islam dan Akulturasi Budaya Tanpa Menghilangkan Pokok Syariat",
+        "B. Kearifan Lokal Tradisi Islam: Sekaten di Jawa, Grebeg Maulud, Tabuik di Minang, Tahlilan, Halalbihalal",
+        "C. Menjaga Tradisi Luhur Nusantara sebagai Kekayaan Budaya Nasional",
+        "D. Mencegah Radikalisme Agama yang Memusuhi Budaya Nusantara"
+      ],
+      "elemen_kode": [
+        "E5"
+      ],
+      "sumber": {
+        "buku": "Sejarah Kebudayaan Islam MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "97–124",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Menghargai tradisi adat yang bernafaskan Islam memupuk cinta tanah air dan moderasi beragama."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        5
+      ],
+      "deskripsi": "Menghargai tradisi adat yang bernafaskan Islam memupuk cinta tanah air dan moderasi beragama.",
+      "kata_kunci": [
+        "nilai-nilai islam",
+        "konsep pribumisasi islam",
+        "kearifan lokal tradisi islam",
+        "sekaten di jawa",
+        "grebeg maulud"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Walisanga dalam Dakwah Islam di Indonesia",
+      "subbab": [
+        "A. Biografi Sembilan Wali Allah (Maulana Malik Ibrahim, Sunan Ampel, Bonang, Drajat, Giri, Muria, Kudus, Kalijaga, Gunung Jati)",
+        "B. Metode Dakwah Kultural: Menggunakan Media Gamelan, Wayang Kulit, Tembang Ilir-Ilir, Suluk",
+        "C. Keteladanan Akhlak, Sikap Welas Asih, dan Kedermawanan Walisanga kepada Rakyat Kecil",
+        "D. Mengambil Ibrah Dakwah Santun, Bijaksana (Hikmah), dan Tanpa Kekerasan"
+      ],
+      "elemen_kode": [
+        "E5"
+      ],
+      "sumber": {
+        "buku": "Sejarah Kebudayaan Islam MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "125–158",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Dakwah santun Walisanga sarat dengan kasih sayang tulus merangkul sesama manusia."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        4
+      ],
+      "deskripsi": "Dakwah santun Walisanga sarat dengan kasih sayang tulus merangkul sesama manusia.",
+      "kata_kunci": [
+        "walisanga",
+        "dakwah islam di indonesia",
+        "biografi sembilan wali allah",
+        "maulana malik ibrahim",
+        "sunan ampel"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Syaikh Abdul Rauf As-Singkili dan Syaikh Muhammad Arsyad Al-Banjari",
+      "subbab": [
+        "A. Biografi, Sanad Keilmuan, dan Karya Kitab Syaikh Abdul Rauf As-Singkili di Aceh",
+        "B. Biografi, Masa Studi di Makkah, dan Karya Kitab Sabilal Muhtadin Syaikh Muhammad Arsyad Al-Banjari",
+        "C. Kontribusi Ulama Nusantara dalam Menegakkan Fikih dan Rekayasa Irigasi Pertanian Rakyat",
+        "D. Meneladani Kehausan Menuntut Ilmu Lintas Benua demi Menerangi Umat di Tanah Air"
+      ],
+      "elemen_kode": [
+        "E5"
+      ],
+      "sumber": {
+        "buku": "Sejarah Kebudayaan Islam MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "159–186",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Karya-karya kitab ulama nusantara menjadi bukti keagungan tradisi cinta ilmu bangsa kita."
+        },
+        {
+          "id": 4,
+          "alasan": "Pulang ke tanah air untuk mencerdaskan bangsa adalah wujud cinta tanah air yang sejati."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        3
+      ],
+      "deskripsi": "Karya-karya kitab ulama nusantara menjadi bukti keagungan tradisi cinta ilmu bangsa kita.",
+      "kata_kunci": [
+        "syaikh abdul rauf as-singkili",
+        "biografi",
+        "sanad keilmuan",
+        "masa studi di makkah"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 7,
+      "bab": "Bab 7: Biografi Tokoh Pendiri Organisasi Keagamaan di Indonesia",
+      "subbab": [
+        "A. Biografi KH. Hasyim Asy'ari dan Sejarah Berdirinya Nahdlatul Ulama (NU)",
+        "B. Biografi KH. Ahmad Dahlan dan Sejarah Berdirinya Persyarikatan Muhammadiyah",
+        "C. Peran Jam'iyyatul Washliyah, Persis, dan Organisasi Keagamaan Lainnya dalam Pendidikan",
+        "D. Merawat Ukhuwah Islamiyah dan Sinergi Memajukan Pendidikan Madrasah Menuju Indonesia Emas"
+      ],
+      "elemen_kode": [
+        "E5"
+      ],
+      "sumber": {
+        "buku": "Sejarah Kebudayaan Islam MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "187–218",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Kiprah KH. Hasyim Asy'ari dan KH. Ahmad Dahlan mendirikan madrasah dan RS membuktikan cinta tanah air dan pengabdian bangsa."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        2
+      ],
+      "deskripsi": "Kiprah KH. Hasyim Asy'ari dan KH. Ahmad Dahlan mendirikan madrasah dan RS membuktikan cinta tanah air dan pengabdian bangsa.",
+      "kata_kunci": [
+        "biografi kh hasyim asy'ari",
+        "berdirinya nahdlatul ulama",
+        "biografi kh ahmad dahlan",
+        "jam'iyyatul washliyah",
+        "persis"
+      ]
+    }
+  ],
+  "status": "LENGKAP",
+  "catatan": "CP verbatim mengacu pada SK Dirjen Pendis No. 9941 Tahun 2025 Lampiran Mata Pelajaran SKI Fase D (5 Elemen: Periode Rasulullah SAW, Periode Khulafaur Rasyidin, Periode Klasik, Periode Pertengahan, Periode Islam di Nusantara). Materi per bab dirangkum dari Buku Siswa Kemenag RI Kelas VII, VIII, dan IX. Saran integrasi Panca Cinta dan DPL lengkap di setiap bab.",
+  "diverifikasi_oleh": null,
+  "tanggal_verifikasi": null
+}

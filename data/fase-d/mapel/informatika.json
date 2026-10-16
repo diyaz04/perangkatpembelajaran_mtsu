@@ -1,0 +1,1009 @@
+{
+  "mapel": "Informatika",
+  "slug": "informatika",
+  "kelompok": "umum",
+  "fase": "D",
+  "sumber_cp": {
+    "regulasi_kode": "BSKAP-046-2025",
+    "halaman": "Halaman 98–111",
+    "url": "https://kurikulum.kemendikdasmen.go.id/unduhan",
+    "diakses": "2026-10-14"
+  },
+  "rasional": "Informatika adalah bidang ilmu mengenai perancangan, pembuatan, dan pengoperasian sistem komputasi, serta prinsip-prinsip yang mendasari perancangan tersebut. Di madrasah, mata pelajaran Informatika tidak hanya mengarahkan peserta didik menjadi konsumen teknologi yang cerdas, melainkan pembelajar yang berdaya cipta komputasional (computational thinkers) dengan integritas akhlak mulia, mampu memanfaatkan data sains dan algoritma secara bijak, menjaga keamanan dan adab digital di ruang maya, serta berkontribusi nyata bagi kemaslahatan umat (rahmatan lil 'alamin).",
+  "tujuan_mapel": [
+    "Membekali peserta didik dengan kecakapan berpikir komputasional (computational thinking) untuk menyelesaikan masalah kompleks secara logis, sistematis, dan inovatif.",
+    "Menguasai pemanfaatan teknologi informasi dan komunikasi (TIK) secara produktif, kolaboratif, aman, dan beretika.",
+    "Memahami arsitektur dasar sistem komputer, perangkat keras, perangkat lunak, dan cara kerja jaringan internet.",
+    "Mampu mengumpulkan, mengolah, menganalisis, dan memvisualisasikan data untuk pengambilan keputusan yang tepat.",
+    "Merancang algoritma dan mengimplementasikannya dalam program visual atau tekstual sederhana guna menghasilkan artefak komputasi bermanfaat.",
+    "Menumbuhkan kesadaran etika digital, perlindungan privasi data pribadi, kepatuhan hukum siber, dan tanggung jawab sosial informatika."
+  ],
+  "capaian_umum_fase_d": "Pada akhir Fase D, peserta didik mampu menerapkan berpikir komputasional untuk menghasilkan solusi logis dari persoalan komputasi sehari-hari; memanfaatkan aplikasi perkantoran, platform kolaborasi daring, dan web browser secara terintegrasi; memahami komponen internal dan cara kerja komputer serta konektivitas internet; memilah, mengolah, dan memvisualisasikan data dengan bantuan perangkat lunak lembar kerja; merancang algoritma dan mengimplementasikannya dalam program visual (seperti Blockly atau Scratch); serta mengidentifikasi dampak sosial teknologi informasi, jejak digital, hukum siber, dan etika komunikasi digital.",
+  "elemen": [
+    {
+      "kode": "E1",
+      "nama": "Berpikir Komputasional (BK)",
+      "deskripsi_cp": "Peserta didik menerapkan berpikir komputasional untuk dekomposisi persoalan, pengenalan pola, abstraksi, dan perancangan algoritma dalam menyelesaikan persoalan komputasi sehari-hari yang melibatkan struktur data diskrit (antrean, tumpukan, graf, pohon sederhana)."
+    },
+    {
+      "kode": "E2",
+      "nama": "Teknologi Informasi dan Komunikasi (TIK)",
+      "deskripsi_cp": "Peserta didik memanfaatkan fitur perkakas aplikasi perkantoran (pengolah kata, lembar kerja, presentasi) secara terintegrasi; mengelola file dan folder secara terstruktur di komputer lokal maupun komputasi awan (cloud); serta menggunakan surel, mesin pencari, dan media kolaborasi secara produktif dan aman."
+    },
+    {
+      "kode": "E3",
+      "nama": "Sistem Komputer (SK)",
+      "deskripsi_cp": "Peserta didik memahami komponen perangkat keras (input, proses, output, penyimpanan), perangkat lunak (sistem operasi dan aplikasi), serta interaksi antara perangkat keras, perangkat lunak, dan pengguna (brainware) serta mekanisme pemecahan masalah (troubleshooting) dasar."
+    },
+    {
+      "kode": "E4",
+      "nama": "Jaringan Komputer dan Internet (JKI)",
+      "deskripsi_cp": "Peserta didik memahami konsep jaringan lokal (LAN) dan internet, cara kerja transmisi data nirkabel (Wi-Fi, Bluetooth), routing sederhana, serta langkah-langkah dasar pengamanan koneksi internet dan enkripsi sederhana."
+    },
+    {
+      "kode": "E5",
+      "nama": "Analisis Data (AD)",
+      "deskripsi_cp": "Peserta didik mengumpulkan data dari berbagai sumber secara manual atau digital; mengorganisasi, membersihkan, dan menganalisis data menggunakan formula dan fungsi lembar kerja; serta menampilkan data dalam bentuk tabel dan grafik untuk penarikan kesimpulan yang akurat."
+    },
+    {
+      "kode": "E6",
+      "nama": "Algoritma dan Pemrograman (AP)",
+      "deskripsi_cp": "Peserta didik memahami konsep algoritma, instruksi kondisional (if-else), perulangan (looping), variabel, dan fungsi; mengimplementasikan algoritma dengan menulis kode program visual (Blockly / Scratch) untuk menyelesaikan persoalan interaktif atau gim edukasi."
+    },
+    {
+      "kode": "E7",
+      "nama": "Dampak Sosial Informatika (DSI)",
+      "deskripsi_cp": "Peserta didik memahami sejarah perkembangan TIK, etika kewargaan digital, bahaya jejak digital (digital footprint), perlindungan privasi data pribadi, pencegahan kejahatan siber (phishing, malware), serta regulasi hukum informasi (UU ITE)."
+    },
+    {
+      "kode": "E8",
+      "nama": "Praktik Lintas Bidang (PLB)",
+      "deskripsi_cp": "Peserta didik berkolaborasi dalam tim untuk merancang, mengembangkan, mendokumentasikan, dan mempresentasikan karya digital (artefak komputasi) terpadu yang memecahkan masalah nyata di lingkungan madrasah atau masyarakat sekitar."
+    }
+  ],
+  "materi": [
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Informatika dan Keterampilan Generik",
+      "subbab": [
+        "A. Pengertian Informatika dan Ruang Lingkup Bidang Ilmunya",
+        "B. Keterampilan Kolaborasi dan Kerja Kelompok dalam Proyek Digital",
+        "C. Perencanaan Kerja dan Dokumentasi Hasil Belajar Komputasi"
+      ],
+      "elemen_kode": [
+        "E8"
+      ],
+      "sumber": {
+        "buku": "Informatika untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "1–24",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Mengenal ilmu informatika menumbuhkan kecintaan pada ilmu pengetahuan modern yang menopang peradaban."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        5
+      ],
+      "deskripsi": "Mengenal ilmu informatika menumbuhkan kecintaan pada ilmu pengetahuan modern yang menopang peradaban.",
+      "kata_kunci": [
+        "informatika",
+        "keterampilan generik",
+        "ruang lingkup bidang ilmunya",
+        "keterampilan kolaborasi",
+        "perencanaan kerja"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Berpikir Komputasional Dasar",
+      "subbab": [
+        "A. Konsep Dekomposisi Masalah Sehari-Hari",
+        "B. Pengenalan Pola (Pattern Recognition)",
+        "C. Abstraksi dan Generalisasi Informasi Penting",
+        "D. Perancangan Langkah Algoritma Sederhana"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Informatika untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "25–54",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Berpikir logis dan sistematis melatih akal pikiran karunia Allah agar tajam dalam membedakan yang haq dan batil."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Berpikir logis dan sistematis melatih akal pikiran karunia Allah agar tajam dalam membedakan yang haq dan batil.",
+      "kata_kunci": [
+        "berpikir komputasional dasar",
+        "pengenalan pola",
+        "pattern recognition",
+        "abstraksi",
+        "generalisasi informasi penting"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Teknologi Informasi dan Komunikasi (TIK)",
+      "subbab": [
+        "A. Antarmuka Grafis Pengguna (GUI) dan Manajemen Folder/File",
+        "B. Pemanfaatan Pengolah Kata dan Pembuatan Dokumen Terstruktur",
+        "C. Etika Berkirim Surel (Email) dan Penelusuran Informasi di Web Browser"
+      ],
+      "elemen_kode": [
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Informatika untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "55–86",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Menyusun file dan berkas secara rapi merupakan bentuk cinta ketertiban dan adab thalabul ilmi."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        7
+      ],
+      "deskripsi": "Menyusun file dan berkas secara rapi merupakan bentuk cinta ketertiban dan adab thalabul ilmi.",
+      "kata_kunci": [
+        "teknologi informasi",
+        "komunikasi",
+        "antarmuka grafis pengguna",
+        "manajemen folder file",
+        "pemanfaatan pengolah kata"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 4,
+      "bab": "Bab 4: Sistem Komputer (SK)",
+      "subbab": [
+        "A. Perangkat Keras Komputer: Perangkat Masukan, Pemrosesan, dan Keluaran",
+        "B. Perangkat Lunak: Sistem Operasi dan Perangkat Lunak Aplikasi",
+        "C. Interaksi Pengguna dengan Komputer dan Troubleshooting Dasar"
+      ],
+      "elemen_kode": [
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Informatika untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "87–116",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Mengetahui cara kerja mesin komputasi memperdalam kecintaan pada sains teknologi."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        7
+      ],
+      "deskripsi": "Mengetahui cara kerja mesin komputasi memperdalam kecintaan pada sains teknologi.",
+      "kata_kunci": [
+        "sistem komputer",
+        "perangkat keras komputer",
+        "perangkat masukan",
+        "pemrosesan",
+        "keluaran"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Jaringan Komputer dan Internet (JKI)",
+      "subbab": [
+        "A. Jaringan Lokal (LAN) vs Jaringan Internet",
+        "B. Koneksi Nirkabel (Wi-Fi dan Tethering Ponsel)",
+        "C. Keamanan Dasar Saat Mengakses Jaringan Publik dan Enkripsi Sederhana"
+      ],
+      "elemen_kode": [
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Informatika untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "117–144",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Menjaga keamanan saat terhubung ke internet adalah wujud cinta dan kehati-hatian menjaga privasi diri dan keluarga."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        7
+      ],
+      "deskripsi": "Menjaga keamanan saat terhubung ke internet adalah wujud cinta dan kehati-hatian menjaga privasi diri dan keluarga.",
+      "kata_kunci": [
+        "jaringan komputer",
+        "internet",
+        "jaringan lokal",
+        "vs jaringan internet",
+        "koneksi nirkabel"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Analisis Data Dasar (AD)",
+      "subbab": [
+        "A. Pengenalan Perangkat Lunak Lembar Kerja (Spreadsheet)",
+        "B. Tipe Data, Format Sel, dan Pengurutan Data (Sorting and Filtering)",
+        "C. Formula Matematika dan Fungsi Statistik Dasar (SUM, AVERAGE, MIN, MAX)",
+        "D. Pembuatan Grafik Batang dan Lingkaran untuk Visualisasi Data"
+      ],
+      "elemen_kode": [
+        "E5"
+      ],
+      "sumber": {
+        "buku": "Informatika untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "145–178",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Menganalisis data dengan teliti dan jujur menguatkan cinta kebenaran ilmiah dan integritas data."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Menganalisis data dengan teliti dan jujur menguatkan cinta kebenaran ilmiah dan integritas data.",
+      "kata_kunci": [
+        "analisis data dasar",
+        "spreadsheet",
+        "tipe data",
+        "format sel",
+        "pengurutan data"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 7,
+      "bab": "Bab 7: Algoritma dan Pemrograman Visual (AP)",
+      "subbab": [
+        "A. Pengenalan Lingkungan Pemrograman Visual Scratch / Blockly",
+        "B. Objek Sprite, Kostum, dan Panggung (Stage)",
+        "C. Blok Perintah Gerak, Suara, dan Variabel Sederhana",
+        "D. Instruksi Percabangan (If-Then) dalam Gim Edukatif Sederhana"
+      ],
+      "elemen_kode": [
+        "E6"
+      ],
+      "sumber": {
+        "buku": "Informatika untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "179–218",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Membuat karya gim pembelajaran mengasah kreativitas intelektual dan kecintaan pada rekayasa teknologi."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Membuat karya gim pembelajaran mengasah kreativitas intelektual dan kecintaan pada rekayasa teknologi.",
+      "kata_kunci": [
+        "algoritma",
+        "pemrograman visual",
+        "objek sprite",
+        "kostum",
+        "panggung"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 8,
+      "bab": "Bab 8: Dampak Sosial Informatika (DSI)",
+      "subbab": [
+        "A. Sejarah Perkembangan Komputer dan Pengaruhnya terhadap Peradaban",
+        "B. Etika Komunikasi Digital (Netiket) dan Pencegahan Cyberbullying",
+        "C. Mengenali Bahaya Jejak Digital dan Berita Bohong (Hoaks)"
+      ],
+      "elemen_kode": [
+        "E7"
+      ],
+      "sumber": {
+        "buku": "Informatika untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "219–246",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Bertutur kata santun di media sosial dan menolak perundungan digital adalah bukti cinta persaudaraan sesama muslim."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        8
+      ],
+      "deskripsi": "Bertutur kata santun di media sosial dan menolak perundungan digital adalah bukti cinta persaudaraan sesama muslim.",
+      "kata_kunci": [
+        "dampak sosial informatika",
+        "perkembangan komputer",
+        "pengaruhnya terhadap peradaban",
+        "etika komunikasi digital",
+        "netiket"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 9,
+      "bab": "Bab 9: Praktik Lintas Bidang Komputasi (PLB)",
+      "subbab": [
+        "A. Perancangan Proyek Komputasi Bertema 'Madrasah Hijau Bersih'",
+        "B. Pembuatan Media Interaktif Simulasi Pemilahan Sampah",
+        "C. Presentasi dan Pengujian Produk Digital Bersama Guru dan Teman"
+      ],
+      "elemen_kode": [
+        "E8"
+      ],
+      "sumber": {
+        "buku": "Informatika untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "247–270",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Menciptakan karya digital untuk kampanye kebersihan lingkungan adalah aplikasi nyata cinta lingkungan madrasah."
+        }
+      ],
+      "saran_dpl": [
+        6,
+        8
+      ],
+      "deskripsi": "Menciptakan karya digital untuk kampanye kebersihan lingkungan adalah aplikasi nyata cinta lingkungan madrasah.",
+      "kata_kunci": [
+        "praktik lintas bidang komputasi",
+        "presentasi",
+        "teman"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Berpikir Komputasional Menengah",
+      "subbab": [
+        "A. Struktur Data Antrean (Queue) dalam Kehidupan Sehari-hari",
+        "B. Struktur Data Tumpukan (Stack) dan Operasi Push-Pop",
+        "C. Representasi Data Biner dan Konversi Bilangan Desimal ke Biner"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Informatika untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "1–38",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Memahami struktur data diskrit melatih ketertiban berpikir logis dan kecintaan pada ilmu komputasi."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Memahami struktur data diskrit melatih ketertiban berpikir logis dan kecintaan pada ilmu komputasi.",
+      "kata_kunci": [
+        "berpikir komputasional menengah",
+        "struktur data antrean",
+        "queue",
+        "dalam kehidupan sehari-hari",
+        "struktur data tumpukan"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: TIK Kolaboratif dan Pengolahan Dokumen Lanjut",
+      "subbab": [
+        "A. Integrasi Aplikasi Perkantoran: Penggabungan Surat Massal (Mail Merge)",
+        "B. Kolaborasi Dokumen Daring Real-time (Google Docs / Office Online)",
+        "C. Pengelolaan Arsip Berbasis Cloud Storage secara Efisien dan Aman"
+      ],
+      "elemen_kode": [
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Informatika untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "39–72",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Bekerja bersama secara daring menumbuhkan semangat sinergi, gotong royong, dan cinta sesama rekan."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        5
+      ],
+      "deskripsi": "Bekerja bersama secara daring menumbuhkan semangat sinergi, gotong royong, dan cinta sesama rekan.",
+      "kata_kunci": [
+        "tik kolaboratif",
+        "pengolahan dokumen lanjut",
+        "integrasi aplikasi perkantoran",
+        "penggabungan surat massal",
+        "mail merge"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Sistem Komputer: Mekanisme dan Interaksi",
+      "subbab": [
+        "A. Arsitektur Komputer Model Von Neumann",
+        "B. Siklus Pemrosesan Instruksi (Fetch, Decode, Execute)",
+        "C. Peran Memori Utama (RAM, ROM) dan Pengolah Grafis (GPU)"
+      ],
+      "elemen_kode": [
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Informatika untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "73–102",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Menyelami cara kerja prosesor dan memori membuktikan kedalaman ilmu pengetahuan ciptaan pemikiran manusia."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        7
+      ],
+      "deskripsi": "Menyelami cara kerja prosesor dan memori membuktikan kedalaman ilmu pengetahuan ciptaan pemikiran manusia.",
+      "kata_kunci": [
+        "sistem komputer",
+        "mekanisme",
+        "interaksi",
+        "siklus pemrosesan instruksi",
+        "fetch"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 4,
+      "bab": "Bab 4: Jaringan Komputer dan Komunikasi Data",
+      "subbab": [
+        "A. Pengalamatan Jaringan: Konsep IP Address dan Domain Name System (DNS)",
+        "B. Cara Kerja World Wide Web (HTTP/HTTPS) dan Transfer Berkas",
+        "C. Enkripsi Klasik (Caesar Cipher) dan Proteksi Kata Sandi Akun"
+      ],
+      "elemen_kode": [
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Informatika untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "103–132",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Mengetahui prinsip keamanan kriptografi menyadarkan pentingnya menjaga amanah rahasia dan cinta ilmu."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        7
+      ],
+      "deskripsi": "Mengetahui prinsip keamanan kriptografi menyadarkan pentingnya menjaga amanah rahasia dan cinta ilmu.",
+      "kata_kunci": [
+        "jaringan komputer",
+        "komunikasi data",
+        "pengalamatan jaringan",
+        "konsep ip address",
+        "domain name system"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Analisis Data Lanjutan (AD)",
+      "subbab": [
+        "A. Pembersihan Data (Data Cleansing) dan Validasi Input",
+        "B. Pemanfaatan Fungsi Logika IF Tunggal dan Majemuk",
+        "C. Fungsi Pencarian dan Perhitungan Bersyarat (COUNTIF, SUMIF, VLOOKUP Sederhana)",
+        "D. Penyusunan Dashboard Data Sederhana Hasil Survei Madrasah"
+      ],
+      "elemen_kode": [
+        "E5"
+      ],
+      "sumber": {
+        "buku": "Informatika untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "133–168",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Mengolah data survei dengan jujur melatih kecintaan pada kebenaran dan objektivitas ilmiah."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Mengolah data survei dengan jujur melatih kecintaan pada kebenaran dan objektivitas ilmiah.",
+      "kata_kunci": [
+        "analisis data lanjutan",
+        "pembersihan data",
+        "data cleansing",
+        "validasi input",
+        "majemuk"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Algoritma dan Pemrograman: Kontrol Alur Kompleks",
+      "subbab": [
+        "A. Operator Logika (AND, OR, NOT) dalam Struktur Kondisional",
+        "B. Perulangan Bersarang (Nested Loops) dan Modul Custom Blocks",
+        "C. Merancang Permainan Kuis Edukasi Pengetahuan Agama Islam dan Umum"
+      ],
+      "elemen_kode": [
+        "E6"
+      ],
+      "sumber": {
+        "buku": "Informatika untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "169–208",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Membuat aplikasi kuis edukasi bernilai dakwah mencerminkan perpaduan cinta ilmu dan cinta sesama."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Membuat aplikasi kuis edukasi bernilai dakwah mencerminkan perpaduan cinta ilmu dan cinta sesama.",
+      "kata_kunci": [
+        "algoritma",
+        "pemrograman",
+        "kontrol alur kompleks",
+        "operator logika",
+        "dalam struktur kondisional"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 7,
+      "bab": "Bab 7: Dampak Sosial Informatika: Privasi dan Regulasi Siber",
+      "subbab": [
+        "A. Hak Cipta Perangkat Lunak, Lisensi Terbuka (Open Source), dan Komersial",
+        "B. Perlindungan Data Pribadi (UU PDP) dan Etika Penggunaan Kamera/Media Sosial",
+        "C. Mengenali Kejahatan Siber (Phishing, Social Engineering) dan Upaya Pencegahannya"
+      ],
+      "elemen_kode": [
+        "E7"
+      ],
+      "sumber": {
+        "buku": "Informatika untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "209–238",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Mematuhi hukum hak cipta dan regulasi siber adalah bukti warga negara yang tertib dan cinta tanah air."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        8
+      ],
+      "deskripsi": "Mematuhi hukum hak cipta dan regulasi siber adalah bukti warga negara yang tertib dan cinta tanah air.",
+      "kata_kunci": [
+        "dampak sosial informatika",
+        "privasi",
+        "regulasi siber",
+        "hak cipta perangkat lunak",
+        "lisensi terbuka"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 8,
+      "bab": "Bab 8: Praktik Lintas Bidang: Proyek Media Digital",
+      "subbab": [
+        "A. Pembuatan Panduan Digital Interaktif Kegiatan Ekstrakurikuler",
+        "B. Dokumentasi Perancangan (Storyboarding dan User Testing)",
+        "C. Publikasi Portofolio Digital Kelompok di Lingkungan Madrasah"
+      ],
+      "elemen_kode": [
+        "E8"
+      ],
+      "sumber": {
+        "buku": "Informatika untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2021,
+        "halaman": "239–262",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Berbagi karya bermanfaat untuk adik kelas dan teman menunjukkan cinta sesama yang tulus."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        6
+      ],
+      "deskripsi": "Berbagi karya bermanfaat untuk adik kelas dan teman menunjukkan cinta sesama yang tulus.",
+      "kata_kunci": [
+        "praktik lintas bidang",
+        "proyek media digital",
+        "dokumentasi perancangan",
+        "storyboarding",
+        "user testing"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Berpikir Komputasional Lanjut",
+      "subbab": [
+        "A. Struktur Data Graf (Graph) dan Pohon (Tree) Sederhana",
+        "B. Algoritma Pencarian Jalur Terpendek dan Optimasi Logistik",
+        "C. Logika Penjadwalan Tugas Berbasis Prioritas (Scheduling)"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Informatika untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "1–40",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Menyelesaikan persoalan optimasi dengan graf melatih penalaran kritis dan kecintaan pada ilmu matematika terapan."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Menyelesaikan persoalan optimasi dengan graf melatih penalaran kritis dan kecintaan pada ilmu matematika terapan.",
+      "kata_kunci": [
+        "berpikir komputasional lanjut",
+        "struktur data graf",
+        "graph",
+        "pohon",
+        "tree"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: TIK: Perancangan Web Sederhana dan Blog Edukasi",
+      "subbab": [
+        "A. Struktur Dasar Dokumen Web Menggunakan HTML",
+        "B. Penataan Gaya Visual Menggunakan CSS Dasar",
+        "C. Publikasi Konten Positif, Edukatif, dan Islami di Platform Blog"
+      ],
+      "elemen_kode": [
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Informatika untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "41–78",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Menyebarkan artikel ilmu dan inspirasi kebaikan via web adalah dakwah literasi berbasis cinta ilmu."
+        }
+      ],
+      "saran_dpl": [
+        5,
+        6
+      ],
+      "deskripsi": "Menyebarkan artikel ilmu dan inspirasi kebaikan via web adalah dakwah literasi berbasis cinta ilmu.",
+      "kata_kunci": [
+        "perancangan web sederhana",
+        "blog edukasi",
+        "publikasi konten positif",
+        "edukatif",
+        "islami di platform blog"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Sistem Komputer dan Internet of Things (IoT) Dasar",
+      "subbab": [
+        "A. Konsep Dasar Internet of Things (IoT) dan Peran Sensor",
+        "B. Pengenalan Mikrokontroler Edukasi (Arduino / Micro:bit)",
+        "C. Simulasi Otomasi Lampu Sensor Cahaya atau Penyiram Tanaman Otomatis"
+      ],
+      "elemen_kode": [
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Informatika untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "79–112",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Membuat otomatisasi penyiram tanaman hemat air menggabungkan teknologi modern dengan cinta kelestarian lingkungan."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        7
+      ],
+      "deskripsi": "Membuat otomatisasi penyiram tanaman hemat air menggabungkan teknologi modern dengan cinta kelestarian lingkungan.",
+      "kata_kunci": [
+        "sistem komputer",
+        "internet of things",
+        "dasar",
+        "sensor",
+        "arduino micro"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 4,
+      "bab": "Bab 4: Pengantar Sains Data dan Kecerdasan Buatan (AI)",
+      "subbab": [
+        "A. Konsep Big Data dan Siklus Pengolahan Data Modern",
+        "B. Pengenalan Konsep Kecerdasan Buatan (AI) dan Machine Learning Sederhana",
+        "C. Etika Pemanfaatan AI, Keaslian Karya, dan Perspektif Moral Islam"
+      ],
+      "elemen_kode": [
+        "E5",
+        "E7"
+      ],
+      "sumber": {
+        "buku": "Informatika untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "113–148",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Menempatkan AI sebagai alat bantu dengan tetap mengagungkan akal budi pemberian Allah menyeimbangkan teknologi dengan cinta Allah."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        4
+      ],
+      "deskripsi": "Menempatkan AI sebagai alat bantu dengan tetap mengagungkan akal budi pemberian Allah menyeimbangkan teknologi dengan cinta Allah.",
+      "kata_kunci": [
+        "pengantar sains data",
+        "kecerdasan buatan",
+        "konsep big data",
+        "siklus pengolahan data modern",
+        "machine learning sederhana"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Pemrograman Berbasis Teks (Python Dasar)",
+      "subbab": [
+        "A. Transisi Pemrograman Visual ke Teks Menggunakan Bahasa Python",
+        "B. Variabel, Tipe Data Angka dan String, Operasi Input/Output",
+        "C. Struktur Kondisional (If-Elif-Else) dan Perulangan (For/While) Sederhana"
+      ],
+      "elemen_kode": [
+        "E6"
+      ],
+      "sumber": {
+        "buku": "Informatika untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "149–192",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Belajar bahasa pemrograman teks melatih ketepatan sintaksis, ketekunan analitis, dan kecintaan pada ilmu masa depan."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Belajar bahasa pemrograman teks melatih ketepatan sintaksis, ketekunan analitis, dan kecintaan pada ilmu masa depan.",
+      "kata_kunci": [
+        "pemrograman berbasis teks",
+        "python dasar",
+        "variabel",
+        "tipe data angka",
+        "string"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Keamanan Siber dan Masa Depan Karier Digital",
+      "subbab": [
+        "A. Mengenal Ragam Ancaman Keamanan Siber (Malware, Ransomware, Man-in-the-Middle)",
+        "B. Praktik Higiene Siber: Autentikasi Dua Faktor (2FA) dan Manajemen Sandi",
+        "C. Wawasan Peluang Karier dan Profesi di Bidang Teknologi Informasi Masa Depan"
+      ],
+      "elemen_kode": [
+        "E7"
+      ],
+      "sumber": {
+        "buku": "Informatika untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "193–226",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Melindungi akun diri dan membantu mengamankan data madrasah adalah perwujudan cinta diri dan kepedulian sosial."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        8
+      ],
+      "deskripsi": "Melindungi akun diri dan membantu mengamankan data madrasah adalah perwujudan cinta diri dan kepedulian sosial.",
+      "kata_kunci": [
+        "keamanan siber",
+        "masa depan karier digital",
+        "ragam ancaman keamanan siber",
+        "malware",
+        "ransomware"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 7,
+      "bab": "Bab 7: Praktik Lintas Bidang: Solusi Cerdas Lingkungan Madrasah",
+      "subbab": [
+        "A. Perancangan Sistem Cerdas Mini Berbasis TIK / Komputasi untuk Madrasah",
+        "B. Implementasi Artefak Komputasi Terpadu (Kombinasi Data, Web/Program, dan Desain)",
+        "C. Uji Coba Lapangan, Evaluasi Pengguna, dan Gelar Karya Digital Madrasah"
+      ],
+      "elemen_kode": [
+        "E8"
+      ],
+      "sumber": {
+        "buku": "Informatika untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "227–258",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Mempersembahkan solusi digital peduli lingkungan memperkuat komitmen cinta bumi madrasah berkelanjutan."
+        }
+      ],
+      "saran_dpl": [
+        6,
+        8
+      ],
+      "deskripsi": "Mempersembahkan solusi digital peduli lingkungan memperkuat komitmen cinta bumi madrasah berkelanjutan.",
+      "kata_kunci": [
+        "praktik lintas bidang",
+        "kombinasi data",
+        "web program",
+        "desain",
+        "uji coba lapangan"
+      ]
+    }
+  ],
+  "status": "LENGKAP",
+  "catatan": "CP verbatim mengacu pada Keputusan Kepala BSKAP No. 046/H/KR/2025 Lampiran Mata Pelajaran Informatika Fase D (mencakup 8 elemen resmi komputasi). Materi per bab dan subbab dirangkum dari Buku Teks Utama Informatika Pusat Perbukuan Kemendikbudristek Kelas VII, VIII, dan IX. Saran Panca Cinta dan DPL telah dipetakan secara kontekstual.",
+  "diverifikasi_oleh": null,
+  "tanggal_verifikasi": null
+}

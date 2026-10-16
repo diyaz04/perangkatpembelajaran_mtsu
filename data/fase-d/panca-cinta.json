@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "kode": "PC1",
+    "nama": "Cinta Allah dan Rasul",
+    "deskripsi": "Internalisasi nilai keimanan, ketakwaan, ibadah ikhlas kepada Allah SWT, mahabbah serta meneladani akhlak mulia Rasulullah SAW dalam seluruh dimensi kehidupan.",
+    "nilai_utama": [
+      "Tauhid dan Akidah Shahihah",
+      "Ibadah Ikhlas dan Khusyuk",
+      "Mahabbah dan Teladan Akhlak Rasulullah",
+      "Zikrullah dan Pembiasaan Doa",
+      "Integritas Spiritual dan Moral"
+    ],
+    "sumber": "Kepdirjen Pendis No. 6077 Tahun 2025 & KMA No. 512 Tahun 2026"
+  },
+  {
+    "id": 2,
+    "kode": "PC2",
+    "nama": "Cinta Ilmu",
+    "deskripsi": "Membangun tradisi ilmiah, nalar kritis, rasa ingin tahu yang mendalam, gemar membaca, serta terbuka terhadap perkembangan sains, teknologi, dan hikmah peradaban.",
+    "nilai_utama": [
+      "Tradisi Ilmiah dan Budaya Literasi",
+      "Nalar Kritis dan Skeptisisme Sehat",
+      "Rasa Ingin Tahu Eksploratif (Curiosity)",
+      "Keterbukaan terhadap Sains dan Teknologi",
+      "Pemanfaatan Ilmu untuk Kemaslahatan Umat"
+    ],
+    "sumber": "Kepdirjen Pendis No. 6077 Tahun 2025 & KMA No. 512 Tahun 2026"
+  },
+  {
+    "id": 3,
+    "kode": "PC3",
+    "nama": "Cinta Lingkungan",
+    "deskripsi": "Menjaga kelestarian alam, kebersihan madrasah, kepedulian ekologis, hemat energi, serta kesadaran menjaga bumi sebagai amanah khalifah fil ardh.",
+    "nilai_utama": [
+      "Amanah Khalifah fil Ardh (Etika Ekologis)",
+      "Kebersihan dan Keasrian Lingkungan Hidup",
+      "Konservasi Air dan Hemat Energi",
+      "Pengurangan dan Pengelolaan Sampah (Zero Waste)",
+      "Kepedulian terhadap Keseimbangan Ekosistem"
+    ],
+    "sumber": "Kepdirjen Pendis No. 6077 Tahun 2025 & KMA No. 512 Tahun 2026"
+  },
+  {
+    "id": 4,
+    "kode": "PC4",
+    "nama": "Cinta Tanah Air",
+    "deskripsi": "Rasa bangga sebagai bangsa Indonesia, kesetiaan pada NKRI, pengamalan nilai Pancasila, kerukunan dalam kebinekaan, dan komitmen moderasi beragama.",
+    "nilai_utama": [
+      "Kesetiaan pada NKRI dan Konstitusi",
+      "Pengamalan Nilai-Nilai Luhur Pancasila",
+      "Moderasi Beragama (Wasathiyyah)",
+      "Penghargaan atas Keberagaman (Bhinneka Tunggal Ika)",
+      "Bela Negara dan Kontribusi Pembangunan Nasional"
+    ],
+    "sumber": "Kepdirjen Pendis No. 6077 Tahun 2025 & KMA No. 512 Tahun 2026"
+  },
+  {
+    "id": 5,
+    "kode": "PC5",
+    "nama": "Cinta Diri dan Sesama",
+    "deskripsi": "Menghargai martabat kemanusiaan, menjaga kesehatan lahir-batin, menumbuhkan empati, ukhuwah islamiyah, saling menolong, toleransi, dan anti-perundungan.",
+    "nilai_utama": [
+      "Penghargaan Martabat Insani (Karamah Insaniyyah)",
+      "Kesehatan Lahir, Batin, dan Pola Hidup Bersih",
+      "Empati, Ukhuwah, dan Tolong-Menolong (Ta'awun)",
+      "Budaya Ramah dan Anti-Perundungan (Anti-Bullying)",
+      "Toleransi, Kasih Sayang, dan Keadilan Sosial"
+    ],
+    "sumber": "Kepdirjen Pendis No. 6077 Tahun 2025 & KMA No. 512 Tahun 2026"
+  }
+]

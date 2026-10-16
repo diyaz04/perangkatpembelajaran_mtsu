@@ -1,0 +1,658 @@
+{
+  "mapel": "Bahasa Inggris",
+  "slug": "bahasa-inggris",
+  "kelompok": "umum",
+  "fase": "D",
+  "sumber_cp": {
+    "regulasi_kode": "BSKAP-046-2025",
+    "halaman": "Halaman 58–66",
+    "url": "https://kurikulum.kemendikdasmen.go.id/unduhan",
+    "diakses": "2026-10-14"
+  },
+  "rasional": "Kemampuan berbahasa Inggris pada Fase D difokuskan pada penguasaan bahasa Inggris lisan dan tulis sederhana yang bermakna dalam konteks interaksi sosial di madrasah, keluarga, dan lingkungan masyarakat sekitar. Bahasa Inggris sebagai bahasa pergaulan dan sains internasional membekali peserta didik madrasah untuk membuka cakrawala ilmu pengetahuan global, berinteraksi secara percaya diri dan santun dalam komunitas multikultural, serta memperkenalkan khazanah keislaman moderat dan nilai-nilai luhur Indonesia ke dunia luar.",
+  "tujuan_mapel": [
+    "Mengembangkan kemampuan berkomunikasi dalam bahasa Inggris secara lisan dan tulis (menyimak, berbicara, membaca, memirsa, menulis, dan mempresentasikan) melalui ragam teks interpersonal, transaksional, dan fungsional.",
+    "Memahami ide pokok, informasi rinci, dan makna tersirat dari berbagai jenis teks lisan dan multimodal (descriptive, recount, narrative, procedure, report).",
+    "Mengembangkan kesadaran lintas budaya (intercultural awareness) dan keterbukaan global dengan tetap berakar teguh pada identitas keislaman dan nasionalisme Indonesia.",
+    "Menumbuhkan rasa percaya diri, keterampilan bernalar kritis, dan kemandirian dalam menggunakan bahasa Inggris untuk tujuan belajar berkelanjutan."
+  ],
+  "capaian_umum_fase_d": "Pada akhir Fase D, peserta didik menggunakan teks lisan, tulisan, dan visual dalam bahasa Inggris untuk berinteraksi dan berkomunikasi dalam konteks yang lebih beragam serta dalam situasi formal dan informal. Peserta didik dapat menggunakan berbagai jenis teks seperti narasi, deskripsi, prosedur, teks khusus (pesan singkat, iklan) dan teks otentik menjadi rujukan utama dalam mempelajari bahasa Inggris di Fase ini. Peserta didik menggunakan bahasa Inggris untuk berdiskusi dan menyampaikan keinginan/perasaan. Pemahaman mereka terhadap teks tulisan semakin berkembang dan keterampilan inferensi mulai tampak ketika memahami informasi tersirat. Mereka memproduksi teks tulisan dan visual dalam bahasa Inggris yang terstruktur dengan kosakata yang lebih beragam. Mereka memahami tujuan dan pemirsa ketika memproduksi teks tulisan dan visual dalam bahasa Inggris.",
+  "elemen": [
+    {
+      "kode": "E1",
+      "nama": "Menyimak – Berbicara (Listening – Speaking)",
+      "deskripsi_cp": "Pada akhir Fase D, peserta didik menggunakan bahasa Inggris untuk berinteraksi dan saling bertukar ide, pengalaman, minat, pendapat, dan pandangan dengan guru, teman sebaya, dan orang lain dalam berbagai macam konteks akrab yang formal dan informal. Dengan pengulangan dan penggantian kosakata, peserta didik memahami ide utama dan detail yang relevan dari diskusi atau presentasi mengenai berbagai macam topik yang telah familiar dan dalam konteks kehidupan di sekolah dan di rumah. Mereka terlibat dalam diskusi, misalnya memberikan pendapat, membuat perbandingan, dan menyampaikan preferensi. Mereka menjelaskan dan memperjelas jawaban mereka menggunakan struktur kalimat dan kata kerja sederhana."
+    },
+    {
+      "kode": "E2",
+      "nama": "Membaca – Memirsa (Reading – Viewing)",
+      "deskripsi_cp": "Pada akhir Fase D, peserta didik membaca dan merespons teks familiar dan tidak familiar yang mengandung struktur yang telah dipelajari dan kosakata yang familiar secara mandiri. Mereka mencari dan mengevaluasi ide utama dan informasi spesifik dalam berbagai jenis teks. Teks ini dapat berbentuk cetak atau digital, termasuk di antaranya teks visual, multimodal atau interaktif. Mereka mengidentifikasi tujuan teks dan mulai melakukan inferensi untuk memahami informasi tersirat dalam sebuah teks."
+    },
+    {
+      "kode": "E3",
+      "nama": "Menulis – Mempresentasikan (Writing – Presenting)",
+      "deskripsi_cp": "Pada akhir Fase D, peserta didik mengomunikasikan ide dan pengalaman mereka melalui paragraf sederhana dan terstruktur, menunjukkan perkembangan dalam penggunaan kosakata spesifik dan struktur kalimat sederhana. Menggunakan contoh, mereka membuat perencanaan, menulis, dan menyajikan teks informasi, imajinasi, dan persuasi dengan menggunakan kalimat sederhana dan majemuk untuk menyusun argumen dan menjelaskan atau mempertahankan suatu pendapat."
+    }
+  ],
+  "materi": [
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Chapter 1: About Me",
+      "subbab": [
+        "Unit 1: Galang from Kalimantan (Greetings, Introductions, Personal Pronouns)",
+        "Unit 2: I Love Fishing (Hobbies, Daily Activities, Simple Present Tense)",
+        "Unit 3: My Friends and I (Describing Physical Features and Personalities)"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "English for Nusantara untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "1–48",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Memperkenalkan diri dan menghargai keragaman teman madrasah menguatkan cinta diri dan persaudaraan sesama pelajar."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        5
+      ],
+      "deskripsi": "Memperkenalkan diri dan menghargai keragaman teman madrasah menguatkan cinta diri dan persaudaraan sesama pelajar.",
+      "kata_kunci": [
+        "chapter 1",
+        "about me",
+        "galang from kalimantan",
+        "greetings",
+        "introductions"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Chapter 2: Culinary and Me",
+      "subbab": [
+        "Unit 1: My Favorite Food (Talking about Favorite Food and Drinks, Adjectives of Taste)",
+        "Unit 2: My Favorite Snack (Describing Textures and Tastes of Traditional Snacks)",
+        "Unit 3: A Secret Recipe (Reading and Writing Cooking Recipes, Imperative Sentences)"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "English for Nusantara untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "49–98",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Menikmati dan mensyukuri rezeki makanan halal dan thayyib adalah wujud cinta dan syukur kepada Allah SWT."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        8
+      ],
+      "deskripsi": "Menikmati dan mensyukuri rezeki makanan halal dan thayyib adalah wujud cinta dan syukur kepada Allah SWT.",
+      "kata_kunci": [
+        "chapter 2",
+        "culinary and me",
+        "my favorite food",
+        "adjectives of taste",
+        "my favorite snack"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Chapter 3: Home Sweet Home",
+      "subbab": [
+        "Unit 1: My House (Describing Rooms and Household Furniture, Prepositions of Place)",
+        "Unit 2: My House Chores (Daily Routines, House Cleaning Activities, Frequency Adverbs)",
+        "Unit 3: Let's Clean Up! (Instructional Signs, Procedural Cleaning Steps)"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "English for Nusantara untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "99–146",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Menjaga kebersihan dan kerapian rumah serta lingkungan kamar merupakan pengamalan cinta lingkungan dan kebersihan bagian dari iman."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        7
+      ],
+      "deskripsi": "Menjaga kebersihan dan kerapian rumah serta lingkungan kamar merupakan pengamalan cinta lingkungan dan kebersihan bagian dari iman.",
+      "kata_kunci": [
+        "chapter 3",
+        "home sweet home",
+        "my house",
+        "prepositions of place",
+        "my house chores"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Chapter 4: My School Activities",
+      "subbab": [
+        "Unit 1: My Class Schedule (School Subjects, Days of the Week, Telling Time)",
+        "Unit 2: My Online / Offline Class (Study Habits, Madrasah Rules, Classroom Language)",
+        "Unit 3: Talking about Hobbies (Asking and Giving Information about Leisure Activities)"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "English for Nusantara untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "147–196",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Disiplin mengikuti jadwal belajar madrasah mencerminkan kecintaan pada ilmu pengetahuan dan adab thalabul ilmi."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        4
+      ],
+      "deskripsi": "Disiplin mengikuti jadwal belajar madrasah mencerminkan kecintaan pada ilmu pengetahuan dan adab thalabul ilmi.",
+      "kata_kunci": [
+        "chapter 4",
+        "my school activities",
+        "my class schedule",
+        "school subjects",
+        "days of the week"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Chapter 5: This is My School",
+      "subbab": [
+        "Unit 1: School Buildings and Facilities (Describing Mosque, Library, Laboratory, Playground)",
+        "Unit 2: Extracurricular Activities (Joining Scout, PMR, English Club, Sports)",
+        "Unit 3: School Festival and Madrasah Events (Writing Notices, Posters, and Event Announcements)"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "English for Nusantara untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "197–244",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Bangga terhadap madrasah dan aktif dalam kegiatan kebersamaan mengokohkan cinta almamater dan cinta tanah air."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        5
+      ],
+      "deskripsi": "Bangga terhadap madrasah dan aktif dalam kegiatan kebersamaan mengokohkan cinta almamater dan cinta tanah air.",
+      "kata_kunci": [
+        "chapter 5",
+        "this is my school",
+        "describing mosque",
+        "library",
+        "laboratory"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Chapter 1: Celebrating Independence Day",
+      "subbab": [
+        "Unit 1: The Champion of Panjat Pinang (Recounting Independence Day Games, Past Tense)",
+        "Unit 2: Going to a School Parade (Recounting Experiences in a Carnival, Sequence Words)",
+        "Unit 3: Independence Day Festival (Writing a Personal Recount of Madrasah Independence Day)"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "English for Nusantara untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "1–60",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Menceritakan perayaan HUT RI menumbuhkan rasa syukur kemerdekaan dan kebanggaan cinta tanah air."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        4
+      ],
+      "deskripsi": "Menceritakan perayaan HUT RI menumbuhkan rasa syukur kemerdekaan dan kebanggaan cinta tanah air.",
+      "kata_kunci": [
+        "chapter 1",
+        "celebrating independence day",
+        "the champion of panjat pinang",
+        "past tense",
+        "going to a school parade"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Chapter 2: Kindness and Happiness",
+      "subbab": [
+        "Unit 1: Kindness towards Others (Expressing Feelings, Recalling Acts of Kindness)",
+        "Unit 2: Elephant and Friends / Folk Tales (Reading Fables and Folk Stories, Narrative Orientation)",
+        "Unit 3: The Story of Kind Hearts (Complication, Resolution, Writing a Moral Narrative)"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "English for Nusantara untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "61–118",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Kisah-kisah kebaikan hati memupuk cinta sesama, empati mendalam, dan ketulusan membantu orang lain."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Kisah-kisah kebaikan hati memupuk cinta sesama, empati mendalam, dan ketulusan membantu orang lain.",
+      "kata_kunci": [
+        "chapter 2",
+        "kindness and happiness",
+        "kindness towards others",
+        "expressing feelings",
+        "recalling acts of kindness"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Chapter 3: Love Our World",
+      "subbab": [
+        "Unit 1: Look around You (Discussing Plastic Waste and Environmental Issues)",
+        "Unit 2: This is Plastic Waste! (Asking and Giving Opinions on Eco-Friendly Living)",
+        "Unit 3: Let's Save the Earth (Designing Environmental Posters, Persuasive Messages)"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "English for Nusantara untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "119–174",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Kampanye peduli sampah dan pelestarian bumi melatih komitmen cinta lingkungan sebagai khalifah fil ardh."
+        }
+      ],
+      "saran_dpl": [
+        7,
+        8
+      ],
+      "deskripsi": "Kampanye peduli sampah dan pelestarian bumi melatih komitmen cinta lingkungan sebagai khalifah fil ardh.",
+      "kata_kunci": [
+        "chapter 3",
+        "love our world",
+        "look around you",
+        "this is plastic waste",
+        "let's save the earth"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Chapter 4: No Littering!",
+      "subbab": [
+        "Unit 1: Did You Throw the Rubbish? (Recounting Environmental Incidents, Past Interrogative)",
+        "Unit 2: What Happened to the River? (Connecting Causes and Effects in Clean-Up Campaigns)",
+        "Unit 3: You Can Help! (Writing Action Plans for a Greener Madrasah Community)"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "English for Nusantara untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "175–230",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Tindakan nyata tidak membuang sampah sembarangan membiasakan cinta lingkungan hidup yang bersih dan sehat."
+        }
+      ],
+      "saran_dpl": [
+        5,
+        7
+      ],
+      "deskripsi": "Tindakan nyata tidak membuang sampah sembarangan membiasakan cinta lingkungan hidup yang bersih dan sehat.",
+      "kata_kunci": [
+        "chapter 4",
+        "no littering",
+        "did you throw the rubbish",
+        "past interrogative",
+        "what happened to the river"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Chapter 5: Embrace Yourself",
+      "subbab": [
+        "Unit 1: Be Yourself (Complimenting Others, Self-Acceptance, Positive Adjectives)",
+        "Unit 2: I Know I Can Do It (Expressing Abilities, Modals 'Can' and 'Could', Overcoming Difficulties)",
+        "Unit 3: Practice Makes Perfect (Sharing Personal Growth Stories, Writing Personal Reflections)"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "English for Nusantara untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "231–284",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Menerima kelebihan dan kekurangan diri sendiri menumbuhkan rasa syukur dan cinta diri yang seimbang dengan cinta sesama."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        3
+      ],
+      "deskripsi": "Menerima kelebihan dan kekurangan diri sendiri menumbuhkan rasa syukur dan cinta diri yang seimbang dengan cinta sesama.",
+      "kata_kunci": [
+        "chapter 5",
+        "embrace yourself",
+        "be yourself",
+        "complimenting others",
+        "self-acceptance"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Chapter 1: Bekantan and Indonesian Wildlife",
+      "subbab": [
+        "Unit 1: Indonesian Fauna (Characteristics of Endemic Animals, Bekantan and Orangutan)",
+        "Unit 2: Threatened Animals (Facts and Threats to Indonesian Wildlife, Passive Voice in Present)",
+        "Unit 3: Conservation Report (Writing Simple Information Report Texts on Endangered Animals)"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "English for Nusantara untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "1–64",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Mempelajari fauna endemik Nusantara membangkitkan cinta lingkungan dan kepedulian terhadap keanekaragaman hayati titipan Tuhan."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        7
+      ],
+      "deskripsi": "Mempelajari fauna endemik Nusantara membangkitkan cinta lingkungan dan kepedulian terhadap keanekaragaman hayati titipan Tuhan.",
+      "kata_kunci": [
+        "chapter 1",
+        "bekantan and indonesian wildlife",
+        "indonesian fauna",
+        "bekantan and orangutan",
+        "threatened animals"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Chapter 2: Taking Trips",
+      "subbab": [
+        "Unit 1: Going to a National Park (Travel Preparation, Ecotourism Experiences, Recount Text)",
+        "Unit 2: Holiday Experiences (Describing Historical Landmarks in Indonesia, Sequence Connectors)",
+        "Unit 3: Travel Tips and Etiquette (Writing Informative Travel Advice and Responsible Tourism)"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "English for Nusantara untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "65–122",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Menjelajahi keindahan alam dan situs bersejarah nusantara memupuk rasa bangga dan cinta tanah air Indonesia."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        6
+      ],
+      "deskripsi": "Menjelajahi keindahan alam dan situs bersejarah nusantara memupuk rasa bangga dan cinta tanah air Indonesia.",
+      "kata_kunci": [
+        "chapter 2",
+        "taking trips",
+        "going to a national park",
+        "travel preparation",
+        "ecotourism experiences"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Chapter 3: Journey to the Fantasy World",
+      "subbab": [
+        "Unit 1: Indonesian Folktales and Legends (Reading The Legend of Black Sea and Local Folktales)",
+        "Unit 2: Narrative Structure (Orientation, Complication, Resolution, and Moral Lessons)",
+        "Unit 3: Creating a Graphic Story (Writing and Presenting an Illustrated Narrative Text)"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "English for Nusantara untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "123–180",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Membaca dan memetik hikmah dari cerita legenda memperluas imajinasi, kecerdasan berbahasa, dan kecintaan pada ilmu."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Membaca dan memetik hikmah dari cerita legenda memperluas imajinasi, kecerdasan berbahasa, dan kecintaan pada ilmu.",
+      "kata_kunci": [
+        "chapter 3",
+        "journey to the fantasy world",
+        "narrative structure",
+        "orientation",
+        "complication"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Chapter 4: Upcycling Used Materials",
+      "subbab": [
+        "Unit 1: What is Upcycling? (Concepts of Reusing and Transforming Recyclable Items)",
+        "Unit 2: Step-by-Step Upcycling (Reading and Writing Procedural Texts, Imperative Verbs)",
+        "Unit 3: Promoting Eco-Products (Creating Persuasive Advertisements and Digital Product Presentations)"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "English for Nusantara untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "181–236",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Mendaur ulang bahan bekas menjadi barang berguna menumbuhkan cinta lingkungan dan gaya hidup bijak minim sampah."
+        }
+      ],
+      "saran_dpl": [
+        6,
+        8
+      ],
+      "deskripsi": "Mendaur ulang bahan bekas menjadi barang berguna menumbuhkan cinta lingkungan dan gaya hidup bijak minim sampah.",
+      "kata_kunci": [
+        "chapter 4",
+        "upcycling used materials",
+        "what is upcycling",
+        "step-by-step upcycling",
+        "imperative verbs"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Chapter 5: Digital Life and Media Literacy",
+      "subbab": [
+        "Unit 1: Social Media Safety (Online Etiquette, Privacy Settings, Giving Advice with Should/Must)",
+        "Unit 2: Online News and Fact-Checking (Critical Reading, Distinguishing Facts from Fake News)",
+        "Unit 3: Being a Responsible Netizen (Composing a Digital Safety Infographic and Public Campaign)"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "English for Nusantara untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "237–290",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Beretika santun di ruang siber dan menolak cyberbullying adalah perwujudan cinta diri dan kepedulian antarsesama manusia."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        4
+      ],
+      "deskripsi": "Beretika santun di ruang siber dan menolak cyberbullying adalah perwujudan cinta diri dan kepedulian antarsesama manusia.",
+      "kata_kunci": [
+        "chapter 5",
+        "digital life and media literacy",
+        "social media safety",
+        "online etiquette",
+        "privacy settings"
+      ]
+    }
+  ],
+  "status": "LENGKAP",
+  "catatan": "CP verbatim mengacu pada Keputusan Kepala BSKAP No. 046/H/KR/2025 Lampiran Mata Pelajaran Bahasa Inggris Fase D. Materi per bab dan subbab dirangkum dari Buku Teks Utama English for Nusantara Pusat Perbukuan Kemendikbudristek Kelas VII, VIII, dan IX. Saran Panca Cinta dan DPL telah dipetakan kontekstual.",
+  "diverifikasi_oleh": null,
+  "tanggal_verifikasi": null
+}

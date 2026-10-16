@@ -1,0 +1,787 @@
+{
+  "mapel": "Al-Qur'an Hadis",
+  "slug": "al-quran-hadis",
+  "kelompok": "PAI",
+  "fase": "D",
+  "sumber_cp": {
+    "regulasi_kode": "SK-DIRJEN-PENDIS-9941-2025",
+    "halaman": "Halaman 15–28",
+    "url": "https://pendis.kemenag.go.id/kurikulum",
+    "diakses": "2026-10-14"
+  },
+  "rasional": "Al-Qur'an dan Hadis merupakan sumber utama ajaran Islam, pedoman hidup, dan inspirasi peradaban mulia. Pembelajaran Al-Qur'an Hadis di madrasah diarahkan untuk menumbuhkan kecintaan mendalam pada kalamullah dan sunnah Rasulullah SAW, membiasakan membaca secara fasih dan tartil sesuai kaidah tajwid, memahami pesan moral dan hukum, serta mengamalkan nilai-nilai luhur Al-Qur'an dan Hadis dalam membentuk pribadi berakhlak mulia, peduli lingkungan, jujur dalam muamalah, dan berwawasan kebangsaan.",
+  "tujuan_mapel": [
+    "Membiasakan membaca Al-Qur'an secara tartil, fasih, dan cermat sesuai kaidah ilmu tajwid dan ketentuan bacaan gharib.",
+    "Melafalkan, menghafal, dan memahami ayat-ayat Al-Qur'an dan hadis-hadis pilihan secara tekstual dan kontekstual.",
+    "Menumbuhkan keimanan, ketakwaan, dan mahabbah kepada Allah SWT dan Rasulullah SAW melalui penghayatan wahyu.",
+    "Menginternalisasi nilai-nilai karakter mulia: dermawan, jujur dalam transaksi, sabar, optimis, menjaga kelestarian alam, dan tekun menuntut ilmu.",
+    "Menjadikan Al-Qur'an dan Hadis sebagai pedoman moral dalam menghadapi tantangan modernitas, hedonisme, dan korupsi."
+  ],
+  "capaian_umum_fase_d": "Pada akhir Fase D, peserta didik mampu membaca Al-Qur'an dengan fasih dan tartil sesuai kaidah ilmu tajwid (hukum bacaan mad dan bacaan gharib); melafalkan, menghafal, memahami, dan menganalisis arti serta isi kandungan ayat-ayat Al-Qur'an dan hadis Nabi tentang kekuasaan dan rahmat Allah Swt., sifat pemurah, optimis, sabar, infak di jalan Allah, kepedulian sosial dan lingkungan hidup, kejujuran dalam bermuamalah, serta semangat menuntut ilmu; serta membiasakan diri berakhlak mulia dan menghindari perilaku hedonisme, korupsi, dan kikir dalam kehidupan sehari-hari.",
+  "elemen": [
+    {
+      "kode": "E1",
+      "nama": "Ilmu Tajwid",
+      "deskripsi_cp": "Peserta didik mampu memahami dan menganalisis hukum bacaan mad tabi‘i, mad far‘i (mad ‘iwad, mad layyin, mad ‘arid lissukun, mad shilah, mad badal, mad tamkin, mad farqi, mad lazim mukhaffaf/mutsaqqal kilmi dan harfi), serta bacaan gharib (imalah, isymam, tashil, naql, dan saktah) agar dapat membiasakan membaca Al-Qur’an dengan baik, benar, dan tartil sesuai kaidah tajwid."
+    },
+    {
+      "kode": "E2",
+      "nama": "Al-Qur'an",
+      "deskripsi_cp": "Peserta didik mampu melafalkan, menghafal, memahami, mengomunikasikan, dan menganalisis arti serta isi kandungan ayat-ayat Al-Qur'an secara tekstual dan kontekstual tentang: kekuasaan dan rahmat Allah Swt. (QS. Asy-Syams, Al-Lail, dll.), sifat pemurah dan optimis (QS. Adh-Dhuha, Al-Insyirah), infak di jalan Allah (QS. Al-Fajr: 15-18, Al-Baqarah: 254 & 261), kelestarian alam dan lingkungan (QS. Ar-Rum: 41-42, Al-A'raf: 56-58), kejujuran dalam bermuamalah (QS. Al-Muthaffifin: 1-17, Al-An'am: 152), serta semangat menuntut ilmu (QS. 'Abasa: 1-10, Al-Mujadilah: 11)."
+    },
+    {
+      "kode": "E3",
+      "nama": "Hadis",
+      "deskripsi_cp": "Peserta didik mampu membaca, menghafal, memahami, mengomunikasikan, dan menganalisis arti serta isi kandungan hadis Nabi secara tekstual dan kontekstual tentang: kekuasaan dan rahmat Allah, infak dan sedekah (HR. Bukhari Muslim dari Abu Hurairah dan Hakim bin Hizam), kelestarian lingkungan dan larangan berbuat kerusakan di bumi, etos kerja dan disiplin (HR. Ibnu Majah dan Baihaqi), kejujuran dalam perdagangan/muamalah (HR. Tirmidzi dan Baihaqi), serta keutamaan menuntut ilmu (HR. Ibnu Majah dan Muslim dari Abu Hurairah)."
+    }
+  ],
+  "materi": [
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Al-Qur'an dan Hadis Pedoman Hidupku",
+      "subbab": [
+        "A. Hakikat dan Kedudukan Al-Qur'an dan Hadis dalam Islam",
+        "B. Fungsi Al-Qur'an dan Hadis sebagai Petunjuk dan Sumber Hukum Utama",
+        "C. Cara Memfungsikan Al-Qur'an dan Hadis dalam Kehidupan Sehari-hari",
+        "D. Meneladani Semangat Sahabat dalam Berpegang Teguh pada Wahyu"
+      ],
+      "elemen_kode": [
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Al-Qur'an Hadis MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "1–22",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Menjadikan Al-Qur'an dan Hadis sebagai pedoman hidup adalah bukti cinta tertinggi kepada Allah dan Rasulullah SAW."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Menjadikan Al-Qur'an dan Hadis sebagai pedoman hidup adalah bukti cinta tertinggi kepada Allah dan Rasulullah SAW.",
+      "kata_kunci": [
+        "al-qur'an",
+        "hadis pedoman hidupku",
+        "hakikat",
+        "kedudukan al-qur'an",
+        "hadis dalam islam"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Merenungkan Kekuasaan Allah SWT dan Menggapai Rahmat-Nya",
+      "subbab": [
+        "A. Membaca dan Menghafal QS. Asy-Syams (91): 1-15 dan QS. Al-Lail (92): 1-21",
+        "B. Memahami Terjemah dan Kandungan QS. Asy-Syams dan QS. Al-Lail",
+        "C. Hadis Riwayat Muslim tentang Rahmat dan Kekuasaan Allah",
+        "D. Menanamkan Sikap Takwa dan Mensyukuri Tanda-Tanda Kebesaran Sang Pencipta"
+      ],
+      "elemen_kode": [
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Al-Qur'an Hadis MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "23–48",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Tadabur keagungan matahari, bulan, siang, dan malam menuntun jiwa mencintai Allah Sang Maha Kuasa."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        3
+      ],
+      "deskripsi": "Tadabur keagungan matahari, bulan, siang, dan malam menuntun jiwa mencintai Allah Sang Maha Kuasa.",
+      "kata_kunci": [
+        "kekuasaan allah swt",
+        "rahmat-nya",
+        "membaca",
+        "menghafal qs asy-syams",
+        "1-15"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Menggapai Ridha Allah SWT dengan Sikap Dermawan dan Menghindari Kikir",
+      "subbab": [
+        "A. Kandungan QS. Al-Balad (90): 1-20 tentang Jalan Terjal Kebajikan (Al-'Aqabah)",
+        "B. Hadis Riwayat Muttafaq 'Alaih tentang Keutamaan Sifat Pemurah dan Bahaya Kikir",
+        "C. Menumbuhkan Sikap Empati, Santunan Yatim, dan Memberi Makan Orang Miskin",
+        "D. Menjauhi Sifat Bakhil dan Egois dalam Kehidupan Madrasah"
+      ],
+      "elemen_kode": [
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Al-Qur'an Hadis MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "49–74",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Gemar bersedekah dan peduli pada kaum dhuafa adalah wujud cinta dan kasih sayang kepada sesama manusia."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        2
+      ],
+      "deskripsi": "Gemar bersedekah dan peduli pada kaum dhuafa adalah wujud cinta dan kasih sayang kepada sesama manusia.",
+      "kata_kunci": [
+        "menghindari kikir",
+        "kandungan qs al-balad",
+        "al-'aqabah",
+        "bahaya kikir",
+        "menumbuhkan sikap empati"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Bab 4: Memperindah Bacaan Al-Qur'an dengan Kaidah Tajwid (Mad Tabi'i)",
+      "subbab": [
+        "A. Pengertian dan Hukum Bacaan Mad Secara Bahasa dan Istilah",
+        "B. Huruf-Huruf Mad Tabi'i (Alif, Wawu, Ya) dan Syarat-Syaratnya",
+        "C. Praktik Membaca Mad Tabi'i Sepanjang Dua Harakat secara Presisi",
+        "D. Mengidentifikasi Hukum Mad Tabi'i pada Surah-Surah Juz 'Amma"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Al-Qur'an Hadis MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "75–98",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Mempelajari kaidah tajwid menumbuhkan ketekunan cinta ilmu dalam menjaga kesucian kitab suci."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Mempelajari kaidah tajwid menumbuhkan ketekunan cinta ilmu dalam menjaga kesucian kitab suci.",
+      "kata_kunci": [
+        "mad tabi'i",
+        "pengertian",
+        "hukum bacaan mad secara bahasa",
+        "istilah",
+        "huruf-huruf mad tabi'i"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Terhapus Kesalahanku Karena Dia Maha Pengampun",
+      "subbab": [
+        "A. Kandungan QS. Adh-Dhuha (93): 1-11 dan QS. Al-Insyirah (94): 1-8",
+        "B. Hadis Riwayat Tirmidzi tentang Luasnya Ampunan dan Rahmat Allah SWT",
+        "C. Menumbuhkan Sikap Optimisme, Pantang Putus Asa, dan Selalu Berprasangka Baik",
+        "D. Pembiasaan Taubat Nasuha dan Istighfar dalam Keseharian Siswa"
+      ],
+      "elemen_kode": [
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Al-Qur'an Hadis MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "99–126",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Meyakini ampunan Allah menumbuhkan rasa harap (raja') dan mahabbah kepada Sang Maha Pengasih."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Meyakini ampunan Allah menumbuhkan rasa harap (raja') dan mahabbah kepada Sang Maha Pengasih.",
+      "kata_kunci": [
+        "kandungan qs adh-dhuha",
+        "1-11",
+        "qs al-insyirah",
+        "rahmat allah swt",
+        "menumbuhkan sikap optimisme"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Menggapai Kebahagiaan dengan Sabar dan Syukur",
+      "subbab": [
+        "A. Kandungan QS. Al-Baqarah: 153 tentang Salat dan Sabar sebagai Penolong",
+        "B. Hadis Riwayat Muslim tentang Keindahan Sikap Orang Beriman dalam Syukur dan Sabar",
+        "C. Macam-Macam Sabar: Sabar dalam Ketaatan, Menjauhi Maksiat, dan Menghadapi Ujian",
+        "D. Aplikasi Sikap Bersyukur melalui Lisan, Hati, dan Amal Nyata Membantu Sesama"
+      ],
+      "elemen_kode": [
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Al-Qur'an Hadis MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "127–156",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Sabar dan syukur memelihara ketenangan jiwa, kesehatan mental, serta keharmonisan dengan sesama."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Sabar dan syukur memelihara ketenangan jiwa, kesehatan mental, serta keharmonisan dengan sesama.",
+      "kata_kunci": [
+        "kebahagiaan dengan sabar",
+        "syukur",
+        "kandungan qs al-baqarah",
+        "153 tentang salat",
+        "sabar"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Kubaca Al-Qur'an dengan Tepat (Mad 'Iwad, Mad Layyin, Mad 'Aridh Lissukun)",
+      "subbab": [
+        "A. Pengertian dan Ketentuan Hukum Bacaan Mad 'Iwad",
+        "B. Pengertian dan Ketentuan Hukum Bacaan Mad Layyin",
+        "C. Pengertian dan Ketentuan Hukum Bacaan Mad 'Aridh Lissukun",
+        "D. Perbandingan Cara Membaca dan Latihan Penerapan dalam Tilawah"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Al-Qur'an Hadis MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "1–26",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Memperdalam kaidah tajwid mad far'i melatih ketelitian artikulasi fonetik dan cinta ilmu."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Memperdalam kaidah tajwid mad far'i melatih ketelitian artikulasi fonetik dan cinta ilmu.",
+      "kata_kunci": [
+        "kubaca al-qur'an dengan tepat",
+        "mad 'iwad",
+        "mad layyin",
+        "mad 'aridh lissukun",
+        "pengertian"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Kuberbagi Infak dan Sedekah dengan Ikhlas",
+      "subbab": [
+        "A. Kandungan QS. Al-Fajr: 15-18 tentang Ujian Kekayaan dan Kepedulian Yatim",
+        "B. Kandungan QS. Al-Baqarah: 254 dan 261 tentang Perumpamaan Pahala Menafkahkan Harta",
+        "C. Menghindari Penyakit Riya' dan Menyakiti Hati Penerima Sedekah",
+        "D. Praktik Penggalangan Dana Infak Peduli Bencana di Madrasah"
+      ],
+      "elemen_kode": [
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Al-Qur'an Hadis MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "27–54",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Berbagi infak secara ikhlas menyucikan jiwa dan memupuk rasa persaudaraan serta cinta sesama."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        2
+      ],
+      "deskripsi": "Berbagi infak secara ikhlas menyucikan jiwa dan memupuk rasa persaudaraan serta cinta sesama.",
+      "kata_kunci": [
+        "kuberbagi infak",
+        "sedekah dengan ikhlas",
+        "kandungan qs al-fajr",
+        "15-18 tentang ujian kekayaan",
+        "kepedulian yatim"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Kukuatkan Iman Melalui Beramal Saleh",
+      "subbab": [
+        "A. Teks dan Terjemah Hadis Bukhari Muslim dari Abu Hurairah tentang Tangan di Atas Lebih Baik",
+        "B. Hadis Bukhari dari Hakim bin Hizam tentang Keutamaan Menjaga Kehormatan Diri (Iffah)",
+        "C. Menghubungkan Keimanan dengan Aksi Nyata Kemandirian Ekonomi",
+        "D. Menjauhi Sikap Meminta-minta dan Budaya Malas"
+      ],
+      "elemen_kode": [
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Al-Qur'an Hadis MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "55–80",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Beramal saleh atas dasar iman membuahkan keikhlasan ibadah karena Allah semata."
+        },
+        {
+          "id": 5,
+          "alasan": "Menjaga martabat diri dengan bekerja halal dan tidak bergantung pada orang lain."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Beramal saleh atas dasar iman membuahkan keikhlasan ibadah karena Allah semata.",
+      "kata_kunci": [
+        "kukuatkan iman",
+        "melalui",
+        "beramal saleh",
+        "teks",
+        "iffah"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Bab 4: Membaca Al-Qur'an dengan Benar (Mad Shilah, Mad Badal, Mad Tamkin, Mad Farqi)",
+      "subbab": [
+        "A. Hukum Bacaan Mad Shilah Qashirah dan Mad Shilah Thawilah",
+        "B. Hukum Bacaan Mad Badal dan Cara Melafalkannya",
+        "C. Hukum Bacaan Mad Tamkin pada Pertemuan Huruf Ya Bertasydid",
+        "D. Hukum Bacaan Mad Farqi untuk Membedakan Kalimat Tanya",
+        "E. Uji Kemampuan Membaca Tajwid Berkelompok"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Al-Qur'an Hadis MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "81–110",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Kecermatan melafalkan hukum mad lanjutan melatih ketelitian saintifik dan adab cinta ilmu."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Kecermatan melafalkan hukum mad lanjutan melatih ketelitian saintifik dan adab cinta ilmu.",
+      "kata_kunci": [
+        "membaca al-qur'an dengan benar",
+        "mad shilah",
+        "mad badal",
+        "mad tamkin",
+        "mad farqi"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Menjaga Kelestarian Alam dengan Berpikir Kritis",
+      "subbab": [
+        "A. Kandungan QS. Ar-Rum: 41-42 tentang Kerusakan Lingkungan Akibat Perbuatan Manusia",
+        "B. Kandungan QS. Al-A'raf: 56-58 tentang Larangan Merusak Bumi Sesudah Diperbaiki",
+        "C. Hadis Riwayat Bukhari Muslim tentang Menanam Pohon sebagai Sedekah",
+        "D. Peran Pelajar Madrasah dalam Aksi Konservasi Air, Penghijauan, dan Pengurangan Sampah"
+      ],
+      "elemen_kode": [
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Al-Qur'an Hadis MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "111–142",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Melestarikan alam adalah mandat teologis khalifah fil ardh yang ditegaskan langsung dalam Al-Qur'an."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        3
+      ],
+      "deskripsi": "Melestarikan alam adalah mandat teologis khalifah fil ardh yang ditegaskan langsung dalam Al-Qur'an.",
+      "kata_kunci": [
+        "kandungan qs ar-rum",
+        "kandungan qs al-a'raf",
+        "sedekah",
+        "penghijauan",
+        "pengurangan sampah"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Disiplin dan Kerja Keras Menuju Kesuksesan",
+      "subbab": [
+        "A. Hadis Riwayat Ibnu Majah dari Miqdam bin Ma'dikarib tentang Memakan Hasil Usaha Sendiri",
+        "B. Hadis Riwayat Baihaqi tentang Sikap Profesional (Itqan) dalam Bekerja",
+        "C. Membangun Etos Kerja Islami: Disiplin, Tangguh, dan Pantang Menyerah",
+        "D. Membiasakan Manajemen Waktu yang Efektif bagi Pelajar MTs"
+      ],
+      "elemen_kode": [
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Al-Qur'an Hadis MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "143–172",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Bekerja keras dan itqan adalah nilai luhur cinta ilmu dan integritas seorang mukmin."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        6
+      ],
+      "deskripsi": "Bekerja keras dan itqan adalah nilai luhur cinta ilmu dan integritas seorang mukmin.",
+      "kata_kunci": [
+        "disiplin",
+        "kerja keras",
+        "menuju",
+        "kesuksesan",
+        "itqan"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Fasih Membaca Al-Qur'an (Mad Lazim Kilmi dan Harfi)",
+      "subbab": [
+        "A. Hukum Bacaan Mad Lazim Mukhaffaf Kilmi dan Mad Lazim Mutsaqqal Kilmi",
+        "B. Hukum Bacaan Mad Lazim Mukhaffaf Harfi dan Mad Lazim Mutsaqqal Harfi",
+        "C. Penerapan Panjang Bacaan 6 Harakat (3 Alif) pada Fawatihus Suwar",
+        "D. Praktik Tilawah Berkaidah Tajwid Tinggi pada Surah Maryam dan Qaf"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Al-Qur'an Hadis MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "1–28",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Membaca Al-Qur'an dengan tajwid yang sempurna memancarkan cinta dan penghormatan pada kalam Ilahi."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Membaca Al-Qur'an dengan tajwid yang sempurna memancarkan cinta dan penghormatan pada kalam Ilahi.",
+      "kata_kunci": [
+        "fasih membaca al-qur'an",
+        "mad lazim kilmi",
+        "harfi",
+        "mad lazim mutsaqqal kilmi",
+        "mad lazim mutsaqqal harfi"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Meraih Berkah dengan Sikap Jujur dalam Muamalah",
+      "subbab": [
+        "A. Kandungan QS. Al-Muthaffifin (83): 1-17 tentang Ancaman bagi Orang yang Curang Menimbang",
+        "B. Kandungan QS. Al-An'am (6): 152 tentang Perintah Menyempurnakan Takaran dan Timbangan",
+        "C. Dampak Buruk Korupsi, Manipulasi Data, dan Penipuan bagi Ketenteraman Bangsa",
+        "D. Menegakkan Budaya Kejujuran Akademik dan Transaksi di Koperasi Madrasah"
+      ],
+      "elemen_kode": [
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Al-Qur'an Hadis MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "29–58",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Kejujuran menimbang dan anti-korupsi membangun tatanan ekonomi bangsa yang adil dan bermartabat."
+        },
+        {
+          "id": 5,
+          "alasan": "Tidak merugikan hak orang lain mencerminkan kasih sayang dan integritas moral kepada sesama."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        2
+      ],
+      "deskripsi": "Kejujuran menimbang dan anti-korupsi membangun tatanan ekonomi bangsa yang adil dan bermartabat.",
+      "kata_kunci": [
+        "meraih berkah dengan sikap jujur",
+        "muamalah",
+        "kandungan qs al-muthaffifin",
+        "kandungan qs al-an'am",
+        "timbangan"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Menggapai Keberkahan Hidup Melalui Transaksi yang Benar",
+      "subbab": [
+        "A. Teks dan Terjemah Hadis Riwayat Tirmidzi tentang Pedagang yang Jujur Bersama Para Nabi",
+        "B. Hadis Riwayat Baihaqi tentang Jual Beli atas Dasar Suka Sama Suka (Taradhin)",
+        "C. Menghindari Penipuan Digital, Riba, dan Spekulasi Judi Daring (Judol)",
+        "D. Membiasakan Muamalah Halal dan Transparan di Era Perdagangan Elektronik"
+      ],
+      "elemen_kode": [
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Al-Qur'an Hadis MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "59–86",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Transaksi adil tanpa riba melindungi hak sesama dari kezaliman dan eksploitasi."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        3
+      ],
+      "deskripsi": "Transaksi adil tanpa riba melindungi hak sesama dari kezaliman dan eksploitasi.",
+      "kata_kunci": [
+        "keberkahan hidup",
+        "melalui",
+        "transaksi yang benar",
+        "teks",
+        "taradhin"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Bab 4: Menerapkan Bacaan Gharib dalam Al-Qur'an",
+      "subbab": [
+        "A. Mengenal Bacaan Imalah (QS. Hud: 41) dan Praktik Pelafalannya",
+        "B. Mengenal Bacaan Isymam (QS. Yusuf: 11) dan Gerakan Bibir",
+        "C. Mengenal Bacaan Tashil (QS. Fushshilat: 44) dan Kemudahan Bunyi Hamzah",
+        "D. Mengenal Bacaan Naql (QS. Al-Hujurat: 11) dan Bacaan Saktah (QS. Al-Kahfi, Yasin, dll.)",
+        "E. Hikmah dan Adab dalam Menjaga Keaslian Riwayat Bacaan Al-Qur'an (Qira'at Imam 'Ashim)"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Al-Qur'an Hadis MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "87–118",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Menjaga kekhususan bacaan gharib adalah bentuk ketakwaan dan amanah melestarikan sunnah bacaan Nabi SAW."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        3
+      ],
+      "deskripsi": "Menjaga kekhususan bacaan gharib adalah bentuk ketakwaan dan amanah melestarikan sunnah bacaan Nabi SAW.",
+      "kata_kunci": [
+        "bacaan gharib",
+        "al-qur'an",
+        "bacaan imalah",
+        "qs hud",
+        "praktik pelafalannya"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Semangat Menuntut Ilmu untuk Meraih Martabat Mulia",
+      "subbab": [
+        "A. Kandungan QS. 'Abasa (80): 1-16 tentang Teguran Menghargai Pencari Ilmu",
+        "B. Kandungan QS. Al-Mujadilah (58): 11 tentang Pengangkatan Derajat Orang Beriman dan Berilmu",
+        "C. Kewajiban Inklusif Menuntut Ilmu Tanpa Membedakan Fisik dan Status Sosial",
+        "D. Membangun Budaya Literasi, Riset Ilmiah, dan Adab Santun kepada Guru"
+      ],
+      "elemen_kode": [
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Al-Qur'an Hadis MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "119–146",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Ayat-ayat Al-Qur'an memerintahkan umat Islam mencintai ilmu sebagai jalan kemuliaan peradaban."
+        },
+        {
+          "id": 5,
+          "alasan": "Memperlakukan semua pencari ilmu secara adil tanpa diskriminasi memuliakan martabat manusia."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        3
+      ],
+      "deskripsi": "Ayat-ayat Al-Qur'an memerintahkan umat Islam mencintai ilmu sebagai jalan kemuliaan peradaban.",
+      "kata_kunci": [
+        "kandungan qs 'abasa",
+        "kandungan qs al-mujadilah",
+        "berilmu",
+        "status sosial",
+        "membangun budaya literasi"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Pantang Menyerah Meraih Kebahagiaan dengan Mengamalkan Ilmu",
+      "subbab": [
+        "A. Hadis Riwayat Ibnu Majah dari Shafwan bin 'Assal tentang Sayap Malaikat bagi Penuntut Ilmu",
+        "B. Hadis Riwayat Muslim dari Abu Hurairah tentang Tiga Amal yang Tidak Terputus (Ilmu yang Bermanfaat)",
+        "C. Tanggung Jawab Moral Mengamalkan dan Mengajarkan Ilmu untuk Kemaslahatan Umat",
+        "D. Menyusun Rencana Studi Lanjut dan Cita-Cita Bakti untuk Agama dan Bangsa"
+      ],
+      "elemen_kode": [
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Al-Qur'an Hadis MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "147–176",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Mendedikasikan ilmu untuk kemaslahatan masyarakat adalah puncak tertinggi dari nilai cinta ilmu."
+        },
+        {
+          "id": 4,
+          "alasan": "Generasi berilmu menjadi modal utama kemajuan dan kedaulatan tanah air."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Mendedikasikan ilmu untuk kemaslahatan masyarakat adalah puncak tertinggi dari nilai cinta ilmu.",
+      "kata_kunci": [
+        "ilmu yang bermanfaat",
+        "menyusun rencana studi lanjut",
+        "cita-cita bakti untuk agama",
+        "bangsa"
+      ]
+    }
+  ],
+  "status": "LENGKAP",
+  "catatan": "CP verbatim mengacu pada SK Dirjen Pendis No. 9941 Tahun 2025 Lampiran Mata Pelajaran Al-Qur'an Hadis Fase D (3 Elemen: Ilmu Tajwid, Al-Qur'an, Hadis). Materi per bab dirangkum dari Buku Siswa Kemenag RI Kelas VII, VIII, dan IX. Saran integrasi Panca Cinta dan DPL lengkap di setiap bab.",
+  "diverifikasi_oleh": null,
+  "tanggal_verifikasi": null
+}

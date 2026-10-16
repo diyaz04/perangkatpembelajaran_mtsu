@@ -1,0 +1,122 @@
+{
+  "kognitif": [
+    {
+      "tingkat": "C1",
+      "nama": "Mengingat (Remembering)",
+      "deskripsi": "Mengingat kembali fakta, istilah, konsep dasar, atau jawaban yang telah dipelajari sebelumnya.",
+      "kata_kerja": [
+        "Menyebutkan", "Menunjukkan", "Mendefinisikan", "Mengidentifikasi", "Mendaftar",
+        "Menjodohkan", "Menamai", "Membaca", "Menghafal", "Merekam", "Mengulang"
+      ]
+    },
+    {
+      "tingkat": "C2",
+      "nama": "Memahami (Understanding)",
+      "deskripsi": "Menunjukkan pemahaman tentang fakta dan gagasan dengan mengorganisasi, membandingkan, menafsirkan, dan menyatakan gagasan utama.",
+      "kata_kerja": [
+        "Menjelaskan", "Menguraikan", "Mencontohkan", "Mengklasifikasikan", "Merangkum",
+        "Menyimpulkan", "Membandingkan", "Membedakan", "Menerjemahkan", "Memparafrasekan", "Menginterpretasikan"
+      ]
+    },
+    {
+      "tingkat": "C3",
+      "nama": "Menerapkan (Applying)",
+      "deskripsi": "Menerapkan pengetahuan, fakta, aturan, atau konsep ke situasi baru atau pemecahan masalah nyata.",
+      "kata_kerja": [
+        "Menerapkan", "Menggunakan", "Menghitung", "Melaksanakan", "Memperagakan",
+        "Mengoperasikan", "Menentukan", "Menyesuaikan", "Memodifikasi", "Menyelesaikan", "Membuktikan"
+      ]
+    },
+    {
+      "tingkat": "C4",
+      "nama": "Menganalisis (Analyzing)",
+      "deskripsi": "Memeriksa dan memecah informasi menjadi bagian-bagian dengan mengidentifikasi motif, sebab, dan hubungan antarkomponen.",
+      "kata_kerja": [
+        "Menganalisis", "Menelaah", "Memerinci", "Mendiagnosis", "Mengorelasikan",
+        "Mendiferensiasikan", "Mengorganisasikan", "Menemukan pola", "Menyelidiki", "Mengaitkan"
+      ]
+    },
+    {
+      "tingkat": "C5",
+      "nama": "Mengevaluasi (Evaluating)",
+      "deskripsi": "Menyajikan dan mempertahankan pendapat dengan membuat penilaian tentang informasi, validitas gagasan, atau kualitas pekerjaan berdasarkan kriteria.",
+      "kata_kerja": [
+        "Mengevaluasi", "Menilai", "Mengkritik", "Memvalidasi", "Menimbang",
+        "Memutuskan", "Mempertahankan", "Menjustifikasi", "Menguji", "Membandingkan efektivitas"
+      ]
+    },
+    {
+      "tingkat": "C6",
+      "nama": "Mencipta (Creating)",
+      "deskripsi": "Menggabungkan bagian-bagian untuk membentuk suatu kesatuan baru yang utuh atau mengusulkan solusi alternatif.",
+      "kata_kerja": [
+        "Merancang", "Menciptakan", "Menyusun", "Mengembangkan", "Membuat",
+        "Mengonstruksi", "Merumuskan", "Memproduksi", "Mengintegrasikan", "Merekonstruksi"
+      ]
+    }
+  ],
+  "afektif": [
+    {
+      "tingkat": "A1",
+      "nama": "Menerima (Receiving)",
+      "deskripsi": "Kesadaran, kemauan mendengar, dan memperhatikan stimulus pembelajaran.",
+      "kata_kerja": ["Memperhatikan", "Mendengarkan", "Mengikuti", "Menyadari", "Menunjukkan minat"]
+    },
+    {
+      "tingkat": "A2",
+      "nama": "Merespons (Responding)",
+      "deskripsi": "Partisipasi aktif siswa, memberikan tanggapan dan reaksi sukarela.",
+      "kata_kerja": ["Menanggapi", "Berpartisipasi", "Mengajukan pertanyaan", "Menaati", "Melaporkan"]
+    },
+    {
+      "tingkat": "A3",
+      "nama": "Menghargai (Valuing)",
+      "deskripsi": "Menilai keberhargaan atau mutu sesuatu, berkomitmen pada suatu nilai.",
+      "kata_kerja": ["Menghargai", "Mendukung", "Meyakini", "Menghormati", "Mengapresiasi", "Menginternalisasi"]
+    },
+    {
+      "tingkat": "A4",
+      "nama": "Mengorganisasikan (Organizing)",
+      "deskripsi": "Memadukan nilai-nilai yang berbeda, menyelesaikan konflik antarnilai, dan membentuk sistem nilai internal.",
+      "kata_kerja": ["Mengatur", "Menghubungkan", "Menyelaraskan", "Memprioritaskan", "Mempertahankan prinsip"]
+    },
+    {
+      "tingkat": "A5",
+      "nama": "Karakterisasi (Characterizing)",
+      "deskripsi": "Memiliki sistem nilai yang mengendalikan perilaku dan menjadi gaya hidup konsisten.",
+      "kata_kerja": ["Membiasakan", "Meneladankan", "Mempraktikkan secara konsisten", "Menunjukkan integritas", "Berkomitmen"]
+    }
+  ],
+  "psikomotorik": [
+    {
+      "tingkat": "P1",
+      "nama": "Meniru (Imitation)",
+      "deskripsi": "Mengamati dan meniru tindakan orang lain.",
+      "kata_kerja": ["Meniru", "Mengikuti gerak", "Menyalin", "Mengulangi contoh"]
+    },
+    {
+      "tingkat": "P2",
+      "nama": "Memanipulasi (Manipulation)",
+      "deskripsi": "Melakukan tindakan tertentu mengikuti instruksi tertulis atau lisan secara mandiri.",
+      "kata_kerja": ["Melakukan sesuai petunjuk", "Mengoperasikan", "Merangkai", "Mempraktikkan langkah kerja"]
+    },
+    {
+      "tingkat": "P3",
+      "nama": "Presisi (Precision)",
+      "deskripsi": "Melakukan tindakan dengan tingkat ketepatan dan kecermatan yang tinggi tanpa bimbingan langsung.",
+      "kata_kerja": ["Mendemonstrasikan dengan tepat", "Mengukur dengan teliti", "Melakukan kalibrasi", "Menunjukkan kemahiran"]
+    },
+    {
+      "tingkat": "P4",
+      "nama": "Artikulasi (Articulation)",
+      "deskripsi": "Mengkoordinasikan serangkaian tindakan secara harmonis, runtut, dan terintegrasi.",
+      "kata_kerja": ["Mengkoordinasikan", "Mengombinasikan gerak/langkah", "Menyesuaikan teknik", "Menyajikan secara terpadu"]
+    },
+    {
+      "tingkat": "P5",
+      "nama": "Naturalisasi (Naturalization)",
+      "deskripsi": "Melakukan tindakan secara spontan, otomatis, dan terbiasa dengan tingkat keahlian tingkat tinggi.",
+      "kata_kerja": ["Mendesain secara spontan", "Menciptakan kreasi baru", "Menampilkan kebiasaan otomatis", "Melakukan manuver ahli"]
+    }
+  ]
+}

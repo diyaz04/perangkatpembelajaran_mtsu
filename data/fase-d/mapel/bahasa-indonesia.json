@@ -1,0 +1,819 @@
+{
+  "mapel": "Bahasa Indonesia",
+  "slug": "bahasa-indonesia",
+  "kelompok": "umum",
+  "fase": "D",
+  "sumber_cp": {
+    "regulasi_kode": "BSKAP-046-2025",
+    "halaman": "Halaman 26–38",
+    "url": "https://kurikulum.kemendikdasmen.go.id/unduhan",
+    "diakses": "2026-10-14"
+  },
+  "rasional": "Kemampuan berbahasa, bersastra, dan berpikir merupakan fondasi utama literasi murid. Pembelajaran Bahasa Indonesia membina kompetensi menyimak, membaca dan memirsa, berbicara dan mempresentasikan, serta menulis melalui beragam jenis teks sastra dan nonsastra guna menumbuhkan kemandirian nalar kritis, empati kemanusiaan, kreativitas estetik, serta rasa bangga terhadap bahasa persatuan.",
+  "tujuan_mapel": [
+    "Berkomunikasi secara efektif, santun, dan bertanggung jawab sesuai konteks sosial budaya, akademik, dan multimodal.",
+    "Mengembangkan kecakapan bernalar kritis, analitis, dan apresiatif dalam memproses dan mengevaluasi beragam informasi teks.",
+    "Memproduksi berbagai jenis teks fiksi dan nonfiksi dengan struktur runtut, logis, dan kaidah kebahasaan baku yang cermat.",
+    "Menghargai dan mengeksplorasi kekayaan sastra Indonesia sebagai media penumbuh kehalusan budi pekerti dan empati kemanusiaan.",
+    "Mengembangkan literasi informasi digital yang beretika, bebas plagiarisme, serta menjunjung tinggi verifikasi kebenaran (tabayun)."
+  ],
+  "capaian_umum_fase_d": "Pada akhir Fase D, peserta didik memiliki kemampuan berbahasa untuk berkomunikasi dan bernalar sesuai dengan tujuan, konteks sosial, dan akademis. Peserta didik mampu memahami, mengolah, dan menginterpretasi informasi paparan tentang topik yang beragam dan karya sastra. Peserta didik mampu berpartisipasi aktif dalam diskusi, mempresentasikan, dan menanggapi informasi nonfiksi dan fiksi yang dipaparkan; peserta didik menulis berbagai teks untuk menyampaikan pengamatan dan pengalamannya dengan lebih terstruktur, dan menuliskan tanggapannya terhadap paparan dan bacaan menggunakan pengalaman dan pengetahuannya. Peserta didik mengembangkan kompetensi diri melalui pajanan berbagai teks penguatan karakter.",
+  "elemen": [
+    {
+      "kode": "E1",
+      "nama": "Menyimak",
+      "deskripsi_cp": "Peserta didik mampu menganalisis dan memaknai informasi berupa gagasan, pikiran, perasaan, pandangan, arahan atau pesan yang tepat dari berbagai tipe teks (fiksi dan nonfiksi) audiovisual dan aural dalam bentuk monolog, dialog, dan gelar wicara. Peserta didik mampu mengeksplorasi dan mengevaluasi berbagai informasi dari topik aktual yang didengar."
+    },
+    {
+      "kode": "E2",
+      "nama": "Membaca dan Memirsa",
+      "deskripsi_cp": "Peserta didik memahami informasi berupa gagasan, pikiran, pandangan, arahan atau pesan dari berbagai jenis teks misalnya teks deskripsi, narasi, puisi, eksplanasi dan eksposisi dari teks visual dan audiovisual untuk menemukan makna yang tersurat dan tersirat. Peserta didik menginterpretasikan informasi untuk mengungkapkan simpati, kepedulian, empati atau pendapat pro/kontra dari teks visual dan audiovisual. Peserta didik menggunakan sumber informasi lain untuk menilai akurasi dan kualitas data serta membandingkan informasi pada teks. Peserta didik mampu mengeksplorasi dan mengevaluasi berbagai topik aktual yang dibaca dan dipirsa."
+    },
+    {
+      "kode": "E3",
+      "nama": "Berbicara dan Mempresentasikan",
+      "deskripsi_cp": "Peserta didik mampu menyampaikan gagasan, pikiran, pandangan, arahan atau pesan untuk memecahkan masalah dan mencari solusi secara lisan dalam bentuk monolog dan dialog logis, runtut, kritis, dan kreatif. Peserta didik mampu menggunakan dan memaknai kosakata baru yang memiliki makna denotatif, konotatif, dan kiasan untuk berbicara dan menyajikan gagasannya. Peserta didik mampu menggunakan ungkapan sesuai dengan norma kesopanan dalam berkomunikasi. Peserta didik mampu berdiskusi secara aktif, kontributif, efektif, dan santun. Peserta didik mampu menuturkan dan menyajikan ungkapan simpati, empati, peduli, perasaan, dan penghargaan dalam bentuk teks informatif dan fiksi melalui teks multimodal. Peserta didik mampu mengungkapkan dan mempresentasikan berbagai topik aktual secara kritis."
+    },
+    {
+      "kode": "E4",
+      "nama": "Menulis",
+      "deskripsi_cp": "Peserta didik mampu menulis gagasan, pikiran, pandangan, arahan atau pesan tertulis untuk berbagai tujuan secara logis, kritis, dan kreatif. Peserta didik juga mampu menuliskan hasil penelitian sederhana dengan mengutip sumber rujukan secara etis. Menyampaikan ungkapan rasa simpati, empati, peduli, dan pendapat pro/kontra secara etis dalam memberikan penghargaan secara tertulis dalam teks multimodal. Peserta didik mampu menggunakan dan mengembangkan kosakata baru yang memiliki makna denotatif, konotatif, dan kiasan untuk menulis. Peserta didik menyampaikan tulisan berdasarkan fakta, pengalaman, dan imajinasi secara indah dan menarik dalam bentuk prosa dan puisi dengan penggunaan kosa kata secara kreatif."
+    }
+  ],
+  "materi": [
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Jelajah Nusantara (Teks Deskripsi)",
+      "subbab": [
+        "A. Mengakses Informasi dan Menemukan Makna Kata dalam Teks Deskripsi",
+        "B. Mengenali Gaya Penulisan Teks Deskripsi di Media Sosial",
+        "C. Menjelajahi Arti Kata Menggunakan Kamus dan Tesaurus",
+        "D. Menyelami Ragam Bahasa Teks Deskripsi: Kata Konkret dan Kalimat Perincian",
+        "E. Menulis Teks Deskripsi Sederhana tentang Objek Wisata dan Kuliner Lokal"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Indonesia untuk SMP Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "1–36",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Mendeskripsikan keindahan panorama nusantara dan kuliner daerah menumbuhkan rasa bangga dan cinta tanah air."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        8
+      ],
+      "deskripsi": "Mendeskripsikan keindahan panorama nusantara dan kuliner daerah menumbuhkan rasa bangga dan cinta tanah air.",
+      "kata_kunci": [
+        "jelajah nusantara",
+        "teks deskripsi",
+        "mengakses informasi",
+        "tesaurus",
+        "kata konkret"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Berkelana di Dunia Imajinasi (Cerita Fantasi/Narasi)",
+      "subbab": [
+        "A. Mengenal Tokoh dan Alur Cerita Fantasi",
+        "B. Membedakan Cerita Fantasi Total dan Fantasi Irisan",
+        "C. Mengenali Majas Sarkasme, Metafora, dan Personifikasi",
+        "D. Menulis Cerita Fantasi dengan Alur Menarik dan Pesan Moral Kebajikan"
+      ],
+      "elemen_kode": [
+        "E2",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Indonesia untuk SMP Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "37–70",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Mengembangkan daya kreasi imajinatif memperkaya nalar sastra dan kecintaan pada ilmu pengetahuan."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Mengembangkan daya kreasi imajinatif memperkaya nalar sastra dan kecintaan pada ilmu pengetahuan.",
+      "kata_kunci": [
+        "berkelana di dunia imajinasi",
+        "cerita fantasi",
+        "narasi",
+        "fantasi irisan",
+        "mengenali majas sarkasme"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Hal yang Baik bagi Tubuh (Teks Prosedur)",
+      "subbab": [
+        "A. Mengidentifikasi Ciri dan Karakteristik Teks Prosedur",
+        "B. Menganalisis Struktur Teks Prosedur: Tujuan, Bahan/Alat, dan Langkah",
+        "C. Kaidah Kebahasaan: Kalimat Perintah, Saran, Larangan, dan Pelesapan",
+        "D. Menyusun Teks Prosedur Membuat Makanan Sehat dan Memperagakannya"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Indonesia untuk SMP Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "71–104",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Menyusun petunjuk menjaga kebugaran tubuh adalah ekspresi cinta diri dan pola hidup sehat."
+        }
+      ],
+      "saran_dpl": [
+        6,
+        7
+      ],
+      "deskripsi": "Menyusun petunjuk menjaga kebugaran tubuh adalah ekspresi cinta diri dan pola hidup sehat.",
+      "kata_kunci": [
+        "hal yang baik bagi tubuh",
+        "teks prosedur",
+        "mengidentifikasi ciri",
+        "karakteristik teks prosedur",
+        "struktur teks prosedur"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Bab 4: Aksi Nyata para Pelindung Bumi (Teks LHO)",
+      "subbab": [
+        "A. Menggali Fakta dan Informasi dalam Teks Laporan Hasil Observasi",
+        "B. Membedakan Kalimat Fakta dan Kalimat Opini",
+        "C. Struktur Teks LHO: Pernyataan Umum, Deskripsi Bagian, dan Manfaat",
+        "D. Melakukan Observasi Lingkungan Madrasah dan Menulis Laporannya"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Indonesia untuk SMP Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "105–140",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Observasi flora-fauna dan kebersihan lingkungan menumbuhkan aksi nyata pelestarian ekologi madrasah."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        5
+      ],
+      "deskripsi": "Observasi flora-fauna dan kebersihan lingkungan menumbuhkan aksi nyata pelestarian ekologi madrasah.",
+      "kata_kunci": [
+        "aksi nyata para pelindung bumi",
+        "teks lho",
+        "menggali fakta",
+        "membedakan kalimat fakta",
+        "kalimat opini"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Membuka Gerbang Dunia (Membaca Buku Fiksi dan Nonfiksi)",
+      "subbab": [
+        "A. Mengenal Bagian-Bagian Buku dan Unsur Fisik Buku",
+        "B. Merangkum Gagasan Pokok dari Buku Nonfiksi",
+        "C. Menilai Tokoh, Latar, dan Tema dari Buku Fiksi",
+        "D. Menyusun Resensi Buku Sederhana dan Merekomendasikannya kepada Teman"
+      ],
+      "elemen_kode": [
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Indonesia untuk SMP Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "141–172",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Gemar membaca buku membuka cakrawala pengetahuan dan mengokohkan tradisi cinta ilmu."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        8
+      ],
+      "deskripsi": "Gemar membaca buku membuka cakrawala pengetahuan dan mengokohkan tradisi cinta ilmu.",
+      "kata_kunci": [
+        "membuka gerbang dunia",
+        "membaca buku fiksi",
+        "nonfiksi",
+        "bagian-bagian buku",
+        "unsur fisik buku"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Sampaikan Melalui Surat (Surat Pribadi dan Surat Resmi)",
+      "subbab": [
+        "A. Mengenal Unsur dan Format Surat Pribadi",
+        "B. Mengenal Unsur, Kepala Surat, dan Bahasa Baku Surat Resmi",
+        "C. Menulis Surat Pribadi untuk Sahabat dan Guru dengan Bahasa Santun",
+        "D. Menulis Surat Undangan atau Izin Resmi Kegiatan Madrasah"
+      ],
+      "elemen_kode": [
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Indonesia untuk SMP Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "173–204",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Berkomunikasi santun lewat surat mempererat silaturahmi, kasih sayang antarsesama, dan adab pergaulan."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        8
+      ],
+      "deskripsi": "Berkomunikasi santun lewat surat mempererat silaturahmi, kasih sayang antarsesama, dan adab pergaulan.",
+      "kata_kunci": [
+        "sampaikan",
+        "melalui",
+        "surat",
+        "surat pribadi",
+        "surat resmi"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Menulis Teks Laporan Hasil Observasi",
+      "subbab": [
+        "A. Mengidentifikasi Topik dan Data Faktual dalam LHO",
+        "B. Menelaah Struktur Teks LHO Secara Kritis",
+        "C. Kaidah Bahasa: Kata Teknis, Kalimat Definisi, dan Kalimat Deskripsi",
+        "D. Menyusun Teks LHO Berdasarkan Pengamatan Lapangan"
+      ],
+      "elemen_kode": [
+        "E2",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Indonesia untuk SMP Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "1–36",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Melatih keterampilan riset empiris objektif memperkuat sikap ilmiah cinta ilmu."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        8
+      ],
+      "deskripsi": "Melatih keterampilan riset empiris objektif memperkuat sikap ilmiah cinta ilmu.",
+      "kata_kunci": [
+        "mengidentifikasi topik",
+        "data faktual dalam lho",
+        "kaidah bahasa",
+        "kata teknis",
+        "kalimat definisi"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Membuat Iklan, Slogan, dan Poster",
+      "subbab": [
+        "A. Mengenal Ciri dan Fungsi Iklan, Slogan, dan Poster",
+        "B. Menganalisis Unsur Pesan Persuasif dan Sasaran Pembaca",
+        "C. Kaidah Bahasa Persuasif, Imperatif, dan Rima Singkat",
+        "D. Mendesain Poster Layanan Masyarakat (Kesehatan dan Kebersihan)"
+      ],
+      "elemen_kode": [
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Indonesia untuk SMP Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "37–72",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Membuat poster layanan sosial menggerakkan kepedulian bersama dan tolong-menolong."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        8
+      ],
+      "deskripsi": "Membuat poster layanan sosial menggerakkan kepedulian bersama dan tolong-menolong.",
+      "kata_kunci": [
+        "membuat iklan",
+        "slogan",
+        "poster",
+        "ciri",
+        "iklan"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Menulis Artikel Ilmiah Populer",
+      "subbab": [
+        "A. Karakteristik Teks Artikel Ilmiah Populer",
+        "B. Mengumpulkan Bukti dan Data melalui Wawancara dan Kuesioner",
+        "C. Mengembangkan Pendapat Berdasarkan Fakta",
+        "D. Menulis Artikel Ilmiah Populer dengan Bahasa yang Mengalir dan Menarik"
+      ],
+      "elemen_kode": [
+        "E2",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Indonesia untuk SMP Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "73–106",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Menyusun artikel ilmiah membiasakan siswa bernalar analitis dan bertanggung jawab atas validitas data."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        8
+      ],
+      "deskripsi": "Menyusun artikel ilmiah membiasakan siswa bernalar analitis dan bertanggung jawab atas validitas data.",
+      "kata_kunci": [
+        "menulis artikel ilmiah populer",
+        "mengumpulkan bukti",
+        "data melalui wawancara",
+        "kuesioner",
+        "menarik"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Bab 4: Mengulas Karya Fiksi",
+      "subbab": [
+        "A. Mengenal Unsur Intrinsik Cerpen dan Novel",
+        "B. Menilai Penokohan, Tema, dan Nilai-Nilai Moral dalam Cerita",
+        "C. Menulis Resensi dan Ulasan Karya Fiksi secara Kritis dan Objektif",
+        "D. Menyajikan Ulasan Buku di Mading atau Blog Madrasah"
+      ],
+      "elemen_kode": [
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Indonesia untuk SMP Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "107–138",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Mengapresiasi karya fiksi melatih empati batin terhadap beragam perasaan dan pergulatan manusia."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        4
+      ],
+      "deskripsi": "Mengapresiasi karya fiksi melatih empati batin terhadap beragam perasaan dan pergulatan manusia.",
+      "kata_kunci": [
+        "mengulas karya fiksi",
+        "unsur intrinsik cerpen",
+        "novel",
+        "menilai penokohan",
+        "tema"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Menumbuhkan Sikap Tanggap melalui Puisi",
+      "subbab": [
+        "A. Menemukan Unsur Batin Puisi: Tema, Rasa, Nada, dan Amanat",
+        "B. Mengeksplorasi Diksi, Citraan, dan Majas dalam Puisi",
+        "C. Menulis Puisi Ekspresi Cinta Tuhan, Alam, dan Kemanusiaan",
+        "D. Membaca dan Mendeklamasikan Puisi dengan Penghayatan Penuh"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Indonesia untuk SMP Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "139–174",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Puisi religi dan alam memperdalam munajat mahabbah kepada Allah SWT."
+        },
+        {
+          "id": 5,
+          "alasan": "Menghayati puisi kemanusiaan melunakkan hati dan melatih empati sosial."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        8
+      ],
+      "deskripsi": "Puisi religi dan alam memperdalam munajat mahabbah kepada Allah SWT.",
+      "kata_kunci": [
+        "menumbuhkan sikap tanggap",
+        "melalui",
+        "puisi",
+        "menemukan unsur batin puisi",
+        "tema"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Menulis Teks Pidato",
+      "subbab": [
+        "A. Memahami Struktur Teks Pidato: Salam, Pembuka, Isi, dan Penutup",
+        "B. Menyusun Argumen dan Pesan Persuasif Kebangsaan",
+        "C. Kaidah Kebahasaan Pidato: Kalimat Persuasif dan Kosakata Baku",
+        "D. Praktik Berpidato Santun dan Percaya Diri di Hadapan Khalayak"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Indonesia untuk SMP Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "175–208",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Menyampaikan pidato bertema persatuan bangsa mengobarkan semangat cinta tanah air."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        8
+      ],
+      "deskripsi": "Menyampaikan pidato bertema persatuan bangsa mengobarkan semangat cinta tanah air.",
+      "kata_kunci": [
+        "menulis teks pidato",
+        "struktur teks pidato",
+        "salam",
+        "pembuka",
+        "penutup"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Demi Keluarga (Teks Deskripsi dan Narasi Personal)",
+      "subbab": [
+        "A. Menemukan Makna dan Pesan Berbakti pada Orang Tua",
+        "B. Menganalisis Sudut Pandang Orang Pertama dan Ketiga",
+        "C. Kosakata Serapan dan Kata Kiasan Pembentuk Emosi Teks",
+        "D. Menulis Cerita Pengalaman Personal Penuh Kasih Sayang Keluarga"
+      ],
+      "elemen_kode": [
+        "E2",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Indonesia untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "1–38",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Merenungkan jasa keluarga menumbuhkan birrul walidain dan cinta mendalam pada keluarga."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        8
+      ],
+      "deskripsi": "Merenungkan jasa keluarga menumbuhkan birrul walidain dan cinta mendalam pada keluarga.",
+      "kata_kunci": [
+        "demi keluarga",
+        "teks deskripsi",
+        "narasi personal",
+        "menemukan makna",
+        "pesan berbakti pada orang tua"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Buku-Buku Berbicara (Resensi dan Tanggapan Kritis)",
+      "subbab": [
+        "A. Menilai Keunggulan dan Kelemahan Buku secara Kritis",
+        "B. Struktur Teks Tanggapan: Konteks, Deskripsi, dan Penilaian",
+        "C. Menulis Resensi Buku Ilmiah dan Sastra Secara Komprehensif",
+        "D. Menyajikan Gelar Wicara Diskusi Buku Bersama Komunitas Literasi"
+      ],
+      "elemen_kode": [
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Indonesia untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "39–74",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Mengkaji mutu buku memperkuat budaya riset dan tradisi ilmiah cinta ilmu."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        4
+      ],
+      "deskripsi": "Mengkaji mutu buku memperkuat budaya riset dan tradisi ilmiah cinta ilmu.",
+      "kata_kunci": [
+        "buku-buku berbicara",
+        "resensi",
+        "tanggapan kritis",
+        "menilai keunggulan",
+        "kelemahan buku secara kritis"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Komunikasi Ujung Jari (Teks Rekon dan Etika Digital)",
+      "subbab": [
+        "A. Membaca Teks Rekon Faktual tentang Sejarah Teknologi Informasi",
+        "B. Menganalisis Etika Berkomunikasi di Media Sosial dan Surat Pembaca",
+        "C. Menghindari Cyberbullying, Pelecehan Verbal, dan Penyebaran Hoaks",
+        "D. Menulis Esai Reflektif tentang Penggunaan Gawai yang Sehat dan Bijak"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Indonesia untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "75–110",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Prinsip tabayun memandu siswa memverifikasi berita digital sebelum percaya atau menyebarkannya."
+        },
+        {
+          "id": 5,
+          "alasan": "Menjunjung etika komunikasi daring mencegah perundungan siber dan memuliakan sesama."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        8
+      ],
+      "deskripsi": "Prinsip tabayun memandu siswa memverifikasi berita digital sebelum percaya atau menyebarkannya.",
+      "kata_kunci": [
+        "komunikasi ujung jari",
+        "teks rekon",
+        "etika digital",
+        "surat pembaca",
+        "menghindari cyberbullying"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Bab 4: Dari Hobi Menjadi Pundi-Pundi (Teks Prosedur Wirausaha)",
+      "subbab": [
+        "A. Membaca Teks Inspiratif Kewirausahaan Mandiri",
+        "B. Menyusun Panduan Prosedur Pembuatan Produk Kreatif",
+        "C. Membuat Rencana Bisnis Sederhana dan Promosi Digital",
+        "D. Mempresentasikan Gagasan Usaha Berlandaskan Kejujuran dan Kerja Keras"
+      ],
+      "elemen_kode": [
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Indonesia untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "111–146",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Mengembangkan potensi bakat menjadi karya nyata yang bermanfaat bagi kemaslahatan masyarakat."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Mengembangkan potensi bakat menjadi karya nyata yang bermanfaat bagi kemaslahatan masyarakat.",
+      "kata_kunci": [
+        "dari hobi menjadi pundi-pundi",
+        "teks prosedur wirausaha",
+        "promosi digital",
+        "kerja keras"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Menuju Laut (Teks Laporan dan Narasi Kelautan Nusantara)",
+      "subbab": [
+        "A. Membaca Teks Ekologi Maritim dan Kekayaan Bahari Indonesia",
+        "B. Menulis Teks Laporan Analisis Sampah Plastik di Lautan",
+        "C. Menulis Cerita Penjelajahan Maritim Bertema Kepahlawanan Pelaut Nusantara",
+        "D. Kampanye Literasi Konservasi Terumbu Karang dan Ekosistem Pesisir"
+      ],
+      "elemen_kode": [
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Indonesia untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "147–182",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Peduli pada kelestarian terumbu karang dan lautan Indonesia sebagai amanah ekologi bumi."
+        },
+        {
+          "id": 4,
+          "alasan": "Bangga pada jati diri bangsa Indonesia sebagai negara maritim kepulauan terbesar."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        5
+      ],
+      "deskripsi": "Peduli pada kelestarian terumbu karang dan lautan Indonesia sebagai amanah ekologi bumi.",
+      "kata_kunci": [
+        "menuju",
+        "laut",
+        "teks laporan",
+        "narasi kelautan nusantara",
+        "membaca teks ekologi maritim"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Merencanakan Masa Depan (Teks Argumentasi dan Pidato Persuasi)",
+      "subbab": [
+        "A. Membaca Teks Argumentasi tentang Pilihan Karir dan Minat Studi Lanjut",
+        "B. Menyusun Argumen Berdasarkan Data Prestasi dan Nilai Hidup",
+        "C. Menulis Esai Visi Masa Depan Pelajar Madrasah",
+        "D. Menyampaikan Pidato Resolusi Pribadi dan Kontribusi untuk Bangsa"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Bahasa Indonesia untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "183–220",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Menyiapkan studi lanjut dengan semangat haus ilmu demi mengabdi pada umat."
+        },
+        {
+          "id": 5,
+          "alasan": "Mengenali potensi diri dan bercita-cita menebar manfaat seluas-luasnya untuk sesama."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        6
+      ],
+      "deskripsi": "Menyiapkan studi lanjut dengan semangat haus ilmu demi mengabdi pada umat.",
+      "kata_kunci": [
+        "merencanakan masa depan",
+        "teks argumentasi",
+        "pidato persuasi",
+        "minat studi lanjut",
+        "nilai hidup"
+      ]
+    }
+  ],
+  "status": "LENGKAP",
+  "catatan": "CP verbatim mengacu pada Keputusan Kepala BSKAP No. 046/H/KR/2025 Lampiran Mata Pelajaran Bahasa Indonesia Fase D (4 Elemen: Menyimak, Membaca dan Memirsa, Berbicara dan Mempresentasikan, Menulis). Materi per bab dirangkum dari Buku Siswa Kemendikbudristek Kelas VII, VIII, dan IX. Saran integrasi Panca Cinta dan DPL lengkap di setiap bab.",
+  "diverifikasi_oleh": null,
+  "tanggal_verifikasi": null
+}

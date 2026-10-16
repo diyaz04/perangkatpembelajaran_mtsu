@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "kode": "DPL1",
+    "nama": "Keimanan dan Ketakwaan terhadap Tuhan YME",
+    "deskripsi": "Murid berakhlak mulia yang memadukan keimanan kokoh, ketaatan beribadah, dan keluhuran pekerti dalam relasi spiritual, personal, sosial, dan lingkungan.",
+    "elemen_kunci": [
+      "Akhlak Beragama",
+      "Akhlak Pribadi",
+      "Akhlak kepada Manusia",
+      "Akhlak kepada Alam",
+      "Akhlak Bernegara"
+    ],
+    "sumber": "KMA 1503 Tahun 2025 Bab IV Standar Kelulusan Madrasah"
+  },
+  {
+    "id": 2,
+    "kode": "DPL2",
+    "nama": "Kewargaan",
+    "deskripsi": "Murid memiliki kesadaran hukum, komitmen kebangsaan, cinta tanah air, moderasi beragama, dan kesediaan berkontribusi aktif sebagai warga negara dan warga dunia.",
+    "elemen_kunci": [
+      "Kepedulian Sosial",
+      "Partisipasi Warga Negara",
+      "Moderasi Beragama",
+      "Cinta Perdamaian"
+    ],
+    "sumber": "KMA 1503 Tahun 2025 Bab IV Standar Kelulusan Madrasah"
+  },
+  {
+    "id": 3,
+    "kode": "DPL3",
+    "nama": "Penalaran Kritis",
+    "deskripsi": "Murid mampu memproses informasi secara objektif, menganalisis argumen, mengevaluasi fakta dan opini, serta merefleksikan proses berpikir secara mandiri.",
+    "elemen_kunci": [
+      "Memperoleh Informasi Objektif",
+      "Menganalisis dan Mengevaluasi Penalaran",
+      "Refleksi Pemikiran dan Proses Berpikir"
+    ],
+    "sumber": "KMA 1503 Tahun 2025 Bab IV Standar Kelulusan Madrasah"
+  },
+  {
+    "id": 4,
+    "kode": "DPL4",
+    "nama": "Kreativitas",
+    "deskripsi": "Murid mampu memodifikasi dan menghasilkan sesuatu yang orisinal, bermakna, bermanfaat, dan berdampak dalam pemecahan masalah serta kreasi karya.",
+    "elemen_kunci": [
+      "Menghasilkan Gagasan Orisinal",
+      "Menghasilkan Karya dan Tindakan Orisinal",
+      "Keluwesan Berpikir dalam Mencari Solusi"
+    ],
+    "sumber": "KMA 1503 Tahun 2025 Bab IV Standar Kelulusan Madrasah"
+  },
+  {
+    "id": 5,
+    "kode": "DPL5",
+    "nama": "Kolaborasi",
+    "deskripsi": "Murid mampu bekerja sama secara sinergis, saling peduli, berbagi peran, dan membangun relasi positif dalam mencapai tujuan bersama.",
+    "elemen_kunci": [
+      "Kerjasama Sinergis",
+      "Komunikasi Positif",
+      "Saling Ketergantungan Positif",
+      "Koordinasi Sosial"
+    ],
+    "sumber": "KMA 1503 Tahun 2025 Bab IV Standar Kelulusan Madrasah"
+  },
+  {
+    "id": 6,
+    "kode": "DPL6",
+    "nama": "Kemandirian",
+    "deskripsi": "Murid bertanggung jawab atas proses dan hasil belajarnya sendiri, memiliki regulasi diri, daya juang, dan ketangguhan dalam menghadapi tantangan.",
+    "elemen_kunci": [
+      "Pemahaman Diri dan Situasi yang Dihadapi",
+      "Regulasi Diri dan Disiplin",
+      "Percaya Diri dan Pantang Menyerah"
+    ],
+    "sumber": "KMA 1503 Tahun 2025 Bab IV Standar Kelulusan Madrasah"
+  },
+  {
+    "id": 7,
+    "kode": "DPL7",
+    "nama": "Kesehatan",
+    "deskripsi": "Murid memiliki kebugaran jasmani, kesehatan mental-emosional, ketahanan fisik, serta menjalankan pola hidup bersih dan sehat dalam keseharian.",
+    "elemen_kunci": [
+      "Kebugaran Jasmani",
+      "Kesehatan Mental-Emosional",
+      "Pola Hidup Sehat dan Bersih"
+    ],
+    "sumber": "KMA 1503 Tahun 2025 Bab IV Standar Kelulusan Madrasah"
+  },
+  {
+    "id": 8,
+    "kode": "DPL8",
+    "nama": "Komunikasi",
+    "deskripsi": "Murid mampu menyimak secara aktif, menyampaikan gagasan, perasaan, dan informasi secara persuasif, santun, etis, dan efektif dalam berbagai konteks serta media.",
+    "elemen_kunci": [
+      "Menyimak Aktif",
+      "Menyampaikan Ide dan Perasaan",
+      "Etika dan Literasi Komunikasi Digital"
+    ],
+    "sumber": "KMA 1503 Tahun 2025 Bab IV Standar Kelulusan Madrasah"
+  }
+]

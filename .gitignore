@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Bank data Fase D: PDF mentah hasil unduhan
+/data/_raw/
+/data/_tools/

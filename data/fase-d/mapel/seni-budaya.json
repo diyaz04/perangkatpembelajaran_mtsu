@@ -1,0 +1,743 @@
+{
+  "mapel": "Seni Budaya",
+  "slug": "seni-budaya",
+  "kelompok": "umum",
+  "fase": "D",
+  "sumber_cp": {
+    "regulasi_kode": "BSKAP-046-2025",
+    "halaman": "Halaman 123–140",
+    "url": "https://kurikulum.kemendikdasmen.go.id/unduhan",
+    "diakses": "2026-10-14"
+  },
+  "rasional": "Pendidikan Seni Budaya (mencakup Seni Rupa dan Budaya Nusantara) membekali peserta didik madrasah dengan kepekaan estetika, daya imajinasi, kreativitas artistik, dan penghargaan mendalam terhadap khazanah kebudayaan bangsa. Melalui pembelajaran seni, peserta didik diajak mengagumi keindahan ciptaan Allah SWT (inna Allaha jamilun yuhibbul jamal), mengekspresikan gagasan batin secara santun dan orisinal, serta merawat kearifan lokal nusantara sebagai sarana mempererat kerukunan dan peradaban.",
+  "tujuan_mapel": [
+    "Mengembangkan kepekaan rasa estetis, apresiasi indrawi, dan penghormatan terhadap keberagaman warisan seni budaya Indonesia.",
+    "Mengekspresikan gagasan, perasaan, dan imajinasi kreatif melalui medium rupa dua dimensi dan tiga dimensi secara bertanggung jawab.",
+    "Mengembangkan kemampuan berpikir artistik, eksplorasi bahan alam dan buatan, serta inovasi teknik berkarya.",
+    "Memahami keterkaitan antara seni, nilai-nilai spiritual keagamaan, dan kelestarian lingkungan hidup.",
+    "Membangun kepribadian yang berbudaya, percaya diri, toleran, dan mampu menghasilkan karya seni yang memberi kemaslahatan sosial."
+  ],
+  "capaian_umum_fase_d": "Pada akhir Fase D, peserta didik mampu mengamati, merekam, dan merefleksikan pengalaman visual serta peristiwa kehidupan sehari-hari; menggunakan aneka media, bahan, alat, dan teknik seni untuk menciptakan karya dua dan tiga dimensi yang orisinal dan kontekstual; mengaplikasikan prinsip dan unsur seni rupa (garis, bentuk, warna, tekstur, ruang, komposisi, keseimbangan); mengevaluasi dan mengapresiasi keindahan karya diri dan orang lain dengan kosakata seni yang tepat; serta memahami peran seni budaya dalam merawat identitas bangsa dan keharmonisan masyarakat.",
+  "elemen": [
+    {
+      "kode": "E1",
+      "nama": "Mengalami (Experiencing)",
+      "deskripsi_cp": "Peserta didik mengamati, mengenali, dan merekam pengalaman estetik serta objek visual dari alam sekitar, budaya lokal, dan karya seni; mengeksplorasi unsur-unsur rupa (garis, bentuk, warna, tekstur, ruang) dan prinsip desain menggunakan berbagai indera."
+    },
+    {
+      "kode": "E2",
+      "nama": "Merefleksikan (Reflecting)",
+      "deskripsi_cp": "Peserta didik mengevaluasi, menganalisis, dan memaknai karya seni rupa sendiri dan orang lain dengan menggunakan kosa kata seni rupa yang tepat; mendiskusikan pesan tersirat, konteks budaya, dan nilai estetis serta filosofis dari sebuah karya."
+    },
+    {
+      "kode": "E3",
+      "nama": "Berpikir dan Bekerja Artistik (Thinking and Working Artistically)",
+      "deskripsi_cp": "Peserta didik mengeksplorasi aneka alat, bahan, teknik, dan prosedur berkarya seni rupa secara mandiri maupun kolaboratif; merencanakan dan mengorganisasi ide artistik dengan memperhatikan keselamatan kerja dan kelestarian lingkungan."
+    },
+    {
+      "kode": "E4",
+      "nama": "Menciptakan (Creating)",
+      "deskripsi_cp": "Peserta didik memproduksi karya seni rupa dua dimensi dan tiga dimensi dengan menggunakan berbagai media dan teknik (menggambar, melukis, mencetak, membentuk, merakit, mendesain) untuk mengekspresikan gagasan pribadi atau isu kontekstual secara orisinal."
+    },
+    {
+      "kode": "E5",
+      "nama": "Berdampak (Impacting)",
+      "deskripsi_cp": "Peserta didik menghasilkan karya seni yang memberikan kontribusi positif terhadap lingkungan madrasah, masyarakat sekitar, dan pelestarian budaya bangsa; menumbuhkan rasa bangga terhadap warisan budaya Indonesia dan kepekaan sosial."
+    }
+  ],
+  "materi": [
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Menggambar Flora, Fauna, dan Benda Alam",
+      "subbab": [
+        "A. Unsur-Unsur Seni Rupa (Titik, Garis, Bidang, Bentuk, Warna, Gelap-Terang)",
+        "B. Prinsip Komposisi, Proporsi, Keseimbangan, dan Kesatuan",
+        "C. Teknik Arsir dan Gradasi Bayangan pada Objek Alami Ciptaan Allah"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Seni Rupa untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "1–32",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Mengamati keindahan ciptaan flora dan fauna menumbuhkan rasa takjub dan cinta kepada Allah Sang Maha Pencipta Keindahan."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Mengamati keindahan ciptaan flora dan fauna menumbuhkan rasa takjub dan cinta kepada Allah Sang Maha Pencipta Keindahan.",
+      "kata_kunci": [
+        "menggambar flora",
+        "fauna",
+        "benda alam",
+        "unsur-unsur seni rupa",
+        "titik"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Menggambar Ragam Hias Nusantara",
+      "subbab": [
+        "A. Pengertian dan Motif Ragam Hias Flora, Fauna, Geometris, dan Figuratif",
+        "B. Pola Ragam Hias Nusantara pada Tekstil, Kayu, dan Keramik",
+        "C. Teknik Deformasi dan Stilasi Motif Tradisional Nusantara"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Seni Rupa untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "33–64",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Mempelajari kekayaan motif ragam hias daerah mempertebal rasa bangga dan cinta terhadap khazanah budaya tanah air."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        4
+      ],
+      "deskripsi": "Mempelajari kekayaan motif ragam hias daerah mempertebal rasa bangga dan cinta terhadap khazanah budaya tanah air.",
+      "kata_kunci": [
+        "menggambar ragam hias nusantara",
+        "pengertian",
+        "motif ragam hias flora",
+        "fauna",
+        "geometris"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Seni Rupa Tradisi: Batik dan Kriya Nusantara",
+      "subbab": [
+        "A. Sejarah dan Filosofi Batik Indonesia sebagai Warisan Dunia UNESCO",
+        "B. Teknik Batik Celup (Jumputan) dan Batik Tulis Sederhana",
+        "C. Eksplorasi Pewarna Alami dari Daun dan Tumbuhan Lokal"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E3",
+        "E5"
+      ],
+      "sumber": {
+        "buku": "Seni Rupa untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "65–96",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Memanfaatkan pewarna alami tumbuhan ramah lingkungan adalah aplikasi cinta lingkungan dalam berkarya seni."
+        }
+      ],
+      "saran_dpl": [
+        6,
+        7
+      ],
+      "deskripsi": "Memanfaatkan pewarna alami tumbuhan ramah lingkungan adalah aplikasi cinta lingkungan dalam berkarya seni.",
+      "kata_kunci": [
+        "seni rupa tradisi",
+        "batik",
+        "kriya nusantara",
+        "sejarah",
+        "filosofi batik indonesia"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Bab 4: Desain Tipografi dan Kaligrafi Kreatif",
+      "subbab": [
+        "A. Mengenal Anatomi Huruf dan Tipografi Kreatif",
+        "B. Eksplorasi Seni Kaligrafi Arab Kontemporer dan Hiasan Mushaf",
+        "C. Merancang Hiasan Dinding Bertema Kata-Kata Mutiara Islami"
+      ],
+      "elemen_kode": [
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Seni Rupa untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "97–128",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Membuat karya kaligrafi dan kata mutiara hikmah memancarkan kecintaan pada ilmu dan wahyu Ilahi."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Membuat karya kaligrafi dan kata mutiara hikmah memancarkan kecintaan pada ilmu dan wahyu Ilahi.",
+      "kata_kunci": [
+        "desain tipografi",
+        "kaligrafi kreatif",
+        "anatomi huruf",
+        "tipografi kreatif",
+        "hiasan mushaf"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Desain Poster Edukatif dan Lingkungan",
+      "subbab": [
+        "A. Prinsip Tata Letak (Layout) dan Pemilihan Tipografi pada Poster",
+        "B. Merancang Poster Kampanye Peduli Sampah dan Hemat Energi di Madrasah",
+        "C. Apresiasi dan Presentasi Pesan Sosial Karya Poster"
+      ],
+      "elemen_kode": [
+        "E4",
+        "E5"
+      ],
+      "sumber": {
+        "buku": "Seni Rupa untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "129–158",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Mendesain poster lingkungan merupakan dakwah visual cinta lingkungan madrasah yang bersih dan asri."
+        }
+      ],
+      "saran_dpl": [
+        5,
+        8
+      ],
+      "deskripsi": "Mendesain poster lingkungan merupakan dakwah visual cinta lingkungan madrasah yang bersih dan asri.",
+      "kata_kunci": [
+        "desain poster edukatif",
+        "lingkungan",
+        "tata letak",
+        "layout",
+        "hemat energi di madrasah"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Apresiasi Seni Pertunjukan Tradisional Nusantara",
+      "subbab": [
+        "A. Mengenal Ragam Alat Musik Tradisional Daerah (Angklung, Gamelan, Kolintang)",
+        "B. Pola Lantai dan Makna Gerak Tari Tradisional Daerah",
+        "C. Nilai Kebersamaan dan Ukhuwah dalam Musik Ansambel Tradisional"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E5"
+      ],
+      "sumber": {
+        "buku": "Seni Budaya untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "159–192",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Mengapresiasi kekayaan seni pertunjukan daerah menumbuhkan rasa persatuan dan cinta tanah air yang kokoh."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        4
+      ],
+      "deskripsi": "Mengapresiasi kekayaan seni pertunjukan daerah menumbuhkan rasa persatuan dan cinta tanah air yang kokoh.",
+      "kata_kunci": [
+        "angklung",
+        "gamelan",
+        "kolintang",
+        "pola lantai",
+        "nilai kebersamaan"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Menggambar Model Benda dan Manusia",
+      "subbab": [
+        "A. Konsep Proporsi dan Anatomi Tubuh Manusia Sederhana",
+        "B. Penggunaan Model Benda Mati (Still Life) dalam Ruang Berperspektif",
+        "C. Penguasaan Teknik Pencahayaan, Bayangan, dan Karakter Objek"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Seni Rupa untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "1–34",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Menelaah proporsi ciptaan manusia dan benda memunculkan ketelitian dan kekaguman atas keagungan ciptaan Ilahi."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Menelaah proporsi ciptaan manusia dan benda memunculkan ketelitian dan kekaguman atas keagungan ciptaan Ilahi.",
+      "kata_kunci": [
+        "menggambar model benda",
+        "manusia",
+        "konsep proporsi",
+        "penggunaan model benda mati",
+        "still life"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Menggambar Ilustrasi Cerita dan Komik Islami",
+      "subbab": [
+        "A. Jenis-Jenis Ilustrasi (Vignette, Karikatur, Kartun, Cerita Bergambar)",
+        "B. Pembuatan Karakter Tokoh, Ekspresi Wajah, dan Balon Percakapan",
+        "C. Merancang Komik Edukatif Bertema Kejujuran dan Adab Pelajar Muslim"
+      ],
+      "elemen_kode": [
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "sumber": {
+        "buku": "Seni Rupa untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "35–68",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Menyampaikan pesan moral melalui komik adalah sarana mendidik dengan cinta dan kelemahlembutan antarsesama."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Menyampaikan pesan moral melalui komik adalah sarana mendidik dengan cinta dan kelemahlembutan antarsesama.",
+      "kata_kunci": [
+        "menggambar ilustrasi cerita",
+        "komik islami",
+        "jenis-jenis ilustrasi",
+        "vignette",
+        "karikatur"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Seni Lukis Eksploratif dan Media Campuran",
+      "subbab": [
+        "A. Mengenal Aliran Seni Lukis (Realisme, Naturalisme, Romantisme, Impresionisme)",
+        "B. Eksplorasi Media Lukis: Cat Air, Akrilik, dan Bahan Kolase",
+        "C. Melukis Bertema Harmoni Alam Nusantara"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Seni Rupa untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "69–102",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Melukis keindahan alam Nusantara memperkuat ikatan batin cinta lingkungan dan kelestarian flora fauna."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Melukis keindahan alam Nusantara memperkuat ikatan batin cinta lingkungan dan kelestarian flora fauna.",
+      "kata_kunci": [
+        "seni lukis eksploratif",
+        "media campuran",
+        "aliran seni lukis",
+        "realisme",
+        "naturalisme"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Bab 4: Seni Patung dan Membentuk Karya 3 Dimensi",
+      "subbab": [
+        "A. Fungsi, Bentuk, dan Corak Seni Patung 3 Dimensi",
+        "B. Bahan Lunak (Tanah Liat, Plastisin, Gips) dan Bahan Keras",
+        "C. Teknik Butsir, Cor, dan Memahat Bentuk Dekoratif Non-Figuratif"
+      ],
+      "elemen_kode": [
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Seni Rupa untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "103–134",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Bereksplorasi dengan teknik bentuk tiga dimensi melatih ketelitian spasial dan kecintaan terhadap eksplorasi ilmu."
+        }
+      ],
+      "saran_dpl": [
+        6,
+        8
+      ],
+      "deskripsi": "Bereksplorasi dengan teknik bentuk tiga dimensi melatih ketelitian spasial dan kecintaan terhadap eksplorasi ilmu.",
+      "kata_kunci": [
+        "seni patung",
+        "membentuk karya 3 dimensi",
+        "fungsi",
+        "bentuk",
+        "corak seni patung 3 dimensi"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Seni Grafis Cetak Tinggi dan Cetak Saring",
+      "subbab": [
+        "A. Mengenal Ragam Cetak Seni Grafis (Cetak Tinggi, Cetak Dalam, Cetak Datar, Cetak Saring)",
+        "B. Teknik Cukil Cetak Tinggi pada Media Karet Lino / Kentang / Kayu",
+        "C. Pembuatan Sablon Sederhana (Screen Printing) untuk Kaos/Totebag Madrasah"
+      ],
+      "elemen_kode": [
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "sumber": {
+        "buku": "Seni Rupa untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "135–166",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Memproduksi cinderamata madrasah bersama kelompok melatih kewirausahaan kreatif dan kerja sama sesama teman."
+        }
+      ],
+      "saran_dpl": [
+        6,
+        8
+      ],
+      "deskripsi": "Memproduksi cinderamata madrasah bersama kelompok melatih kewirausahaan kreatif dan kerja sama sesama teman.",
+      "kata_kunci": [
+        "seni grafis cetak tinggi",
+        "cetak saring",
+        "ragam cetak seni grafis",
+        "cetak tinggi",
+        "cetak dalam"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Manajemen Pameran Seni Rupa Madrasah",
+      "subbab": [
+        "A. Perencanaan Pameran Karya Seni (Tujuan, Tema, Kepanitiaan, Anggaran)",
+        "B. Kurasi dan Penataan Ruang Galeri Pameran (Tata Lampu, Label Karya, Alur Pengunjung)",
+        "C. Pelaksanaan, Apresiasi Pengunjung, dan Evaluasi Kegiatan Pameran"
+      ],
+      "elemen_kode": [
+        "E2",
+        "E5"
+      ],
+      "sumber": {
+        "buku": "Seni Rupa untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "167–196",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Bekerja bersama menyelenggarakan pameran memupuk tanggung jawab, saling menghormati, dan cinta kebersamaan."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        5
+      ],
+      "deskripsi": "Bekerja bersama menyelenggarakan pameran memupuk tanggung jawab, saling menghormati, dan cinta kebersamaan.",
+      "kata_kunci": [
+        "perencanaan pameran karya seni",
+        "tujuan",
+        "tema",
+        "kepanitiaan",
+        "anggaran"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Desain Grafis Digital dan Identitas Visual",
+      "subbab": [
+        "A. Dasar-Dasar Desain Grafis Vektor Menggunakan Aplikasi Digital",
+        "B. Merancang Logo, Maskot, dan Identitas Visual Kegiatan Madrasah",
+        "C. Prinsip Hak Cipta dan Menghindari Plagiarisme dalam Karya Seni Digital"
+      ],
+      "elemen_kode": [
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Seni Rupa untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "1–36",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Memanfaatkan teknologi digital untuk menciptakan karya estetis mencerminkan kecintaan pada kemajuan ilmu dan inovasi."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Memanfaatkan teknologi digital untuk menciptakan karya estetis mencerminkan kecintaan pada kemajuan ilmu dan inovasi.",
+      "kata_kunci": [
+        "desain grafis digital",
+        "identitas visual",
+        "merancang logo",
+        "maskot",
+        "hak cipta"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Seni Kriya Berkelanjutan dan Instalasi Lingkungan",
+      "subbab": [
+        "A. Konsep Seni Ramah Lingkungan (Eco-Art) dan Pemanfaatan Limbah Padat",
+        "B. Merancang Seni Instalasi Tiga Dimensi untuk Taman Madrasah",
+        "C. Refleksi Pesan Ekologis Karya terhadap Warga Madrasah"
+      ],
+      "elemen_kode": [
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "sumber": {
+        "buku": "Seni Rupa untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "37–72",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Mengubah sampah menjadi instalasi seni estetik adalah bukti nyata cinta lingkungan dan kepeloporan peduli bumi."
+        }
+      ],
+      "saran_dpl": [
+        6,
+        7
+      ],
+      "deskripsi": "Mengubah sampah menjadi instalasi seni estetik adalah bukti nyata cinta lingkungan dan kepeloporan peduli bumi.",
+      "kata_kunci": [
+        "seni kriya berkelanjutan",
+        "instalasi lingkungan",
+        "konsep seni ramah lingkungan",
+        "eco-art",
+        "pemanfaatan limbah padat"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Seni Peran dan Teater Tradisi Nusantara",
+      "subbab": [
+        "A. Olah Vokal, Olah Tubuh, dan Olah Rasa dalam Seni Akting",
+        "B. Eksplorasi Teater Tradisional (Wayang Orang, Randai, Lenong, Sandiwara Sunda)",
+        "C. Merancang Naskah Drama Singkat Bertema Perjuangan Pahlawan Kemerdekaan"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Seni Budaya untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "73–108",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Memerankan tokoh pahlawan pejuang bangsa menanamkan jiwa patriotik dan cinta tanah air yang mendalam."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        5
+      ],
+      "deskripsi": "Memerankan tokoh pahlawan pejuang bangsa menanamkan jiwa patriotik dan cinta tanah air yang mendalam.",
+      "kata_kunci": [
+        "seni peran",
+        "teater tradisi nusantara",
+        "olah vokal",
+        "olah tubuh",
+        "olah rasa dalam seni akting"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Bab 4: Apresiasi Seni Kontemporer dan Kritik Seni",
+      "subbab": [
+        "A. Mengenal Perkembangan Seni Rupa Modern dan Kontemporer Indonesia",
+        "B. Tahapan Kritik Seni: Deskripsi, Analisis Formal, Interpretasi, dan Evaluasi",
+        "C. Menulis Ulasan Resensi Apresiasi Karya Seni Rekan Sebaya"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Seni Rupa untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "109–138",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Memberikan apresiasi dan kritik objektif membiasakan daya nalar kritis, keterbukaan pikiran, dan cinta ilmu."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Memberikan apresiasi dan kritik objektif membiasakan daya nalar kritis, keterbukaan pikiran, dan cinta ilmu.",
+      "kata_kunci": [
+        "apresiasi seni kontemporer",
+        "kritik seni",
+        "perkembangan seni rupa modern",
+        "kontemporer indonesia",
+        "tahapan kritik seni"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Pagelaran Seni Budaya Terpadu Akhir Tahun",
+      "subbab": [
+        "A. Kolaborasi Artistik Lintas Disiplin Seni (Rupa, Musik, Tari, dan Teater)",
+        "B. Manajemen Produksi Pentas Seni Budaya Nusantara di Madrasah",
+        "C. Pementasan dan Refleksi Dampak Karya Seni bagi Masyarakat"
+      ],
+      "elemen_kode": [
+        "E4",
+        "E5"
+      ],
+      "sumber": {
+        "buku": "Seni Budaya untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2022,
+        "halaman": "139–176",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Menampilkan pagelaran seni kolaboratif merayakan kemajemukan budaya nusantara dalam bingkai cinta tanah air."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        6
+      ],
+      "deskripsi": "Menampilkan pagelaran seni kolaboratif merayakan kemajemukan budaya nusantara dalam bingkai cinta tanah air.",
+      "kata_kunci": [
+        "rupa",
+        "musik",
+        "tari",
+        "teater",
+        "pementasan"
+      ]
+    }
+  ],
+  "status": "LENGKAP",
+  "catatan": "CP verbatim mengacu pada Keputusan Kepala BSKAP No. 046/H/KR/2025 Lampiran Mata Pelajaran Seni Budaya / Seni Rupa Fase D (memuat 5 elemen artistik). Materi per bab dan subbab dirangkum dari Buku Teks Utama Pusat Perbukuan Kemendikbudristek Kelas VII, VIII, dan IX. Saran Panca Cinta dan DPL telah dipetakan secara kontekstual.",
+  "diverifikasi_oleh": null,
+  "tanggal_verifikasi": null
+}

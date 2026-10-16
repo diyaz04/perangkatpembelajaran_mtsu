@@ -1,0 +1,855 @@
+{
+  "mapel": "Muatan Lokal (Bahasa Sunda)",
+  "slug": "bahasa-sunda",
+  "kelompok": "muatan_lokal",
+  "fase": "D",
+  "sumber_cp": {
+    "regulasi_kode": "PERGUB-JABAR-173-2014",
+    "halaman": "Kurikulum Mulok Bahasa Sunda Disdik Jabar Fase D",
+    "url": "https://disdik.jabarprov.go.id",
+    "diakses": "2026-10-14"
+  },
+  "rasional": "Pangajaran Basa jeung Sastra Sunda di madrasah tsanawiyah mangrupakeun sarana utama pikeun ngamumulé basa indung, ngaraksa ajén-inajén kearifan lokal tatar Sunda anu luyu jeung tatakrama ageman Islam ('Someah Hadé ka Sémah', 'Silih Asih, Silih Asah, Silih Asuh'), sarta ngawangun karakter murid anu santun, panceg dina ageman tauhid, micinta lemah cai, tur miboga kasopanan dina tata krama basa (undak-usuk basa).",
+  "tujuan_mapel": [
+    "Numuwuhkeun rasa reueus, micinta, sarta ngamumulé basa, sastra, jeung budaya Sunda salaku warisan karuhun anu beunghar ku ajén kaagamaan jeung kamanusaan.",
+    "Ngaronjatkeun kamampuh komunikasi dina basa Sunda kalawan merenah luyu jeung tatakrama basa (undak-usuk basa: lemes jeung loma) dina rupa-rupa kontéks kahirupan sosial.",
+    "Mikawanoh, paham, sarta ngaprésiasi rupa-rupa wangun karya sastra Sunda (dongéng, carpon, sajak, sisindiran, pupujian, guguritan, warta, biantara, carita babad).",
+    "Ngamekarkeun kaparigelan nulis jeung maca aksara Sunda kaganga salaku aksara tradisional tatar Jawa Barat.",
+    "Ngawangun kapribadian murid madrasah anu miboga karakter Panca Cinta, mikanyaah sasama mahluk, tur reueus kana idéntitas daérah dina bingkai NKRI."
+  ],
+  "capaian_umum_fase_d": "Dina ahir Fase D, murid mampuh ngaidéntifikasi, maham, ngaprésiasi, jeung ngagunakeun basa jeung sastra Sunda dina rupa-rupa wangun téks lisan, tulisan, jeung visual kalawan merhatikeun undak-usuk basa jeung norma kasantunan. Murid parigel dina ngaregepkeun paguneman, warta, dongeng, carpon, jeung biantara; mampuh maca jeung miarsa karya sastra Sunda sarta nuliskeun ideu, pangalaman, carita pondok, sajak, sisindiran, surat, jeung aksara Sunda kalawan bener; sarta némbongkeun karakter mulia anu nyaah ka Allah, rasul, élmu, lingkungan, lemah cai, sarta sasama manusa.",
+  "elemen": [
+    {
+      "kode": "E1",
+      "nama": "Ngaregepkeun (Menyimak)",
+      "deskripsi_cp": "Murid mampuh nganalisis, ngaréfléksikeun, sarta nyimpulkeun informasi, pesen moral, jeung ajén kaarifan lokal tina rupa-rupa wangun téks lisan (paguneman, dongéng, sajak, kawih/pupujian, warta, biantara, jeung carita pondok) kalawan kritis tur santun."
+    },
+    {
+      "kode": "E2",
+      "nama": "Maca jeung Miarsa (Membaca dan Memirsa)",
+      "deskripsi_cp": "Murid mampuh maca, maham, ngaprésiasi, sarta ngaévaluasi ideu poko, struktur téks, jeung harti kecap tina wangun téks tinulis jeung visual (téks fiksi, nonfiksi, sisindiran, guguritan, carita babad/sajarah lokal, sarta téks aksara Sunda) kalawan mandiri."
+    },
+    {
+      "kode": "E3",
+      "nama": "Nyarita jeung Midangkeun (Berbicara dan Mempresentasikan)",
+      "deskripsi_cp": "Murid mampuh nepikeun ideu, gagasan, éksprési rasa, jeung pamadegan sacara lisan kalawan ngagunakeun tatakrama basa Sunda anu merenah (ragam basa loma jeung ragam basa lemes), lentong anu pas, tur percaya diri dina kagiatan paguneman, biantara, ngadongéng, panata acara, atawa midangkeun karya sastra."
+    },
+    {
+      "kode": "E4",
+      "nama": "Nulis (Menulis)",
+      "deskripsi_cp": "Murid mampuh nyusun jeung nulis rupa-rupa wangun téks basa Sunda (paragraf déskripsi/narasi, pangalaman pribadi, carpon, sajak, sisindiran, warta, laporan kagiatan, surat pribadi/resmi, sarta nuliskeun kecap/kalimah maké aksara Sunda) kalawan ngalarapkeun éjaan jeung tata basa anu bener."
+    }
+  ],
+  "materi": [
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Pangajaran 1: Paguneman dina Kahirupan Sapopoé",
+      "subbab": [
+        "A. Hakekat Paguneman jeung Tatakrama Basa Sunda",
+        "B. Ragam Basa Loma (ka Sasama/Mimitran) jeung Ragam Basa Lemes (ka Saluhureun)",
+        "C. Prakték Paguneman Tepang Mimitran di Madrasah kalawan Lentong anu Merenah"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Pamekar Diajar Basa Sunda Pikeun Murid SMP/MTs Kelas VII",
+        "penerbit": "Dinas Pendidikan Provinsi Jawa Barat",
+        "tahun": 2014,
+        "halaman": "1–18",
+        "url": "https://disdik.jabarprov.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Ngalarapkeun tatakrama basa lemes ka saluhureun mangrupakeun wujud cinta diri tur hormat ka sasama manusa."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        5
+      ],
+      "deskripsi": "Ngalarapkeun tatakrama basa lemes ka saluhureun mangrupakeun wujud cinta diri tur hormat ka sasama manusa.",
+      "kata_kunci": [
+        "pangajaran 1",
+        "paguneman dina kahirupan sapopo",
+        "ragam basa loma",
+        "ka sasama mimitran",
+        "jeung ragam basa lemes"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Pangajaran 2: Kaulinan Barudak Tradisional Sunda",
+      "subbab": [
+        "A. Mikawanoh Rupa-Rupa Kaulinan Barudak (Oray-orayan, Boy-boyan, Congklak, Galah)",
+        "B. Kakawihan dina Kaulinan Barudak Lembur",
+        "C. Ajén Gotong Royong, Karakter Sportif, jeung Kabersamaan dina Kaulinan Tradisional"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Pamekar Diajar Basa Sunda Pikeun Murid SMP/MTs Kelas VII",
+        "penerbit": "Dinas Pendidikan Provinsi Jawa Barat",
+        "tahun": 2014,
+        "halaman": "19–34",
+        "url": "https://disdik.jabarprov.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Ngamumulé kaulinan barudak lembur numuwuhkeun rasa cinta kana kabudayaan asli tanah air."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        5
+      ],
+      "deskripsi": "Ngamumulé kaulinan barudak lembur numuwuhkeun rasa cinta kana kabudayaan asli tanah air.",
+      "kata_kunci": [
+        "pangajaran 2",
+        "oray-orayan",
+        "boy-boyan",
+        "congklak",
+        "galah"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Pangajaran 3: Pupujian di Madrasah jeung Mesjid",
+      "subbab": [
+        "A. Hakekat jeung Fungsi Pupujian dina Budaya Islam Sunda",
+        "B. Pesen Kaagamaan dina Syair Pupujian (Éling-Éling Umat, Solawat ka Nabi, Puji ka Gusti)",
+        "C. Ngalarapkeun Nadhom Pupujian Babarengan Saméméh Sholat Berjamaah"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Pamekar Diajar Basa Sunda Pikeun Murid SMP/MTs Kelas VII",
+        "penerbit": "Dinas Pendidikan Provinsi Jawa Barat",
+        "tahun": 2014,
+        "halaman": "35–52",
+        "url": "https://disdik.jabarprov.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Ngalakonan pupujian solawat jeung dzikir Sunda mangrupakeun pituduh cinta ka Allah SWT jeung Rasul-Na."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        3
+      ],
+      "deskripsi": "Ngalakonan pupujian solawat jeung dzikir Sunda mangrupakeun pituduh cinta ka Allah SWT jeung Rasul-Na.",
+      "kata_kunci": [
+        "pangajaran 3",
+        "ling- ling umat",
+        "solawat ka nabi",
+        "puji ka gusti"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 4,
+      "bab": "Pangajaran 4: Pangalaman Pribadi anu Matak Ngesankeun",
+      "subbab": [
+        "A. Mikawanoh Wangun Tulisan Pangalaman Pribadi",
+        "B. Unsur Kajadian, Latar Waktu, Tempat, jeung Parasaan dina Pangalaman",
+        "C. Nulis Téks Pangalaman Pribadi kalawan Ejaan Basa Sunda anu Bener"
+      ],
+      "elemen_kode": [
+        "E2",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Pamekar Diajar Basa Sunda Pikeun Murid SMP/MTs Kelas VII",
+        "penerbit": "Dinas Pendidikan Provinsi Jawa Barat",
+        "tahun": 2014,
+        "halaman": "53–70",
+        "url": "https://disdik.jabarprov.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Nétélakeun pangalaman hirup sacara jujur ngalatih kasadaran diri tur micinta prosés kamekaran pribadi."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        6
+      ],
+      "deskripsi": "Nétélakeun pangalaman hirup sacara jujur ngalatih kasadaran diri tur micinta prosés kamekaran pribadi.",
+      "kata_kunci": [
+        "pangajaran 4",
+        "unsur kajadian",
+        "latar waktu",
+        "tempat",
+        "jeung parasaan dina pangalaman"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Pangajaran 5: Dongéng Sasakala jeung Fabel",
+      "subbab": [
+        "A. Ciri-Ciri jeung Papasingan Dongéng (Sasakala/Legenda, Fabel, Mite, Sage, Parabel)",
+        "B. Maca jeung Nganalisis Dongéng Sasakala Talaga Warna / Situ Bagendit",
+        "C. Nyaritakeun Deui Eusi Dongéng kalawan Basa Sorangan tur Nyokot Piwuruk Moralna"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Pamekar Diajar Basa Sunda Pikeun Murid SMP/MTs Kelas VII",
+        "penerbit": "Dinas Pendidikan Provinsi Jawa Barat",
+        "tahun": 2014,
+        "halaman": "71–92",
+        "url": "https://disdik.jabarprov.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Metik ajén piwuruk dina dongéng ngajembaran wawasan mikahayang elmu pangaweruh."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Metik ajén piwuruk dina dongéng ngajembaran wawasan mikahayang elmu pangaweruh.",
+      "kata_kunci": [
+        "pangajaran 5",
+        "dong ng sasakala jeung fabel",
+        "sasakala legenda",
+        "fabel",
+        "mite"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Pangajaran 6: Sajak Sunda ngeunaan Kaéndahan Alam",
+      "subbab": [
+        "A. Hakekat Sajak Basa Sunda (Pilihan Kecap, Purwakanti, jeung Wirahma)",
+        "B. Maca Sajak Éksprésif kalawan Lentong jeung Pasang Peta anu Pas",
+        "C. Nulis Sajak Singkat Téma Kaéndahan Gunung jeung Pasawahan Tatar Priangan"
+      ],
+      "elemen_kode": [
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Pamekar Diajar Basa Sunda Pikeun Murid SMP/MTs Kelas VII",
+        "penerbit": "Dinas Pendidikan Provinsi Jawa Barat",
+        "tahun": 2014,
+        "halaman": "93–114",
+        "url": "https://disdik.jabarprov.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Muji kaéndahan alam tatar Sunda dina wangun sajak mangrupakeun éksprési cinta ka lingkungan lemah cai."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Muji kaéndahan alam tatar Sunda dina wangun sajak mangrupakeun éksprési cinta ka lingkungan lemah cai.",
+      "kata_kunci": [
+        "pangajaran 6",
+        "hakekat sajak basa sunda",
+        "pilihan kecap",
+        "purwakanti",
+        "jeung wirahma"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 7,
+      "bab": "Pangajaran 7: Aksara Sunda Kaganga Dasar",
+      "subbab": [
+        "A. Sajarah Kamekaran Aksara Sunda Kaganga",
+        "B. Mikawanoh 7 Aksara Swara (Vokal Mandiri) jeung 18 Aksara Ngalagena (Konsonan)",
+        "C. Rarangken Panambah Vokal Dasar (Panghulu, Panyuku, Pamepet, Paneuleung)",
+        "D. Latihan Maca jeung Nulis Kecap Basa Sunda Maké Aksara Kaganga"
+      ],
+      "elemen_kode": [
+        "E2",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Pamekar Diajar Basa Sunda Pikeun Murid SMP/MTs Kelas VII",
+        "penerbit": "Dinas Pendidikan Provinsi Jawa Barat",
+        "tahun": 2014,
+        "halaman": "115–138",
+        "url": "https://disdik.jabarprov.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Diajar nulis aksara karuhun Sunda Kaganga ngaraksa idéntitas budaya tanah air sangkan teu leungit kalindih jaman."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        4
+      ],
+      "deskripsi": "Diajar nulis aksara karuhun Sunda Kaganga ngaraksa idéntitas budaya tanah air sangkan teu leungit kalindih jaman.",
+      "kata_kunci": [
+        "pangajaran 7",
+        "aksara sunda kaganga dasar",
+        "mikawanoh 7 aksara swara",
+        "vokal mandiri",
+        "jeung 18 aksara ngalagena"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Pangajaran 1: Warta Sunda",
+      "subbab": [
+        "A. Hakekat Téks Warta (Berita) Basa Sunda jeung Unsur 5W + 1H",
+        "B. Basa Warta anu Jéntré, Singget, tur Dumasar Fakta Sabenerna",
+        "C. Prakték Maca Warta Basa Sunda Salaku Panyiar Radio atawa Televisi"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Pamekar Diajar Basa Sunda Pikeun Murid SMP/MTs Kelas VIII",
+        "penerbit": "Dinas Pendidikan Provinsi Jawa Barat",
+        "tahun": 2014,
+        "halaman": "1–22",
+        "url": "https://disdik.jabarprov.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Nepikeun béja anu bener tur jauh tina hoaks némbongkeun cinta kana bebeneran elmu jeung kajujuran."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        5
+      ],
+      "deskripsi": "Nepikeun béja anu bener tur jauh tina hoaks némbongkeun cinta kana bebeneran elmu jeung kajujuran.",
+      "kata_kunci": [
+        "pangajaran 1",
+        "warta sunda",
+        "hakekat t ks warta",
+        "berita",
+        "basa sunda jeung unsur 5w 1h"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Pangajaran 2: Sisindiran Sunda",
+      "subbab": [
+        "A. Mikawanoh Wangun Sisindiran: Paparikan, Rarakitan, jeung Wawangsalan",
+        "B. Watak Sisindiran: Piwuruk (Néangan Kautamaan), Silih Asih, jeung Sésébréd (Banyol)",
+        "C. Struktur Cangkang jeung Eusi kalawan Guru Lagu katut Guru Wilangan 8 Engang",
+        "D. Nyusun jeung Midangkeun Sisindiran Berbalas Sisindiran di Kelas"
+      ],
+      "elemen_kode": [
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Pamekar Diajar Basa Sunda Pikeun Murid SMP/MTs Kelas VIII",
+        "penerbit": "Dinas Pendidikan Provinsi Jawa Barat",
+        "tahun": 2014,
+        "halaman": "23–46",
+        "url": "https://disdik.jabarprov.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Nepikeun nasehat ngaliwatan sisindiran piwuruk ngaraksa silaturahmi tur cinta ka sasama baraya."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Nepikeun nasehat ngaliwatan sisindiran piwuruk ngaraksa silaturahmi tur cinta ka sasama baraya.",
+      "kata_kunci": [
+        "pangajaran 2",
+        "sisindiran sunda",
+        "mikawanoh wangun sisindiran",
+        "paparikan",
+        "rarakitan"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Pangajaran 3: Guguritan Pupuh Sunda",
+      "subbab": [
+        "A. Mikawanoh 17 Pupuh Sunda (Sekar Ageung: Kinanti, Sinom, Asmarandana, Dangdanggula)",
+        "B. Patokan Guru Wilangan jeung Guru Lagu dina Pupuh Kinanti katut Asmarandana",
+        "C. Nembangkeun Pupuh kalawan Wirahma anu Merenah sarta Ngahartikeun Eusina"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Pamekar Diajar Basa Sunda Pikeun Murid SMP/MTs Kelas VIII",
+        "penerbit": "Dinas Pendidikan Provinsi Jawa Barat",
+        "tahun": 2014,
+        "halaman": "47–68",
+        "url": "https://disdik.jabarprov.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Eusi pupuh Sunda ngandung pépéling tawadhu ka Gusti Allah SWT salaku tanda cinta ka Sang Maha Murba."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Eusi pupuh Sunda ngandung pépéling tawadhu ka Gusti Allah SWT salaku tanda cinta ka Sang Maha Murba.",
+      "kata_kunci": [
+        "pangajaran 3",
+        "guguritan pupuh sunda",
+        "mikawanoh 17 pupuh sunda",
+        "sekar ageung",
+        "kinanti"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 4,
+      "bab": "Pangajaran 4: Panata Acara (MC) dina Kagiatan Madrasah",
+      "subbab": [
+        "A. Pancén jeung Sarat Jadi Panata Acara anu Parigel",
+        "B. Susunan Acara Resmi (Maulid Nabi, Isra Mi'raj, Paturay Tineung Madrasah)",
+        "C. Prakték Mandu Acara maké Basa Sunda anu Tartib, Sopan, tur Hadé Lentongna"
+      ],
+      "elemen_kode": [
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Pamekar Diajar Basa Sunda Pikeun Murid SMP/MTs Kelas VIII",
+        "penerbit": "Dinas Pendidikan Provinsi Jawa Barat",
+        "tahun": 2014,
+        "halaman": "69–90",
+        "url": "https://disdik.jabarprov.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Mandu acara madrasah kalawan someah ngalatih kapamingpinan tur rasa nyaah ka sakumna warga sakola."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        5
+      ],
+      "deskripsi": "Mandu acara madrasah kalawan someah ngalatih kapamingpinan tur rasa nyaah ka sakumna warga sakola.",
+      "kata_kunci": [
+        "pangajaran 4",
+        "panata acara",
+        "dina kagiatan madrasah",
+        "susunan acara resmi",
+        "maulid nabi"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Pangajaran 5: Carita Pondok (Carpon)",
+      "subbab": [
+        "A. Hakekat Carpon Basa Sunda jeung Unsur Intrinsik (Téma, Tokoh, Latar, Galur, Amanat)",
+        "B. Maca jeung Nganalisis Carpon Sunda Barudak / Rumaja",
+        "C. Nulis Sinopsis Carpon tur Ngébréhkeun Ajén Moral Kautamaan Hirup"
+      ],
+      "elemen_kode": [
+        "E2",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Pamekar Diajar Basa Sunda Pikeun Murid SMP/MTs Kelas VIII",
+        "penerbit": "Dinas Pendidikan Provinsi Jawa Barat",
+        "tahun": 2014,
+        "halaman": "91–114",
+        "url": "https://disdik.jabarprov.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Neuleuman pasualan tokoh dina carpon ngasah empati batin jeung rasa mikanyaah ka sasama."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Neuleuman pasualan tokoh dina carpon ngasah empati batin jeung rasa mikanyaah ka sasama.",
+      "kata_kunci": [
+        "pangajaran 5",
+        "carita pondok",
+        "carpon",
+        "t ma",
+        "latar"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Pangajaran 6: Surat Pribadi jeung Surat Resmi Basa Sunda",
+      "subbab": [
+        "A. Format jeung Struktur Surat Pribadi (Kop, Titimangsa, Salam Pamuka, Eusi, Panutup)",
+        "B. Basa Surat Ka Sobat Sebaya vs Surat Resmi Izin Sakola ka Guru Madrasah",
+        "C. Prakték Nulis Surat Kalawan Ragam Basa Sunda Lemes anu Sopan"
+      ],
+      "elemen_kode": [
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Pamekar Diajar Basa Sunda Pikeun Murid SMP/MTs Kelas VIII",
+        "penerbit": "Dinas Pendidikan Provinsi Jawa Barat",
+        "tahun": 2014,
+        "halaman": "115–136",
+        "url": "https://disdik.jabarprov.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Nulis surat kalawan sopan ka guru némbongkeun tawadhu, tatakrama, jeung hormat ka guru pahlawan élmu."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        5
+      ],
+      "deskripsi": "Nulis surat kalawan sopan ka guru némbongkeun tawadhu, tatakrama, jeung hormat ka guru pahlawan élmu.",
+      "kata_kunci": [
+        "pangajaran 6",
+        "titimangsa",
+        "salam pamuka",
+        "eusi",
+        "panutup"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 7,
+      "bab": "Pangajaran 7: Aksara Sunda: Rarangken Lanjutan jeung Angka",
+      "subbab": [
+        "A. Rarangken Panambah Konsonan (Panglayar, Panyecek, Pangwisad, Pamaéh)",
+        "B. Lambang Angka Basa Sunda dina Aksara Kaganga",
+        "C. Alih Aksara Tina Aksara Latén kana Aksara Sunda dina Wangun Paragraf Pondok"
+      ],
+      "elemen_kode": [
+        "E2",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Pamekar Diajar Basa Sunda Pikeun Murid SMP/MTs Kelas VIII",
+        "penerbit": "Dinas Pendidikan Provinsi Jawa Barat",
+        "tahun": 2014,
+        "halaman": "137–160",
+        "url": "https://disdik.jabarprov.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Parigel nulis aksara Sunda kalawan rarangken lengkep mangrupakeun buktos nyata cinta kabudayaan bangsa."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        4
+      ],
+      "deskripsi": "Parigel nulis aksara Sunda kalawan rarangken lengkep mangrupakeun buktos nyata cinta kabudayaan bangsa.",
+      "kata_kunci": [
+        "pangajaran 7",
+        "aksara sunda",
+        "rarangken lanjutan jeung angka",
+        "rarangken panambah konsonan",
+        "panglayar"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Pangajaran 1: Biantara (Pidato) Basa Sunda",
+      "subbab": [
+        "A. Struktur Téks Biantara (Salam Bubuka, Mukadimah, Eusi, Panutup, jeung Salam Panutup)",
+        "B. Métode Biantara: Dadakan (Impromptu), Naskah, Ngapalkeun, jeung Ekstemporan",
+        "C. Prakték Biantara Tingkat MTs Téma Peringatan Poé Besar Islam atawa Nasionalisme"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Pamekar Diajar Basa Sunda Pikeun Murid SMP/MTs Kelas IX",
+        "penerbit": "Dinas Pendidikan Provinsi Jawa Barat",
+        "tahun": 2014,
+        "halaman": "1–24",
+        "url": "https://disdik.jabarprov.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Nepikeun biantara ngeunaan cinta lemah cai ngobar-ngobarkeun sumanget perjuangan jeung patriotisme bangsa."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        5
+      ],
+      "deskripsi": "Nepikeun biantara ngeunaan cinta lemah cai ngobar-ngobarkeun sumanget perjuangan jeung patriotisme bangsa.",
+      "kata_kunci": [
+        "pangajaran 1",
+        "biantara",
+        "pidato",
+        "basa sunda",
+        "struktur t ks biantara"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Pangajaran 2: Déskripsi Adat Istiadat jeung Kampung Adat Sunda",
+      "subbab": [
+        "A. Mikawanoh Kampung Adat Sunda (Kampung Naga, Ciptagelar, Baduy, Dukuh)",
+        "B. Ajén Kearifan Lokal dina Ngajaga Kasaimbangan Alam jeung Tatanan Hirup",
+        "C. Nulis Téks Déskripsi Tradisi Upacara Adat (Sérén Taun, Tingkeban, Babarit)"
+      ],
+      "elemen_kode": [
+        "E2",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Pamekar Diajar Basa Sunda Pikeun Murid SMP/MTs Kelas IX",
+        "penerbit": "Dinas Pendidikan Provinsi Jawa Barat",
+        "tahun": 2014,
+        "halaman": "25–50",
+        "url": "https://disdik.jabarprov.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Filosofi hirup kampung adat 'leuweung ruksak cai beak' ngagedurkeun kasadaran jero kana cinta lingkungan hirup."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        7
+      ],
+      "deskripsi": "Filosofi hirup kampung adat 'leuweung ruksak cai beak' ngagedurkeun kasadaran jero kana cinta lingkungan hirup.",
+      "kata_kunci": [
+        "pangajaran 2",
+        "mikawanoh kampung adat sunda",
+        "kampung naga",
+        "ciptagelar",
+        "baduy"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Pangajaran 3: Pakeman Basa (Babasan jeung Paribasa)",
+      "subbab": [
+        "A. Hakekat Babasan jeung Paribasa Sunda salaku Perlambang Budi Pekerti",
+        "B. Papasingan Paribasa: Wawaran Luang, Panyaram Lampah Salah, jeung Pangjurung Laku Hadé",
+        "C. Ngalarapkeun Babasan jeung Paribasa dina Paguneman tur Kahirupan Sapopoé"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Pamekar Diajar Basa Sunda Pikeun Murid SMP/MTs Kelas IX",
+        "penerbit": "Dinas Pendidikan Provinsi Jawa Barat",
+        "tahun": 2014,
+        "halaman": "51–74",
+        "url": "https://disdik.jabarprov.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Ngamalkeun paribasa 'kudu hade gogog hade tagog' ngajaga kahormatan diri tur micinta karukunan papada manusa."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        4
+      ],
+      "deskripsi": "Ngamalkeun paribasa 'kudu hade gogog hade tagog' ngajaga kahormatan diri tur micinta karukunan papada manusa.",
+      "kata_kunci": [
+        "pangajaran 3",
+        "pakeman basa",
+        "babasan jeung paribasa",
+        "papasingan paribasa",
+        "wawaran luang"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Pangajaran 4: Drama / Sandiwara Basa Sunda",
+      "subbab": [
+        "A. Unsur Drama Sunda: Naskah, Sutradara, Palaku, Dialog (Caturan), Latar Panggung",
+        "B. Bedana Monolog, Épilog, jeung Prolog dina Naskah Sandiwara",
+        "C. Latihan Merankeun Tokoh Drama Pondok dina Panggung Kelas Madrasah"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Pamekar Diajar Basa Sunda Pikeun Murid SMP/MTs Kelas IX",
+        "penerbit": "Dinas Pendidikan Provinsi Jawa Barat",
+        "tahun": 2014,
+        "halaman": "75–98",
+        "url": "https://disdik.jabarprov.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Mintonkeun drama sandiwara Sunda ngarojong kreasi seni daérah salaku wujud nyaah ka budaya tanah air."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        6
+      ],
+      "deskripsi": "Mintonkeun drama sandiwara Sunda ngarojong kreasi seni daérah salaku wujud nyaah ka budaya tanah air.",
+      "kata_kunci": [
+        "pangajaran 4",
+        "drama",
+        "sandiwara basa sunda",
+        "unsur drama sunda",
+        "naskah"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Pangajaran 5: Resénsi Buku / Novél Sunda",
+      "subbab": [
+        "A. Hakekat jeung Tujuan Resénsi Buku Karya Sastra",
+        "B. Sistematika Resénsi: Idéntitas Buku, Ringkesan Eusi, Kaleuwihan, jeung Kakurangan",
+        "C. Nulis Resénsi Novél Rumaja Sunda kalawan Basa anu Kritis tur Santun"
+      ],
+      "elemen_kode": [
+        "E2",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Pamekar Diajar Basa Sunda Pikeun Murid SMP/MTs Kelas IX",
+        "penerbit": "Dinas Pendidikan Provinsi Jawa Barat",
+        "tahun": 2014,
+        "halaman": "99–122",
+        "url": "https://disdik.jabarprov.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Maca jeung meunteun novel Sunda kalawan kritis numuwuhkeun minat literasi jeung cinta kana élmu pangaweruh."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Maca jeung meunteun novel Sunda kalawan kritis numuwuhkeun minat literasi jeung cinta kana élmu pangaweruh.",
+      "kata_kunci": [
+        "pangajaran 5",
+        "res nsi buku",
+        "nov l sunda",
+        "sistematika res nsi",
+        "id ntitas buku"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Pangajaran 6: Carita Babad / Sajarah Lokal Tatar Sunda",
+      "subbab": [
+        "A. Hakekat Carita Babad salaku Dongéng anu Ngandung Unsur Sajarah Karajaan Sunda",
+        "B. Maca jeung Nganalisis Babad Pajajaran / Babad Sumedang Larang / Babad Cirebon",
+        "C. Nyandak Piwuruk Kapahlawanan sarta Katetegan Manah dina Ngabela Lemah Cai"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Pamekar Diajar Basa Sunda Pikeun Murid SMP/MTs Kelas IX",
+        "penerbit": "Dinas Pendidikan Provinsi Jawa Barat",
+        "tahun": 2014,
+        "halaman": "123–146",
+        "url": "https://disdik.jabarprov.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Diajar sajarah babad tatar Sunda ngagedurkeun sumanget bajoang ngabéla harkat jeung martabat tanah air."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        4
+      ],
+      "deskripsi": "Diajar sajarah babad tatar Sunda ngagedurkeun sumanget bajoang ngabéla harkat jeung martabat tanah air.",
+      "kata_kunci": [
+        "pangajaran 6",
+        "carita babad",
+        "sajarah lokal tatar sunda"
+      ]
+    }
+  ],
+  "status": "LENGKAP",
+  "catatan": "CP verbatim ngarujuk kana Peraturan Gubernur Jawa Barat No. 173 Tahun 2014 sarta Panduan Kurikulum Muatan Lokal Basa jeung Sastra Sunda Disdik Jabar Fase D (ngawengku 4 elemen kamampuh basa: Ngaregepkeun, Maca jeung Miarsa, Nyarita jeung Midangkeun, sarta Nulis). Materi per pangajaran dirangkum tina Buku Teks Utama Pamekar Diajar Basa Sunda Disdik Jawa Barat Kelas VII, VIII, jeung IX. Saran Panca Cinta jeung DPL parantos dipetakeun sacara kontekstual.",
+  "diverifikasi_oleh": null,
+  "tanggal_verifikasi": null
+}

@@ -1,0 +1,718 @@
+{
+  "mapel": "Pendidikan Pancasila",
+  "slug": "pendidikan-pancasila",
+  "kelompok": "umum",
+  "fase": "D",
+  "sumber_cp": {
+    "regulasi_kode": "BSKAP-046-2025",
+    "halaman": "Halaman 18–25",
+    "url": "https://kurikulum.kemendikdasmen.go.id/unduhan",
+    "diakses": "2026-10-14"
+  },
+  "rasional": "Pendidikan Pancasila merupakan muatan kurikulum wajib yang membentuk kepribadian murid Indonesia yang beriman, bertakwa kepada Tuhan YME, berakhlak mulia, bernalar kritis, mandiri, kreatif, bergotong royong, dan berkebinekaan global melalui internalisasi nilai-nilai luhur Pancasila, pemahaman konstitusi UUD NRI 1945, apresiasi kebinekaan, serta komitmen menjaga keutuhan Negara Kesatuan Republik Indonesia.",
+  "tujuan_mapel": [
+    "Menghayati dan mengamalkan nilai-nilai luhur Pancasila sebagai pandangan hidup, dasar negara, dan ideologi nasional dalam kehidupan pribadi, sosial, dan bernegara.",
+    "Memahami, mematuhi norma dan peraturan perundang-undangan serta menghormati hak asasi manusia dan kewajiban warga negara.",
+    "Mengembangkan sikap toleransi, inklusivitas, dan penghargaan terhadap kemajemukan bangsa dalam bingkai Bhinneka Tunggal Ika.",
+    "Menumbuhkan rasa cinta tanah air, kesadaran bela negara, dan komitmen aktif menjaga kedaulatan serta persatuan NKRI.",
+    "Mengembangkan kecakapan kewargaan digital yang etis, kritis, santun, dan bertanggung jawab di tengah era keterbukaan informasi."
+  ],
+  "capaian_umum_fase_d": "Pada akhir Fase D, peserta didik memahami sejarah kelahiran Pancasila, menelaah kedudukan Pancasila sebagai dasar negara, pandangan hidup bangsa, dan ideologi negara, serta menerapkan nilai-nilai Pancasila dalam kehidupan sehari-hari; menelaah hubungan Pancasila dengan UUD NRI 1945, Bhinneka Tunggal Ika, dan NKRI; mematuhi norma dan aturan, memahami hak dan kewajiban warga negara, tata urutan peraturan perundang-undangan di Indonesia, serta mempraktikkan kemerdekaan berpendapat di era digital; mengidentifikasi dan menghargai keragaman suku, agama, ras, budaya, dan kearifan lokal; serta mengenal wilayah NKRI, sejarah kebangkitan nasional dan Sumpah Pemuda, serta berkomitmen menjaga keutuhan NKRI.",
+  "elemen": [
+    {
+      "kode": "E1",
+      "nama": "Pancasila",
+      "deskripsi_cp": "Peserta didik memahami sejarah kelahiran Pancasila, menelaah kedudukan Pancasila sebagai dasar negara, pandangan hidup bangsa, dan ideologi negara; menerapkan nilai-nilai Pancasila dalam kehidupan sehari-hari; serta menelaah hubungan Pancasila dengan Undang-Undang Dasar Negara Republik Indonesia Tahun 1945, Bhinneka Tunggal Ika, dan Negara Kesatuan Republik Indonesia."
+    },
+    {
+      "kode": "E2",
+      "nama": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945",
+      "deskripsi_cp": "Peserta didik mematuhi norma dan aturan yang berlaku dalam kehidupan bermasyarakat, berbangsa, dan bernegara; memahami hak dan kewajiban warga negara; memahami kedudukan dan tata urutan peraturan perundang-undangan di Indonesia; serta mempraktikkan kemerdekaan berpendapat warga negara pada era keterbukaan informasi dengan penuh tanggung jawab."
+    },
+    {
+      "kode": "E3",
+      "nama": "Bhinneka Tunggal Ika",
+      "deskripsi_cp": "Peserta didik mengidentifikasi dan menghargai keberagaman suku, agama, ras, antargolongan, dan budaya di Indonesia; merawat tradisi dan kearifan lokal; mempromosikan kebinekaan; serta menunjukkan literasi digital yang beretika dalam merawat persatuan bangsa."
+    },
+    {
+      "kode": "E4",
+      "nama": "Negara Kesatuan Republik Indonesia",
+      "deskripsi_cp": "Peserta didik mengenal wilayah Negara Kesatuan Republik Indonesia beserta batas-batasnya; memahami karakteristik daerah dan potensinya dalam bingkai NKRI; menelusuri sejarah kebangkitan nasional dan Sumpah Pemuda; serta menunjukkan komitmen menjaga keutuhan NKRI dan persatuan bangsa."
+    }
+  ],
+  "materi": [
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Sejarah Kelahiran Pancasila",
+      "subbab": [
+        "A. Latar Sejarah Kelahiran Pancasila",
+        "B. Sidang Pertama BPUPKI dan Gagasan Rumusan Dasar Negara",
+        "C. Peran Panitia Sembilan dan Piagam Jakarta",
+        "D. Penetapan Pancasila sebagai Dasar Negara oleh PPKI"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Pendidikan Pancasila untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "1–28",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Memahami sejarah perumusan Pancasila menumbuhkan kebanggaan nasional dan cinta tanah air atas jasa perjuangan para pendiri bangsa."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        2
+      ],
+      "deskripsi": "Memahami sejarah perumusan Pancasila menumbuhkan kebanggaan nasional dan cinta tanah air atas jasa perjuangan para pendiri bangsa.",
+      "kata_kunci": [
+        "kelahiran pancasila",
+        "sidang pertama bpupki",
+        "gagasan rumusan dasar negara",
+        "panitia sembilan",
+        "piagam jakarta"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Penerapan Nilai-Nilai Pancasila",
+      "subbab": [
+        "A. Makna Nilai Tiap Sila Pancasila",
+        "B. Nilai Ketuhanan dan Kemanusiaan dalam Keseharian",
+        "C. Persatuan, Kerakyatan, dan Keadilan Sosial",
+        "D. Praktik Pengamalan Pancasila di Rumah, Madrasah, dan Masyarakat"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Pendidikan Pancasila untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "29–56",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Sila pertama meneguhkan keimanan kepada Allah, sedangkan sila lainnya mewujudkan akhlak mulia dan kasih sayang sesama."
+        },
+        {
+          "id": 5,
+          "alasan": "Penerapan nilai kemanusiaan dan keadilan melatih empati serta anti-perundungan di lingkungan madrasah."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        5
+      ],
+      "deskripsi": "Sila pertama meneguhkan keimanan kepada Allah, sedangkan sila lainnya mewujudkan akhlak mulia dan kasih sayang sesama.",
+      "kata_kunci": [
+        "penerapan nilai-nilai pancasila",
+        "nilai ketuhanan",
+        "kemanusiaan dalam keseharian",
+        "persatuan",
+        "kerakyatan"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Patuh terhadap Norma",
+      "subbab": [
+        "A. Hakikat dan Fungsi Norma dalam Masyarakat",
+        "B. Macam-Macam Norma: Agama, Kesusilaan, Kesopanan, dan Hukum",
+        "C. Arti Penting Ketaatan terhadap Norma",
+        "D. Penerapan Budaya Tertib dan Disiplin di Madrasah"
+      ],
+      "elemen_kode": [
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Pendidikan Pancasila untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "57–84",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Kepatuhan pada norma kesopanan dan kesusilaan menumbuhkan budaya saling menghargai martabat sesama manusia."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        6
+      ],
+      "deskripsi": "Kepatuhan pada norma kesopanan dan kesusilaan menumbuhkan budaya saling menghargai martabat sesama manusia.",
+      "kata_kunci": [
+        "patuh terhadap norma",
+        "hakikat",
+        "norma dalam masyarakat",
+        "norma",
+        "agama"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Bab 4: Keberagaman Bangsa Indonesia dalam Bingkai Bhinneka Tunggal Ika",
+      "subbab": [
+        "A. Keragaman Suku Bangsa dan Budaya di Indonesia",
+        "B. Keragaman Agama dan Kepercayaan",
+        "C. Keragaman Ras dan Antargolongan",
+        "D. Merawat Toleransi dan Kerukunan Hidup Berdampingan"
+      ],
+      "elemen_kode": [
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Pendidikan Pancasila untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "85–118",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Menyadari kebinekaan Indonesia sebagai kekayaan luhur bangsa memperkokoh komitmen persatuan nasional."
+        },
+        {
+          "id": 5,
+          "alasan": "Toleransi dan ukhuwah insaniyyah menjadi pondasi kerukunan lintas agama dan budaya."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        5
+      ],
+      "deskripsi": "Menyadari kebinekaan Indonesia sebagai kekayaan luhur bangsa memperkokoh komitmen persatuan nasional.",
+      "kata_kunci": [
+        "keberagaman bangsa indonesia",
+        "bingkai bhinneka tunggal ika",
+        "keragaman suku bangsa",
+        "budaya di indonesia",
+        "keragaman agama"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Wilayah Negara Kesatuan Republik Indonesia (NKRI)",
+      "subbab": [
+        "A. Wilayah dan Batas-Batas NKRI",
+        "B. Karakteristik Daerah Tempat Tinggal dan Potensinya",
+        "C. Menjaga Keasrian dan Kelestarian Lingkungan Daerah",
+        "D. Peran Generasi Muda Menjaga Keutuhan Wilayah"
+      ],
+      "elemen_kode": [
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Pendidikan Pancasila untuk SMP/MTs Kelas VII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "119–148",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Mengenal kekayaan alam wilayah daerah melahirkan kesadaran merawat kelestarian ekologi nusantara."
+        },
+        {
+          "id": 4,
+          "alasan": "Mencintai dan membela kedaulatan setiap jengkal tanah air dari Sabang sampai Merauke."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        3
+      ],
+      "deskripsi": "Mengenal kekayaan alam wilayah daerah melahirkan kesadaran merawat kelestarian ekologi nusantara.",
+      "kata_kunci": [
+        "nkri",
+        "wilayah",
+        "batas-batas nkri",
+        "potensinya",
+        "keasrian"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Pancasila dalam Kehidupan Bangsaku",
+      "subbab": [
+        "A. Kedudukan Pancasila sebagai Dasar Negara",
+        "B. Pancasila sebagai Pandangan Hidup Bangsa",
+        "C. Pancasila sebagai Ideologi Negara dan Sumber Hukum",
+        "D. Tantangan Aktualisasi Pancasila di Era Modern"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Pendidikan Pancasila untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "1–32",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Memahami Pancasila sebagai ideologi terbuka mengokohkan ketahanan mental dan kecintaan pada tanah air."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        3
+      ],
+      "deskripsi": "Memahami Pancasila sebagai ideologi terbuka mengokohkan ketahanan mental dan kecintaan pada tanah air.",
+      "kata_kunci": [
+        "pancasila",
+        "kehidupan bangsaku",
+        "kedudukan pancasila",
+        "dasar negara",
+        "pandangan hidup bangsa"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Pedoman Negaraku (UUD NRI Tahun 1945)",
+      "subbab": [
+        "A. Sejarah dan Makna Konstitusi bagi Suatu Negara",
+        "B. Kedudukan dan Fungsi UUD NRI Tahun 1945",
+        "C. Hubungan Pembukaan dan Batang Tubuh UUD 1945",
+        "D. Sikap Ketaatan terhadap Konstitusi Negara"
+      ],
+      "elemen_kode": [
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Pendidikan Pancasila untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "33–64",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Menjunjung tinggi konstitusi negara merupakan wujud nyata integritas kewargaan dan cinta tanah air."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        3
+      ],
+      "deskripsi": "Menjunjung tinggi konstitusi negara merupakan wujud nyata integritas kewargaan dan cinta tanah air.",
+      "kata_kunci": [
+        "pedoman negaraku",
+        "uud nri tahun 1945",
+        "sejarah",
+        "kedudukan",
+        "hubungan pembukaan"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Peraturan di Negaraku",
+      "subbab": [
+        "A. Tata Urutan Peraturan Perundang-undangan di Indonesia",
+        "B. Proses Pembuatan Undang-Undang dan Peraturan Daerah",
+        "C. Menegakkan Hukum dan Keadilan",
+        "D. Kesadaran Kepatuhan Hukum Pelajar Madrasah"
+      ],
+      "elemen_kode": [
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Pendidikan Pancasila untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "65–94",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Menaati hukum perundang-undangan nasional membangun ketertiban sosial demi kejayaan bangsa."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        6
+      ],
+      "deskripsi": "Menaati hukum perundang-undangan nasional membangun ketertiban sosial demi kejayaan bangsa.",
+      "kata_kunci": [
+        "peraturan di negaraku",
+        "proses pembuatan undang-undang",
+        "peraturan daerah",
+        "menegakkan hukum",
+        "keadilan"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Bab 4: Melestarikan Budaya Bangsaku",
+      "subbab": [
+        "A. Sejarah Pergerakan Kebangkitan Nasional 1908",
+        "B. Makna dan Ikrar Sumpah Pemuda 1928",
+        "C. Nilai-Nilai Luhur Kearifan Lokal dan Tradisi Daerah",
+        "D. Peran Remaja Melestarikan Warisan Budaya Nusantara"
+      ],
+      "elemen_kode": [
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Pendidikan Pancasila untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "95–124",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Meneladani semangat Sumpah Pemuda membakar patriotisme persatuan pemuda lintas suku bangsa."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        4
+      ],
+      "deskripsi": "Meneladani semangat Sumpah Pemuda membakar patriotisme persatuan pemuda lintas suku bangsa.",
+      "kata_kunci": [
+        "melestarikan budaya bangsaku",
+        "makna",
+        "ikrar sumpah pemuda 1928",
+        "tradisi daerah"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Jati Diri Bangsa dan Budaya Nasional",
+      "subbab": [
+        "A. Budaya Nasional sebagai Identitas dan Pemersatu Bangsa",
+        "B. Menghargai Keragaman Budaya sebagai Kekuatan Bangsa",
+        "C. Menyaring Pengaruh Budaya Asing di Era Globalisasi",
+        "D. Apresiasi Seni dan Produk Kebudayaan Lokal"
+      ],
+      "elemen_kode": [
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Pendidikan Pancasila untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "125–152",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Nalar kritis membantu menyeleksi budaya luar secara bijak sesuai adab dan kepribadian bangsa."
+        },
+        {
+          "id": 4,
+          "alasan": "Bangga menggunakan produk dan melestarikan seni budaya bangsa Indonesia."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        3
+      ],
+      "deskripsi": "Nalar kritis membantu menyeleksi budaya luar secara bijak sesuai adab dan kepribadian bangsa.",
+      "kata_kunci": [
+        "jati diri bangsa",
+        "budaya nasional",
+        "identitas",
+        "pemersatu bangsa",
+        "menghargai keragaman budaya"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Literasi Digital dalam Kebinekaan Bangsa",
+      "subbab": [
+        "A. Etika Berkomunikasi dan Berinteraksi di Ruang Digital",
+        "B. Memilah Informasi dan Mencegah Berita Bohong (Hoaks)",
+        "C. Merawat Persatuan dan Melawan Ujaran Kebencian di Media Sosial",
+        "D. Memanfaatkan Media Digital untuk Menyebarkan Pesan Toleransi"
+      ],
+      "elemen_kode": [
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Pendidikan Pancasila untuk SMP/MTs Kelas VIII",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "153–180",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Tradisi ilmiah dan tabayun melatih murid memverifikasi kabar di dunia digital sebelum membagikannya."
+        },
+        {
+          "id": 5,
+          "alasan": "Etika digital mencegah perundungan siber (cyber-bullying) dan menjaga martabat sesama insan."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        8
+      ],
+      "deskripsi": "Tradisi ilmiah dan tabayun melatih murid memverifikasi kabar di dunia digital sebelum membagikannya.",
+      "kata_kunci": [
+        "literasi digital",
+        "kebinekaan bangsa",
+        "etika berkomunikasi",
+        "berinteraksi di ruang digital",
+        "memilah informasi"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Hubungan Pancasila dengan UUD NRI 1945, Bhinneka Tunggal Ika, dan NKRI",
+      "subbab": [
+        "A. Pancasila sebagai Sumber dari Segala Sumber Hukum",
+        "B. Hubungan Kausal Organik Pancasila dan Pembukaan UUD 1945",
+        "C. Sinergi Nilai Pancasila dalam Menjaga Kebinekaan Bangsa",
+        "D. Komitmen Berbangsa Berdasarkan Empat Konsensus Kebangsaan"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Pendidikan Pancasila untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "1–34",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Memahami kesatuan pilar kebangsaan menumbuhkan cinta tanah air yang kokoh berlandaskan nilai ketuhanan."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        3
+      ],
+      "deskripsi": "Memahami kesatuan pilar kebangsaan menumbuhkan cinta tanah air yang kokoh berlandaskan nilai ketuhanan.",
+      "kata_kunci": [
+        "bhinneka tunggal ika",
+        "nkri",
+        "pancasila",
+        "pembukaan uud 1945"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Hak dan Kewajiban Warga Negara",
+      "subbab": [
+        "A. Makna Hak Asasi Manusia dan Hak Warga Negara",
+        "B. Hak dan Kewajiban Warga Negara Menurut UUD NRI 1945",
+        "C. Kasus Pelanggaran Hak dan Pengingkaran Kewajiban",
+        "D. Upaya Penegakan Keadilan dan Pemenuhan Hak di Lingkungan Sekolah"
+      ],
+      "elemen_kode": [
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Pendidikan Pancasila untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "35–66",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Menghormati hak sesama dan menunaikan kewajiban sosial mencerminkan cinta sesama dan keadilan."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        6
+      ],
+      "deskripsi": "Menghormati hak sesama dan menunaikan kewajiban sosial mencerminkan cinta sesama dan keadilan.",
+      "kata_kunci": [
+        "kewajiban warga negara",
+        "makna hak asasi manusia",
+        "hak warga negara",
+        "kasus pelanggaran hak",
+        "pengingkaran kewajiban"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Kemerdekaan Berpendapat pada Era Keterbukaan Informasi",
+      "subbab": [
+        "A. Landasan Hukum Kemerdekaan Mengemukakan Pendapat",
+        "B. Bentuk dan Saluran Penyampaian Pendapat di Ruang Publik",
+        "C. Tanggung Jawab Moral dan Hukum dalam Berpendapat",
+        "D. Simulasi Musyawarah dan Debat Kebangsaan Santun di Madrasah"
+      ],
+      "elemen_kode": [
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Pendidikan Pancasila untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "67–98",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Mengemukakan pendapat berlandaskan data dan nalar kritis menghidupkan cinta ilmu dan kebenaran."
+        },
+        {
+          "id": 5,
+          "alasan": "Menyampaikan kritik dengan santun tanpa merendahkan martabat orang lain."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        8
+      ],
+      "deskripsi": "Mengemukakan pendapat berlandaskan data dan nalar kritis menghidupkan cinta ilmu dan kebenaran.",
+      "kata_kunci": [
+        "bentuk",
+        "tanggung jawab moral",
+        "hukum dalam berpendapat",
+        "simulasi musyawarah"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Bab 4: Menjaga dan Melestarikan Tradisi, Kearifan Lokal dalam Masyarakat Global",
+      "subbab": [
+        "A. Keragaman Kearifan Lokal Nusantara",
+        "B. Peran Kearifan Lokal dalam Mengelola Lingkungan dan Sosial",
+        "C. Tantangan Pengikisan Budaya di Tengah Globalisasi",
+        "D. Inovasi Kreatif Mempromosikan Budaya Nusantara ke Dunia"
+      ],
+      "elemen_kode": [
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Pendidikan Pancasila untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "99–128",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Banyak kearifan lokal nusantara yang mengandung etika sakral menjaga kelestarian alam dan lingkungan."
+        },
+        {
+          "id": 4,
+          "alasan": "Melestarikan tradisi luhur lokal menjadi benteng pertahanan identitas nasional."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        4
+      ],
+      "deskripsi": "Banyak kearifan lokal nusantara yang mengandung etika sakral menjaga kelestarian alam dan lingkungan.",
+      "kata_kunci": [
+        "menjaga",
+        "melestarikan tradisi",
+        "kearifan lokal",
+        "masyarakat global",
+        "sosial"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Menjaga Keutuhan Negara Kesatuan Republik Indonesia",
+      "subbab": [
+        "A. Hakikat dan Bentuk Negara Kesatuan Republik Indonesia",
+        "B. Ancaman terhadap Kedaulatan Bangsa: Militer dan Non-militer",
+        "C. Peran TNI, Polri, dan Partisipasi Rakyat dalam Pertahanan Negara",
+        "D. Aksi Nyata Pelajar Madrasah Membela Bangsa dan Menjaga Persatuan"
+      ],
+      "elemen_kode": [
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Pendidikan Pancasila untuk SMP/MTs Kelas IX",
+        "penerbit": "Pusat Perbukuan Kemendikbudristek",
+        "tahun": 2023,
+        "halaman": "129–158",
+        "url": "https://buku.kemdikbud.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Komitmen membela NKRI adalah perwujudan cinta tanah air yang tak terpisahkan dari iman (hubbul wathan minal iman)."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        2
+      ],
+      "deskripsi": "Komitmen membela NKRI adalah perwujudan cinta tanah air yang tak terpisahkan dari iman (hubbul wathan minal iman).",
+      "kata_kunci": [
+        "hakikat",
+        "militer",
+        "non-militer",
+        "polri",
+        "persatuan"
+      ]
+    }
+  ],
+  "status": "LENGKAP",
+  "catatan": "CP verbatim mengacu pada Keputusan Kepala BSKAP No. 046/H/KR/2025 Lampiran Mata Pelajaran Pendidikan Pancasila Fase D. Materi per bab dan subbab dirangkum dari Buku Teks Utama Pusat Perbukuan Kemendikbudristek Kelas VII, VIII, dan IX. Saran Panca Cinta dan DPL telah dipetakan kontekstual.",
+  "diverifikasi_oleh": null,
+  "tanggal_verifikasi": null
+}

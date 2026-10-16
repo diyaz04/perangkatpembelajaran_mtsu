@@ -1,0 +1,114 @@
+[
+  {
+    "mapel_slug": "al-quran-hadis",
+    "mapel_nama": "Al-Qur'an Hadis",
+    "kelompok": "PAI",
+    "jp_per_minggu": { "7": 2, "8": 2, "9": 2 },
+    "sumber": "KMA 1503 Tahun 2025 Lampiran Struktur Kurikulum MTs"
+  },
+  {
+    "mapel_slug": "akidah-akhlak",
+    "mapel_nama": "Akidah Akhlak",
+    "kelompok": "PAI",
+    "jp_per_minggu": { "7": 2, "8": 2, "9": 2 },
+    "sumber": "KMA 1503 Tahun 2025 Lampiran Struktur Kurikulum MTs"
+  },
+  {
+    "mapel_slug": "fikih",
+    "mapel_nama": "Fikih",
+    "kelompok": "PAI",
+    "jp_per_minggu": { "7": 2, "8": 2, "9": 2 },
+    "sumber": "KMA 1503 Tahun 2025 Lampiran Struktur Kurikulum MTs"
+  },
+  {
+    "mapel_slug": "ski",
+    "mapel_nama": "Sejarah Kebudayaan Islam (SKI)",
+    "kelompok": "PAI",
+    "jp_per_minggu": { "7": 2, "8": 2, "9": 2 },
+    "sumber": "KMA 1503 Tahun 2025 Lampiran Struktur Kurikulum MTs"
+  },
+  {
+    "mapel_slug": "bahasa-arab",
+    "mapel_nama": "Bahasa Arab",
+    "kelompok": "Bahasa Arab",
+    "jp_per_minggu": { "7": 3, "8": 3, "9": 3 },
+    "sumber": "KMA 1503 Tahun 2025 Lampiran Struktur Kurikulum MTs"
+  },
+  {
+    "mapel_slug": "pendidikan-pancasila",
+    "mapel_nama": "Pendidikan Pancasila",
+    "kelompok": "umum",
+    "jp_per_minggu": { "7": 2, "8": 2, "9": 2 },
+    "sumber": "KMA 1503 Tahun 2025 Lampiran Struktur Kurikulum MTs"
+  },
+  {
+    "mapel_slug": "bahasa-indonesia",
+    "mapel_nama": "Bahasa Indonesia",
+    "kelompok": "umum",
+    "jp_per_minggu": { "7": 5, "8": 5, "9": 5 },
+    "sumber": "KMA 1503 Tahun 2025 Lampiran Struktur Kurikulum MTs"
+  },
+  {
+    "mapel_slug": "matematika",
+    "mapel_nama": "Matematika",
+    "kelompok": "umum",
+    "jp_per_minggu": { "7": 4, "8": 4, "9": 4 },
+    "sumber": "KMA 1503 Tahun 2025 Lampiran Struktur Kurikulum MTs"
+  },
+  {
+    "mapel_slug": "ipa",
+    "mapel_nama": "Ilmu Pengetahuan Alam (IPA)",
+    "kelompok": "umum",
+    "jp_per_minggu": { "7": 4, "8": 4, "9": 4 },
+    "sumber": "KMA 1503 Tahun 2025 Lampiran Struktur Kurikulum MTs"
+  },
+  {
+    "mapel_slug": "ips",
+    "mapel_nama": "Ilmu Pengetahuan Sosial (IPS)",
+    "kelompok": "umum",
+    "jp_per_minggu": { "7": 3, "8": 3, "9": 3 },
+    "sumber": "KMA 1503 Tahun 2025 Lampiran Struktur Kurikulum MTs"
+  },
+  {
+    "mapel_slug": "bahasa-inggris",
+    "mapel_nama": "Bahasa Inggris",
+    "kelompok": "umum",
+    "jp_per_minggu": { "7": 3, "8": 3, "9": 3 },
+    "sumber": "KMA 1503 Tahun 2025 Lampiran Struktur Kurikulum MTs"
+  },
+  {
+    "mapel_slug": "pjok",
+    "mapel_nama": "Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK)",
+    "kelompok": "umum",
+    "jp_per_minggu": { "7": 2, "8": 2, "9": 2 },
+    "sumber": "KMA 1503 Tahun 2025 Lampiran Struktur Kurikulum MTs"
+  },
+  {
+    "mapel_slug": "informatika",
+    "mapel_nama": "Informatika",
+    "kelompok": "umum",
+    "jp_per_minggu": { "7": 2, "8": 2, "9": 2 },
+    "sumber": "KMA 1503 Tahun 2025 Lampiran Struktur Kurikulum MTs"
+  },
+  {
+    "mapel_slug": "seni-budaya",
+    "mapel_nama": "Seni Budaya",
+    "kelompok": "umum",
+    "jp_per_minggu": { "7": 2, "8": 2, "9": 2 },
+    "sumber": "KMA 1503 Tahun 2025 Lampiran Struktur Kurikulum MTs"
+  },
+  {
+    "mapel_slug": "prakarya",
+    "mapel_nama": "Prakarya",
+    "kelompok": "umum",
+    "jp_per_minggu": { "7": 2, "8": 2, "9": 2 },
+    "sumber": "KMA 1503 Tahun 2025 Lampiran Struktur Kurikulum MTs"
+  },
+  {
+    "mapel_slug": "bahasa-sunda",
+    "mapel_nama": "Muatan Lokal (Bahasa Sunda)",
+    "kelompok": "muatan_lokal",
+    "jp_per_minggu": { "7": 2, "8": 2, "9": 2 },
+    "sumber": "Pergub Jawa Barat No. 173 Tahun 2014 & KMA 1503 Tahun 2025"
+  }
+]

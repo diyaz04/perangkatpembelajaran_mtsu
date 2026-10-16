@@ -1,0 +1,1236 @@
+{
+  "mapel": "Akidah Akhlak",
+  "slug": "akidah-akhlak",
+  "kelompok": "PAI",
+  "fase": "D",
+  "sumber_cp": {
+    "regulasi_kode": "SK-DIRJEN-PENDIS-9941-2025",
+    "halaman": "Halaman 29–42",
+    "url": "https://pendis.kemenag.go.id/kurikulum",
+    "diakses": "2026-10-14"
+  },
+  "rasional": "Akidah merupakan fondasi keyakinan tauhid yang kokoh, sedangkan akhlak adalah buah keimanan dalam perilaku nyata. Pembelajaran Akidah Akhlak di madrasah bertujuan membentuk murid yang memiliki akidah shahihah berlandaskan manhaj Ahl as-Sunnah wa al-Jama’ah, membiasakan akhlak mulia (mahmudah), menjauhi akhlak tercela (madzmumah), mempraktikkan adab islami dalam kehidupan sehari-hari (termasuk etika sosial media), serta meneladani keluhuran budi para nabi, rasul, sahabat, dan ulama salafus shalih.",
+  "tujuan_mapel": [
+    "Memperkokoh keimanan dan ketakwaan kepada Allah SWT melalui pemahaman rukun iman dan akidah Ahlussunnah wal Jama'ah.",
+    "Menganalisis sifat-sifat Allah, Asmaul Husna, mukjizat rasul, malaikat, hari akhir, dan takdir (qadha-qadar) sebagai landasan spiritualitas hidup.",
+    "Membiasakan akhlak terpuji kepada Allah, diri sendiri, sesama manusia, dan lingkungan alam berlandaskan cinta kepada Allah (mahabbah fillah).",
+    "Menjauhkan diri dari penyakit hati dan akhlak tercela seperti riya', nifaq, egois, hasad, ghibah, fitnah, dan pergaulan bebas.",
+    "Menginternalisasi adab islami dalam beribadah, berinteraksi sosial, dan berselancar di dunia digital secara santun dan bertanggung jawab.",
+    "Meneladani integritas kepemimpinan, kedermawanan, dan ketabahan para nabi dan khulafaur rasyidin dalam kehidupan kontemporer."
+  ],
+  "capaian_umum_fase_d": "Pada akhir Fase D, peserta didik mampu menganalisis akidah Islam (iman, Islam, dan ihsan), sifat wajib, mustahil, dan jaiz bagi Allah Swt. dan rasul-Nya (Aqaid Khamsin), Asmaul Husna pilihan, serta enam rukun iman sebagai landasan dan motivasi beraktivitas sehari-hari yang bernilai ibadah dan berdimensi ukhrawi; membiasakan akhlak terpuji (ikhtiar, tawakal, sabar, syukur, qana'ah, husnudzan, tawadhu', tasamuh, ta'awun) dan menjauhi akhlak tercela; menerapkan adab shalat, zikir, membaca Al-Qur'an, adab kepada orang tua, guru, teman, tetangga, adab berjalan, berpakaian, makan-minum, serta adab bermedia sosial; serta menganalisis dan meneladani kisah nabi (Sulaiman, Ibrahim, Musa, Rasul Ulul Azmi) dan sahabat utama (Khulafaur Rasyidin dan Sayyidah Aisyah r.a.).",
+  "elemen": [
+    {
+      "kode": "E1",
+      "nama": "Akidah",
+      "deskripsi_cp": "Peserta didik mampu menganalisis akidah Islam (iman, Islam, dan ihsan), sifat wajib, mustahil, dan jaiz bagi Allah Swt. beserta pembagian sifat Nafsiyah, Salbiyah, Ma'ani, dan Ma'anawiyah; Asmaul Husna (Al-'Aziz, Al-Ghaffar, Al-Basith, An-Nafi', Ar-Rauf, Al-Barr, Al-Fattah, Al-'Adl, Al-Qayyum, dll.); keistimewaan Al-Qur'an dan mukjizat para nabi serta kejadian luar biasa lainnya (karamah, ma'unah, irhas); iman kepada malaikat Allah dan makhluk gaib; sifat wajib, mustahil, dan jaiz bagi rasul serta tugas Rasul Ulul Azmi; iman kepada hari akhir; serta iman kepada qadha dan qadar sebagai landasan dan motivasi beramal saleh."
+    },
+    {
+      "kode": "E2",
+      "nama": "Akhlak",
+      "deskripsi_cp": "Peserta didik mampu membiasakan akhlak terpuji (taubat, taat, istiqamah, ikhlas, ikhtiar, tawakal, sabar, syukur, qana'ah, husnudzan, tawadhu', tasamuh, dan ta'awun) dalam kehidupan pribadi maupun sosial yang dilandasi atas kecintaan kepada Allah Swt. (mahabbah fillah); serta menjauhi akhlak tercela (riya', nifaq, ananiyah/egois, putus asa, gadhab/pemarah, tamak, hasad, dendam, ghibah, fitnah, namimah, dan pergaulan bebas remaja)."
+    },
+    {
+      "kode": "E3",
+      "nama": "Adab",
+      "deskripsi_cp": "Peserta didik mampu memahami dan membiasakan adab islami yang baik dalam beribadah kepada Allah Swt. (adab shalat, berzikir, membaca Al-Qur'an, dan berdoa); adab berinteraksi dengan sesama manusia (adab kepada orang tua dan guru, adab kepada saudara, teman sebaya, dan tetangga); adab keseharian (adab berjalan, berpakaian, makan dan minum); serta adab bersosial media secara santun, beretika, dan bijak di era digital."
+    },
+    {
+      "kode": "E4",
+      "nama": "Kisah Keteladanan",
+      "deskripsi_cp": "Peserta didik mampu menganalisis dan meneladani kisah keteladanan para nabi dan orang saleh (Nabi Sulaiman a.s., Nabi Ibrahim a.s., Nabi Musa a.s., Rasul Ulul Azmi) serta para sahabat mulia (Abu Bakar ash-Shiddiq r.a., Umar bin al-Khattab r.a., Usman bin Affan r.a., Ali bin Abi Thalib karramallahu wajhah, dan Sayyidah Aisyah r.a.) untuk dijadikan inspirasi moral menghadapi tantangan kehidupan masa kini."
+    }
+  ],
+  "materi": [
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Akidah Islam Fondasi Keimanan",
+      "subbab": [
+        "A. Pengertian, Dasar Hukum, dan Tujuan Akidah Islam",
+        "B. Hubungan Integral antara Iman, Islam, dan Ihsan",
+        "C. Metode Peningkatan dan Penguatan Akidah di Kalangan Remaja",
+        "D. Menghindari Bahaya Kemusyrikan Modern dan Takahyul"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "1–24",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Akidah tauhid yang murni adalah inti utama dari cinta Allah dan Rasul."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Akidah tauhid yang murni adalah inti utama dari cinta Allah dan Rasul.",
+      "kata_kunci": [
+        "akidah islam fondasi keimanan",
+        "pengertian",
+        "dasar hukum",
+        "tujuan akidah islam",
+        "hubungan integral antara iman"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Mengenal Sifat-Sifat Allah SWT",
+      "subbab": [
+        "A. Sifat Wajib, Mustahil, dan Jaiz bagi Allah SWT",
+        "B. Pembagian Sifat: Nafsiyah, Salbiyah, Ma'ani, dan Ma'anawiyah",
+        "C. Dalil 'Aqli dan Naqli tentang Keberadaan dan Keagungan Allah",
+        "D. Dampak Positif Mengimani Sifat-Sifat Allah dalam Kehidupan Sehari-hari"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "25–52",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Mengenal sifat-sifat kesempurnaan Allah SWT membangkitkan rasa takzim dan mahabbah di lubuk hati."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        3
+      ],
+      "deskripsi": "Mengenal sifat-sifat kesempurnaan Allah SWT membangkitkan rasa takzim dan mahabbah di lubuk hati.",
+      "kata_kunci": [
+        "sifat-sifat allah swt",
+        "sifat wajib",
+        "mustahil",
+        "jaiz bagi allah swt",
+        "sifat"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Taubat, Taat, Istiqamah, dan Ikhlas",
+      "subbab": [
+        "A. Hakikat dan Syarat-Syarat Taubat Nasuha",
+        "B. Sikap Taat Menjalankan Perintah Agama dan Peraturan",
+        "C. Menjaga Konsistensi (Istiqamah) dalam Menuntut Ilmu dan Beribadah",
+        "D. Keutamaan Ikhlas Beramal Tanpa Pamrih Pujian Manusia"
+      ],
+      "elemen_kode": [
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "53–78",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Ikhlas dan taubat membersihkan motivasi jiwa hanya mencari ridha Allah SWT."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Ikhlas dan taubat membersihkan motivasi jiwa hanya mencari ridha Allah SWT.",
+      "kata_kunci": [
+        "taubat",
+        "taat",
+        "istiqamah",
+        "ikhlas",
+        "hakikat"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 4,
+      "bab": "Bab 4: Adab Shalat dan Berdzikir",
+      "subbab": [
+        "A. Adab Menyucikan Diri dan Berpakaian Sebelum Shalat",
+        "B. Menghadirkan Khusyuk, Tuma'ninah, dan Penghayatan Doa dalam Shalat",
+        "C. Adab Berdzikir: Merendahkan Suara, Khidmat, dan Tidak Lalai",
+        "D. Dampak Shalat Khusyuk dalam Mencegah Perbuatan Keji dan Munkar"
+      ],
+      "elemen_kode": [
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "79–102",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Adab shalat yang khusyuk melatih kedekatan intim bermunajat kepada Sang Pencipta."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Adab shalat yang khusyuk melatih kedekatan intim bermunajat kepada Sang Pencipta.",
+      "kata_kunci": [
+        "adab shalat",
+        "berdzikir",
+        "adab menyucikan diri",
+        "berpakaian sebelum shalat",
+        "menghadirkan khusyuk"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 5,
+      "bab": "Bab 5: Keteladanan Nabi Sulaiman a.s.",
+      "subbab": [
+        "A. Riwayat Hidup Nabi Sulaiman a.s. sebagai Raja yang Shaleh",
+        "B. Mukjizat Menundukkan Angin, Jin, dan Memahami Bahasa Hewan",
+        "C. Sikap Tawadhu', Syukur atas Nikmat Kerajaan, dan Keadilan Memerintah",
+        "D. Mengambil Ibrah Menghindari Kesombongan Meskipun Berprestasi Tinggi"
+      ],
+      "elemen_kode": [
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "103–128",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Kisah Nabi Sulaiman berdialog dan menyayangi semut serta burung hud-hud mengajarkan cinta lingkungan dan satwa."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        4
+      ],
+      "deskripsi": "Kisah Nabi Sulaiman berdialog dan menyayangi semut serta burung hud-hud mengajarkan cinta lingkungan dan satwa.",
+      "kata_kunci": [
+        "keteladanan nabi sulaiman a s",
+        "raja yang shaleh",
+        "mukjizat menundukkan angin",
+        "bahasa hewan",
+        "sikap tawadhu'"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Asmaul Husna Penyejuk Jiwa",
+      "subbab": [
+        "A. Mengenal Makna Al-'Aziz, Al-Ghaffar, Al-Basith, dan An-Nafi'",
+        "B. Mengenal Makna Ar-Rauf, Al-Barr, Al-Fattah, Al-'Adl, dan Al-Qayyum",
+        "C. Meneladani Nilai Luhur Asmaul Husna dalam Sikap Adil dan Santun",
+        "D. Wirid Asmaul Husna sebagai Penenteram Batin Remaja"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "129–156",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Meneladani sifat kasih sayang Asmaul Husna memperindah budi pekerti mahabbah Ilahiyyah."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        3
+      ],
+      "deskripsi": "Meneladani sifat kasih sayang Asmaul Husna memperindah budi pekerti mahabbah Ilahiyyah.",
+      "kata_kunci": [
+        "asmaul husna penyejuk jiwa",
+        "makna al-'aziz",
+        "al-ghaffar",
+        "al-basith",
+        "an-nafi'"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 7,
+      "bab": "Bab 7: Iman kepada Malaikat dan Makhluk Gaib Lainnya",
+      "subbab": [
+        "A. Nama-Nama Malaikat Allah Beserta Tugas-Tugasnya",
+        "B. Karakteristik Malaikat Berbanding Jin, Iblis, dan Setan",
+        "C. Dampak Mengimani Pengawasan Malaikat Raqib dan 'Atid (Muraqabah)",
+        "D. Menghindari Godaan Bisikan Setan dengan Benteng Ibadah dan Doa"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "157–182",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Kesadaran diawasi malaikat melahirkan integritas moral dan kejujuran di setiap waktu."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Kesadaran diawasi malaikat melahirkan integritas moral dan kejujuran di setiap waktu.",
+      "kata_kunci": [
+        "iman kepada malaikat",
+        "makhluk gaib lainnya",
+        "iblis",
+        "setan",
+        "'atid"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 8,
+      "bab": "Bab 8: Akhlak Tercela kepada Allah (Riya' dan Nifaq)",
+      "subbab": [
+        "A. Hakikat dan Bahaya Penyakit Riya' (Pamer Ibadah) dan Sum'ah",
+        "B. Tanda-Tanda Kemunafikan (Nifaq I'tiqadi dan Nifaq 'Amali)",
+        "C. Kerugian Riya' dan Nifaq bagi Kehidupan Pribadi dan Sosial",
+        "D. Terapi Hati Membersihkan Niat demi Menjaga Kemurnian Amal"
+      ],
+      "elemen_kode": [
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "183–208",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Menjauhi kemunafikan memelihara ketulusan hubungan persaudaraan dan kejujuran pada diri sendiri."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Menjauhi kemunafikan memelihara ketulusan hubungan persaudaraan dan kejujuran pada diri sendiri.",
+      "kata_kunci": [
+        "akhlak tercela kepada allah",
+        "riya'",
+        "nifaq",
+        "hakikat",
+        "bahaya penyakit riya'"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 9,
+      "bab": "Bab 9: Adab Membaca Al-Qur'an dan Berdoa",
+      "subbab": [
+        "A. Adab Lahiriah: Berwudhu, Menghadap Kiblat, dan Menutup Aurat",
+        "B. Adab Batiniah: Tadabur Makna, Menghayati Peringatan Wahyu, dan Khusyuk",
+        "C. Tata Cara Berdoa yang Mustajab: Waktu, Tempat, dan Adab Memuji Allah",
+        "D. Membiasakan Doa Harian Sebelum dan Sesudah Beraktivitas"
+      ],
+      "elemen_kode": [
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "209–232",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Beradab mulia saat membaca Al-Qur'an adalah cermin mahabbah takzim kepada kalamullah."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Beradab mulia saat membaca Al-Qur'an adalah cermin mahabbah takzim kepada kalamullah.",
+      "kata_kunci": [
+        "adab membaca al-qur'an",
+        "berdoa",
+        "adab lahiriah",
+        "berwudhu",
+        "menghadap kiblat"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 10,
+      "bab": "Bab 10: Kisah Keteladanan Nabi Ibrahim a.s.",
+      "subbab": [
+        "A. Perjuangan Nabi Ibrahim a.s. Mencari Kebenaran Tauhid Menggunakan Akal Kritis",
+        "B. Keteguhan Menghadapi Raja Namrud dan Ujian Dibakar Api",
+        "C. Kepatuhan Total Melaksanakan Perintah Qurban Nabi Ismail a.s.",
+        "D. Meneladani Gelar Khalilullah (Kekasih Allah) dan Pembangun Ka'bah"
+      ],
+      "elemen_kode": [
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "233–260",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Metode Nabi Ibrahim mengamati bintang, bulan, dan matahari melatih nalar kritis sains cinta ilmu."
+        },
+        {
+          "id": 1,
+          "alasan": "Ketundukan mutlak Nabi Ibrahim adalah teladan cinta sejati tanpa tanding kepada Allah."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        3
+      ],
+      "deskripsi": "Metode Nabi Ibrahim mengamati bintang, bulan, dan matahari melatih nalar kritis sains cinta ilmu.",
+      "kata_kunci": [
+        "ujian dibakar api",
+        "gelar khalilullah",
+        "kekasih allah",
+        "pembangun ka'bah"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Al-Qur'an dan Keistimewaannya",
+      "subbab": [
+        "A. Sejarah Penurunan Al-Qur'an secara Berangsur-Angsur (Nuzulul Qur'an)",
+        "B. Bukti Kebenaran dan Kemukjizatan Al-Qur'an dari Segi Bahasa dan Sains",
+        "C. Isi Pokok Ajaran Al-Qur'an (Akidah, Ibadah, Akhlak, Syariat, Sejarah, Sains)",
+        "D. Menjadikan Al-Qur'an sebagai Solusi Problematika Remaja Zaman Sekarang"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "1–26",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Mengimani keistimewaan Al-Qur'an mengokohkan cinta kepada Allah dan wahyu-Nya."
+        },
+        {
+          "id": 2,
+          "alasan": "Menelaah ayat-ayat sains dalam Al-Qur'an memupuk tradisi cinta ilmu pengetahuan."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        3
+      ],
+      "deskripsi": "Mengimani keistimewaan Al-Qur'an mengokohkan cinta kepada Allah dan wahyu-Nya.",
+      "kata_kunci": [
+        "al-qur'an",
+        "nuzulul qur'an",
+        "bukti kebenaran",
+        "sains",
+        "isi pokok ajaran al-qur'an"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Mukjizat dan Kejadian Luar Biasa Lainnya",
+      "subbab": [
+        "A. Hakikat dan Fungsi Mukjizat bagi Para Nabi dan Rasul",
+        "B. Mengenal Karomah Para Wali Allah dan Perbedaannya dengan Sihir",
+        "C. Konsep Ma'unah bagi Orang Beriman dan Irhas Calon Nabi",
+        "D. Menyikapi Fenomena Gaib dengan Akal Sehat Berlandaskan Syariat"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "27–52",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Meyakini mukjizat para nabi mempertebal keimanan pada kekuasaan mutlak Allah SWT."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        3
+      ],
+      "deskripsi": "Meyakini mukjizat para nabi mempertebal keimanan pada kekuasaan mutlak Allah SWT.",
+      "kata_kunci": [
+        "mukjizat",
+        "kejadian luar biasa lainnya",
+        "hakikat",
+        "mukjizat bagi para nabi",
+        "rasul"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Membiasakan Akhlak Terpuji (Ikhtiar, Tawakal, Sabar, Syukur, Qana'ah)",
+      "subbab": [
+        "A. Perintah Bekerja Keras dan Berikhtiar secara Sungguh-Sungguh",
+        "B. Hakikat Berserah Diri (Tawakal) Setelah Ikhtiar Maksimal",
+        "C. Menjaga Kesabaran dalam Meraih Cita-Cita",
+        "D. Mensyukuri Segala Anugerah dan Memiliki Sifat Merasa Cukup (Qana'ah)"
+      ],
+      "elemen_kode": [
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "53–82",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Qana'ah dan ikhtiar melatih ketenangan batin, kesehatan mental, serta cinta pada diri sendiri."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Qana'ah dan ikhtiar melatih ketenangan batin, kesehatan mental, serta cinta pada diri sendiri.",
+      "kata_kunci": [
+        "akhlak terpuji",
+        "ikhtiar",
+        "tawakal",
+        "sabar",
+        "syukur"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 4,
+      "bab": "Bab 4: Menghindari Akhlak Tercela (Ananiyah, Putus Asa, Gadhab, Tamak)",
+      "subbab": [
+        "A. Menghindari Sifat Ananiyah (Egois Mementingkan Diri Sendiri)",
+        "B. Menghindari Bahaya Keputusasaan dari Rahmat Allah",
+        "C. Mengendalikan Amarah (Gadhab) dengan Menahan Diri dan Berwudhu",
+        "D. Menolak Sifat Tamak, Rakus Harta, dan Menumpuk Kekayaan"
+      ],
+      "elemen_kode": [
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "83–110",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Menjauhi sifat egois dan pemarah mempererat kerukunan dan kasih sayang antarteman."
+        }
+      ],
+      "saran_dpl": [
+        6,
+        7
+      ],
+      "deskripsi": "Menjauhi sifat egois dan pemarah mempererat kerukunan dan kasih sayang antarteman.",
+      "kata_kunci": [
+        "menghindari akhlak tercela",
+        "ananiyah",
+        "putus asa",
+        "gadhab",
+        "tamak"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 5,
+      "bab": "Bab 5: Adab Seorang Muslim terhadap Orang Tua dan Guru",
+      "subbab": [
+        "A. Perintah Birrul Walidain dan Keutamaan Berbakti pada Ayah-Ibu",
+        "B. Adab Berbicara Lembut dan Tidak Berkata 'Ah' kepada Orang Tua",
+        "C. Menghormati dan Memuliakan Guru sebagai Pewaris Para Nabi",
+        "D. Mendoakan Kebaikan bagi Orang Tua dan Guru yang Telah Wafat"
+      ],
+      "elemen_kode": [
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "111–136",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Berbakti pada orang tua dan memuliakan guru adalah pilar adab cinta dan hormat kepada sesama."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        8
+      ],
+      "deskripsi": "Berbakti pada orang tua dan memuliakan guru adalah pilar adab cinta dan hormat kepada sesama.",
+      "kata_kunci": [
+        "guru",
+        "perintah birrul walidain",
+        "adab berbicara lembut",
+        "menghormati",
+        "memuliakan guru"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 6,
+      "bab": "Bab 6: Kisah Keteladanan Nabi Musa a.s.",
+      "subbab": [
+        "A. Masa Kecil Nabi Musa a.s. Dihanyutkan di Sungai Nil hingga Istana Fir'aun",
+        "B. Keberanian Menegakkan Kebenaran Dakwah di Hadapan Tirani Fir'aun",
+        "C. Mukjizat Tongkat Membelah Laut Merah dan Kesabaran Membimbing Bani Israil",
+        "D. Meneladani Keberanian Membela Kebenaran dan Membela Kaum yang Tertindas"
+      ],
+      "elemen_kode": [
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "137–164",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Keberanian Nabi Musa melawan kezaliman menginspirasi pembelaan martabat bangsa dan tanah air."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        2
+      ],
+      "deskripsi": "Keberanian Nabi Musa melawan kezaliman menginspirasi pembelaan martabat bangsa dan tanah air.",
+      "kata_kunci": [
+        "kisah keteladanan nabi musa a s",
+        "keberanian membela kebenaran",
+        "membela kaum yang tertindas"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 7,
+      "bab": "Bab 7: Keteladanan Rasul Ulul Azmi dan Keistimewaannya",
+      "subbab": [
+        "A. Pengertian dan Kriteria Rasul Bergelar Ulul Azmi",
+        "B. Lima Rasul Ulul Azmi: Nuh a.s., Ibrahim a.s., Musa a.s., Isa a.s., Muhammad SAW",
+        "C. Ketabahan Luar Biasa dalam Mengemban Risalah Ilahi Menghadapi Ujian",
+        "D. Mengambil Pelajaran Sikap Pantang Menyerah dalam Menuntut Kebaikan"
+      ],
+      "elemen_kode": [
+        "E1",
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "165–192",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Meneladani ketabahan Rasul Ulul Azmi mengobarkan mahabbah keteladanan kepada Rasulullah SAW."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Meneladani ketabahan Rasul Ulul Azmi mengobarkan mahabbah keteladanan kepada Rasulullah SAW.",
+      "kata_kunci": [
+        "keteladanan rasul ulul azmi",
+        "pengertian",
+        "lima rasul ulul azmi",
+        "nuh a s",
+        "ibrahim a s"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 8,
+      "bab": "Bab 8: Membiasakan Akhlak Terpuji (Husnudzan, Tawadhu', Tasamuh, Ta'awun)",
+      "subbab": [
+        "A. Berprasangka Baik (Husnudzan) kepada Allah dan Sesama Manusia",
+        "B. Rendah Hati (Tawadhu') Tanpa Meremehkan Orang Lain",
+        "C. Toleransi (Tasamuh) dalam Keberagaman Suku, Budaya, dan Agama",
+        "D. Semangat Tolong-Menolong (Ta'awun) dalam Kebaikan dan Takwa"
+      ],
+      "elemen_kode": [
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "193–220",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Tasamuh dan ta'awun adalah inti persaudaraan universal dan budaya saling mengasihi."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        5
+      ],
+      "deskripsi": "Tasamuh dan ta'awun adalah inti persaudaraan universal dan budaya saling mengasihi.",
+      "kata_kunci": [
+        "akhlak terpuji",
+        "husnudzan",
+        "tawadhu'",
+        "tasamuh",
+        "ta'awun"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 9,
+      "bab": "Bab 9: Menghindari Akhlak Tercela (Hasad, Dendam, Ghibah, Fitnah, Namimah)",
+      "subbab": [
+        "A. Bahaya Penyakit Iri Hati (Hasad) Memakan Kebaikan Seperti Api Memakan Kayu",
+        "B. Menyucikan Hati dari Dendam dan Membiasakan Memberi Maaf",
+        "C. Menjauhi Menggunjing (Ghibah) dan Membicarakan Aib Teman",
+        "D. Bahaya Fitnah dan Mengadu Domba (Namimah) terhadap Kerukunan Masyarakat"
+      ],
+      "elemen_kode": [
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "221–248",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Menghindari ghibah dan fitnah melindungi martabat sesama dari perundungan verbal."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        8
+      ],
+      "deskripsi": "Menghindari ghibah dan fitnah melindungi martabat sesama dari perundungan verbal.",
+      "kata_kunci": [
+        "menghindari akhlak tercela",
+        "hasad",
+        "dendam",
+        "ghibah",
+        "fitnah"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 10,
+      "bab": "Bab 10: Adab Bersosial Media dalam Pandangan Islam",
+      "subbab": [
+        "A. Prinsip Tabayun (Verifikasi Kebenaran) Sebelum Menyebarkan Informasi",
+        "B. Etika Berkomunikasi Santun (Qaulan Sadidan) di Ruang Digital",
+        "C. Larangan Melakukan Cyberbullying, Pelecehan Online, dan Menyebar Konten Asusila",
+        "D. Pemanfaatan Media Sosial untuk Syiar Kebaikan dan Literasi Ilmu"
+      ],
+      "elemen_kode": [
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "249–272",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Tabayun digital mencerminkan nalar kritis tradisi cinta ilmu dan kebenaran data."
+        },
+        {
+          "id": 5,
+          "alasan": "Adab bermedsos santun mencegah perundungan siber dan memelihara kehormatan manusia."
+        }
+      ],
+      "saran_dpl": [
+        3,
+        8
+      ],
+      "deskripsi": "Tabayun digital mencerminkan nalar kritis tradisi cinta ilmu dan kebenaran data.",
+      "kata_kunci": [
+        "adab bersosial media",
+        "pandangan islam",
+        "tabayun",
+        "verifikasi kebenaran",
+        "sebelum menyebarkan informasi"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 11,
+      "bab": "Bab 11: Keteladanan Sahabat Abu Bakar Ash-Shiddiq r.a.",
+      "subbab": [
+        "A. Biografi Singkat dan Gelar Ash-Shiddiq (Pembenaran Peristiwa Isra' Mi'raj)",
+        "B. Kedermawanan Menginfakkan Seluruh Hartanya demi Perjuangan Dakwah Islam",
+        "C. Ketegasan dan Kebijaksanaan Menjaga Keutuhan Islam saat Menjadi Khalifah",
+        "D. Meneladani Kesetiaan Sahabat Sejati dan Keikhlasan Berkorban"
+      ],
+      "elemen_kode": [
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "273–298",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Ketulusan iman Abu Bakar ash-Shiddiq adalah panutan tertinggi cinta kepada Rasulullah SAW."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        5
+      ],
+      "deskripsi": "Ketulusan iman Abu Bakar ash-Shiddiq adalah panutan tertinggi cinta kepada Rasulullah SAW.",
+      "kata_kunci": [
+        "biografi singkat",
+        "gelar ash-shiddiq",
+        "ketegasan",
+        "kesetiaan sahabat sejati",
+        "keikhlasan berkorban"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Iman Kepada Hari Akhir",
+      "subbab": [
+        "A. Pengertian, Dalil Naqli, dan Tanda-Tanda Kiamat Sugra dan Kubra",
+        "B. Peristiwa Hari Kiamat: Yaumul Ba'ats, Mahsyar, Mizan, Hisab, Shirath, Surga dan Neraka",
+        "C. Fungsi dan Hikmah Beriman kepada Hari Akhir dalam Mengontrol Perilaku",
+        "D. Menumbuhkan Rasa Tanggung Jawab atas Segala Amal Perbuatan"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "1–32",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Meyakini hari kiamat melahirkan kesadaran spiritual untuk senantiasa taat pada aturan Allah SWT."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        3
+      ],
+      "deskripsi": "Meyakini hari kiamat melahirkan kesadaran spiritual untuk senantiasa taat pada aturan Allah SWT.",
+      "kata_kunci": [
+        "iman kepada hari akhir",
+        "pengertian",
+        "dalil naqli",
+        "tanda-tanda kiamat sugra",
+        "kubra"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Akhlak Terpuji kepada Diri Sendiri (Berilmu, Kerja Keras, Kreatif, Produktif)",
+      "subbab": [
+        "A. Semangat Haus Menuntut Ilmu Sepanjang Hayat (Long Life Education)",
+        "B. Menghargai Waktu dengan Bekerja Keras dan Disiplin",
+        "C. Mengembangkan Daya Kreativitas dan Inovasi yang Bermanfaat bagi Umat",
+        "D. Membiasakan Gaya Hidup Produktif dan Menolak Budaya Konsumtif"
+      ],
+      "elemen_kode": [
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "33–62",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Semangat berilmu, kreatif, dan produktif mewujudkan cinta ilmu dalam karya nyata."
+        },
+        {
+          "id": 5,
+          "alasan": "Mengembangkan potensi bakat diri adalah bentuk rasa syukur dan cinta diri."
+        }
+      ],
+      "saran_dpl": [
+        4,
+        6
+      ],
+      "deskripsi": "Semangat berilmu, kreatif, dan produktif mewujudkan cinta ilmu dalam karya nyata.",
+      "kata_kunci": [
+        "berilmu",
+        "kerja keras",
+        "kreatif",
+        "produktif",
+        "long life education"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Adab kepada Saudara, Teman, dan Tetangga",
+      "subbab": [
+        "A. Hakikat dan Adab Ukhuwah Islamiyah, Basyariyah, dan Wathaniyah",
+        "B. Memuliakan Hak-Hak Tetangga Tanpa Membedakan Latar Belakang",
+        "C. Menjaga Keharmonisan Pergaulan dengan Teman Sebaya dan Saudara",
+        "D. Menyelesaikan Perselisihan secara Kekeluargaan dan Saling Memaafkan"
+      ],
+      "elemen_kode": [
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "63–88",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Memuliakan tetangga dan kawan mewujudkan nilai kasih sayang ukhuwah insaniyyah."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        5
+      ],
+      "deskripsi": "Memuliakan tetangga dan kawan mewujudkan nilai kasih sayang ukhuwah insaniyyah.",
+      "kata_kunci": [
+        "adab kepada saudara",
+        "teman",
+        "tetangga",
+        "hakikat",
+        "adab ukhuwah islamiyah"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 4,
+      "bab": "Bab 4: Kisah Keteladanan Sahabat Umar bin Khattab dan Sayyidah Aisyah r.a.",
+      "subbab": [
+        "A. Kepemimpinan Umar bin Khattab r.a. yang Adil, Tegas, dan Merakyat (Al-Faruq)",
+        "B. Inovasi Tata Kelola Baitul Mal dan Pelayanan Sosial Khalifah Umar",
+        "C. Kecerdasan Keilmuan, Daya Kritis, dan Kedermawanan Sayyidah Aisyah r.a.",
+        "D. Meneladani Keberanian Menyuarakan Keadilan dan Semangat Belajar Wanita Muslimah"
+      ],
+      "elemen_kode": [
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "89–116",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Kecerdasan Sayyidah Aisyah meriwayatkan ribuan hadis membuktikan kemuliaan wanita dalam cinta ilmu."
+        },
+        {
+          "id": 4,
+          "alasan": "Keadilan kepemimpinan Khalifah Umar menumbuhkan cinta tanah air dan integritas penyelenggara negara."
+        }
+      ],
+      "saran_dpl": [
+        2,
+        3
+      ],
+      "deskripsi": "Kecerdasan Sayyidah Aisyah meriwayatkan ribuan hadis membuktikan kemuliaan wanita dalam cinta ilmu.",
+      "kata_kunci": [
+        "sayyidah aisyah r a",
+        "tegas",
+        "merakyat",
+        "al-faruq",
+        "inovasi tata kelola baitul mal"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Iman Kepada Qadha dan Qadar",
+      "subbab": [
+        "A. Pengertian Qadha dan Qadar serta Hubungannya dengan Ikhtiar Manusia",
+        "B. Membedakan Takdir Mubram (Pasti) dan Takdir Mu'allaq (Dapat Diupayakan)",
+        "C. Sikap Tawakal dan Prasangka Baik (Husnudzan) atas Ketetapan Takdir Allah",
+        "D. Mengatasi Sikap Fatalisme Malas dan Membangun Daya Juang Tangguh"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "117–144",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Mengimani qadha dan qadar menenangkan hati menerima ketetapan hikmah Allah SWT."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Mengimani qadha dan qadar menenangkan hati menerima ketetapan hikmah Allah SWT.",
+      "kata_kunci": [
+        "iman kepada qadha",
+        "qadar",
+        "qadha",
+        "membedakan takdir mubram",
+        "pasti"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Menghindari Perilaku Menyimpang dalam Pergaulan Remaja",
+      "subbab": [
+        "A. Bentuk-Bentuk Kenakalan Remaja: Pornografi, Tawuran, Miras, dan Narkoba",
+        "B. Dampak Pergaulan Bebas terhadap Kesehatan Reproduksi dan Masa Depan",
+        "C. Strategi Memilih Lingkungan Pertemanan yang Positif dan Sehat",
+        "D. Penguatan Kontrol Diri Berlandaskan Malu (Haya') dan Ketaatan Beribadah"
+      ],
+      "elemen_kode": [
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "145–172",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Menjauhi narkoba dan tawuran adalah wujud menjaga kesucian jiwa, keselamatan tubuh, dan cinta diri."
+        }
+      ],
+      "saran_dpl": [
+        6,
+        7
+      ],
+      "deskripsi": "Menjauhi narkoba dan tawuran adalah wujud menjaga kesucian jiwa, keselamatan tubuh, dan cinta diri.",
+      "kata_kunci": [
+        "menghindari perilaku menyimpang",
+        "pergaulan remaja",
+        "bentuk-bentuk kenakalan remaja",
+        "pornografi",
+        "tawuran"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 7,
+      "bab": "Bab 7: Adab Berjalan, Berpakaian, Makan, dan Minum",
+      "subbab": [
+        "A. Adab Berjalan Santun, Tidak Sombong, dan Menundukkan Pandangan (Ghadhdhul Bashar)",
+        "B. Adab Berpakaian Menutup Aurat, Bersih, Rapi, dan Tidak Berlebihan (Israf)",
+        "C. Adab Makan dan Minum Sesuai Sunnah: Duduk, Menggunakan Tangan Kanan, Membaca Basmalah",
+        "D. Menerapkan Budaya Halal, Bersih, dan Sehat (Thayyib) dalam Keseharian"
+      ],
+      "elemen_kode": [
+        "E3"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "173–198",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Makan dan minum sesuai sunnah Rasulullah mendatangkan keberkahan dan meneladani akhlak Nabi."
+        },
+        {
+          "id": 5,
+          "alasan": "Pola makan bergizi halal-thayyib menjaga kesehatan jasmani cinta diri."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        7
+      ],
+      "deskripsi": "Makan dan minum sesuai sunnah Rasulullah mendatangkan keberkahan dan meneladani akhlak Nabi.",
+      "kata_kunci": [
+        "adab berjalan",
+        "berpakaian",
+        "makan",
+        "minum",
+        "adab berjalan santun"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 8,
+      "bab": "Bab 8: Keteladanan Sahabat Usman bin Affan dan Ali bin Abi Thalib r.a.",
+      "subbab": [
+        "A. Sifat Kedermawanan, Kesantunan, dan Rasa Malu Sahabat Usman bin Affan r.a.",
+        "B. Jasa Khalifah Usman dalam Kodifikasi dan Standardisasi Mushaf Al-Qur'an (Mushaf Usmani)",
+        "C. Kecerdasan, Keberanian, dan Keluasan Ilmu Sahabat Ali bin Abi Thalib karramallahu wajhah",
+        "D. Meneladani Semangat Berkorban Harta dan Keteguhan Prinsip Mengawal Kebenaran"
+      ],
+      "elemen_kode": [
+        "E4"
+      ],
+      "sumber": {
+        "buku": "Akidah Akhlak MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "199–228",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 2,
+          "alasan": "Ali bin Abi Thalib sebagai 'gerbang kota ilmu' menjadi suri teladan kecintaan pada hikmah dan sains."
+        },
+        {
+          "id": 5,
+          "alasan": "Kedermawanan Sahabat Usman mewujudkan aksi nyata tolong-menolong meringankan kesulitan umat."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        5
+      ],
+      "deskripsi": "Ali bin Abi Thalib sebagai 'gerbang kota ilmu' menjadi suri teladan kecintaan pada hikmah dan sains.",
+      "kata_kunci": [
+        "ali bin abi thalib r a",
+        "sifat kedermawanan",
+        "kesantunan",
+        "standardisasi mushaf al-qur'an",
+        "mushaf usmani"
+      ]
+    }
+  ],
+  "status": "LENGKAP",
+  "catatan": "CP verbatim mengacu pada SK Dirjen Pendis No. 9941 Tahun 2025 Lampiran Mata Pelajaran Akidah Akhlak Fase D (4 Elemen: Akidah, Akhlak, Adab, Kisah Keteladanan). Materi per bab dirangkum dari Buku Siswa Kemenag RI Kelas VII, VIII, dan IX. Saran integrasi Panca Cinta dan DPL lengkap di setiap bab.",
+  "diverifikasi_oleh": null,
+  "tanggal_verifikasi": null
+}

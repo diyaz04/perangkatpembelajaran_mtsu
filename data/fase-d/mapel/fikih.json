@@ -1,0 +1,936 @@
+{
+  "mapel": "Fikih",
+  "slug": "fikih",
+  "kelompok": "PAI",
+  "fase": "D",
+  "sumber_cp": {
+    "regulasi_kode": "SK-DIRJEN-PENDIS-9941-2025",
+    "halaman": "Halaman 43–56",
+    "url": "https://pendis.kemenag.go.id/kurikulum",
+    "diakses": "2026-10-14"
+  },
+  "rasional": "Fikih merupakan pedoman operasional syariat Islam yang mengatur hubungan vertikal manusia dengan Allah SWT (hablun minallah) melalui ibadah mahdhah, serta hubungan horizontal antarsesama manusia (hablun minannas) melalui muamalah amaliah. Di madrasah, pembelajaran fikih diarahkan untuk menumbuhkan ketaatan beribadah berlandaskan mahabbah ikhlas, menjaga kesucian lahir-batin, menjunjung etika keadilan bertransaksi bebas riba, serta mengokohkan empati sosial melalui zakat, sedekah, dan kurban.",
+  "tujuan_mapel": [
+    "Memahami dan mempraktikkan tata cara bersuci (thaharah) dan shalat fardhu/sunnah secara benar, khusyuk, dan sesuai sunnah Rasulullah SAW.",
+    "Mengamalkan ibadah berdimensi spiritual dan sosial: sujud syukur/sahwi/tilawah, puasa, i'tikaf, zakat, haji, umrah, kurban, dan akikah.",
+    "Membiasakan pola konsumsi makanan dan minuman yang halal dan thayyib serta menjauhi hal-hal yang diharamkan syariat.",
+    "Menganalisis dan mempraktikkan akad-akad muamalah islami: jual beli, khiyar, qiradh, pinjam-meminjam, titipan, utang, gadai, dan ijarah berlandaskan kejujuran.",
+    "Memahami tata cara fardhu kifayah pengurusan jenazah serta prinsip keadilan pembagian harta warisan menurut hukum faraidh.",
+    "Menumbuhkan kepekaan sosial, tolong-menolong, dan etika transaksi yang adil di tengah perkembangan ekonomi digital."
+  ],
+  "capaian_umum_fase_d": "Pada akhir Fase D, peserta didik mampu menganalisis dan mempraktikkan tata cara bersuci dari hadas dan najis, ketentuan shalat fardhu, shalat berjamaah, shalat Jumat, shalat jamak-qashar, shalat dalam keadaan tertentu (darurat/sakit), shalat sunnah, sujud sahwi, sujud tilawah, sujud syukur, puasa fardhu dan sunnah, i'tikaf, zakat fitrah dan zakat mal, sedekah, hibah, hadiah, haji dan umrah, penyembelihan kurban dan akikah, serta ketentuan makanan dan minuman halal-haram; menganalisis tata cara pengurusan jenazah dan pembagian waris; serta menganalisis dan menerapkan ketentuan fikih muamalah: jual beli, khiyar, qiradh, larangan riba, 'ariyah, wadi'ah, utang-piutang, gadai, hiwalah, dan ijarah berbasis kejujuran dan keadilan ekonomi.",
+  "elemen": [
+    {
+      "kode": "E1",
+      "nama": "Fikih Ibadah",
+      "deskripsi_cp": "Peserta didik mampu menganalisis dan mempraktikkan tata cara bersuci dari hadas dan najis; ketentuan shalat fardhu lima waktu, shalat berjamaah, zikir dan doa sesudah shalat, shalat Jumat, shalat fardhu jamak dan qashar, shalat dalam kondisi tertentu (sakit, safar, darurat/khauf); macam-macam shalat sunnah muakkad dan ghairu muakkad; sujud sahwi, sujud syukur, dan sujud tilawah; zakat fitrah dan zakat mal; puasa fardhu dan puasa sunnah serta i'tikaf; sedekah, hibah, dan hadiah; ketentuan manasik haji dan umrah; makanan dan minuman yang halal dan haram; tata cara penyembelihan hewan, ibadah kurban, dan akikah; serta fardhu kifayah tata cara pengurusan jenazah (memandikan, mengkafani, menshalatkan, dan menguburkan) dan pembagian harta waris menurut syariat Islam."
+    },
+    {
+      "kode": "E2",
+      "nama": "Fikih Muamalah",
+      "deskripsi_cp": "Peserta didik mampu menganalisis dan menerapkan ketentuan hukum Islam terkait aktivitas sosial-ekonomi masyarakat: jual beli, khiyar (hak memilih), qiradh (kerja sama permodalan), larangan dan bahaya riba dalam ekonomi, 'ariyah (pinjam-meminjam barang), wadi'ah (titipan amanah), utang-piutang, gadai (rahn), pengalihan utang (hiwalah), serta ijarah (sewa-menyewa dan upah kerja) dengan mengedepankan prinsip keadilan, kejujuran, saling rela (taradhin), dan tanggung jawab moral di era ekonomi digital."
+    }
+  ],
+  "materi": [
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Alat-Alat Bersuci",
+      "subbab": [
+        "A. Pembagian Jenis Air: Air Mutlak, Air Musyammas, Air Musta'mal, dan Air Mutanajjis",
+        "B. Benda Padat sebagai Alat Bersuci: Batu, Daun Kering, dan Tisu Istinja'",
+        "C. Syarat dan Ketentuan Benda Padat yang Boleh Digunakan Bersuci",
+        "D. Menjaga Kebersihan Sumber Air dan Etika Konservasi Air dalam Berwudhu"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Fikih MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "1–20",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 3,
+          "alasan": "Menghemat air saat bersuci dan menjaga kebersihan sungai adalah wujud cinta lingkungan."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        7
+      ],
+      "deskripsi": "Menghemat air saat bersuci dan menjaga kebersihan sungai adalah wujud cinta lingkungan.",
+      "kata_kunci": [
+        "alat-alat bersuci",
+        "jenis air",
+        "air mutlak",
+        "air musyammas",
+        "air musta'mal"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Bersuci dari Najis dan Hadats",
+      "subbab": [
+        "A. Pengertian dan Pembagian Najis: Mukhaffafah, Mutawassithah, dan Mughalladhah",
+        "B. Tata Cara Mensucikan Tiap Jenis Najis Sesuai Syariat",
+        "C. Hadats Kecil dan Tata Cara Wudhu serta Tayamum",
+        "D. Hadats Besar dan Tata Cara Mandi Wajib (Janabah, Haid, Nifas)"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Fikih MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "21–46",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Menjaga kesucian badan dari hadas dan najis mendidik pola hidup bersih dan cinta kesehatan diri."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        7
+      ],
+      "deskripsi": "Menjaga kesucian badan dari hadas dan najis mendidik pola hidup bersih dan cinta kesehatan diri.",
+      "kata_kunci": [
+        "bersuci dari najis",
+        "hadats",
+        "pengertian",
+        "najis",
+        "mukhaffafah"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Shalat Fardhu Lima Waktu",
+      "subbab": [
+        "A. Ketentuan Hukum, Syarat Wajib, dan Syarat Sah Shalat Fardhu",
+        "B. Rukun Shalat (Qauliyah, Fi'liyah, Qalbiyah) dan Sunnah Ab'adh serta Hai'at",
+        "C. Hal-Hal yang Membatalkan Shalat dan Makruh dalam Shalat",
+        "D. Praktik Shalat Fardhu dengan Tuma'ninah dan Penghayatan Bacaan"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Fikih MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "47–74",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Shalat fardhu lima waktu tepat waktu adalah tiang agama dan bukti cinta tertinggi kepada Allah SWT."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Shalat fardhu lima waktu tepat waktu adalah tiang agama dan bukti cinta tertinggi kepada Allah SWT.",
+      "kata_kunci": [
+        "shalat fardhu lima waktu",
+        "hukum",
+        "syarat wajib",
+        "syarat sah shalat fardhu",
+        "rukun shalat"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 4,
+      "bab": "Bab 4: Shalat Berjama'ah",
+      "subbab": [
+        "A. Hukum dan Keutamaan Pahala Shalat Berjamaah (27 Derajat)",
+        "B. Syarat Menjadi Imam, Syarat Makmum, dan Posisi Shaf yang Lurus-Rapat",
+        "C. Ketentuan Makmum Muwafiq dan Makmum Masbuq",
+        "D. Membiasakan Shalat Berjamaah Dhuhur dan Ashar di Madrasah"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Fikih MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "75–96",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Shaf shalat berjamaah yang rapat melatih persatuan, kedisiplinan, dan cinta sesama tanpa sekat sosial."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        5
+      ],
+      "deskripsi": "Shaf shalat berjamaah yang rapat melatih persatuan, kedisiplinan, dan cinta sesama tanpa sekat sosial.",
+      "kata_kunci": [
+        "shalat berjama'ah",
+        "hukum",
+        "27 derajat",
+        "syarat menjadi imam",
+        "syarat makmum"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 1,
+      "urutan": 5,
+      "bab": "Bab 5: Berdzikir dan Berdoa Setelah Shalat",
+      "subbab": [
+        "A. Tuntunan Lafal Wirid dan Dzikir Setelah Shalat Sesuai Sunnah Nabi",
+        "B. Doa-Doa Pilihan Keseharian: Memohon Ampunan, Ilmu Bermanfaat, dan Keselamatan",
+        "C. Adab Mengangkat Tangan, Khusyuk, dan Merendahkan Hati di Hadapan Allah",
+        "D. Menjaga Kebiasaan Dzikir sebagai Benteng Ketenangan Jiwa"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Fikih MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "97–116",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Berdzikir mengagungkan asma Allah menautkan hati dalam munajat cinta Ilahi."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Berdzikir mengagungkan asma Allah menautkan hati dalam munajat cinta Ilahi.",
+      "kata_kunci": [
+        "berdzikir",
+        "berdoa setelah shalat",
+        "tuntunan lafal wirid",
+        "doa-doa pilihan keseharian",
+        "memohon ampunan"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Shalat Jum'at",
+      "subbab": [
+        "A. Hukum Wajib dan Dalil Shalat Jum'at bagi Laki-Laki Muslim",
+        "B. Syarat Wajib, Syarat Sah Shalat Jum'at, dan Sunnah Sebelum Jum'atan",
+        "C. Rukun, Syarat, dan Sunnah Khutbah Jum'at",
+        "D. Menyimak Khutbah dengan Tenang dan Tidak Berbicara"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Fikih MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "117–138",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 4,
+          "alasan": "Khutbah Jum'at menyampaikan pesan ketakwaan dan kerukunan merawat persatuan bangsa."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        2
+      ],
+      "deskripsi": "Khutbah Jum'at menyampaikan pesan ketakwaan dan kerukunan merawat persatuan bangsa.",
+      "kata_kunci": [
+        "shalat jum'at",
+        "hukum wajib",
+        "syarat wajib",
+        "syarat sah shalat jum'at",
+        "sunnah sebelum jum'atan"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 7,
+      "bab": "Bab 7: Shalat Fardhu Jama' dan Qashar",
+      "subbab": [
+        "A. Pengertian Keringanan (Rukhsah) Shalat Jama' Taqdim dan Jama' Ta'khir",
+        "B. Syarat dan Ketentuan Shalat Qashar",
+        "C. Sebab Diperbolehkannya Jama' dan Qashar (Safar, Hujan Lebat, Darurat)",
+        "D. Praktik Pelaksanaan Shalat Jama' Qashar Saat Berpergian Jauh"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Fikih MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "139–158",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Rukhsah shalat saat bepergian membuktikan kasih sayang dan kemudahan syariat Allah SWT."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Rukhsah shalat saat bepergian membuktikan kasih sayang dan kemudahan syariat Allah SWT.",
+      "kata_kunci": [
+        "shalat fardhu jama'",
+        "qashar",
+        "keringanan",
+        "rukhsah",
+        "shalat jama' taqdim"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 8,
+      "bab": "Bab 8: Shalat Fardhu dalam Kondisi Tertentu",
+      "subbab": [
+        "A. Tata Cara Shalat Orang yang Sakit: Duduk, Berbaring, dan Isyarat",
+        "B. Tata Cara Shalat di Atas Kendaraan (Mobil, Kereta Api, Pesawat, Kapal Laut)",
+        "C. Tata Cara Shalat dalam Keadaan Bahaya (Shalat Khauf)",
+        "D. Prinsip Shalat Tidak Boleh Ditinggalkan Selama Akal Masih Sehat"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Fikih MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "159–178",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Tetap menunaikan shalat di tengah sakit adalah wujud kesetiaan cinta tanpa syarat kepada Allah."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Tetap menunaikan shalat di tengah sakit adalah wujud kesetiaan cinta tanpa syarat kepada Allah.",
+      "kata_kunci": [
+        "shalat fardhu",
+        "kondisi tertentu",
+        "shalat orang yang sakit",
+        "duduk",
+        "berbaring"
+      ]
+    },
+    {
+      "tingkat": 7,
+      "semester": 2,
+      "urutan": 9,
+      "bab": "Bab 9: Shalat Sunnah Mu'akkad dan Ghairu Mu'akkad",
+      "subbab": [
+        "A. Shalat Sunnah Rawatib Qabliyah dan Ba'diyah",
+        "B. Shalat Sunnah Tahajjud, Dhuha, Witir, Tarawih, dan Istikharah",
+        "C. Shalat Sunnah Dua Hari Raya (Idul Fitri dan Idul Adha), Gerhana, dan Istisqa'",
+        "D. Hikmah Membiasakan Shalat Sunnah sebagai Penyempurna Kekurangan Shalat Fardhu"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Fikih MTs Kelas VII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "179–206",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Melaksanakan shalat sunnah secara dawam adalah tanda kerinduan cinta seorang hamba kepada Rabb-nya."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Melaksanakan shalat sunnah secara dawam adalah tanda kerinduan cinta seorang hamba kepada Rabb-nya.",
+      "kata_kunci": [
+        "shalat sunnah mu'akkad",
+        "ghairu mu'akkad",
+        "shalat sunnah rawatib qabliyah",
+        "ba'diyah",
+        "shalat sunnah tahajjud"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Sujud Sahwi, Sujud Syukur, dan Sujud Tilawah",
+      "subbab": [
+        "A. Sebab, Bacaan, dan Tata Cara Sujud Sahwi karena Ragu/Lupa dalam Shalat",
+        "B. Pengertian dan Tata Cara Sujud Syukur saat Memperoleh Nikmat/Terhindar Bahaya",
+        "C. Pengertian, Ayat-Ayat Sajdah, dan Tata Cara Sujud Tilawah",
+        "D. Hikmah Ketundukan Batin Mengakui Kelemahan Diri di Hadapan Kemahaagungan Allah"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Fikih MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "1–24",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Bersujud syukur saat meraih keberhasilan mendidik kerendahan hati dan cinta Allah."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Bersujud syukur saat meraih keberhasilan mendidik kerendahan hati dan cinta Allah.",
+      "kata_kunci": [
+        "sujud sahwi",
+        "sujud syukur",
+        "sujud tilawah",
+        "sebab",
+        "bacaan"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Dengan Zakat Jiwa dan Harta Menjadi Bersih",
+      "subbab": [
+        "A. Ketentuan Zakat Fitrah: Syarat, Waktu Membayar, Takaran Bahan Pokok",
+        "B. Ketentuan Zakat Mal: Emas/Perak, Perniagaan, Pertanian, Peternakan, dan Profesi",
+        "C. Menghitung Nisab, Haul, dan Kadar Zakat Harta",
+        "D. Delapan Golongan Asnaf Penerima Zakat dan Peran BAZNAS/LAZ dalam Pemberdayaan Dhuafa"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Fikih MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "25–54",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Menunaikan zakat membersihkan harta dan mengentaskan kemiskinan saudara sesama mukmin."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        2
+      ],
+      "deskripsi": "Menunaikan zakat membersihkan harta dan mengentaskan kemiskinan saudara sesama mukmin.",
+      "kata_kunci": [
+        "dengan zakat jiwa",
+        "harta menjadi bersih",
+        "zakat fitrah",
+        "syarat",
+        "waktu membayar"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: Puasa Fardhu dan Puasa Sunnah",
+      "subbab": [
+        "A. Ketentuan Puasa Ramadhan: Syarat, Rukun, Hal yang Membatalkan, dan Fidyah",
+        "B. Puasa Wajib Lainnya: Puasa Qadha, Puasa Nazar, dan Puasa Kifarat",
+        "C. Macam-Macam Puasa Sunnah (Senin-Kamis, Ayyamul Bidh, Daud, Syawwal, Arafah)",
+        "D. Hari-Hari yang Diharamkan Berpuasa dan Manfaat Medis Puasa bagi Kesehatan Jasmani"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Fikih MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "55–82",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Puasa adalah ibadah rahasia yang melatih keikhlasan murni karena Allah SWT."
+        },
+        {
+          "id": 5,
+          "alasan": "Merasakan lapar saat puasa menumbuhkan empati mendalam pada penderitaan kaum miskin."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        7
+      ],
+      "deskripsi": "Puasa adalah ibadah rahasia yang melatih keikhlasan murni karena Allah SWT.",
+      "kata_kunci": [
+        "puasa fardhu",
+        "puasa sunnah",
+        "puasa ramadhan",
+        "syarat",
+        "rukun"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 1,
+      "urutan": 4,
+      "bab": "Bab 4: Dengan I'tikaf Hati Menjadi Tenteram",
+      "subbab": [
+        "A. Pengertian, Hukum, dan Keutamaan I'tikaf di Masjid",
+        "B. Syarat Sah I'tikaf, Hal yang Membatalkan, dan Waktu Pelaksanaan Utama",
+        "C. Amalan yang Dianjurkan saat I'tikaf: Tilawah, Zikir, Muhasabah, dan Shalat Malam",
+        "D. Meraih Keutamaan Malam Lailatul Qadar di Sepuluh Hari Terakhir Ramadhan"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Fikih MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "83–102",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Beri'tikaf di masjid memutus hiruk pikuk duniawi demi meraih keheningan cinta Ilahi."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        6
+      ],
+      "deskripsi": "Beri'tikaf di masjid memutus hiruk pikuk duniawi demi meraih keheningan cinta Ilahi.",
+      "kata_kunci": [
+        "pengertian",
+        "hukum",
+        "keutamaan i'tikaf di masjid",
+        "syarat sah i'tikaf",
+        "hal yang membatalkan"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Indahnya Berbagi dengan Sedekah, Hibah, dan Hadiah",
+      "subbab": [
+        "A. Pengertian, Dalil, dan Keutamaan Sedekah Jariyah",
+        "B. Ketentuan Hibah Harta: Syarat Pemberi, Penerima, dan Larangan Menarik Kembali Hibah",
+        "C. Ketentuan Hadiah sebagai Sarana Menumbuhkan Saling Mencintai Antarsesama",
+        "D. Membiasakan Budaya Gemar Memberi dan Menghindari Suap (Risywah)"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Fikih MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "103–128",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Saling memberi hadiah menumbuhkan cinta kasih dan merekatkan ukhuwah (tahadu tahabbu)."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        5
+      ],
+      "deskripsi": "Saling memberi hadiah menumbuhkan cinta kasih dan merekatkan ukhuwah (tahadu tahabbu).",
+      "kata_kunci": [
+        "indahnya berbagi dengan sedekah",
+        "hibah",
+        "hadiah",
+        "pengertian",
+        "dalil"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Ketentuan Haji dan Umrah",
+      "subbab": [
+        "A. Pengertian, Hukum, dan Syarat Istitha'ah (Kemampuan) Berhaji",
+        "B. Rukun Haji (Ihram, Wukuf, Thawaf, Sa'i, Tahallul, Tertib) dan Wajib Haji",
+        "C. Perbedaan Rukun Haji dan Rukun Umrah serta Larangan Selama Ihram",
+        "D. Praktik Manasik Haji di Madrasah dan Hikmah Persaudaraan Umat Islam Sedunia"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Fikih MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "129–160",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Memenuhi panggilan Baitullah adalah puncak kerinduan cinta hamba kepada Allah SWT."
+        },
+        {
+          "id": 5,
+          "alasan": "Wukuf di Arafah dengan pakaian ihram putih setara mengajarkan persamaan derajat kemanusiaan."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        5
+      ],
+      "deskripsi": "Memenuhi panggilan Baitullah adalah puncak kerinduan cinta hamba kepada Allah SWT.",
+      "kata_kunci": [
+        "haji",
+        "umrah",
+        "pengertian",
+        "hukum",
+        "syarat istitha'ah"
+      ]
+    },
+    {
+      "tingkat": 8,
+      "semester": 2,
+      "urutan": 7,
+      "bab": "Bab 7: Ketentuan Makanan dan Minuman Halal dan Haram",
+      "subbab": [
+        "A. Kriteria Makanan dan Minuman Halal Menurut Al-Qur'an dan Sunnah (Halal Dzat dan Cara Memperoleh)",
+        "B. Jenis-Jenis Makanan yang Diharamkan: Bangkai, Darah, Babi, Khamr, Hewan Buas/Menjijikkan",
+        "C. Bahaya Minuman Keras (Khamr), Narkoba, dan Zat Adiktif bagi Akal dan Tubuh",
+        "D. Membiasakan Gaya Hidup Halal Lifestyle dan Memeriksa Label Halal BPJPH/MUI"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Fikih MTs Kelas VIII",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "161–188",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Mengonsumsi makanan halal-thayyib menjaga kesehatan fisik-mental dan menjaga kesucian diri."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        7
+      ],
+      "deskripsi": "Mengonsumsi makanan halal-thayyib menjaga kesehatan fisik-mental dan menjaga kesucian diri.",
+      "kata_kunci": [
+        "makanan",
+        "minuman halal",
+        "haram",
+        "kriteria makanan",
+        "sunnah"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 1,
+      "bab": "Bab 1: Penyembelihan Hewan, Kurban, dan Akikah",
+      "subbab": [
+        "A. Syarat dan Rukun Penyembelihan Hewan Tradisional dan Mekanik",
+        "B. Ketentuan Ibadah Qurban: Jenis Hewan, Waktu Penyembelihan, dan Pembagian Daging",
+        "C. Ketentuan Ibadah Akikah sebagai Rasa Syukur atas Kelahiran Anak",
+        "D. Nilai Kasih Sayang Menyembelih dengan Golok Tajam dan Menghargai Hak Hewan"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Fikih MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "1–32",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Qurban meneladani pengorbanan suci Nabi Ibrahim a.s. demi cinta kepada Allah."
+        },
+        {
+          "id": 3,
+          "alasan": "Adab menyembelih tanpa menyiksa hewan mengajarkan kasih sayang ekologis."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        5
+      ],
+      "deskripsi": "Qurban meneladani pengorbanan suci Nabi Ibrahim a.s. demi cinta kepada Allah.",
+      "kata_kunci": [
+        "penyembelihan hewan",
+        "kurban",
+        "akikah",
+        "syarat",
+        "mekanik"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 2,
+      "bab": "Bab 2: Jual Beli, Khiyar, Qiradh, dan Larangan Riba",
+      "subbab": [
+        "A. Rukun dan Syarat Sah Jual Beli (Penjual, Pembeli, Barang, Ijab Qabul)",
+        "B. Macam-Macam Khiyar: Khiyar Majlis, Khiyar Syarat, dan Khiyar 'Aib",
+        "C. Ketentuan Qiradh (Kerja Sama Bagi Hasil Permodalan Usaha)",
+        "D. Bahaya Riba (Riba Fadhl, Nasiah, Qardh, Yad) dan Solusi Perbankan Syariah"
+      ],
+      "elemen_kode": [
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Fikih MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "33–68",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Jual beli jujur tanpa riba melindungi hak sesama dari kezaliman ekonomi dan eksploitasi."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        3
+      ],
+      "deskripsi": "Jual beli jujur tanpa riba melindungi hak sesama dari kezaliman ekonomi dan eksploitasi.",
+      "kata_kunci": [
+        "jual beli",
+        "khiyar",
+        "qiradh",
+        "larangan riba",
+        "rukun"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 1,
+      "urutan": 3,
+      "bab": "Bab 3: 'Ariyah (Pinjam Meminjam) dan Wadi'ah (Titipan)",
+      "subbab": [
+        "A. Ketentuan Hukum Pinjam-Meminjam ('Ariyah) Barang yang Bermanfaat",
+        "B. Hak dan Kewajiban Peminjam dalam Menjaga Keutuhan Barang",
+        "C. Ketentuan Akad Titipan (Wadi'ah Yad Amanah dan Yad Dhamanah)",
+        "D. Menjaga Amanah Titipan Teman dan Menolak Pengkhianatan"
+      ],
+      "elemen_kode": [
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Fikih MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "69–92",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Meminjamkan barang dan menjaga amanah titipan merekatkan tolong-menolong dan cinta sesama."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        5
+      ],
+      "deskripsi": "Meminjamkan barang dan menjaga amanah titipan merekatkan tolong-menolong dan cinta sesama.",
+      "kata_kunci": [
+        "'ariyah",
+        "pinjam meminjam",
+        "wadi'ah",
+        "titipan",
+        "hukum pinjam-meminjam"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 4,
+      "bab": "Bab 4: Utang Piutang, Gadai (Rahn), dan Hiwalah",
+      "subbab": [
+        "A. Adab dan Ketentuan Berutang: Mencatat Transaksi dan Berniat Melunasi",
+        "B. Ketentuan Gadai Syariah (Rahn) sebagai Jaminan Utang yang Adil",
+        "C. Ketentuan Akad Pengalihan Utang (Hiwalah) secara Transparan",
+        "D. Menghindari Jeratan Pinjaman Daring Ilegal dan Rentenir yang Menindas"
+      ],
+      "elemen_kode": [
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Fikih MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "93–120",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Meringankan beban orang berutang dan menepati janji pelunasan memupuk empati kemanusiaan."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        3
+      ],
+      "deskripsi": "Meringankan beban orang berutang dan menepati janji pelunasan memupuk empati kemanusiaan.",
+      "kata_kunci": [
+        "utang piutang",
+        "gadai",
+        "rahn",
+        "hiwalah",
+        "adab"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 5,
+      "bab": "Bab 5: Ijarah (Sewa-Menyewa) dan Upah Kerja",
+      "subbab": [
+        "A. Syarat dan Rukun Akad Sewa-Menyewa Manfaat Barang (Ijarah)",
+        "B. Ketentuan Pembayaran Upah Kerja Karyawan: Tepat Waktu Sebelum Keringat Kering",
+        "C. Hak-Hak Pekerja dan Tanggung Jawab Pemberi Kerja yang Manusiawi",
+        "D. Menyelesaikan Sengketa Hubungan Kerja secara Adil dan Beradab"
+      ],
+      "elemen_kode": [
+        "E2"
+      ],
+      "sumber": {
+        "buku": "Fikih MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "121–146",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 5,
+          "alasan": "Membayar upah pekerja secara layak dan tepat waktu adalah kewajiban cinta dan hormat pada martabat manusia."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        2
+      ],
+      "deskripsi": "Membayar upah pekerja secara layak dan tepat waktu adalah kewajiban cinta dan hormat pada martabat manusia.",
+      "kata_kunci": [
+        "ijarah",
+        "sewa-menyewa",
+        "upah kerja",
+        "syarat",
+        "pembayaran upah kerja karyawan"
+      ]
+    },
+    {
+      "tingkat": 9,
+      "semester": 2,
+      "urutan": 6,
+      "bab": "Bab 6: Pengurusan Jenazah dan Ketentuan Harta Waris",
+      "subbab": [
+        "A. Fardhu Kifayah Pengurusan Jenazah: Memandikan, Mengkafani, Menshalatkan, Menguburkan",
+        "B. Adab Takziah dan Ziarah Kubur Mengingat Kematian",
+        "C. Dasar-Dasar Ilmu Faraidh: Hak Ahli Waris (Ashabul Furudh dan 'Ashabah)",
+        "D. Hikmah Keadilan Syariat Waris Islam dalam Menjaga Keharmonisan Keluarga"
+      ],
+      "elemen_kode": [
+        "E1"
+      ],
+      "sumber": {
+        "buku": "Fikih MTs Kelas IX",
+        "penerbit": "Direktorat KSKK Madrasah Kementerian Agama RI",
+        "tahun": 2020,
+        "halaman": "147–182",
+        "url": "https://pendis.kemenag.go.id"
+      },
+      "saran_panca_cinta": [
+        {
+          "id": 1,
+          "alasan": "Mengingat kematian dan takziah jenazah melembutkan hati untuk mempersiapkan bekal menghadap Allah SWT."
+        },
+        {
+          "id": 5,
+          "alasan": "Membantu pemakaman jenazah adalah wujud puncak solidaritas cinta kepada sesama muslim."
+        }
+      ],
+      "saran_dpl": [
+        1,
+        5
+      ],
+      "deskripsi": "Mengingat kematian dan takziah jenazah melembutkan hati untuk mempersiapkan bekal menghadap Allah SWT.",
+      "kata_kunci": [
+        "pengurusan jenazah",
+        "harta waris",
+        "memandikan",
+        "mengkafani",
+        "menshalatkan"
+      ]
+    }
+  ],
+  "status": "LENGKAP",
+  "catatan": "CP verbatim mengacu pada SK Dirjen Pendis No. 9941 Tahun 2025 Lampiran Mata Pelajaran Fikih Fase D (2 Elemen: Fikih Ibadah dan Fikih Muamalah). Materi per bab dirangkum dari Buku Siswa Kemenag RI Kelas VII, VIII, dan IX. Saran integrasi Panca Cinta dan DPL lengkap di setiap bab.",
+  "diverifikasi_oleh": null,
+  "tanggal_verifikasi": null
+}
