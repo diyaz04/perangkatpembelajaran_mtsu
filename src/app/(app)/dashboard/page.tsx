@@ -1,6 +1,4 @@
 import { requireAuth } from "@/lib/auth";
-import { Badge } from "@/components/ui/badge";
-import { PageHeader } from "@/components/page-header";
 import { getDashboardGuruDataAction } from "./dashboard-actions";
 import { getRekapKelengkapanAction } from "@/lib/validasi/actions";
 import { DashboardGuruClient } from "./dashboard-guru-client";
@@ -47,28 +45,19 @@ export default async function BerandaPage() {
 
   return (
     <div className="flex-1 p-4 sm:p-6 lg:p-8 space-y-6 max-w-7xl mx-auto">
-      {/* Header Beranda */}
-      <PageHeader
-        title={`Assalamu'alaikum, ${namaLengkap.split(" ")[0]}!`}
-        description={`${getRoleLabel(role)} · MTs KH A Wahab Muhsin, Tasikmalaya`}
-        badge={
-          <Badge className="bg-emerald-50 text-emerald-700 border-emerald-200">
-            Fase D · KBC
-          </Badge>
-        }
-      />
-
       {isStaff && staffData ? (
         <DashboardStaffClient
           data={staffData}
           namaPengguna={namaLengkap}
           role={role}
+          roleLabel={getRoleLabel(role)}
         />
       ) : (
         guruData && (
           <DashboardGuruClient
             data={guruData}
             namaGuru={namaLengkap}
+            roleLabel={getRoleLabel(role)}
           />
         )
       )}

@@ -14,9 +14,9 @@ export default async function AppLayout({
   return (
     <SidebarProvider>
       <AppSidebar userEmail={session.user.email} profile={session.profile} />
-      <SidebarInset className="bg-white">
+      <SidebarInset className="bg-[#f8fafc]">
         <AppHeader userEmail={session.user.email} profile={session.profile} />
-        <main className="flex-1 bg-white">{children}</main>
+        <main className="flex-1 bg-[#f8fafc]">{children}</main>
       </SidebarInset>
     </SidebarProvider>
   );

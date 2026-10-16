@@ -93,15 +93,15 @@
   /* Radius = 8px */
   --radius: 0.5rem;
 
-  /* Sidebar */
-  --sidebar: #f8fafc; /* slate-50 */
-  --sidebar-foreground: #0f172a;
-  --sidebar-primary: #059669;
+  /* Sidebar — Tema Dark Forest Green MTs */
+  --sidebar: #063b2c;
+  --sidebar-foreground: #f8fafc;
+  --sidebar-primary: #22c55e;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #ecfdf5;
-  --sidebar-accent-foreground: #065f46;
-  --sidebar-border: #e2e8f0;
-  --sidebar-ring: #6ee7b7;
+  --sidebar-accent: #0a4635;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #042a1f;
+  --sidebar-ring: #22c55e;
 
   /* Chart */
   --chart-1: #059669;
@@ -287,4 +287,8 @@
 
 .animate-spin-slow {
   animation: spin-slow 28s linear infinite;
+}
+
+.font-script {
+  font-family: var(--font-caveat), 'Caveat', cursive, sans-serif;
 }

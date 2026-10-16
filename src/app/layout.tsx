@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Inter as InterFont } from "next/font/google";
+import { Inter as InterFont, Caveat as CaveatFont } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 
 const inter = InterFont({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+const caveat = CaveatFont({
+  subsets: ["latin"],
+  variable: "--font-caveat",
   display: "swap",
 });
 
@@ -48,7 +54,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="id" className={`${inter.variable} ${inter.className}`}>
+    <html lang="id" className={`${inter.variable} ${caveat.variable} ${inter.className}`}>
       <body className={`${inter.className} min-h-screen bg-background font-sans antialiased`}>
         {children}
         <Toaster position="top-right" richColors closeButton />
