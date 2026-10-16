@@ -65,7 +65,7 @@ function LoginForm() {
     }
 
     toast.success("Berhasil masuk!");
-    router.push("/");
+    router.push("/dashboard");
     router.refresh();
   }
 

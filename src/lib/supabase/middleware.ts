@@ -48,7 +48,7 @@ export async function updateSession(request: NextRequest) {
 
   // Rute publik yang diizinkan tanpa autentikasi
   const publicRoutes = ["/login", "/lupa-password", "/reset-password"];
-  const isPublicRoute = publicRoutes.some((route) => pathname.startsWith(route));
+  const isPublicRoute = pathname === "/" || publicRoutes.some((route) => pathname.startsWith(route));
 
   // Cek apakah ada cookie session Supabase
   const allCookies = request.cookies.getAll();
@@ -78,10 +78,10 @@ export async function updateSession(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
-  // Redirect ke / jika pengguna sudah login dan mengakses rute auth publik
-  if (user && isPublicRoute) {
+  // Redirect ke /dashboard jika pengguna sudah login dan mengakses rute auth publik
+  if (user && isPublicRoute && pathname !== "/") {
     const url = request.nextUrl.clone();
-    url.pathname = "/";
+    url.pathname = "/dashboard";
     return NextResponse.redirect(url);
   }
 

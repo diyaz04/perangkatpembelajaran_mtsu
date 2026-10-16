@@ -11,16 +11,21 @@ const inter = InterFont({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Perangkat Ajar KBC",
-    default: "Perangkat Ajar KBC — MTs KH A Wahab Muhsin",
+    template: "%s | Perangkat Pembelajaran MTs KH A Wahab Muhsin",
+    default: "Perangkat Pembelajaran MTs KH A Wahab Muhsin",
   },
   description:
-    "Aplikasi penyusunan perangkat pembelajaran terintegrasi Kurikulum Berbasis Cinta (KBC) dan Pembelajaran Mendalam sesuai KMA 1503/2025 untuk MTs KH A Wahab Muhsin Tasikmalaya.",
+    "Sistem Perangkat Pembelajaran Terpadu MTs KH A Wahab Muhsin Tasikmalaya berbasis Kurikulum Berbasis Cinta (KBC) dan Pembelajaran Mendalam sesuai KMA 1503 Tahun 2025.",
+  icons: {
+    icon: "/logo-mts.png",
+    shortcut: "/favicon.ico",
+    apple: "/logo-mts.png",
+  },
   keywords: [
+    "Perangkat Pembelajaran MTs KH A Wahab Muhsin",
+    "MTs KH A Wahab Muhsin",
     "KBC",
     "Kurikulum Berbasis Cinta",
-    "Perangkat Pembelajaran",
-    "MTs",
     "KMA 1503",
     "ATP",
     "Prota",

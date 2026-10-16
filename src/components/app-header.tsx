@@ -34,6 +34,7 @@ interface AppHeaderProps {
 
 const routeTitles: Record<string, string> = {
   "/": "Beranda",
+  "/dashboard": "Dashboard",
   "/atp": "Analisis CP & ATP",
   "/prota": "Program Tahunan",
   "/prosem": "Program Semester",
@@ -75,13 +76,13 @@ export function AppHeader({ userEmail, profile }: AppHeaderProps) {
           <BreadcrumbList>
             <BreadcrumbItem>
               <BreadcrumbLink
-                render={<Link href="/" />}
+                render={<Link href="/dashboard" />}
                 className="text-xs sm:text-sm text-slate-500 hover:text-slate-900"
               >
-                KBC MTs
+                Dashboard
               </BreadcrumbLink>
             </BreadcrumbItem>
-            {pathname !== "/" && (
+            {pathname !== "/dashboard" && pathname !== "/" && (
               <>
                 <BreadcrumbSeparator>
                   <ChevronRight className="h-3.5 w-3.5 text-slate-400" />

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { createClient } from "@/lib/supabase/client";
@@ -54,8 +55,8 @@ export function AppSidebar({ profile }: AppSidebarProps) {
 
   const mainNav = [
     {
-      title: "Beranda",
-      href: "/",
+      title: "Dashboard",
+      href: "/dashboard",
       icon: LayoutDashboard,
     },
     {
@@ -143,13 +144,19 @@ export function AppSidebar({ profile }: AppSidebarProps) {
     <Sidebar collapsible="icon" className="border-r border-slate-200 bg-white">
       {/* Header Madrasah */}
       <SidebarHeader className="border-b border-slate-200 p-4">
-        <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-emerald-600 text-white font-bold text-base shadow-xs">
-            <GraduationCap className="h-5 w-5" />
+        <Link href="/dashboard" className="flex items-center gap-3">
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white border border-slate-200 p-0.5 shadow-xs overflow-hidden">
+            <Image
+              src="/logo-mts.png"
+              alt="Logo MTs"
+              width={34}
+              height={34}
+              className="object-contain"
+            />
           </div>
           <div className="flex flex-col group-data-[collapsible=icon]:hidden overflow-hidden">
             <span className="font-semibold text-sm text-slate-900 tracking-tight truncate">
-              Perangkat Ajar KBC
+              Perangkat Pembelajaran
             </span>
             <span className="text-[11px] text-slate-500 truncate">
               MTs KH A Wahab Muhsin
@@ -171,7 +178,7 @@ export function AppSidebar({ profile }: AppSidebarProps) {
                 const Icon = item.icon;
                 const isActive =
                   pathname === item.href ||
-                  (item.href !== "/" && pathname.startsWith(item.href));
+                  (item.href !== "/dashboard" && pathname.startsWith(item.href));
 
                 return (
                   <SidebarMenuItem
