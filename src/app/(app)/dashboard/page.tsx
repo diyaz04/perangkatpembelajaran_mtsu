@@ -46,7 +46,7 @@ export default async function BerandaPage() {
   };
 
   return (
-    <div className="flex-1 p-6 lg:p-8 space-y-6 max-w-7xl mx-auto">
+    <div className="flex-1 p-4 sm:p-6 lg:p-8 space-y-6 max-w-7xl mx-auto">
       {/* Header Beranda */}
       <PageHeader
         title={`Assalamu'alaikum, ${namaLengkap.split(" ")[0]}!`}

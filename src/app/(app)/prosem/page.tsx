@@ -59,7 +59,7 @@ export default async function ProsemPage() {
   };
 
   return (
-    <div className="flex-1 p-6 lg:p-8 space-y-6 max-w-7xl">
+    <div className="flex-1 p-4 sm:p-6 lg:p-8 space-y-6 max-w-7xl mx-auto">
       <PageHeader
         title="Program Semester (Prosem)"
         description="Matriks alokasi waktu mingguan per Tujuan Pembelajaran (TP) berbasis kalender pendidikan dan minggu efektif madrasah"

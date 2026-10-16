@@ -32,6 +32,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarRail,
+  useSidebar,
 } from "@/components/ui/sidebar";
 import { Badge } from "@/components/ui/badge";
 import type { Profile } from "@/types/database";
@@ -44,6 +45,13 @@ interface AppSidebarProps {
 export function AppSidebar({ profile }: AppSidebarProps) {
   const pathname = usePathname();
   const router = useRouter();
+  const { setOpenMobile, isMobile } = useSidebar();
+
+  const handleNavClick = () => {
+    if (isMobile) {
+      setOpenMobile(false);
+    }
+  };
 
   async function handleLogout() {
     const supabase = createClient();
@@ -144,7 +152,7 @@ export function AppSidebar({ profile }: AppSidebarProps) {
     <Sidebar collapsible="icon" className="border-r border-slate-200 bg-white">
       {/* Header Madrasah */}
       <SidebarHeader className="border-b border-slate-200 p-4">
-        <Link href="/dashboard" className="flex items-center gap-3">
+        <Link href="/dashboard" onClick={handleNavClick} className="flex items-center gap-3">
           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white border border-slate-200 p-0.5 shadow-xs overflow-hidden">
             <Image
               src="/logo-mts.png"
@@ -193,6 +201,7 @@ export function AppSidebar({ profile }: AppSidebarProps) {
                       render={<Link href={item.href} prefetch={true} />}
                       isActive={isActive}
                       tooltip={item.title}
+                      onClick={handleNavClick}
                       className={
                         isActive
                           ? "bg-emerald-50 text-emerald-800 font-medium hover:bg-emerald-100 hover:text-emerald-900"
@@ -234,6 +243,7 @@ export function AppSidebar({ profile }: AppSidebarProps) {
                         render={<Link href={item.href} prefetch={true} />}
                         isActive={isActive}
                         tooltip={item.title}
+                        onClick={handleNavClick}
                         className={
                           isActive
                             ? "bg-emerald-50 text-emerald-800 font-medium hover:bg-emerald-100 hover:text-emerald-900"
@@ -283,6 +293,7 @@ export function AppSidebar({ profile }: AppSidebarProps) {
                       render={<Link href={item.href} prefetch={true} />}
                       isActive={isActive}
                       tooltip={item.title}
+                      onClick={handleNavClick}
                       className={
                         isActive
                           ? "bg-emerald-50 text-emerald-800 font-medium hover:bg-emerald-100 hover:text-emerald-900"

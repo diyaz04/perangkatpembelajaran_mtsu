@@ -86,7 +86,7 @@ export function MasterDataClient({
   ];
 
   return (
-    <div className="flex-1 p-6 lg:p-8 space-y-6">
+    <div className="flex-1 p-4 sm:p-6 lg:p-8 space-y-6 max-w-7xl mx-auto">
       <PageHeader
         title="Master Data & Regulasi Kurikulum"
         description="Kelola seluruh konfigurasi madrasah, kalender pendidikan, mapel, penugasan, CP Fase D, materi KBC, dan model pembelajaran."

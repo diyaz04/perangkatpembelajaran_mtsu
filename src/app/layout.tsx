@@ -40,8 +40,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="id" className={inter.variable}>
-      <body className="min-h-screen bg-background font-sans antialiased">
+    <html lang="id" className={`${inter.variable} ${inter.className}`}>
+      <body className={`${inter.className} min-h-screen bg-background font-sans antialiased`}>
         {children}
         <Toaster position="top-right" richColors closeButton />
       </body>

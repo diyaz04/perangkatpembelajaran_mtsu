@@ -179,7 +179,7 @@ export function ModulAjarClient({
 
         <Button
           onClick={() => setIsDialogOpen(true)}
-          className="bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm font-semibold"
+          className="bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm font-semibold w-full sm:w-auto shrink-0"
         >
           <Plus className="w-4 h-4 mr-1.5" />
           Buat RPP Baru
@@ -198,10 +198,10 @@ export function ModulAjarClient({
           />
         </div>
 
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-2">
           {/* Filter Tingkat */}
           <Select value={filterTingkat} onValueChange={(val) => setFilterTingkat(val || "all")}>
-            <SelectTrigger className="w-[120px] text-xs h-9">
+            <SelectTrigger className="w-full sm:w-[120px] text-xs h-9">
               <SelectValue placeholder="Tingkat" />
             </SelectTrigger>
             <SelectContent>
@@ -214,7 +214,7 @@ export function ModulAjarClient({
 
           {/* Filter Versi */}
           <Select value={filterVersi} onValueChange={(val) => setFilterVersi(val || "all")}>
-            <SelectTrigger className="w-[130px] text-xs h-9">
+            <SelectTrigger className="w-full sm:w-[130px] text-xs h-9">
               <SelectValue placeholder="Versi" />
             </SelectTrigger>
             <SelectContent>
@@ -226,7 +226,7 @@ export function ModulAjarClient({
 
           {/* Filter Status */}
           <Select value={filterStatus} onValueChange={(val) => setFilterStatus(val || "all")}>
-            <SelectTrigger className="w-[130px] text-xs h-9">
+            <SelectTrigger className="w-full sm:w-[130px] col-span-2 sm:col-span-1 text-xs h-9">
               <SelectValue placeholder="Status" />
             </SelectTrigger>
             <SelectContent>

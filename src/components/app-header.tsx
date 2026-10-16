@@ -69,12 +69,12 @@ export function AppHeader({ userEmail, profile }: AppHeaderProps) {
   return (
     <header className="sticky top-0 z-30 flex h-14 shrink-0 items-center justify-between border-b border-slate-200 bg-white px-4 sm:px-6">
       {/* Left: Trigger & Breadcrumb */}
-      <div className="flex items-center gap-3">
-        <SidebarTrigger className="text-slate-600 hover:text-slate-900 -ml-1" />
-        <Separator orientation="vertical" className="h-4 bg-slate-200" />
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
+      <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1 mr-2">
+        <SidebarTrigger className="text-slate-600 hover:text-slate-900 -ml-1 shrink-0" />
+        <Separator orientation="vertical" className="h-4 bg-slate-200 shrink-0" />
+        <Breadcrumb className="min-w-0">
+          <BreadcrumbList className="flex-nowrap">
+            <BreadcrumbItem className="shrink-0">
               <BreadcrumbLink
                 render={<Link href="/dashboard" />}
                 className="text-xs sm:text-sm text-slate-500 hover:text-slate-900"
@@ -84,11 +84,11 @@ export function AppHeader({ userEmail, profile }: AppHeaderProps) {
             </BreadcrumbItem>
             {pathname !== "/dashboard" && pathname !== "/" && (
               <>
-                <BreadcrumbSeparator>
+                <BreadcrumbSeparator className="shrink-0">
                   <ChevronRight className="h-3.5 w-3.5 text-slate-400" />
                 </BreadcrumbSeparator>
-                <BreadcrumbItem>
-                  <BreadcrumbPage className="text-xs sm:text-sm font-medium text-slate-900">
+                <BreadcrumbItem className="min-w-0">
+                  <BreadcrumbPage className="text-xs sm:text-sm font-medium text-slate-900 truncate max-w-[120px] sm:max-w-xs md:max-w-none">
                     {currentTitle}
                   </BreadcrumbPage>
                 </BreadcrumbItem>

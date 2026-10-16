@@ -227,7 +227,7 @@ export function DashboardStaffClient({
         </div>
 
         {/* Search */}
-        <div className="relative max-w-sm">
+        <div className="relative w-full sm:max-w-sm">
           <Search className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
           <Input
             placeholder="Cari nama guru, mapel, rombel..."
@@ -239,7 +239,7 @@ export function DashboardStaffClient({
 
         {/* Tabel Rekapitulasi */}
         <div className="rounded-lg border border-slate-200 overflow-x-auto">
-          <table className="w-full text-left text-xs">
+          <table className="w-full text-left text-xs min-w-[760px]">
             <thead className="bg-slate-50 border-b border-slate-200 text-slate-700">
               <tr>
                 <th className="p-3 w-10 text-center">No</th>

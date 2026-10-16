@@ -14,7 +14,7 @@ export default async function PengaturanPage() {
   const session = await requireAuth();
 
   return (
-    <div className="flex-1 p-6 lg:p-8 space-y-6 max-w-4xl">
+    <div className="flex-1 p-4 sm:p-6 lg:p-8 space-y-6 max-w-4xl mx-auto">
       <PageHeader
         title="Pengaturan Akun & Profil"
         description="Kelola informasi identitas guru, kata sandi, dan periksa hak akses sistem"

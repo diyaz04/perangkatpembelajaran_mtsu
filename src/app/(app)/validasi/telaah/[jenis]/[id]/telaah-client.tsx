@@ -64,9 +64,9 @@ export function TelaahClient({ data }: TelaahClientProps) {
     <div className="flex-1 p-4 lg:p-8 space-y-6 max-w-[1600px] mx-auto">
       {/* Header Bar */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-slate-200">
-        <div className="flex items-center gap-3">
-          <Link href="/validasi">
-            <Button variant="outline" size="sm" className="h-9 w-9 p-0">
+        <div className="flex items-start gap-3 min-w-0">
+          <Link href="/validasi" className="shrink-0">
+            <Button variant="outline" size="sm" className="h-9 w-9 p-0 shrink-0">
               <ArrowLeft className="w-4 h-4 text-slate-600" />
             </Button>
           </Link>

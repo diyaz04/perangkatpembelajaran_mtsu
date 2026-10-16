@@ -352,11 +352,11 @@ export function AntrianValidasiClient({
                     </div>
                   </div>
 
-                  <div className="shrink-0 flex items-center gap-2 sm:self-center">
-                    <Link href={telaahHref}>
+                  <div className="shrink-0 flex items-center gap-2 sm:self-center w-full sm:w-auto">
+                    <Link href={telaahHref} className="w-full sm:w-auto">
                       <Button
                         size="sm"
-                        className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs"
+                        className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs w-full sm:w-auto"
                       >
                         <Sparkles className="w-3.5 h-3.5 mr-1.5" />
                         Telaah Dokumen

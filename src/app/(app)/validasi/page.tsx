@@ -38,7 +38,7 @@ export default async function ValidasiPage() {
   const totalAntrian = antrianItems.filter((i) => i.status === "diajukan").length;
 
   return (
-    <div className="flex-1 p-6 lg:p-8 space-y-6 max-w-7xl mx-auto">
+    <div className="flex-1 p-4 sm:p-6 lg:p-8 space-y-6 max-w-7xl mx-auto">
       <PageHeader
         title="Validasi & Penjaminan Mutu Dokumen"
         description="Pusat telaah instrumen Kurikulum Berbasis Cinta (KBC) dan ekspor dokumen resmi madrasah"

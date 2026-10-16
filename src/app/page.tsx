@@ -23,6 +23,7 @@ import {
 import { buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { createClient } from "@/lib/supabase/server";
+import { LandingNavbar } from "@/components/landing-navbar";
 
 export const metadata = {
   title: "Perangkat Pembelajaran MTs KH A Wahab Muhsin",
@@ -46,75 +47,9 @@ export default async function LandingPage() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 selection:bg-emerald-500 selection:text-white flex flex-col font-sans">
       {/* ========================================================================= */}
-      {/* NAVBAR HEADER */}
+      {/* NAVBAR HEADER RESPONSIVE */}
       {/* ========================================================================= */}
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-xs">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-11 h-11 rounded-xl bg-white p-1 border border-emerald-100 shadow-xs group-hover:scale-105 transition-transform shrink-0 flex items-center justify-center">
-              <Image
-                src="/logo-mts.png"
-                alt="Logo MTs KH A Wahab Muhsin"
-                width={40}
-                height={40}
-                className="object-contain"
-                priority
-              />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-black text-base tracking-tight text-slate-900 leading-tight">
-                MTs KH A Wahab Muhsin
-              </span>
-              <span className="text-[11px] font-semibold text-emerald-800">
-                Sistem Perangkat Pembelajaran KBC
-              </span>
-            </div>
-          </Link>
-
-          {/* Navigasi Desktop */}
-          <nav className="hidden md:flex items-center gap-6 text-xs font-semibold text-slate-600">
-            <a href="#fitur" className="hover:text-emerald-700 transition-colors">
-              Alur Perangkat
-            </a>
-            <a href="#siklus-3m" className="hover:text-emerald-700 transition-colors">
-              Struktur 3M
-            </a>
-            <a href="#panca-cinta" className="hover:text-emerald-700 transition-colors">
-              Panca Cinta
-            </a>
-            <a href="#validasi" className="hover:text-emerald-700 transition-colors">
-              Supervisi Digital
-            </a>
-          </nav>
-
-          {/* Tombol Masuk / Dashboard */}
-          <div className="flex items-center gap-3">
-            {user ? (
-              <Link
-                href="/dashboard"
-                className={
-                  buttonVariants({ size: "sm" }) +
-                  " bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold shadow-sm rounded-lg flex items-center gap-2 h-9 px-3.5"
-                }
-              >
-                <span>Ke Dashboard Saya</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-            ) : (
-              <Link
-                href="/login"
-                className={
-                  buttonVariants({ size: "sm" }) +
-                  " bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold shadow-sm rounded-lg px-4 flex items-center gap-1.5 h-9"
-                }
-              >
-                <LogIn className="w-3.5 h-3.5" />
-                <span>Masuk ke Sistem</span>
-              </Link>
-            )}
-          </div>
-        </div>
-      </header>
+      <LandingNavbar user={user} />
 
       {/* ========================================================================= */}
       {/* HERO SECTION DENGAN IKON BERGERAK */}
@@ -209,13 +144,13 @@ export default async function LandingPage() {
             </div>
 
             {/* Kolom Visual & Ikon Bergerak (5 Kolom) */}
-            <div className="lg:col-span-5 relative flex items-center justify-center min-h-[460px] sm:min-h-[500px]">
+            <div className="lg:col-span-5 relative w-full max-w-lg mx-auto flex items-center justify-center min-h-[380px] sm:min-h-[460px] md:min-h-[500px] py-6 sm:py-0 overflow-visible">
               {/* Cincin Orbit Berputar Lambat */}
-              <div className="absolute w-[360px] h-[360px] sm:w-[420px] sm:h-[420px] rounded-full border border-dashed border-emerald-300/80 animate-spin-slow pointer-events-none" />
-              <div className="absolute w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] rounded-full border border-emerald-200/50 pointer-events-none" />
+              <div className="absolute w-[260px] h-[260px] sm:w-[360px] sm:h-[360px] md:w-[420px] md:h-[420px] rounded-full border border-dashed border-emerald-300/80 animate-spin-slow pointer-events-none" />
+              <div className="absolute w-[200px] h-[200px] sm:w-[280px] sm:h-[280px] md:w-[320px] md:h-[320px] rounded-full border border-emerald-200/50 pointer-events-none" />
 
               {/* CENTERPIECE: LOGO RESMI MADRASAH DENGAN PULSE GLOW */}
-              <div className="relative z-10 w-36 h-36 sm:w-44 sm:h-44 rounded-3xl bg-white shadow-2xl p-4 border-2 border-emerald-500 animate-pulse-glow flex items-center justify-center">
+              <div className="relative z-10 w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 rounded-2xl sm:rounded-3xl bg-white shadow-2xl p-2.5 sm:p-4 border-2 border-emerald-500 animate-pulse-glow flex items-center justify-center shrink-0">
                 <Image
                   src="/logo-mts.png"
                   alt="Logo MTs KH A Wahab Muhsin"
@@ -229,16 +164,16 @@ export default async function LandingPage() {
               {/* ================================================================= */}
               {/* IKON BERGERAK 1: ANALISIS CP & ATP (Melayang Kiri Atas) */}
               {/* ================================================================= */}
-              <div className="absolute top-2 left-2 sm:top-4 sm:left-4 z-20 animate-float-slow">
-                <div className="flex items-center gap-2.5 bg-white/95 backdrop-blur-sm p-2.5 sm:p-3 rounded-2xl shadow-lg border border-emerald-100 hover:scale-105 transition-transform cursor-pointer">
-                  <div className="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0">
-                    <Compass className="w-5 h-5 animate-pulse" />
+              <div className="absolute top-1 left-0 sm:top-4 sm:left-4 z-20 animate-float-slow max-w-[150px] sm:max-w-none">
+                <div className="flex items-center gap-2 sm:gap-2.5 bg-white/95 backdrop-blur-sm p-2 sm:p-3 rounded-xl sm:rounded-2xl shadow-md border border-emerald-100 hover:scale-105 transition-transform cursor-pointer">
+                  <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0">
+                    <Compass className="w-4 h-4 sm:w-5 sm:h-5 animate-pulse" />
                   </div>
-                  <div className="text-left">
-                    <span className="block text-xs font-black text-slate-900 leading-tight">
+                  <div className="text-left min-w-0">
+                    <span className="block text-[11px] sm:text-xs font-black text-slate-900 leading-tight truncate">
                       Analisis CP & ATP
                     </span>
-                    <span className="block text-[10px] text-emerald-700 font-semibold">
+                    <span className="block text-[9px] sm:text-[10px] text-emerald-700 font-semibold truncate">
                       Fase D • Alur Belajar
                     </span>
                   </div>
@@ -248,17 +183,17 @@ export default async function LandingPage() {
               {/* ================================================================= */}
               {/* IKON BERGERAK 2: PROTA & PROSEM (Melayang Kanan Atas) */}
               {/* ================================================================= */}
-              <div className="absolute top-0 right-2 sm:top-2 sm:right-2 z-20 animate-float-reverse">
-                <div className="flex items-center gap-2.5 bg-white/95 backdrop-blur-sm p-2.5 sm:p-3 rounded-2xl shadow-lg border border-amber-100 hover:scale-105 transition-transform cursor-pointer">
-                  <div className="w-9 h-9 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center shrink-0">
-                    <CalendarRange className="w-5 h-5" />
+              <div className="absolute top-0 right-0 sm:top-2 sm:right-2 z-20 animate-float-reverse max-w-[150px] sm:max-w-none">
+                <div className="flex items-center gap-2 sm:gap-2.5 bg-white/95 backdrop-blur-sm p-2 sm:p-3 rounded-xl sm:rounded-2xl shadow-md border border-amber-100 hover:scale-105 transition-transform cursor-pointer">
+                  <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center shrink-0">
+                    <CalendarRange className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <div className="text-left">
-                    <span className="block text-xs font-black text-slate-900 leading-tight">
+                  <div className="text-left min-w-0">
+                    <span className="block text-[11px] sm:text-xs font-black text-slate-900 leading-tight truncate">
                       Prota & Prosem
                     </span>
-                    <span className="block text-[10px] text-amber-700 font-semibold">
-                      Distribusi Pekan & JP
+                    <span className="block text-[9px] sm:text-[10px] text-amber-700 font-semibold truncate">
+                      Distribusi JP Pekan
                     </span>
                   </div>
                 </div>
@@ -267,17 +202,17 @@ export default async function LandingPage() {
               {/* ================================================================= */}
               {/* IKON BERGERAK 3: MODUL AJAR KBC (Melayang Kiri Bawah) */}
               {/* ================================================================= */}
-              <div className="absolute bottom-6 left-0 sm:bottom-8 sm:left-2 z-20 animate-float-fast">
-                <div className="flex items-center gap-2.5 bg-white/95 backdrop-blur-sm p-2.5 sm:p-3 rounded-2xl shadow-lg border border-rose-100 hover:scale-105 transition-transform cursor-pointer">
-                  <div className="w-9 h-9 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center shrink-0">
-                    <Heart className="w-5 h-5 animate-bounce" />
+              <div className="absolute bottom-6 left-0 sm:bottom-8 sm:left-2 z-20 animate-float-fast max-w-[150px] sm:max-w-none">
+                <div className="flex items-center gap-2 sm:gap-2.5 bg-white/95 backdrop-blur-sm p-2 sm:p-3 rounded-xl sm:rounded-2xl shadow-md border border-rose-100 hover:scale-105 transition-transform cursor-pointer">
+                  <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center shrink-0">
+                    <Heart className="w-4 h-4 sm:w-5 sm:h-5 animate-bounce" />
                   </div>
-                  <div className="text-left">
-                    <span className="block text-xs font-black text-slate-900 leading-tight">
+                  <div className="text-left min-w-0">
+                    <span className="block text-[11px] sm:text-xs font-black text-slate-900 leading-tight truncate">
                       Modul Ajar KBC
                     </span>
-                    <span className="block text-[10px] text-rose-700 font-semibold">
-                      Sintaks 3M & Nilai Cinta
+                    <span className="block text-[9px] sm:text-[10px] text-rose-700 font-semibold truncate">
+                      Sintaks 3M & Cinta
                     </span>
                   </div>
                 </div>
@@ -286,17 +221,17 @@ export default async function LandingPage() {
               {/* ================================================================= */}
               {/* IKON BERGERAK 4: SUPERVISI & VALIDASI (Melayang Kanan Bawah) */}
               {/* ================================================================= */}
-              <div className="absolute bottom-4 right-0 sm:bottom-6 sm:right-2 z-20 animate-float-slow">
-                <div className="flex items-center gap-2.5 bg-white/95 backdrop-blur-sm p-2.5 sm:p-3 rounded-2xl shadow-lg border border-blue-100 hover:scale-105 transition-transform cursor-pointer">
-                  <div className="w-9 h-9 rounded-xl bg-blue-100 text-blue-800 flex items-center justify-center shrink-0">
-                    <ShieldCheck className="w-5 h-5" />
+              <div className="absolute bottom-4 right-0 sm:bottom-6 sm:right-2 z-20 animate-float-slow max-w-[150px] sm:max-w-none">
+                <div className="flex items-center gap-2 sm:gap-2.5 bg-white/95 backdrop-blur-sm p-2 sm:p-3 rounded-xl sm:rounded-2xl shadow-md border border-blue-100 hover:scale-105 transition-transform cursor-pointer">
+                  <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl bg-blue-100 text-blue-800 flex items-center justify-center shrink-0">
+                    <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <div className="text-left">
-                    <span className="block text-xs font-black text-slate-900 leading-tight">
+                  <div className="text-left min-w-0">
+                    <span className="block text-[11px] sm:text-xs font-black text-slate-900 leading-tight truncate">
                       Validasi Digital
                     </span>
-                    <span className="block text-[10px] text-blue-700 font-semibold">
-                      Kepala MTs & Waka
+                    <span className="block text-[9px] sm:text-[10px] text-blue-700 font-semibold truncate">
+                      Kepala & Waka
                     </span>
                   </div>
                 </div>
@@ -305,10 +240,10 @@ export default async function LandingPage() {
               {/* ================================================================= */}
               {/* IKON BERGERAK 5: CETAK & EKSPOR RESMI (Melayang Tengah Bawah) */}
               {/* ================================================================= */}
-              <div className="absolute -bottom-6 sm:-bottom-8 z-20 animate-float-reverse">
-                <div className="flex items-center gap-2 bg-emerald-800 text-white px-3.5 py-1.5 rounded-full shadow-lg border border-emerald-600 text-xs font-bold">
-                  <Printer className="w-3.5 h-3.5 text-emerald-300" />
-                  <span>Siap Cetak PDF & DOCX Standar Kemenag</span>
+              <div className="absolute -bottom-4 sm:-bottom-8 z-20 animate-float-reverse">
+                <div className="flex items-center gap-1.5 bg-emerald-800 text-white px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full shadow-lg border border-emerald-600 text-[10px] sm:text-xs font-bold whitespace-nowrap">
+                  <Printer className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-300" />
+                  <span>Siap Cetak PDF & DOCX Kemenag</span>
                 </div>
               </div>
             </div>
@@ -333,7 +268,7 @@ export default async function LandingPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {/* Card 1: ATP */}
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-emerald-300 hover:bg-emerald-50/20 transition-all group">
               <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
@@ -532,7 +467,7 @@ export default async function LandingPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 relative">
             <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-center space-y-2">
               <div className="w-10 h-10 rounded-full bg-emerald-700 text-white font-black flex items-center justify-center mx-auto text-sm">
                 1

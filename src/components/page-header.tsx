@@ -24,21 +24,21 @@ export function PageHeader({
       )}
     >
       <div className="space-y-1">
-        <div className="flex items-center gap-2.5">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
           <h1 className="text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl">
             {title}
           </h1>
           {badge}
         </div>
         {description && (
-          <p className="text-sm text-slate-500 leading-relaxed max-w-2xl">
+          <p className="text-xs sm:text-sm text-slate-500 leading-relaxed max-w-2xl">
             {description}
           </p>
         )}
       </div>
 
       {actions && (
-        <div className="flex items-center gap-2.5 shrink-0 pt-1 sm:pt-0">
+        <div className="flex flex-wrap items-center gap-2 shrink-0 pt-1 sm:pt-0">
           {actions}
         </div>
       )}

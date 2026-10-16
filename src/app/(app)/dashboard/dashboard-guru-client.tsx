@@ -243,30 +243,30 @@ export function DashboardGuruClient({ data, namaGuru }: DashboardGuruClientProps
                 </div>
 
                 {/* RPP / Modul Ajar Progress */}
-                <div className="bg-slate-50 p-2.5 rounded-lg border border-slate-100 flex items-center justify-between text-xs">
+                <div className="bg-slate-50 p-2.5 rounded-lg border border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs">
                   <div className="flex items-center gap-2">
-                    <FileText className="w-3.5 h-3.5 text-amber-600" />
+                    <FileText className="w-3.5 h-3.5 text-amber-600 shrink-0" />
                     <span className="font-medium text-slate-700">RPP / Modul Ajar:</span>
                   </div>
-                  <span className="font-semibold text-slate-900">
+                  <span className="font-semibold text-slate-900 text-left sm:text-right">
                     {p.rppCount} dari {p.rppTarget} TP ({p.rppDisetujui} Disetujui)
                   </span>
                 </div>
 
                 {/* Tombol Akses Cepat */}
-                <div className="pt-1 flex items-center gap-2">
-                  <Link href={`/atp/${p.penugasanId}`} prefetch={true} className="flex-1">
-                    <Button variant="outline" size="sm" className="w-full text-xs h-8">
-                      Buka ATP
+                <div className="pt-1 flex flex-wrap items-center gap-2">
+                  <Link href={`/atp/${p.penugasanId}`} prefetch={true} className="flex-1 min-w-[70px]">
+                    <Button variant="outline" size="sm" className="w-full text-xs h-8 px-2">
+                      ATP
                     </Button>
                   </Link>
-                  <Link href={`/prota/${p.penugasanId}`} prefetch={true} className="flex-1">
-                    <Button variant="outline" size="sm" className="w-full text-xs h-8">
-                      Buka Prota
+                  <Link href={`/prota/${p.penugasanId}`} prefetch={true} className="flex-1 min-w-[70px]">
+                    <Button variant="outline" size="sm" className="w-full text-xs h-8 px-2">
+                      Prota
                     </Button>
                   </Link>
-                  <Link href={`/modul-ajar`} prefetch={true} className="flex-1">
-                    <Button variant="outline" size="sm" className="w-full text-xs h-8">
+                  <Link href={`/modul-ajar`} prefetch={true} className="flex-1 min-w-[70px]">
+                    <Button variant="outline" size="sm" className="w-full text-xs h-8 px-2">
                       RPP
                     </Button>
                   </Link>

@@ -59,7 +59,7 @@ export default async function ProtaPage() {
   };
 
   return (
-    <div className="flex-1 p-6 lg:p-8 space-y-6 max-w-7xl">
+    <div className="flex-1 p-4 sm:p-6 lg:p-8 space-y-6 max-w-7xl mx-auto">
       <PageHeader
         title="Program Tahunan (Prota)"
         description="Analisis alokasi minggu efektif madrasah (KMA 1503/2025) dan distribusi alokasi waktu tahunan terintegrasi Kurikulum Berbasis Cinta"

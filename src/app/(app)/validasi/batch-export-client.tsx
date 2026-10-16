@@ -258,14 +258,14 @@ export function BatchExportClient({ items }: BatchExportClientProps) {
           </div>
 
           {/* Tombol Eksekusi Unduh ZIP */}
-          <div className="flex items-center gap-3">
-            <span className="text-xs font-semibold text-slate-600">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
+            <span className="text-xs font-semibold text-slate-600 text-center sm:text-right">
               {selectedDocs.size} dokumen terpilih
             </span>
             <Button
               disabled={selectedDocs.size === 0 || isExporting}
               onClick={handleDownloadZip}
-              className="h-9 bg-emerald-700 hover:bg-emerald-800 text-white font-medium shadow-sm"
+              className="h-9 bg-emerald-700 hover:bg-emerald-800 text-white font-medium shadow-sm w-full sm:w-auto"
             >
               {isExporting ? (
                 <>

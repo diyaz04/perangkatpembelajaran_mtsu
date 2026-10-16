@@ -76,7 +76,7 @@ export default async function AtpPage() {
   };
 
   return (
-    <div className="flex-1 space-y-6 p-6 md:p-8 max-w-7xl mx-auto">
+    <div className="flex-1 space-y-6 p-4 sm:p-6 md:p-8 max-w-7xl mx-auto">
       {/* Header Halaman */}
       <PageHeader
         title="Analisis CP & Alur Tujuan Pembelajaran (ATP)"
