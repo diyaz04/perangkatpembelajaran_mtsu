@@ -136,7 +136,7 @@ export function RppPreviewClient({ data }: RppPreviewClientProps) {
         @media print {
           @page {
             size: portrait;
-            margin: 10mm;
+            margin: 8mm 10mm;
           }
           body {
             -webkit-print-color-adjust: exact !important;
@@ -150,6 +150,26 @@ export function RppPreviewClient({ data }: RppPreviewClientProps) {
             margin: 0 !important;
             border: none !important;
             box-shadow: none !important;
+          }
+          .break-after-avoid {
+            break-after: avoid !important;
+            page-break-after: avoid !important;
+          }
+          .break-inside-avoid {
+            break-inside: avoid !important;
+            page-break-inside: avoid !important;
+          }
+          .print-doc-container td,
+          .print-doc-container th {
+            padding-top: 3px !important;
+            padding-bottom: 3px !important;
+            padding-left: 6px !important;
+            padding-right: 6px !important;
+            line-height: 1.35 !important;
+          }
+          .print-doc-container .whitespace-pre-line {
+            white-space: pre-wrap !important;
+            word-break: break-word !important;
           }
         }
       `}} />
@@ -272,10 +292,10 @@ export function RppPreviewClient({ data }: RppPreviewClientProps) {
             </div>
           )}
           {/* KOP MADRASAH RESMI */}
-          {showKop && <KopMadrasah madrasah={madrasah} />}
+          {showKop && <KopMadrasah madrasah={madrasah} className="pb-2 mb-3 print:pb-1.5 print:mb-2" />}
 
           {/* JUDUL DOKUMEN */}
-          <div className="text-center my-4 space-y-0.5">
+          <div className="text-center my-3 print:my-1.5 space-y-0.5">
             <h2 className="text-sm md:text-base font-black uppercase tracking-wider text-slate-900 underline decoration-slate-900 underline-offset-4">
               MODUL AJAR / RENCANA PELAKSANAAN PEMBELAJARAN (RPP)
             </h2>
@@ -290,58 +310,58 @@ export function RppPreviewClient({ data }: RppPreviewClientProps) {
           {/* ========================================================================= */}
           {/* TABEL FORMAT 2 KOLOM RESMI */}
           {/* ========================================================================= */}
-          <div className="my-4 border border-slate-900 text-xs">
+          <div className="my-3 print:my-1.5 border border-slate-900 text-xs print:text-[10px]">
             {/* A. SPESIFIKASI DOKUMEN */}
-            <div className="bg-slate-200/90 font-black px-3 py-1.5 border-b border-slate-900 uppercase tracking-wide">
+            <div className="bg-slate-200/90 font-black px-3 py-1.5 print:py-1 border-b border-slate-900 uppercase tracking-wide break-after-avoid">
               A. SPESIFIKASI DOKUMEN
             </div>
             <table className="w-full border-collapse">
               <tbody className="divide-y divide-slate-300">
                 <tr>
-                  <td className="w-1/3 py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
+                  <td className="w-[26%] py-1.5 px-3 print:py-0.5 print:px-2 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
                     Satuan Pendidikan
                   </td>
-                  <td className="py-1.5 px-3 font-bold text-slate-900">
+                  <td className="py-1.5 px-3 print:py-0.5 print:px-2 font-bold text-slate-900">
                     {madrasah.nama}
                   </td>
                 </tr>
                 <tr>
-                  <td className="py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
+                  <td className="w-[26%] py-1.5 px-3 print:py-0.5 print:px-2 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
                     Mata Pelajaran & Kode
                   </td>
-                  <td className="py-1.5 px-3 font-bold text-slate-900">
+                  <td className="py-1.5 px-3 print:py-0.5 print:px-2 font-bold text-slate-900">
                     {penugasan.mapel.nama} ({penugasan.mapel.kode})
                   </td>
                 </tr>
                 <tr>
-                  <td className="py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
+                  <td className="w-[26%] py-1.5 px-3 print:py-0.5 print:px-2 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
                     Fase / Kelas / Rombel
                   </td>
-                  <td className="py-1.5 px-3 text-slate-900">
+                  <td className="py-1.5 px-3 print:py-0.5 print:px-2 text-slate-900">
                     Fase D • Kelas {penugasan.tingkat_kelas} ({penugasan.rombel})
                   </td>
                 </tr>
                 <tr>
-                  <td className="py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
+                  <td className="w-[26%] py-1.5 px-3 print:py-0.5 print:px-2 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
                     Lingkup Materi Pokok
                   </td>
-                  <td className="py-1.5 px-3 font-black text-slate-900">
+                  <td className="py-1.5 px-3 print:py-0.5 print:px-2 font-black text-slate-900">
                     {rpp.materi_pokok}
                   </td>
                 </tr>
                 <tr>
-                  <td className="py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
+                  <td className="w-[26%] py-1.5 px-3 print:py-0.5 print:px-2 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
                     Alokasi Waktu
                   </td>
-                  <td className="py-1.5 px-3 text-slate-900">
+                  <td className="py-1.5 px-3 print:py-0.5 print:px-2 text-slate-900">
                     {rpp.alokasi_waktu}
                   </td>
                 </tr>
                 <tr>
-                  <td className="py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
+                  <td className="w-[26%] py-1.5 px-3 print:py-0.5 print:px-2 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
                     Guru Pengampu
                   </td>
-                  <td className="py-1.5 px-3 text-slate-900">
+                  <td className="py-1.5 px-3 print:py-0.5 print:px-2 text-slate-900">
                     {penugasan.guru.nama_lengkap}
                     {penugasan.guru.gelar ? `, ${penugasan.guru.gelar}` : ""}{" "}
                     {penugasan.guru.nip ? `(NIP. ${penugasan.guru.nip})` : ""}
@@ -351,30 +371,30 @@ export function RppPreviewClient({ data }: RppPreviewClientProps) {
             </table>
 
             {/* B. IDENTIFIKASI */}
-            <div className="bg-slate-200/90 font-black px-3 py-1.5 border-t border-b border-slate-900 uppercase tracking-wide">
+            <div className="bg-slate-200/90 font-black px-3 py-1.5 print:py-1 border-t border-b border-slate-900 uppercase tracking-wide break-after-avoid">
               B. IDENTIFIKASI
             </div>
             <table className="w-full border-collapse">
               <tbody className="divide-y divide-slate-300">
                 {isLengkap && (
                   <tr>
-                    <td className="w-1/3 py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
+                    <td className="w-[26%] py-1.5 px-3 print:py-0.5 print:px-2 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300 align-top">
                       Kesiapan & Karakteristik Murid [L]
                     </td>
-                    <td className="py-1.5 px-3 text-slate-900 leading-relaxed space-y-1">
+                    <td className="py-1.5 px-3 print:py-0.5 print:px-2 text-slate-900 leading-snug space-y-1 print:space-y-0.5">
                       <div>
-                        <strong>Pengetahuan Awal:</strong>{" "}
+                        <strong className="text-slate-800">Pengetahuan Awal:</strong>{" "}
                         {rpp.kesiapan_murid?.pengetahuan_awal || "-"}
                       </div>
                       {rpp.kesiapan_murid?.minat && (
                         <div>
-                          <strong>Minat & Kebutuhan:</strong>{" "}
+                          <strong className="text-slate-800">Minat & Kebutuhan:</strong>{" "}
                           {rpp.kesiapan_murid.minat}
                         </div>
                       )}
                       {rpp.kesiapan_murid?.strategi_asesmen_awal && (
                         <div>
-                          <strong>Strategi Awal & Tindak Lanjut:</strong>{" "}
+                          <strong className="text-slate-800">Strategi Awal & Tindak Lanjut:</strong>{" "}
                           {rpp.kesiapan_murid.strategi_asesmen_awal}
                         </div>
                       )}
@@ -382,38 +402,38 @@ export function RppPreviewClient({ data }: RppPreviewClientProps) {
                   </tr>
                 )}
                 <tr>
-                  <td className="w-1/3 py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
+                  <td className="w-[26%] py-1.5 px-3 print:py-0.5 print:px-2 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300 align-top">
                     Karakteristik Materi
                   </td>
-                  <td className="py-1.5 px-3 text-slate-900 leading-relaxed">
+                  <td className="py-1.5 px-3 print:py-0.5 print:px-2 text-slate-900 leading-snug">
                     {rpp.karakteristik_materi || "-"}
                   </td>
                 </tr>
                 <tr>
-                  <td className="py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
+                  <td className="w-[26%] py-1.5 px-3 print:py-0.5 print:px-2 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
                     Dimensi Profil Lulusan (DPL)
                   </td>
-                  <td className="py-1.5 px-3 text-slate-900">
+                  <td className="py-1.5 px-3 print:py-0.5 print:px-2 text-slate-900 leading-snug">
                     {selectedDplNames.length > 0
                       ? selectedDplNames.join("; ")
                       : "-"}
                   </td>
                 </tr>
                 <tr>
-                  <td className="py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
+                  <td className="w-[26%] py-1.5 px-3 print:py-0.5 print:px-2 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
                     Topik Panca Cinta KBC
                   </td>
-                  <td className="py-1.5 px-3 font-bold text-rose-900">
+                  <td className="py-1.5 px-3 print:py-0.5 print:px-2 font-bold text-rose-900 leading-snug">
                     {selectedPcNames.length > 0
                       ? selectedPcNames.join("; ")
                       : "-"}
                   </td>
                 </tr>
                 <tr>
-                  <td className="py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
+                  <td className="w-[26%] py-1.5 px-3 print:py-0.5 print:px-2 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300 align-top">
                     Benang Merah Nilai Cinta (KBC)
                   </td>
-                  <td className="py-1.5 px-3 text-slate-900 leading-relaxed">
+                  <td className="py-1.5 px-3 print:py-0.5 print:px-2 text-slate-900 leading-snug">
                     {rpp.benang_merah_kbc || "-"}
                   </td>
                 </tr>
@@ -421,17 +441,17 @@ export function RppPreviewClient({ data }: RppPreviewClientProps) {
             </table>
 
             {/* C. DESAIN PEMBELAJARAN */}
-            <div className="bg-slate-200/90 font-black px-3 py-1.5 border-t border-b border-slate-900 uppercase tracking-wide">
+            <div className="bg-slate-200/90 font-black px-3 py-1.5 print:py-1 border-t border-b border-slate-900 uppercase tracking-wide break-after-avoid">
               C. DESAIN PEMBELAJARAN
             </div>
             <table className="w-full border-collapse">
               <tbody className="divide-y divide-slate-300">
                 {isLengkap && master.capaianPembelajaran && (
                   <tr>
-                    <td className="w-1/3 py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
+                    <td className="w-[26%] py-1.5 px-3 print:py-0.5 print:px-2 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300 align-top">
                       Capaian Pembelajaran (CP) [L]
                     </td>
-                    <td className="py-1.5 px-3 text-slate-900 leading-relaxed">
+                    <td className="py-1.5 px-3 print:py-0.5 print:px-2 text-slate-900 leading-snug">
                       <strong>Elemen: {master.capaianPembelajaran.elemen}</strong> —{" "}
                       {master.capaianPembelajaran.deskripsi_cp}
                     </td>
@@ -439,47 +459,47 @@ export function RppPreviewClient({ data }: RppPreviewClientProps) {
                 )}
                 {isLengkap && rpp.topik_pembelajaran && (
                   <tr>
-                    <td className="w-1/3 py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
+                    <td className="w-[26%] py-1.5 px-3 print:py-0.5 print:px-2 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
                       Topik Pembelajaran [L]
                     </td>
-                    <td className="py-1.5 px-3 font-bold text-slate-900">
+                    <td className="py-1.5 px-3 print:py-0.5 print:px-2 font-bold text-slate-900">
                       {rpp.topik_pembelajaran}
                     </td>
                   </tr>
                 )}
                 <tr>
-                  <td className="w-1/3 py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
+                  <td className="w-[26%] py-1.5 px-3 print:py-0.5 print:px-2 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300 align-top">
                     Tujuan Pembelajaran (TP)
                   </td>
-                  <td className="py-1.5 px-3 text-slate-900 leading-relaxed whitespace-pre-line">
+                  <td className="py-1.5 px-3 print:py-0.5 print:px-2 text-slate-900 leading-snug whitespace-pre-line">
                     {rpp.tujuan_pembelajaran_teks}
                   </td>
                 </tr>
                 {isLengkap && rpp.lintas_disiplin_ilmu && (
                   <tr>
-                    <td className="w-1/3 py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
+                    <td className="w-[26%] py-1.5 px-3 print:py-0.5 print:px-2 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
                       Lintas Disiplin Ilmu [L]
                     </td>
-                    <td className="py-1.5 px-3 text-slate-900">
+                    <td className="py-1.5 px-3 print:py-0.5 print:px-2 text-slate-900 leading-snug">
                       {rpp.lintas_disiplin_ilmu}
                     </td>
                   </tr>
                 )}
                 <tr>
-                  <td className="py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
+                  <td className="w-[26%] py-1.5 px-3 print:py-0.5 print:px-2 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
                     Model & Metode Pembelajaran
                   </td>
-                  <td className="py-1.5 px-3 text-slate-900">
+                  <td className="py-1.5 px-3 print:py-0.5 print:px-2 text-slate-900 leading-snug">
                     <strong>Model:</strong> {selectedModel?.nama || "Pembelajaran Mendalam"}{" "}
                     • <strong>Metode:</strong>{" "}
                     {(rpp.metode_pembelajaran || []).join(", ") || "-"}
                   </td>
                 </tr>
                 <tr>
-                  <td className="py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
+                  <td className="w-[26%] py-1.5 px-3 print:py-0.5 print:px-2 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300 align-top">
                     Lingkungan & Budaya Belajar
                   </td>
-                  <td className="py-1.5 px-3 text-slate-900">
+                  <td className="py-1.5 px-3 print:py-0.5 print:px-2 text-slate-900 leading-snug">
                     <strong>Fisik:</strong> {rpp.lingkungan_belajar_fisik || "-"} •{" "}
                     <strong>Budaya:</strong> {rpp.budaya_belajar || "-"}
                     {isLengkap && rpp.kemitraan_pembelajaran && (
@@ -498,7 +518,7 @@ export function RppPreviewClient({ data }: RppPreviewClientProps) {
               const activeSpec = getModelPedagogiSpec(selectedModel?.nama);
               return (
                 <>
-                  <div className="bg-slate-200/90 font-black px-3 py-1.5 border-t border-b border-slate-900 uppercase tracking-wide flex flex-wrap items-center justify-between gap-2">
+                  <div className="bg-slate-200/90 font-black px-3 py-1.5 print:py-1 border-t border-b border-slate-900 uppercase tracking-wide flex flex-wrap items-center justify-between gap-2 break-after-avoid">
                     <span>D. PENGALAMAN BELAJAR ({activeSpec.nama_resmi.toUpperCase()})</span>
                     <span className="text-[10px] font-bold text-emerald-900 normal-case">
                       {activeSpec.format_pengalaman_label}
@@ -506,28 +526,28 @@ export function RppPreviewClient({ data }: RppPreviewClientProps) {
                   </div>
 
                   {/* Ringkasan Struktur 3M Model pada Dokumen Cetak */}
-                  <div className="grid grid-cols-3 border-b border-slate-400 bg-slate-50/70 text-[10.5px] divide-x divide-slate-300">
-                    <div className="p-2">
+                  <div className="grid grid-cols-3 border-b border-slate-400 bg-slate-50/70 text-[10px] divide-x divide-slate-300 break-after-avoid break-inside-avoid">
+                    <div className="p-2 print:p-1.5">
                       <div className="font-bold text-slate-900">
                         1. {activeSpec.struktur_3m.memahami.judul_fase}
                       </div>
-                      <div className="text-slate-600 leading-snug">
+                      <div className="text-slate-600 leading-tight">
                         {activeSpec.struktur_3m.memahami.deskripsi_fase}
                       </div>
                     </div>
-                    <div className="p-2">
+                    <div className="p-2 print:p-1.5">
                       <div className="font-bold text-slate-900">
                         2. {activeSpec.struktur_3m.mengaplikasi.judul_fase}
                       </div>
-                      <div className="text-slate-600 leading-snug">
+                      <div className="text-slate-600 leading-tight">
                         {activeSpec.struktur_3m.mengaplikasi.deskripsi_fase}
                       </div>
                     </div>
-                    <div className="p-2">
+                    <div className="p-2 print:p-1.5">
                       <div className="font-bold text-slate-900">
                         3. {activeSpec.struktur_3m.merefleksi.judul_fase}
                       </div>
-                      <div className="text-slate-600 leading-snug">
+                      <div className="text-slate-600 leading-tight">
                         {activeSpec.struktur_3m.merefleksi.deskripsi_fase}
                       </div>
                     </div>
@@ -540,7 +560,7 @@ export function RppPreviewClient({ data }: RppPreviewClientProps) {
               const pLangkah = langkahList.filter((l) => l.pertemuan_ke === pNum);
               return (
                 <div key={`prev-p-${pNum}`} className="border-b border-slate-900 last:border-b-0">
-                  <div className="bg-slate-100 font-bold px-3 py-1 text-slate-800 text-[11px] flex items-center justify-between">
+                  <div className="bg-slate-100 font-bold px-3 py-1 text-slate-800 text-[10.5px] print:text-[10px] flex items-center justify-between break-after-avoid">
                     <span>
                       PERTEMUAN KE-{pNum} — MODEL:{" "}
                       {(selectedModel?.nama || "Pembelajaran Mendalam").toUpperCase()}
@@ -551,22 +571,22 @@ export function RppPreviewClient({ data }: RppPreviewClientProps) {
                     </span>
                   </div>
 
-                  <table className="w-full border-collapse text-[11px]">
-                    <thead>
+                  <table className="w-full border-collapse text-[10px]">
+                    <thead className="break-after-avoid">
                       <tr className="bg-slate-50 border-b border-slate-400 font-bold text-slate-800">
-                        <th className="py-1 px-1.5 text-center w-8 border-r border-slate-300">
+                        <th className="py-1 px-1 text-center w-7 border-r border-slate-300">
                           No
                         </th>
                         <th className="py-1 px-2 text-left border-r border-slate-300">
                           Sintaks Model & Rincian Pengalaman Pembelajaran (Guru & Murid)
                         </th>
-                        <th className="py-1 px-2 text-center w-24 border-r border-slate-300">
-                          Pengalaman Belajar (3M)
+                        <th className="py-1 px-1.5 text-center w-20 border-r border-slate-300">
+                          Pengalaman (3M)
                         </th>
-                        <th className="py-1 px-2 text-center w-28 border-r border-slate-300">
+                        <th className="py-1 px-1.5 text-center w-24 border-r border-slate-300">
                           Prinsip & Nilai Cinta
                         </th>
-                        <th className="py-1 px-1.5 text-center w-14">Durasi</th>
+                        <th className="py-1 px-1 text-center w-11">Durasi</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-300">
@@ -577,58 +597,54 @@ export function RppPreviewClient({ data }: RppPreviewClientProps) {
                         const parsed = parseLangkahDeskripsi(l.deskripsi_kegiatan);
 
                         return (
-                          <tr key={`p-${pNum}-l-${idx}`}>
-                            <td className="py-1.5 px-1.5 text-center font-bold border-r border-slate-300 align-top">
+                          <tr key={`p-${pNum}-l-${idx}`} className="break-inside-avoid">
+                            <td className="py-1 px-1 text-center font-bold border-r border-slate-300 align-top">
                               {idx + 1}
                             </td>
-                            <td className="py-1.5 px-2 border-r border-slate-300 align-top leading-relaxed space-y-1">
-                              <div className="flex flex-wrap items-center gap-1.5">
-                                <span className="font-bold uppercase text-[10px] text-emerald-800">
+                            <td className="py-1 px-2 border-r border-slate-300 align-top leading-snug space-y-0.5">
+                              <div className="flex flex-wrap items-center gap-1 mb-0.5">
+                                <span className="font-bold uppercase text-[9px] text-emerald-800">
                                   [{l.tahap.toUpperCase()}]
                                 </span>
                                 {parsed.sintaksHeader && (
-                                  <span className="font-bold text-[10.5px] text-slate-900 bg-emerald-50 border border-emerald-200 px-1.5 py-0.2 rounded">
+                                  <span className="font-semibold text-[9.5px] text-slate-900 bg-emerald-50/80 border border-emerald-200/80 px-1 py-0.2 rounded">
                                     {parsed.sintaksHeader}
                                   </span>
                                 )}
                               </div>
 
                               {parsed.aktivitasGuru || parsed.aktivitasMurid ? (
-                                <div className="space-y-1 text-[11px]">
+                                <div className="space-y-0.5 text-[10px] leading-snug">
                                   {parsed.aktivitasGuru && (
-                                    <div>
-                                      <strong className="text-slate-800">
-                                        • Aktivitas Guru:{" "}
-                                      </strong>
-                                      <span>{parsed.aktivitasGuru}</span>
-                                    </div>
+                                    <p>
+                                      <strong className="text-slate-900">• Aktivitas Guru: </strong>
+                                      <span className="text-slate-800">{parsed.aktivitasGuru}</span>
+                                    </p>
                                   )}
                                   {parsed.aktivitasMurid && (
-                                    <div>
-                                      <strong className="text-emerald-950">
-                                        • Aktivitas Murid:{" "}
-                                      </strong>
-                                      <span>{parsed.aktivitasMurid}</span>
-                                    </div>
+                                    <p>
+                                      <strong className="text-emerald-950">• Aktivitas Murid: </strong>
+                                      <span className="text-slate-800">{parsed.aktivitasMurid}</span>
+                                    </p>
                                   )}
                                 </div>
                               ) : (
-                                <div className="whitespace-pre-line">
+                                <div className="whitespace-pre-line text-[10px] leading-snug text-slate-800">
                                   {parsed.isiUtama}
                                 </div>
                               )}
 
                               {l.aksi_kbc && (
-                                <div className="text-[10px] text-rose-800 italic pt-0.5">
-                                  ❤️ Aksi Cinta Guru ({pcObj?.nama || "KBC"}):{" "}
+                                <p className="text-[9.5px] leading-snug text-rose-800 italic pt-0.5">
+                                  ❤️ <strong>Aksi Cinta Guru ({pcObj?.nama || "KBC"}):</strong>{" "}
                                   {l.aksi_kbc}
-                                </div>
+                                </p>
                               )}
                             </td>
-                            <td className="py-1.5 px-2 text-center border-r border-slate-300 align-top capitalize font-semibold">
+                            <td className="py-1 px-1.5 text-center border-r border-slate-300 align-top capitalize font-semibold text-[10px]">
                               {l.pengalaman}
                             </td>
-                            <td className="py-1.5 px-2 text-center border-r border-slate-300 align-top text-[10px]">
+                            <td className="py-1 px-1.5 text-center border-r border-slate-300 align-top text-[9.5px] leading-tight">
                               <div>{(l.prinsip || []).join(", ")}</div>
                               {pcObj && (
                                 <div className="font-bold text-rose-800 mt-0.5">
@@ -636,7 +652,7 @@ export function RppPreviewClient({ data }: RppPreviewClientProps) {
                                 </div>
                               )}
                             </td>
-                            <td className="py-1.5 px-1.5 text-center font-bold align-top">
+                            <td className="py-1 px-1 text-center font-bold align-top text-[10px]">
                               {l.durasi_menit}&apos;
                             </td>
                           </tr>
@@ -649,41 +665,41 @@ export function RppPreviewClient({ data }: RppPreviewClientProps) {
             })}
 
             {/* E. RANCANGAN ASESMEN */}
-            <div className="bg-slate-200/90 font-black px-3 py-1.5 border-t border-b border-slate-900 uppercase tracking-wide">
+            <div className="bg-slate-200/90 font-black px-3 py-1.5 print:py-1 border-t border-b border-slate-900 uppercase tracking-wide break-after-avoid">
               E. RANCANGAN ASESMEN
             </div>
             <table className="w-full border-collapse">
               <tbody className="divide-y divide-slate-300">
                 <tr>
-                  <td className="w-1/3 py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
+                  <td className="w-[26%] py-1.5 px-3 print:py-0.5 print:px-2 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
                     Asesmen Awal (Diagnostik)
                   </td>
-                  <td className="py-1.5 px-3 text-slate-900 leading-relaxed">
+                  <td className="py-1.5 px-3 print:py-0.5 print:px-2 text-slate-900 leading-snug">
                     {rpp.asesmen_awal || "-"}
                   </td>
                 </tr>
                 <tr>
-                  <td className="py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
+                  <td className="w-[26%] py-1.5 px-3 print:py-0.5 print:px-2 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
                     Asesmen Proses (Formatif)
                   </td>
-                  <td className="py-1.5 px-3 text-slate-900 leading-relaxed">
+                  <td className="py-1.5 px-3 print:py-0.5 print:px-2 text-slate-900 leading-snug">
                     {rpp.asesmen_proses || "-"}
                   </td>
                 </tr>
                 <tr>
-                  <td className="py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
+                  <td className="w-[26%] py-1.5 px-3 print:py-0.5 print:px-2 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
                     Asesmen Akhir (Sumatif)
                   </td>
-                  <td className="py-1.5 px-3 text-slate-900 leading-relaxed">
+                  <td className="py-1.5 px-3 print:py-0.5 print:px-2 text-slate-900 leading-snug">
                     {rpp.asesmen_akhir || "-"}
                   </td>
                 </tr>
                 {rpp.kktp && (
                   <tr>
-                    <td className="py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
+                    <td className="w-[26%] py-1.5 px-3 print:py-0.5 print:px-2 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
                       Kriteria Ketercapaian (KKTP)
                     </td>
-                    <td className="py-1.5 px-3 text-slate-900 leading-relaxed">
+                    <td className="py-1.5 px-3 print:py-0.5 print:px-2 text-slate-900 leading-snug">
                       {rpp.kktp}
                     </td>
                   </tr>
@@ -691,19 +707,19 @@ export function RppPreviewClient({ data }: RppPreviewClientProps) {
                 {/* Rubrik Karakter Nilai Panca Cinta */}
                 {(rpp.rubrik_kbc || []).length > 0 && (
                   <tr>
-                    <td className="py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
+                    <td className="w-[26%] py-1.5 px-3 print:py-0.5 print:px-2 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300 align-top">
                       Rubrik Karakter Nilai Panca Cinta KBC
                     </td>
-                    <td className="py-2 px-3 text-slate-900 space-y-2">
+                    <td className="py-1.5 px-3 print:py-1 print:px-2 text-slate-900 space-y-1.5">
                       {(rpp.rubrik_kbc || []).map((rb, idx) => (
                         <div
                           key={`rb-pv-${idx}`}
-                          className="border border-slate-300 rounded p-2 bg-slate-50 text-[10px]"
+                          className="border border-slate-300 rounded p-1.5 bg-slate-50 text-[9.5px]"
                         >
-                          <div className="font-bold text-rose-900 mb-1">
+                          <div className="font-bold text-rose-900 mb-0.5">
                             Topik: {rb.topik_nama} ({rb.indikator})
                           </div>
-                          <div className="grid grid-cols-2 md:grid-cols-4 gap-1.5">
+                          <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
                             {rb.levels.map((lvl) => (
                               <div
                                 key={`rbl-${lvl.level}`}
@@ -724,76 +740,77 @@ export function RppPreviewClient({ data }: RppPreviewClientProps) {
               </tbody>
             </table>
 
-            {/* F. LAMPIRAN */}
-            <div className="bg-slate-200/90 font-black px-3 py-1.5 border-t border-b border-slate-900 uppercase tracking-wide">
+            {/* F. LAMPIRAN - FULL WIDTH UNTUK EFISIENSI RUANG KERTAS & MENGISI HALAMAN */}
+            <div className="bg-slate-200/90 font-black px-3 py-1.5 print:py-1 border-t border-b border-slate-900 uppercase tracking-wide break-after-avoid">
               F. LAMPIRAN
             </div>
-            <table className="w-full border-collapse">
-              <tbody className="divide-y divide-slate-300">
-                {rpp.lampiran?.lkpd && (
-                  <tr>
-                    <td className="w-1/3 py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
-                      Lembar Kerja Peserta Didik (LKPD)
-                    </td>
-                    <td className="py-1.5 px-3 text-slate-900 leading-relaxed whitespace-pre-line">
-                      {rpp.lampiran.lkpd}
-                    </td>
-                  </tr>
-                )}
-                {rpp.lampiran?.bahan_bacaan && (
-                  <tr>
-                    <td className="w-1/3 py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
-                      Bahan Bacaan Guru & Murid
-                    </td>
-                    <td className="py-1.5 px-3 text-slate-900 leading-relaxed whitespace-pre-line">
-                      {rpp.lampiran.bahan_bacaan}
-                    </td>
-                  </tr>
-                )}
-                {rpp.lampiran?.glosarium && (
-                  <tr>
-                    <td className="w-1/3 py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
-                      Glosarium (Daftar Istilah)
-                    </td>
-                    <td className="py-1.5 px-3 text-slate-900 leading-relaxed whitespace-pre-line">
-                      {rpp.lampiran.glosarium}
-                    </td>
-                  </tr>
-                )}
-                {rpp.lampiran?.daftar_pustaka && (
-                  <tr>
-                    <td className="w-1/3 py-1.5 px-3 font-semibold text-slate-700 bg-slate-50/70 border-r border-slate-300">
-                      Daftar Pustaka & Referensi
-                    </td>
-                    <td className="py-1.5 px-3 text-slate-900 leading-relaxed whitespace-pre-line">
-                      {rpp.lampiran.daftar_pustaka}
-                    </td>
-                  </tr>
-                )}
-              </tbody>
-            </table>
+            <div className="divide-y divide-slate-300 text-xs print:text-[10px]">
+              {rpp.lampiran?.lkpd && (
+                <div className="p-3 print:p-2 space-y-1">
+                  <div className="font-bold text-slate-900 uppercase tracking-wide text-[11px] print:text-[10px] bg-slate-100 px-2 py-0.5 rounded border border-slate-200 flex items-center justify-between break-after-avoid">
+                    <span>1. Lembar Kerja Peserta Didik (LKPD)</span>
+                    <span className="text-[9.5px] font-semibold text-emerald-800 lowercase">
+                      {selectedModel?.nama || "PjBL"}
+                    </span>
+                  </div>
+                  <div className="text-slate-800 leading-snug whitespace-pre-line text-[10.5px] print:text-[10px] pl-1 font-sans">
+                    {rpp.lampiran.lkpd}
+                  </div>
+                </div>
+              )}
+              {rpp.lampiran?.bahan_bacaan && (
+                <div className="p-3 print:p-2 space-y-1">
+                  <div className="font-bold text-slate-900 uppercase tracking-wide text-[11px] print:text-[10px] bg-slate-100 px-2 py-0.5 rounded border border-slate-200 break-after-avoid">
+                    2. Bahan Bacaan Guru & Peserta Didik
+                  </div>
+                  <div className="text-slate-800 leading-snug whitespace-pre-line text-[10.5px] print:text-[10px] pl-1 font-sans">
+                    {rpp.lampiran.bahan_bacaan}
+                  </div>
+                </div>
+              )}
+              {rpp.lampiran?.glosarium && (
+                <div className="p-3 print:p-2 space-y-1">
+                  <div className="font-bold text-slate-900 uppercase tracking-wide text-[11px] print:text-[10px] bg-slate-100 px-2 py-0.5 rounded border border-slate-200 break-after-avoid">
+                    3. Glosarium (Daftar Istilah)
+                  </div>
+                  <div className="text-slate-800 leading-snug whitespace-pre-line text-[10.5px] print:text-[10px] pl-1 font-sans">
+                    {rpp.lampiran.glosarium}
+                  </div>
+                </div>
+              )}
+              {rpp.lampiran?.daftar_pustaka && (
+                <div className="p-3 print:p-2 space-y-1">
+                  <div className="font-bold text-slate-900 uppercase tracking-wide text-[11px] print:text-[10px] bg-slate-100 px-2 py-0.5 rounded border border-slate-200 break-after-avoid">
+                    4. Daftar Pustaka & Referensi
+                  </div>
+                  <div className="text-slate-800 leading-snug whitespace-pre-line text-[10.5px] print:text-[10px] pl-1 font-sans">
+                    {rpp.lampiran.daftar_pustaka}
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* ========================================================================= */}
           {/* LEMBAR PENGESAHAN TANDA TANGAN */}
           {/* ========================================================================= */}
-          <div className="mt-8 pt-2 break-inside-avoid text-xs text-slate-900">
+          <div className="mt-4 pt-2 break-inside-avoid text-xs print:text-[10px] text-slate-900">
             <div className="flex justify-between items-start">
               {/* Tanda Tangan Kepala Madrasah */}
-              <div className="text-center w-64 space-y-1">
+              <div className="text-center w-60 space-y-0.5">
                 <p>Mengetahui,</p>
                 <p className="font-bold">Kepala {madrasah.nama}</p>
-                <div className="h-20" />
+                <div className="h-14" />
                 <p className="font-bold underline decoration-slate-900 underline-offset-2">
                   {madrasah.kepala_nama || "..................................................."}
                 </p>
-                <p className="text-[11px] text-slate-600">
+                <p className="text-[10px] text-slate-600">
                   NIP. {madrasah.kepala_nip || "......................................."}
                 </p>
               </div>
 
               {/* Tanda Tangan Guru Mata Pelajaran */}
-              <div className="text-center w-64 space-y-1">
+              <div className="text-center w-60 space-y-0.5">
                 <p>
                   {madrasah.kabupaten || "Tasikmalaya"},{" "}
                   {new Date().toLocaleDateString("id-ID", {
@@ -803,12 +820,12 @@ export function RppPreviewClient({ data }: RppPreviewClientProps) {
                   })}
                 </p>
                 <p className="font-bold">Guru Mata Pelajaran,</p>
-                <div className="h-20" />
+                <div className="h-14" />
                 <p className="font-bold underline decoration-slate-900 underline-offset-2">
                   {penugasan.guru.nama_lengkap}
                   {penugasan.guru.gelar ? `, ${penugasan.guru.gelar}` : ""}
                 </p>
-                <p className="text-[11px] text-slate-600">
+                <p className="text-[10px] text-slate-600">
                   NIP. {penugasan.guru.nip || "......................................."}
                 </p>
               </div>
@@ -816,7 +833,7 @@ export function RppPreviewClient({ data }: RppPreviewClientProps) {
           </div>
 
           {/* Footer Dokumen Bank Data */}
-          <div className="pt-6 border-t border-slate-200 mt-8 flex flex-col sm:flex-row items-center justify-between text-[10px] text-slate-500 italic">
+          <div className="pt-2 border-t border-slate-200 mt-3 flex flex-col sm:flex-row items-center justify-between text-[9.5px] text-slate-500 italic break-inside-avoid">
             <span>{madrasah.nama} • Modul Ajar / RPP Kurikulum Berbasis Cinta (Fase D)</span>
             <span>Sumber CP: KMA 1503/2025 · Bank data 2026-2027-v1</span>
           </div>

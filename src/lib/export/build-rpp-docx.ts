@@ -346,7 +346,7 @@ export async function buildRppDocx(
       }
 
       return new TableRow({
-        cantSplit: true,
+        cantSplit: false,
         children: [
           new TableCell({
             children: [
@@ -468,7 +468,7 @@ export async function buildRppDocx(
       const mText = rb.levels?.find((l) => l.level === "M")?.deskripsi || "-";
 
       return new TableRow({
-        cantSplit: true,
+        cantSplit: false,
         children: [
           new TableCell({ children: [new Paragraph({ children: [new TextRun({ text: topikText, bold: true, font, size: bodyFontSize })] })] }),
           new TableCell({ children: [new Paragraph({ children: [new TextRun({ text: mbText, font, size: bodyFontSize })] })] }),
