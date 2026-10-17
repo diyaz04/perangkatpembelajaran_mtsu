@@ -34,7 +34,6 @@ import {
   SidebarRail,
   useSidebar,
 } from "@/components/ui/sidebar";
-import { Badge } from "@/components/ui/badge";
 import type { Profile } from "@/types/database";
 
 interface AppSidebarProps {
@@ -150,8 +149,8 @@ export function AppSidebar({ profile }: AppSidebarProps) {
       collapsible="icon"
       className="border-r border-[#04281e] bg-[#063b2c] text-white"
     >
-      {/* Watermark Siluet Kubah / Arsitektur Madrasah di Latar Bawah */}
-      <div className="absolute -bottom-8 -left-6 w-48 h-56 pointer-events-none opacity-10 text-emerald-300">
+      {/* Watermark Siluet Kubah / Arsitektur Madrasah di Latar Bawah (Hanya tampil saat expanded) */}
+      <div className="absolute -bottom-8 -left-6 w-48 h-56 pointer-events-none opacity-10 text-emerald-300 group-data-[collapsible=icon]:hidden">
         <svg viewBox="0 0 200 240" fill="currentColor" className="w-full h-full">
           <path d="M100 20 C85 60 40 85 40 130 L40 240 L160 240 L160 130 C160 85 115 60 100 20 Z" />
           <path d="M100 0 L103 15 L97 15 Z" />
@@ -163,9 +162,14 @@ export function AppSidebar({ profile }: AppSidebarProps) {
       </div>
 
       {/* Header Madrasah Sesuai Mockup */}
-      <SidebarHeader className="border-b border-[#04281e] p-4 bg-[#053326]/50">
-        <Link href="/dashboard" onClick={handleNavClick} className="flex items-center gap-3">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white p-1 shadow-xs overflow-hidden">
+      <SidebarHeader className="border-b border-[#04281e] p-4 group-data-[collapsible=icon]:p-2 group-data-[collapsible=icon]:py-3 bg-[#053326]/50 transition-all flex items-center justify-between group-data-[collapsible=icon]:justify-center">
+        <Link
+          href="/dashboard"
+          onClick={handleNavClick}
+          className="flex items-center gap-3 group-data-[collapsible=icon]:gap-0 group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:w-full transition-all"
+          title="MTs KH A Wahab Muhsin"
+        >
+          <div className="flex h-10 w-10 group-data-[collapsible=icon]:h-9 group-data-[collapsible=icon]:w-9 shrink-0 items-center justify-center rounded-xl bg-white p-1 shadow-xs overflow-hidden mx-auto">
             <Image
               src="/logo-mts.png"
               alt="Logo MTs"
@@ -186,14 +190,14 @@ export function AppSidebar({ profile }: AppSidebarProps) {
       </SidebarHeader>
 
       {/* Navigasi Menu */}
-      <SidebarContent className="px-2 py-3 space-y-4 relative z-10">
+      <SidebarContent className="px-2 group-data-[collapsible=icon]:px-1.5 py-3 space-y-4 group-data-[collapsible=icon]:space-y-3 relative z-10">
         {/* Menu Utama */}
         <SidebarGroup>
-          <SidebarGroupLabel className="text-emerald-300/80 text-[10px] font-bold uppercase tracking-wider px-3 mb-1">
+          <SidebarGroupLabel className="text-emerald-300/80 text-[10px] font-bold uppercase tracking-wider px-3 mb-1 group-data-[collapsible=icon]:hidden">
             Perangkat Pembelajaran
           </SidebarGroupLabel>
           <SidebarGroupContent>
-            <SidebarMenu className="gap-1">
+            <SidebarMenu className="gap-1 group-data-[collapsible=icon]:gap-1.5">
               {mainNav.map((item) => {
                 const Icon = item.icon;
                 const isActive =
@@ -201,7 +205,10 @@ export function AppSidebar({ profile }: AppSidebarProps) {
                   (item.href !== "/dashboard" && pathname.startsWith(item.href));
 
                 return (
-                  <SidebarMenuItem key={item.href}>
+                  <SidebarMenuItem
+                    key={item.href}
+                    className="group-data-[collapsible=icon]:flex group-data-[collapsible=icon]:justify-center"
+                  >
                     <SidebarMenuButton
                       render={<Link href={item.href} prefetch={true} />}
                       isActive={isActive}
@@ -209,12 +216,12 @@ export function AppSidebar({ profile }: AppSidebarProps) {
                       onClick={handleNavClick}
                       className={
                         isActive
-                          ? "bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold rounded-xl shadow-xs px-3 py-2.5 h-10 transition-colors"
-                          : "text-slate-200 hover:bg-emerald-900/60 hover:text-white rounded-xl px-3 py-2.5 h-10 transition-colors"
+                          ? "bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold rounded-xl shadow-xs px-3 py-2.5 h-10 group-data-[collapsible=icon]:!size-10 group-data-[collapsible=icon]:!p-0 group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:mx-auto transition-all"
+                          : "text-slate-200 hover:bg-emerald-900/60 hover:text-white rounded-xl px-3 py-2.5 h-10 group-data-[collapsible=icon]:!size-10 group-data-[collapsible=icon]:!p-0 group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:mx-auto transition-all"
                       }
                     >
-                      <Icon className={isActive ? "text-white" : "text-slate-300"} />
-                      <span className="text-xs">{item.title}</span>
+                      <Icon className={isActive ? "text-white size-4.5 group-data-[collapsible=icon]:size-5 shrink-0" : "text-slate-300 size-4.5 group-data-[collapsible=icon]:size-5 shrink-0"} />
+                      <span className="text-xs group-data-[collapsible=icon]:hidden">{item.title}</span>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 );
@@ -226,17 +233,20 @@ export function AppSidebar({ profile }: AppSidebarProps) {
         {/* Khusus Verifikasi & Admin */}
         {adminNav.length > 0 && (
           <SidebarGroup>
-            <SidebarGroupLabel className="text-emerald-300/80 text-[10px] font-bold uppercase tracking-wider px-3 mb-1">
+            <SidebarGroupLabel className="text-emerald-300/80 text-[10px] font-bold uppercase tracking-wider px-3 mb-1 group-data-[collapsible=icon]:hidden">
               Pengawasan & Kelola
             </SidebarGroupLabel>
             <SidebarGroupContent>
-              <SidebarMenu className="gap-1">
+              <SidebarMenu className="gap-1 group-data-[collapsible=icon]:gap-1.5">
                 {adminNav.map((item) => {
                   const Icon = item.icon;
                   const isActive = pathname.startsWith(item.href);
 
                   return (
-                    <SidebarMenuItem key={item.href}>
+                    <SidebarMenuItem
+                      key={item.href}
+                      className="group-data-[collapsible=icon]:flex group-data-[collapsible=icon]:justify-center"
+                    >
                       <SidebarMenuButton
                         render={<Link href={item.href} prefetch={true} />}
                         isActive={isActive}
@@ -244,12 +254,12 @@ export function AppSidebar({ profile }: AppSidebarProps) {
                         onClick={handleNavClick}
                         className={
                           isActive
-                            ? "bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold rounded-xl shadow-xs px-3 py-2.5 h-10 transition-colors"
-                            : "text-slate-200 hover:bg-emerald-900/60 hover:text-white rounded-xl px-3 py-2.5 h-10 transition-colors"
+                            ? "bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold rounded-xl shadow-xs px-3 py-2.5 h-10 group-data-[collapsible=icon]:!size-10 group-data-[collapsible=icon]:!p-0 group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:mx-auto transition-all"
+                            : "text-slate-200 hover:bg-emerald-900/60 hover:text-white rounded-xl px-3 py-2.5 h-10 group-data-[collapsible=icon]:!size-10 group-data-[collapsible=icon]:!p-0 group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:mx-auto transition-all"
                         }
                       >
-                        <Icon className={isActive ? "text-white" : "text-slate-300"} />
-                        <span className="text-xs">{item.title}</span>
+                        <Icon className={isActive ? "text-white size-4.5 group-data-[collapsible=icon]:size-5 shrink-0" : "text-slate-300 size-4.5 group-data-[collapsible=icon]:size-5 shrink-0"} />
+                        <span className="text-xs group-data-[collapsible=icon]:hidden">{item.title}</span>
                         <SidebarMenuBadge>
                           <span className="text-[10px] font-medium py-0.5 px-2 rounded-full bg-emerald-900/90 text-emerald-200 border border-emerald-700/60">
                             {item.badge}
@@ -266,17 +276,20 @@ export function AppSidebar({ profile }: AppSidebarProps) {
 
         {/* Konfigurasi Sistem */}
         <SidebarGroup className="mt-auto">
-          <SidebarGroupLabel className="text-emerald-300/80 text-[10px] font-bold uppercase tracking-wider px-3 mb-1">
+          <SidebarGroupLabel className="text-emerald-300/80 text-[10px] font-bold uppercase tracking-wider px-3 mb-1 group-data-[collapsible=icon]:hidden">
             Sistem
           </SidebarGroupLabel>
           <SidebarGroupContent>
-            <SidebarMenu className="gap-1">
+            <SidebarMenu className="gap-1 group-data-[collapsible=icon]:gap-1.5">
               {systemNav.map((item) => {
                 const Icon = item.icon;
                 const isActive = pathname.startsWith(item.href);
 
                 return (
-                  <SidebarMenuItem key={item.href}>
+                  <SidebarMenuItem
+                    key={item.href}
+                    className="group-data-[collapsible=icon]:flex group-data-[collapsible=icon]:justify-center"
+                  >
                     <SidebarMenuButton
                       render={<Link href={item.href} prefetch={true} />}
                       isActive={isActive}
@@ -284,12 +297,12 @@ export function AppSidebar({ profile }: AppSidebarProps) {
                       onClick={handleNavClick}
                       className={
                         isActive
-                          ? "bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold rounded-xl shadow-xs px-3 py-2.5 h-10 transition-colors"
-                          : "text-slate-200 hover:bg-emerald-900/60 hover:text-white rounded-xl px-3 py-2.5 h-10 transition-colors"
+                          ? "bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold rounded-xl shadow-xs px-3 py-2.5 h-10 group-data-[collapsible=icon]:!size-10 group-data-[collapsible=icon]:!p-0 group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:mx-auto transition-all"
+                          : "text-slate-200 hover:bg-emerald-900/60 hover:text-white rounded-xl px-3 py-2.5 h-10 group-data-[collapsible=icon]:!size-10 group-data-[collapsible=icon]:!p-0 group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:mx-auto transition-all"
                       }
                     >
-                      <Icon className={isActive ? "text-white" : "text-slate-300"} />
-                      <span className="text-xs">{item.title}</span>
+                      <Icon className={isActive ? "text-white size-4.5 group-data-[collapsible=icon]:size-5 shrink-0" : "text-slate-300 size-4.5 group-data-[collapsible=icon]:size-5 shrink-0"} />
+                      <span className="text-xs group-data-[collapsible=icon]:hidden">{item.title}</span>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 );
@@ -300,8 +313,9 @@ export function AppSidebar({ profile }: AppSidebarProps) {
       </SidebarContent>
 
       {/* Footer Info Madrasah & Logout Sesuai Mockup */}
-      <SidebarFooter className="border-t border-[#04281e] p-3 group-data-[collapsible=icon]:hidden space-y-2.5 relative z-10 bg-[#053326]/50">
-        <div className="rounded-xl bg-[#04281e]/90 border border-emerald-800/80 p-3 flex items-center gap-2.5">
+      <SidebarFooter className="border-t border-[#04281e] p-3 group-data-[collapsible=icon]:p-2 group-data-[collapsible=icon]:py-3 relative z-10 bg-[#053326]/50 flex flex-col items-center">
+        {/* Info Madrasah hanya tampil saat expanded */}
+        <div className="group-data-[collapsible=icon]:hidden w-full rounded-xl bg-[#04281e]/90 border border-emerald-800/80 p-3 flex items-center gap-2.5 mb-2.5">
           <div className="w-8 h-8 rounded-full bg-emerald-800 text-emerald-300 flex items-center justify-center shrink-0 shadow-2xs">
             <School className="w-4 h-4" />
           </div>
@@ -315,14 +329,24 @@ export function AppSidebar({ profile }: AppSidebarProps) {
           </div>
         </div>
 
-        {/* Tombol Logout Maroon Gelap Sesuai Mockup */}
+        {/* Tombol Logout Expanded */}
         <button
           type="button"
           onClick={handleLogout}
-          className="w-full flex items-center justify-center gap-2 px-3 py-2.5 text-xs font-semibold text-rose-200 hover:text-white bg-[#4a1c24] hover:bg-[#5c232c] border border-rose-900/70 rounded-xl transition-colors cursor-pointer shadow-xs"
+          className="w-full flex items-center justify-center gap-2 px-3 py-2.5 text-xs font-semibold text-rose-200 hover:text-white bg-[#4a1c24] hover:bg-[#5c232c] border border-rose-900/70 rounded-xl transition-colors cursor-pointer shadow-xs group-data-[collapsible=icon]:hidden"
         >
           <LogOut className="w-3.5 h-3.5" />
           <span>Keluar Akun (Logout)</span>
+        </button>
+
+        {/* Tombol Logout Collapsed (Icon Saja, Berukuran 40px, Tengah) */}
+        <button
+          type="button"
+          onClick={handleLogout}
+          title="Keluar Akun (Logout)"
+          className="hidden group-data-[collapsible=icon]:flex size-10 items-center justify-center rounded-xl text-rose-200 hover:text-white bg-[#4a1c24] hover:bg-[#5c232c] border border-rose-900/70 transition-colors cursor-pointer shadow-xs mx-auto"
+        >
+          <LogOut className="w-4.5 h-4.5" />
         </button>
       </SidebarFooter>
 
