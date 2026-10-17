@@ -13,6 +13,7 @@ import {
   Layers,
   RotateCcw,
   Wand2,
+  RefreshCw,
 } from "lucide-react";
 import {
   Card,
@@ -26,6 +27,7 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import {
   saveProsemAction,
+  syncProsemFromProtaAction,
   type ProsemDetailData,
   type ProsemItemPayload,
 } from "../actions";
@@ -165,6 +167,32 @@ export function ProsemClient({
     }));
     setItems(resetItems);
     setSaveSuccessMsg("Seluruh sel matriks berhasil dikosongkan.");
+  };
+
+  // Sinkronkan Ulang dari Program Tahunan (Prota)
+  const handleSyncFromProta = () => {
+    if (
+      !confirm(
+        `Sinkronkan ulang item TP dari Program Tahunan (Prota) untuk Semester ${semester}? Seluruh alokasi matriks akan diselaraskan dengan data Prota.`
+      )
+    ) {
+      return;
+    }
+    setSaveSuccessMsg(null);
+    setSaveErrorMsg(null);
+
+    startTransition(async () => {
+      const res = await syncProsemFromProtaAction(penugasanId, semester);
+      if (res.success && res.data) {
+        setItems(res.data);
+        setSaveSuccessMsg(
+          `Berhasil menyinkronkan ${res.data.length} item TP dari Program Tahunan (Prota) untuk Semester ${semester}!`
+        );
+        router.refresh();
+      } else {
+        setSaveErrorMsg(res.error || "Gagal menyinkronkan dari Prota.");
+      }
+    });
   };
 
   // Simpan Draf / Ajukan Validasi
@@ -307,6 +335,18 @@ export function ProsemClient({
               Semester 2 (Genap)
             </Link>
           </div>
+
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={handleSyncFromProta}
+            disabled={isPending}
+            className="border-blue-200 bg-blue-50 text-blue-800 hover:bg-blue-100 font-semibold"
+            title="Tarik kembali item TP dan alokasi JP terbaru dari Program Tahunan (Prota)"
+          >
+            <RefreshCw className={`w-4 h-4 mr-1.5 text-blue-600 ${isPending ? "animate-spin" : ""}`} />
+            Sinkronkan dari Prota
+          </Button>
 
           <Button
             variant="outline"

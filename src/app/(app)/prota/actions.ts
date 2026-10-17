@@ -753,7 +753,25 @@ export async function saveProtaAction(
       }
     }
 
-    // 5. Setelah seluruh prota_item tersimpan, perbarui status akhir dokumen (misal "diajukan" atau "draf")
+    // 5. Sinkronkan balik alokasi_jp, semester, dan urutan ke tabel tujuan_pembelajaran di ATP
+    // agar kalkulasi alokasi JP di ATP dan Prota selalu 100% konsisten
+    if (items.length > 0) {
+      for (const it of items) {
+        if (it.tujuan_pembelajaran_id) {
+          await adminDb
+            .from("tujuan_pembelajaran")
+            .update({
+              alokasi_jp: Number(it.alokasi_jp || 2),
+              semester: it.semester,
+              urutan: it.urutan,
+              updated_at: new Date().toISOString(),
+            })
+            .eq("id", it.tujuan_pembelajaran_id);
+        }
+      }
+    }
+
+    // 6. Setelah seluruh prota_item tersimpan, perbarui status akhir dokumen (misal "diajukan" atau "draf")
     await adminDb
       .from("prota")
       .update({
@@ -764,6 +782,8 @@ export async function saveProtaAction(
 
     revalidatePath("/prota");
     revalidatePath(`/prota/${penugasanId}`);
+    revalidatePath("/atp");
+    revalidatePath(`/atp/${penugasanId}`);
     return { success: true };
   } catch (err) {
     const msg = err instanceof Error ? err.message : "Kesalahan sistem.";

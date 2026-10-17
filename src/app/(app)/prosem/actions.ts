@@ -742,3 +742,81 @@ export async function saveProsemAction(
     return { success: false, error: msg };
   }
 }
+
+/**
+ * 4. Sinkronkan Ulang dari PROTA
+ *    Mengambil baris item Prota untuk semester terkait, dan memperbarui item di matriks Prosem.
+ */
+export async function syncProsemFromProtaAction(
+  penugasanId: string,
+  semester: 1 | 2
+): Promise<{
+  success: boolean;
+  data?: ProsemItemPayload[];
+  error?: string;
+}> {
+  try {
+    const session = await getCurrentUser();
+    if (!session) return { success: false, error: "Sesi tidak valid." };
+
+    const supabase = await createClient();
+
+    // 1. Verifikasi penugasan
+    const { data: penugasan } = await supabase
+      .from("penugasan")
+      .select("id, guru_id, tingkat_kelas")
+      .eq("id", penugasanId)
+      .single();
+
+    if (!penugasan) return { success: false, error: "Penugasan tidak ditemukan." };
+    if (session.role === "guru" && penugasan.guru_id !== session.user.id) {
+      return { success: false, error: "Akses ditolak." };
+    }
+
+    // 2. Ambil data Prota untuk penugasan ini
+    const { data: protaData } = await supabase
+      .from("prota")
+      .select("id")
+      .eq("penugasan_id", penugasanId)
+      .maybeSingle();
+
+    if (!protaData) {
+      return { success: false, error: "Dokumen Prota belum dibuat untuk penugasan ini." };
+    }
+
+    // 3. Ambil item Prota khusus untuk semester ini
+    const { data: pItems, error: pErr } = await supabase
+      .from("prota_item")
+      .select("id, kode_tp, materi_pokok, tujuan_pembelajaran_teks, alokasi_jp, urutan")
+      .eq("prota_id", protaData.id)
+      .eq("semester", semester)
+      .order("urutan", { ascending: true });
+
+    if (pErr || !pItems || pItems.length === 0) {
+      return { success: false, error: `Tidak ditemukan item Prota untuk Semester ${semester}. Pastikan Prota sudah diisi.` };
+    }
+
+    // 4. Bentuk ProsemItemPayload baru dari data Prota
+    const newItems: ProsemItemPayload[] = pItems.map((pIt, idx) => ({
+      prota_item_id: pIt.id,
+      kode_tp: pIt.kode_tp || `${penugasan.tingkat_kelas}.${idx + 1}`,
+      materi_pokok: pIt.materi_pokok,
+      tujuan_pembelajaran_teks: pIt.tujuan_pembelajaran_teks || pIt.materi_pokok,
+      alokasi_jp: Number(pIt.alokasi_jp || 2),
+      urutan: pIt.urutan || idx + 1,
+      distribusi_minggu: {},
+    }));
+
+    // 5. Simpan ke database
+    const saveRes = await saveProsemAction(penugasanId, semester, newItems, "draf");
+    if (!saveRes.success) {
+      return { success: false, error: saveRes.error };
+    }
+
+    return { success: true, data: newItems };
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : "Kesalahan sistem saat sinkronisasi Prosem.";
+    return { success: false, error: msg };
+  }
+}
+
