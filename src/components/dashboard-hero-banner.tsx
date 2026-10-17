@@ -14,33 +14,42 @@ export function DashboardHeroBanner({
   roleLabel = "Administrator",
   imageSrc = "/banner-madrasah.png",
 }: DashboardHeroBannerProps) {
-  // Format first name or title nicely
+  // Format nama atau role
   const displayName = nama || roleLabel;
 
   return (
-    <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-emerald-200/80 bg-gradient-to-r from-[#d8f3e5] via-[#e8f7ee] to-[#edf9f3] p-5 sm:p-7 md:p-8 shadow-xs">
-      {/* Gambar Madrasah di Sisi Kanan dengan Fade Gradien Halus */}
-      <div className="absolute right-0 top-0 bottom-0 w-full sm:w-1/2 md:w-[48%] pointer-events-none select-none overflow-hidden hidden sm:block">
+    <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-emerald-200/80 bg-gradient-to-r from-[#d8f3e5] via-[#e6f6ee] to-[#e8f4f8] p-5 sm:p-7 md:p-8 shadow-xs">
+      {/* Gambar Madrasah di Sisi Kanan dengan Masking Gradien Ultra Halus & Seamless */}
+      <div className="absolute right-0 top-0 bottom-0 w-full sm:w-[70%] md:w-[62%] lg:w-[58%] pointer-events-none select-none overflow-hidden hidden sm:block">
         <div className="relative w-full h-full">
-          {/* Masking Gradient dari kiri ke kanan agar foto menyatu alami dengan background hijau muda */}
+          {/* Masking Gradient dari kiri ke kanan yang bertahap lembut tanpa garis batas */}
           <div
             className="absolute inset-0 w-full h-full"
             style={{
-              WebkitMaskImage: "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 20%, rgba(0,0,0,1) 50%)",
-              maskImage: "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 20%, rgba(0,0,0,1) 50%)",
+              WebkitMaskImage:
+                "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.02) 15%, rgba(0,0,0,0.1) 25%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.9) 80%, black 100%)",
+              maskImage:
+                "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.02) 15%, rgba(0,0,0,0.1) 25%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.9) 80%, black 100%)",
             }}
           >
             <Image
               src={imageSrc}
               alt="Gedung MTs KH A Wahab Muhsin"
               fill
-              className="object-cover object-right-top opacity-95"
+              className="object-cover object-right-top"
               priority
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, 60vw"
             />
           </div>
-          {/* Subtle green overlay tone */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#d8f3e5]/70 via-transparent to-transparent pointer-events-none" />
+
+          {/* Overlay Gradien Penyelaras Warna (dari warna solid card di kiri melebur ke transparan di kanan gedung) */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                "linear-gradient(to right, #d8f3e5 0%, rgba(216, 243, 229, 0.96) 18%, rgba(230, 246, 238, 0.75) 38%, rgba(230, 246, 238, 0.25) 62%, transparent 85%)",
+            }}
+          />
         </div>
       </div>
 
