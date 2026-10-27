@@ -1,8 +1,9 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { requireRole } from "@/lib/auth";
+import { requireRole, getCurrentUser } from "@/lib/auth";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { parsePenugasanExcel } from "@/lib/import/parse-penugasan-excel";
 import type {
   JenisKegiatanKalender,
   KelompokMapel,
@@ -746,6 +747,232 @@ export async function deletePenugasanAction(id: string) {
     return { success: true };
   } catch (err: unknown) {
     return { success: false, error: err instanceof Error ? err.message : "Gagal menghapus penugasan" };
+  }
+}
+
+export interface ImportPenugasanRowResult {
+  rowNumber: number;
+  guru_nama: string;
+  mapel_nama: string;
+  tingkat_kelas: string;
+  rombel: string;
+  status: "berhasil" | "gagal";
+  action?: "ditambahkan" | "diperbarui";
+  message: string;
+}
+
+export interface ImportPenugasanActionResult {
+  success: boolean;
+  message?: string;
+  totalRows?: number;
+  berhasilCount?: number;
+  gagalCount?: number;
+  results?: ImportPenugasanRowResult[];
+}
+
+export async function importPenugasanAction(
+  formData: FormData
+): Promise<ImportPenugasanActionResult> {
+  try {
+    await requireRole(["admin"]);
+    const session = await getCurrentUser();
+    const adminClient = createAdminClient();
+
+    const file = formData.get("file") as File | null;
+    let tahunAjaranId = formData.get("tahun_ajaran_id") as string | null;
+
+    if (!file || file.size === 0) {
+      return { success: false, message: "File Excel tidak ditemukan. Silakan pilih file terlebih dahulu." };
+    }
+
+    const ext = file.name.split(".").pop()?.toLowerCase();
+    if (ext !== "xlsx") {
+      return { success: false, message: "Format file harus berupa .xlsx (gunakan template yang disediakan)." };
+    }
+
+    if (file.size > 5 * 1024 * 1024) {
+      return { success: false, message: "Ukuran file maksimal 5 MB." };
+    }
+
+    // Jika tahun_ajaran_id tidak dikirim, gunakan tahun ajaran aktif
+    if (!tahunAjaranId) {
+      const { data: activeTa } = await adminClient
+        .from("tahun_ajaran")
+        .select("id")
+        .eq("aktif", true)
+        .maybeSingle();
+      tahunAjaranId = activeTa?.id || null;
+    }
+
+    if (!tahunAjaranId) {
+      return { success: false, message: "Tahun ajaran belum ditentukan. Pastikan tahun ajaran aktif telah diatur." };
+    }
+
+    // Ambil daftar guru terdaftar & mapel
+    const [guruRes, mapelRes] = await Promise.all([
+      adminClient
+        .from("profiles")
+        .select("id, nama_lengkap, nip, gelar, role, aktif")
+        .eq("aktif", true)
+        .order("nama_lengkap", { ascending: true }),
+      adminClient
+        .from("mapel")
+        .select("id, kode, nama")
+        .order("kode", { ascending: true }),
+    ]);
+
+    const guruList = guruRes.data || [];
+    const mapelList = mapelRes.data || [];
+
+    const buffer = Buffer.from(await file.arrayBuffer());
+
+    let parsedRows;
+    try {
+      parsedRows = await parsePenugasanExcel(buffer, { guruList, mapelList });
+    } catch {
+      return {
+        success: false,
+        message: "Gagal membaca file Excel. Pastikan file tidak rusak dan menggunakan format template.",
+      };
+    }
+
+    if (parsedRows.length === 0) {
+      return {
+        success: false,
+        message: "Tidak ada data pada file. Isi minimal 1 baris data penugasan mulai dari baris ke-2.",
+      };
+    }
+
+    // Ambil penugasan yang sudah ada di tahun ajaran ini untuk pengecekan upsert
+    const { data: existingRows } = await adminClient
+      .from("penugasan")
+      .select("id, guru_id, mapel_id, tingkat_kelas, tahun_ajaran_id, rombel")
+      .eq("tahun_ajaran_id", tahunAjaranId);
+
+    const existingMap = new Map<string, { id: string; rombel: string }>();
+    (existingRows || []).forEach((row) => {
+      const key = `${row.guru_id}_${row.mapel_id}_${row.tingkat_kelas}`;
+      existingMap.set(key, { id: row.id, rombel: row.rombel });
+    });
+
+    const results: ImportPenugasanRowResult[] = [];
+    let berhasilCount = 0;
+    let gagalCount = 0;
+
+    for (const row of parsedRows) {
+      const baseResult = {
+        rowNumber: row.rowNumber,
+        guru_nama: row.guru_nama || row.rawGuru || "-",
+        mapel_nama: row.mapel_nama ? `[${row.mapel_kode}] ${row.mapel_nama}` : row.rawMapel || "-",
+        tingkat_kelas: row.tingkat_kelas ? `Kelas ${row.tingkat_kelas}` : row.rawTingkat || "-",
+        rombel: row.rombel || row.rawRombel || "-",
+      };
+
+      if (row.errors.length > 0) {
+        gagalCount++;
+        results.push({
+          ...baseResult,
+          status: "gagal",
+          message: row.errors.join("; "),
+        });
+        continue;
+      }
+
+      if (!row.guru_id || !row.mapel_id || !row.tingkat_kelas) {
+        gagalCount++;
+        results.push({
+          ...baseResult,
+          status: "gagal",
+          message: "Data guru, mapel, atau tingkat kelas tidak valid.",
+        });
+        continue;
+      }
+
+      const key = `${row.guru_id}_${row.mapel_id}_${row.tingkat_kelas}`;
+      const existing = existingMap.get(key);
+
+      if (existing) {
+        // Perbarui rombel yang sudah ada
+        const { error: upErr } = await adminClient
+          .from("penugasan")
+          .update({
+            rombel: row.rombel,
+            updated_at: new Date().toISOString(),
+          })
+          .eq("id", existing.id);
+
+        if (upErr) {
+          gagalCount++;
+          results.push({
+            ...baseResult,
+            status: "gagal",
+            message: `Gagal memperbarui penugasan: ${upErr.message}`,
+          });
+        } else {
+          berhasilCount++;
+          results.push({
+            ...baseResult,
+            status: "berhasil",
+            action: "diperbarui",
+            message: "Penugasan guru berhasil diperbarui (rombel diselaraskan).",
+          });
+        }
+      } else {
+        // Tambah penugasan baru
+        const { data: inserted, error: inErr } = await adminClient
+          .from("penugasan")
+          .insert({
+            guru_id: row.guru_id,
+            mapel_id: row.mapel_id,
+            tingkat_kelas: row.tingkat_kelas,
+            tahun_ajaran_id: tahunAjaranId,
+            rombel: row.rombel,
+            created_by: session?.user?.id || null,
+          })
+          .select("id, rombel")
+          .single();
+
+        if (inErr || !inserted) {
+          gagalCount++;
+          results.push({
+            ...baseResult,
+            status: "gagal",
+            message: `Gagal menyimpan penugasan baru: ${inErr?.message || "Kesalahan database"}`,
+          });
+        } else {
+          berhasilCount++;
+          existingMap.set(key, { id: inserted.id, rombel: inserted.rombel });
+          results.push({
+            ...baseResult,
+            status: "berhasil",
+            action: "ditambahkan",
+            message: "Penugasan baru berhasil ditambahkan.",
+          });
+        }
+      }
+    }
+
+    revalidatePath("/master-data");
+    revalidatePath("/atp");
+    revalidatePath("/prota");
+    revalidatePath("/prosem");
+    revalidatePath("/modul-ajar");
+    revalidatePath("/dashboard");
+
+    return {
+      success: true,
+      totalRows: parsedRows.length,
+      berhasilCount,
+      gagalCount,
+      results,
+      message: `Proses import selesai. ${berhasilCount} berhasil (${berhasilCount > 0 ? "ditambahkan/diperbarui" : ""}), ${gagalCount} gagal.`,
+    };
+  } catch (err: unknown) {
+    console.error("Gagal import penugasan:", err);
+    return {
+      success: false,
+      message: err instanceof Error ? err.message : "Terjadi kesalahan internal saat import penugasan.",
+    };
   }
 }
 

@@ -23,15 +23,17 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { toast } from "sonner";
-import { Plus, Edit2, Trash2, Loader2, Clock } from "lucide-react";
+import { Plus, Edit2, Trash2, Loader2, Clock, FileSpreadsheet, Download, CheckCircle2, AlertCircle, XCircle, Info } from "lucide-react";
 import {
   getPenugasanAction,
   createPenugasanAction,
   updatePenugasanAction,
   deletePenugasanAction,
+  importPenugasanAction,
   type PenugasanItem,
   type MapelItem,
   type TahunAjaranItem,
+  type ImportPenugasanRowResult,
 } from "../actions";
 
 interface GuruProfile {
@@ -86,6 +88,64 @@ export function TabPenugasan({
   // Confirm Delete
   const [deleteOpen, setDeleteOpen] = useState(false);
   const [deletingId, setDeletingId] = useState<string | null>(null);
+
+  // Dialog State: Import Excel
+  const [importOpen, setImportOpen] = useState(false);
+  const [importFile, setImportFile] = useState<File | null>(null);
+  const [importTaId, setImportTaId] = useState<string>(activeTa?.id || "");
+  const [importing, setImporting] = useState(false);
+  const [importResults, setImportResults] = useState<{
+    totalRows: number;
+    berhasilCount: number;
+    gagalCount: number;
+    message?: string;
+    results: ImportPenugasanRowResult[];
+  } | null>(null);
+  const fileInputRef = React.useRef<HTMLInputElement | null>(null);
+
+  function closeImportDialog() {
+    setImportOpen(false);
+    setImportFile(null);
+    setImportResults(null);
+    if (fileInputRef.current) fileInputRef.current.value = "";
+  }
+
+  async function handleImportSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!importFile) {
+      toast.error("Pilih file Excel (.xlsx) terlebih dahulu.");
+      return;
+    }
+
+    setImporting(true);
+    setImportResults(null);
+
+    const formData = new FormData();
+    formData.append("file", importFile);
+    formData.append("tahun_ajaran_id", importTaId || selectedTaId);
+
+    const res = await importPenugasanAction(formData);
+    setImporting(false);
+
+    if (res.success && res.results) {
+      setImportResults({
+        totalRows: res.totalRows || 0,
+        berhasilCount: res.berhasilCount || 0,
+        gagalCount: res.gagalCount || 0,
+        message: res.message,
+        results: res.results,
+      });
+
+      if (res.berhasilCount && res.berhasilCount > 0) {
+        toast.success(res.message || "Import penugasan berhasil.");
+        await reloadPenugasan(selectedTaId);
+      } else {
+        toast.error(res.message || "Semua baris pada file gagal diimport.");
+      }
+    } else {
+      toast.error(res.message || "Gagal memproses file Excel.");
+    }
+  }
 
   async function reloadPenugasan(taId: string) {
     setLoading(true);
@@ -332,6 +392,20 @@ export function TabPenugasan({
           </Select>
 
           <Button
+            variant="outline"
+            onClick={() => {
+              setImportOpen(true);
+              setImportFile(null);
+              setImportResults(null);
+              setImportTaId(selectedTaId);
+              if (fileInputRef.current) fileInputRef.current.value = "";
+            }}
+            className="border-emerald-200 text-emerald-800 hover:bg-emerald-50 gap-1.5 text-xs h-9 font-medium"
+          >
+            <FileSpreadsheet className="h-4 w-4 text-emerald-600" /> Import Excel
+          </Button>
+
+          <Button
             onClick={handleOpenCreate}
             className="bg-emerald-600 hover:bg-emerald-700 text-white gap-1.5 text-xs h-9"
           >
@@ -569,6 +643,184 @@ export function TabPenugasan({
         confirmText="Ya, Hapus"
         onConfirm={handleDeleteConfirm}
       />
+
+      {/* Dialog: Import Penugasan Guru dari Excel */}
+      <Dialog open={importOpen} onOpenChange={(open) => !open && closeImportDialog()}>
+        <DialogContent className="sm:max-w-xl max-h-[90vh] flex flex-col p-0 gap-0 overflow-hidden bg-white">
+          <DialogHeader className="p-5 pb-3 border-b border-slate-100">
+            <div className="flex items-center gap-2">
+              <div className="p-2 bg-emerald-50 text-emerald-700 rounded-lg">
+                <FileSpreadsheet className="h-5 w-5" />
+              </div>
+              <div>
+                <DialogTitle className="text-base font-bold text-slate-900">
+                  Import Penugasan Guru dari Excel
+                </DialogTitle>
+                <DialogDescription className="text-xs text-slate-500 mt-0.5">
+                  Unggah file Excel penugasan. Template telah terintegrasi validasi dropdown pengguna/guru terdaftar.
+                </DialogDescription>
+              </div>
+            </div>
+          </DialogHeader>
+
+          <div className="p-5 overflow-y-auto space-y-4 flex-1">
+            {/* Step 1: Download Template */}
+            <div className="bg-slate-50 border border-slate-200 rounded-lg p-3.5 space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-semibold text-slate-800 flex items-center gap-1.5">
+                  <Download className="h-3.5 w-3.5 text-emerald-600" /> Unduh Template Format Excel
+                </span>
+                <a
+                  href={`/api/master-data/penugasan/template?taId=${importTaId || selectedTaId}`}
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 hover:text-emerald-800 bg-white border border-emerald-300 hover:bg-emerald-50 px-2.5 py-1.5 rounded-md shadow-xs transition"
+                >
+                  <Download className="h-3.5 w-3.5" /> Unduh Template (.xlsx)
+                </a>
+              </div>
+              <p className="text-[11px] text-slate-600 leading-relaxed">
+                Template ini secara otomatis menyediakan <strong>dropdown validasi</strong> yang berisi <strong>daftar guru terdaftar</strong> di madrasah, <strong>kode mata pelajaran</strong>, dan <strong>tingkat kelas</strong>.
+              </p>
+            </div>
+
+            {/* Form Upload */}
+            <form id="import-penugasan-form" onSubmit={handleImportSubmit} className="space-y-3.5">
+              <div className="space-y-1">
+                <Label htmlFor="import_ta" className="text-xs font-medium text-slate-700">
+                  Target Tahun Ajaran <span className="text-red-500">*</span>
+                </Label>
+                <Select
+                  value={importTaId}
+                  onValueChange={(val) => {
+                    if (val) setImportTaId(val);
+                  }}
+                  disabled={importing}
+                >
+                  <SelectTrigger id="import_ta" className="text-xs h-9">
+                    <SelectValue placeholder="Pilih Tahun Ajaran" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {initialTaList.map((ta) => (
+                      <SelectItem key={ta.id} value={ta.id} className="text-xs">
+                        {ta.nama} {ta.aktif ? "(Aktif)" : ""}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <div className="space-y-1">
+                <Label htmlFor="import_penugasan_file" className="text-xs font-medium text-slate-700">
+                  Pilih File Excel (.xlsx) <span className="text-red-500">*</span>
+                </Label>
+                <Input
+                  ref={fileInputRef}
+                  id="import_penugasan_file"
+                  type="file"
+                  accept=".xlsx, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                  disabled={importing}
+                  onChange={(e) => {
+                    const file = e.target.files?.[0] || null;
+                    setImportFile(file);
+                    setImportResults(null);
+                  }}
+                  className="text-xs h-9 cursor-pointer file:cursor-pointer file:text-xs file:font-semibold file:text-emerald-700 file:bg-emerald-50 file:border-0 file:rounded-md file:mr-2"
+                />
+                <p className="text-[11px] text-slate-500">Maksimal ukuran file: 5 MB.</p>
+              </div>
+            </form>
+
+            {/* Hasil Import */}
+            {importResults && (
+              <div className="space-y-3 pt-2 border-t border-slate-100">
+                <div className="flex items-center justify-between">
+                  <h4 className="text-xs font-bold text-slate-900">Hasil Pemrosesan File</h4>
+                  <div className="flex items-center gap-1.5 text-xs">
+                    <span className="bg-slate-100 text-slate-700 font-semibold px-2 py-0.5 rounded text-[11px]">
+                      Total: {importResults.totalRows}
+                    </span>
+                    <span className="bg-emerald-100 text-emerald-800 font-semibold px-2 py-0.5 rounded text-[11px]">
+                      Berhasil: {importResults.berhasilCount}
+                    </span>
+                    {importResults.gagalCount > 0 && (
+                      <span className="bg-red-100 text-red-800 font-semibold px-2 py-0.5 rounded text-[11px]">
+                        Gagal: {importResults.gagalCount}
+                      </span>
+                    )}
+                  </div>
+                </div>
+
+                <div className="max-h-56 overflow-y-auto border border-slate-200 rounded-md divide-y divide-slate-100 text-xs">
+                  {importResults.results.map((res, idx) => (
+                    <div
+                      key={idx}
+                      className={`p-2.5 flex items-start justify-between gap-3 ${
+                        res.status === "berhasil" ? "bg-emerald-50/40" : "bg-red-50/50"
+                      }`}
+                    >
+                      <div className="space-y-0.5 flex-1 min-w-0">
+                        <div className="flex items-center gap-2">
+                          <span className="font-mono text-[11px] text-slate-400">#{res.rowNumber}</span>
+                          <span className="font-semibold text-slate-800 truncate">{res.guru_nama}</span>
+                          <span className="text-[11px] text-slate-500 font-medium">({res.mapel_nama})</span>
+                          <Badge variant="outline" className="text-[10px] px-1 py-0 h-4">
+                            {res.tingkat_kelas} - {res.rombel}
+                          </Badge>
+                        </div>
+                        <p className={`text-[11px] ${res.status === "berhasil" ? "text-emerald-700" : "text-red-600"}`}>
+                          {res.message}
+                        </p>
+                      </div>
+
+                      <div className="shrink-0 pt-0.5">
+                        {res.status === "berhasil" ? (
+                          <Badge className="bg-emerald-600 text-white text-[10px] gap-1 px-1.5">
+                            <CheckCircle2 className="h-3 w-3" />
+                            {res.action === "diperbarui" ? "Diperbarui" : "Berhasil"}
+                          </Badge>
+                        ) : (
+                          <Badge variant="destructive" className="text-[10px] gap-1 px-1.5">
+                            <XCircle className="h-3 w-3" /> Gagal
+                          </Badge>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          <DialogFooter className="p-4 border-t border-slate-100 bg-slate-50 flex justify-between items-center sm:justify-between">
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              onClick={closeImportDialog}
+              disabled={importing}
+              className="text-xs"
+            >
+              {importResults ? "Tutup" : "Batal"}
+            </Button>
+            <Button
+              type="submit"
+              form="import-penugasan-form"
+              size="sm"
+              disabled={importing || !importFile}
+              className="bg-emerald-600 hover:bg-emerald-700 text-white gap-1.5 text-xs font-semibold"
+            >
+              {importing ? (
+                <>
+                  <Loader2 className="h-3.5 w-3.5 animate-spin" /> Memproses File...
+                </>
+              ) : (
+                <>
+                  <FileSpreadsheet className="h-3.5 w-3.5" /> Proses Import Excel
+                </>
+              )}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
