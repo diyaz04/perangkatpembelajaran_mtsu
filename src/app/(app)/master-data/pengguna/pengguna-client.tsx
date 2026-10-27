@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useTransition } from "react";
+import React, { useRef, useState, useTransition } from "react";
 import { toast } from "sonner";
 import {
   UserPlus,
@@ -12,6 +12,11 @@ import {
   Loader2,
   Mail,
   Hash,
+  FileSpreadsheet,
+  Download,
+  Upload,
+  CheckCircle2,
+  XCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -31,6 +36,8 @@ import {
   tambahPenggunaAction,
   toggleStatusPenggunaAction,
   resetPasswordPenggunaAction,
+  importPenggunaAction,
+  type ImportPenggunaRowResult,
 } from "./actions";
 import type { UserRole } from "@/types/database";
 
@@ -82,6 +89,13 @@ export function PenggunaClient({ initialUsers, currentUserId }: PenggunaClientPr
 
   // Dialog State: Toggle Aktif
   const [toggleTarget, setToggleTarget] = useState<PenggunaRow | null>(null);
+
+  // Dialog State: Import Excel
+  const [isImportOpen, setIsImportOpen] = useState(false);
+  const [importFile, setImportFile] = useState<File | null>(null);
+  const [isImporting, setIsImporting] = useState(false);
+  const [importResults, setImportResults] = useState<ImportPenggunaRowResult[] | null>(null);
+  const importFileInputRef = useRef<HTMLInputElement>(null);
 
   // Filtered list
   const filteredUsers = initialUsers.filter((u) => {
@@ -160,6 +174,48 @@ export function PenggunaClient({ initialUsers, currentUserId }: PenggunaClientPr
     });
   }
 
+  // Handle Import Excel
+  function handleImportFileChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0] || null;
+    setImportFile(file);
+    setImportResults(null);
+  }
+
+  function handleImportSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!importFile) {
+      toast.error("Pilih file Excel (.xlsx) terlebih dahulu.");
+      return;
+    }
+
+    const fd = new FormData();
+    fd.append("file", importFile);
+
+    setIsImporting(true);
+    setImportResults(null);
+    startTransition(async () => {
+      const res = await importPenggunaAction({}, fd);
+      setIsImporting(false);
+
+      if (res.results) {
+        setImportResults(res.results);
+      }
+
+      if (res.success) {
+        toast.success(res.message || "Import berhasil diproses.");
+      } else {
+        toast.error(res.message || "Gagal memproses import.");
+      }
+    });
+  }
+
+  function closeImportDialog() {
+    setIsImportOpen(false);
+    setImportFile(null);
+    setImportResults(null);
+    if (importFileInputRef.current) importFileInputRef.current.value = "";
+  }
+
   return (
     <div className="space-y-4">
       {/* Top Bar: Search, Filters & Action Button */}
@@ -188,12 +244,21 @@ export function PenggunaClient({ initialUsers, currentUserId }: PenggunaClientPr
           </select>
         </div>
 
-        <Button
-          onClick={() => setIsAddOpen(true)}
-          className="bg-emerald-600 hover:bg-emerald-700 text-white shrink-0 gap-1.5"
-        >
-          <UserPlus className="h-4 w-4" /> Tambah Pengguna
-        </Button>
+        <div className="flex items-center gap-2 shrink-0">
+          <Button
+            variant="outline"
+            onClick={() => setIsImportOpen(true)}
+            className="border-slate-200 text-slate-700 hover:bg-slate-50 gap-1.5"
+          >
+            <FileSpreadsheet className="h-4 w-4 text-emerald-600" /> Import Excel
+          </Button>
+          <Button
+            onClick={() => setIsAddOpen(true)}
+            className="bg-emerald-600 hover:bg-emerald-700 text-white gap-1.5"
+          >
+            <UserPlus className="h-4 w-4" /> Tambah Pengguna
+          </Button>
+        </div>
       </div>
 
       {/* Users Table */}
@@ -477,6 +542,105 @@ export function PenggunaClient({ initialUsers, currentUserId }: PenggunaClientPr
         variant={toggleTarget?.aktif ? "destructive" : "default"}
         onConfirm={handleConfirmToggle}
       />
+
+      {/* Dialog: Import Pengguna dari Excel */}
+      <Dialog open={isImportOpen} onOpenChange={(open) => !open && closeImportDialog()}>
+        <DialogContent className="max-w-lg bg-white">
+          <DialogHeader>
+            <DialogTitle>Import Pengguna & Guru dari Excel</DialogTitle>
+            <DialogDescription>
+              Unggah file Excel (.xlsx) berisi daftar guru/staf untuk didaftarkan secara massal.
+            </DialogDescription>
+          </DialogHeader>
+
+          <div className="space-y-4 pt-1">
+            <a
+              href="/api/master-data/pengguna/template"
+              className="flex items-center gap-2 text-sm font-medium text-emerald-700 hover:text-emerald-800 hover:underline"
+            >
+              <Download className="h-4 w-4" /> Unduh Template Import (.xlsx)
+            </a>
+
+            <form onSubmit={handleImportSubmit} className="space-y-3">
+              <div>
+                <Label className="text-xs text-slate-700">Pilih File Excel (.xlsx) *</Label>
+                <div className="mt-1 flex items-center gap-2">
+                  <input
+                    ref={importFileInputRef}
+                    type="file"
+                    accept=".xlsx"
+                    onChange={handleImportFileChange}
+                    disabled={isImporting}
+                    className="block w-full text-sm text-slate-600 file:mr-3 file:py-1.5 file:px-3 file:rounded-md file:border-0 file:bg-emerald-50 file:text-emerald-700 file:text-xs file:font-medium hover:file:bg-emerald-100 border border-slate-200 rounded-md"
+                  />
+                </div>
+              </div>
+
+              {importResults && (
+                <div className="rounded-md border border-slate-200 max-h-64 overflow-y-auto">
+                  <table className="w-full text-xs text-left">
+                    <thead className="bg-slate-50 sticky top-0">
+                      <tr>
+                        <th className="px-2.5 py-1.5 text-slate-500 font-semibold">Baris</th>
+                        <th className="px-2.5 py-1.5 text-slate-500 font-semibold">Nama / Email</th>
+                        <th className="px-2.5 py-1.5 text-slate-500 font-semibold">Keterangan</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-100">
+                      {importResults.map((r) => (
+                        <tr key={r.rowNumber}>
+                          <td className="px-2.5 py-1.5 text-slate-500">{r.rowNumber}</td>
+                          <td className="px-2.5 py-1.5">
+                            <div className="font-medium text-slate-800">{r.nama_lengkap}</div>
+                            <div className="text-slate-400">{r.email}</div>
+                          </td>
+                          <td className="px-2.5 py-1.5">
+                            <div
+                              className={`flex items-center gap-1 font-medium ${
+                                r.status === "berhasil" ? "text-emerald-700" : "text-red-600"
+                              }`}
+                            >
+                              {r.status === "berhasil" ? (
+                                <CheckCircle2 className="h-3.5 w-3.5 shrink-0" />
+                              ) : (
+                                <XCircle className="h-3.5 w-3.5 shrink-0" />
+                              )}
+                              {r.message}
+                            </div>
+                            {r.generatedPassword && (
+                              <div className="text-slate-500 mt-0.5">
+                                Password: <code className="font-mono bg-slate-100 px-1 rounded">{r.generatedPassword}</code>
+                              </div>
+                            )}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+              <DialogFooter className="pt-1">
+                <Button type="button" variant="outline" onClick={closeImportDialog} disabled={isImporting}>
+                  Tutup
+                </Button>
+                <Button
+                  type="submit"
+                  disabled={isImporting || !importFile}
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white gap-1.5"
+                >
+                  {isImporting ? (
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                  ) : (
+                    <Upload className="h-4 w-4" />
+                  )}
+                  Proses Import
+                </Button>
+              </DialogFooter>
+            </form>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
