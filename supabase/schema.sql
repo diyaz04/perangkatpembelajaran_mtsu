@@ -111,6 +111,7 @@ CREATE TABLE IF NOT EXISTS public.tahun_ajaran (
   smt2_mulai  DATE NOT NULL,
   smt2_selesai DATE NOT NULL,
   aktif       BOOLEAN NOT NULL DEFAULT false,
+  tanggal_penetapan_dokumen DATE NULL, -- titimangsa dokumen TP/ATP/Prota/Prosem/RPP
   created_at  TIMESTAMPTZ NOT NULL DEFAULT now(),
   updated_at  TIMESTAMPTZ NOT NULL DEFAULT now(),
   created_by  UUID REFERENCES auth.users(id) ON DELETE SET NULL

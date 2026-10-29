@@ -19,6 +19,7 @@ import {
   Layers,
 } from "lucide-react";
 import { METODE_PENGURUTAN_ATP } from "@/lib/kbc-pedagogi";
+import { formatTitimangsa } from "@/lib/format-titimangsa";
 import type { DocStatus, MetodePengurutanAtp } from "@/types/database";
 import { submitDokumenAction, createRevisiCopyAction } from "@/lib/validasi/actions";
 import { StatusTimeline } from "@/components/validasi/status-timeline";
@@ -65,6 +66,7 @@ export interface PreviewData {
     };
     tahun_ajaran: {
       nama: string;
+      tanggal_penetapan_dokumen: string | null;
     };
   };
   atp: {
@@ -528,7 +530,10 @@ export function PreviewClient({ data }: PreviewClientProps) {
             {/* Tanda Tangan Guru Pengampu */}
             <div className="w-64 text-center space-y-16">
               <div>
-                <p>{madrasah.kabupaten?.replace("Kabupaten ", "") || "Tasikmalaya"}, Juli 2026</p>
+                <p>
+                  {madrasah.kabupaten?.replace("Kabupaten ", "") || "Tasikmalaya"},{" "}
+                  {formatTitimangsa(penugasan.tahun_ajaran.tanggal_penetapan_dokumen)}
+                </p>
                 <p className="font-semibold">Guru Mata Pelajaran</p>
               </div>
               <div className="space-y-0.5">

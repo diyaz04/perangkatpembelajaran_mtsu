@@ -152,6 +152,7 @@ export interface Database {
           smt2_mulai: string;
           smt2_selesai: string;
           aktif: boolean;
+          tanggal_penetapan_dokumen: string | null;
           created_at: string;
           updated_at: string;
           created_by: string | null;
@@ -166,6 +167,7 @@ export interface Database {
           smt2_mulai: string;
           smt2_selesai: string;
           aktif?: boolean;
+          tanggal_penetapan_dokumen?: string | null;
           created_at?: string;
           updated_at?: string;
           created_by?: string | null;

@@ -12,6 +12,7 @@ import {
 } from "docx";
 import type { RppDetailData } from "@/app/(app)/modul-ajar/actions";
 import type { ExportDocxOptions } from "./types";
+import { formatTitimangsa } from "@/lib/format-titimangsa";
 import {
   createPageProperties,
   createKopMadrasah,
@@ -507,7 +508,14 @@ export async function buildRppDocx(
 
   // Spacer sebelum tanda tangan
   contentParagraphs.push(new Paragraph({ spacing: { after: 200 }, children: [] }));
-  contentParagraphs.push(createSignaturesTable(madrasah, penugasan.guru, options));
+  contentParagraphs.push(
+    createSignaturesTable(
+      madrasah,
+      penugasan.guru,
+      options,
+      formatTitimangsa(penugasan.tahun_ajaran.tanggal_penetapan_dokumen)
+    )
+  );
 
   // Buat Dokumen (A4 Portrait)
   const doc = new Document({

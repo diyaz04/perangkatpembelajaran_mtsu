@@ -17,6 +17,7 @@ import {
   RefreshCw,
 } from "lucide-react";
 import type { RppDetailData } from "../../actions";
+import { formatTitimangsa } from "@/lib/format-titimangsa";
 import { submitDokumenAction, createRevisiCopyAction } from "@/lib/validasi/actions";
 import { StatusTimeline } from "@/components/validasi/status-timeline";
 import { Switch } from "@/components/ui/switch";
@@ -813,11 +814,7 @@ export function RppPreviewClient({ data }: RppPreviewClientProps) {
               <div className="text-center w-60 space-y-0.5">
                 <p>
                   {madrasah.kabupaten || "Tasikmalaya"},{" "}
-                  {new Date().toLocaleDateString("id-ID", {
-                    day: "numeric",
-                    month: "long",
-                    year: "numeric",
-                  })}
+                  {formatTitimangsa(penugasan.tahun_ajaran.tanggal_penetapan_dokumen)}
                 </p>
                 <p className="font-bold">Guru Mata Pelajaran,</p>
                 <div className="h-14" />

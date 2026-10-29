@@ -13,6 +13,7 @@ import {
 import type { ProtaDetailData } from "@/app/(app)/prota/actions";
 import type { BulanMingguEfektif } from "@/lib/kalender/minggu-efektif";
 import type { ExportDocxOptions } from "./types";
+import { formatTitimangsa } from "@/lib/format-titimangsa";
 import {
   createPageProperties,
   createKopMadrasah,
@@ -369,7 +370,12 @@ export async function buildProtaDocx(
           }),
           tabelProta,
           new Paragraph({ spacing: { after: 200 }, children: [] }),
-          createSignaturesTable(madrasah, penugasan.guru, options),
+          createSignaturesTable(
+            madrasah,
+            penugasan.guru,
+            options,
+            formatTitimangsa(penugasan.tahun_ajaran.tanggal_penetapan_dokumen)
+          ),
         ],
       },
     ],

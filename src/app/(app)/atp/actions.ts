@@ -1459,7 +1459,7 @@ export async function getAtpPreviewDataAction(penugasanId: string) {
         mapel_id,
         mapel ( id, nama, kode, kelompok, jp_per_minggu_kls7, jp_per_minggu_kls8, jp_per_minggu_kls9 ),
         profiles ( id, nama_lengkap, nip, gelar ),
-        tahun_ajaran ( id, nama, aktif )
+        tahun_ajaran ( id, nama, aktif, tanggal_penetapan_dokumen )
       `)
       .eq("id", penugasanId)
       .maybeSingle();
@@ -1486,7 +1486,7 @@ export async function getAtpPreviewDataAction(penugasanId: string) {
             mapel_id,
             mapel ( id, nama, kode, kelompok, jp_per_minggu_kls7, jp_per_minggu_kls8, jp_per_minggu_kls9 ),
             profiles ( id, nama_lengkap, nip, gelar ),
-            tahun_ajaran ( id, nama, aktif )
+            tahun_ajaran ( id, nama, aktif, tanggal_penetapan_dokumen )
           `)
           .eq("id", actualPenugasanId)
           .maybeSingle();
@@ -1747,6 +1747,7 @@ export interface CpPreviewData {
     };
     tahun_ajaran: {
       nama: string;
+      tanggal_penetapan_dokumen: string | null;
     };
   };
   items: CpPreviewItem[];
@@ -1784,7 +1785,7 @@ export async function getCpPreviewDataAction(penugasanId: string) {
         mapel_id,
         mapel ( id, nama, kode, kelompok, jp_per_minggu_kls7, jp_per_minggu_kls8, jp_per_minggu_kls9 ),
         profiles ( id, nama_lengkap, nip, gelar ),
-        tahun_ajaran ( id, nama, aktif )
+        tahun_ajaran ( id, nama, aktif, tanggal_penetapan_dokumen )
       `)
       .eq("id", penugasanId)
       .maybeSingle();
@@ -1808,7 +1809,7 @@ export async function getCpPreviewDataAction(penugasanId: string) {
             mapel_id,
             mapel ( id, nama, kode, kelompok, jp_per_minggu_kls7, jp_per_minggu_kls8, jp_per_minggu_kls9 ),
             profiles ( id, nama_lengkap, nip, gelar ),
-            tahun_ajaran ( id, nama, aktif )
+            tahun_ajaran ( id, nama, aktif, tanggal_penetapan_dokumen )
           `)
           .eq("id", actualPenugasanId)
           .maybeSingle();
@@ -2007,6 +2008,7 @@ export interface TpPreviewData {
     };
     tahun_ajaran: {
       nama: string;
+      tanggal_penetapan_dokumen: string | null;
     };
   };
   items: TpPreviewItem[];
@@ -2046,7 +2048,7 @@ export async function getTpPreviewDataAction(penugasanId: string) {
         mapel_id,
         mapel ( id, nama, kode, kelompok, jp_per_minggu_kls7, jp_per_minggu_kls8, jp_per_minggu_kls9 ),
         profiles ( id, nama_lengkap, nip, gelar ),
-        tahun_ajaran ( id, nama, aktif )
+        tahun_ajaran ( id, nama, aktif, tanggal_penetapan_dokumen )
       `)
       .eq("id", penugasanId)
       .maybeSingle();
@@ -2070,7 +2072,7 @@ export async function getTpPreviewDataAction(penugasanId: string) {
             mapel_id,
             mapel ( id, nama, kode, kelompok, jp_per_minggu_kls7, jp_per_minggu_kls8, jp_per_minggu_kls9 ),
             profiles ( id, nama_lengkap, nip, gelar ),
-            tahun_ajaran ( id, nama, aktif )
+            tahun_ajaran ( id, nama, aktif, tanggal_penetapan_dokumen )
           `)
           .eq("id", actualPenugasanId)
           .maybeSingle();

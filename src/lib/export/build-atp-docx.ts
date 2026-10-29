@@ -12,6 +12,7 @@ import {
 } from "docx";
 import type { PreviewData } from "@/app/(app)/atp/[penugasanId]/preview/preview-client";
 import type { ExportDocxOptions } from "./types";
+import { formatTitimangsa } from "@/lib/format-titimangsa";
 import {
   createPageProperties,
   createKopMadrasah,
@@ -290,7 +291,12 @@ export async function buildAtpDocx(
           new Paragraph({ spacing: { after: 140 }, children: [] }),
           atpTable,
           new Paragraph({ spacing: { after: 200 }, children: [] }),
-          createSignaturesTable(madrasah, penugasan.guru, options),
+          createSignaturesTable(
+            madrasah,
+            penugasan.guru,
+            options,
+            formatTitimangsa(penugasan.tahun_ajaran.tanggal_penetapan_dokumen)
+          ),
         ],
       },
     ],

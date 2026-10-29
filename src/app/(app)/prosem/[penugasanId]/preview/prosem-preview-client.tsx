@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import type { ProsemDetailData } from "../../actions";
 import type { JenisKegiatanKalender } from "@/types/database";
+import { formatTitimangsa } from "@/lib/format-titimangsa";
 import { submitDokumenAction, createRevisiCopyAction } from "@/lib/validasi/actions";
 import { StatusTimeline } from "@/components/validasi/status-timeline";
 import { Switch } from "@/components/ui/switch";
@@ -692,11 +693,7 @@ export function ProsemPreviewClient({
               <div className="text-center w-72 space-y-1">
                 <p>
                   {madrasah.kabupaten || "Tasikmalaya"},{" "}
-                  {new Date().toLocaleDateString("id-ID", {
-                    day: "numeric",
-                    month: "long",
-                    year: "numeric",
-                  })}
+                  {formatTitimangsa(penugasan.tahun_ajaran.tanggal_penetapan_dokumen)}
                 </p>
                 <p className="font-bold">Guru Mata Pelajaran,</p>
                 <div className="h-20" /> {/* Ruang tanda tangan */}

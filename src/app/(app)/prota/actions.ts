@@ -83,6 +83,7 @@ export interface ProtaDetailData {
       smt1_selesai: string;
       smt2_mulai: string;
       smt2_selesai: string;
+      tanggal_penetapan_dokumen: string | null;
     };
   };
   madrasah: {
@@ -329,7 +330,7 @@ export async function getProtaDetailAction(penugasanId: string): Promise<{
         tahun_ajaran_id,
         mapel ( id, nama, kode, kelompok, jp_per_minggu_kls7, jp_per_minggu_kls8, jp_per_minggu_kls9 ),
         profiles ( id, nama_lengkap, nip, gelar ),
-        tahun_ajaran ( id, nama, smt1_mulai, smt1_selesai, smt2_mulai, smt2_selesai, aktif )
+        tahun_ajaran ( id, nama, smt1_mulai, smt1_selesai, smt2_mulai, smt2_selesai, aktif, tanggal_penetapan_dokumen )
       `)
       .eq("id", penugasanId)
       .single();
@@ -540,6 +541,7 @@ export async function getProtaDetailAction(penugasanId: string): Promise<{
             smt1_selesai: taData.smt1_selesai,
             smt2_mulai: taData.smt2_mulai,
             smt2_selesai: taData.smt2_selesai,
+            tanggal_penetapan_dokumen: taData.tanggal_penetapan_dokumen || null,
           },
         },
         madrasah,

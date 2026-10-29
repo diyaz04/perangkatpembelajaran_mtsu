@@ -178,6 +178,7 @@ export interface RppDetailData {
     tahun_ajaran: {
       id: string;
       nama: string;
+      tanggal_penetapan_dokumen: string | null;
     };
   };
   madrasah: {
@@ -737,7 +738,7 @@ export async function getRppDetailAction(rppId: string): Promise<{
           guru_id,
           mapel ( id, nama, kode, jp_per_minggu_kls7, jp_per_minggu_kls8, jp_per_minggu_kls9 ),
           profiles ( id, nama_lengkap, nip, gelar ),
-          tahun_ajaran ( id, nama, aktif )
+          tahun_ajaran ( id, nama, aktif, tanggal_penetapan_dokumen )
         )
       `)
       .eq("id", rppId)
@@ -947,6 +948,7 @@ export async function getRppDetailAction(rppId: string): Promise<{
           tahun_ajaran: {
             id: ta?.id || "",
             nama: ta?.nama || "",
+            tanggal_penetapan_dokumen: ta?.tanggal_penetapan_dokumen || null,
           },
         },
         madrasah: {

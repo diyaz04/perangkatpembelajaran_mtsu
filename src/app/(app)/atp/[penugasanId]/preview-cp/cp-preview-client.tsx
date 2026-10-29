@@ -14,6 +14,7 @@ import {
   BookOpen,
 } from "lucide-react";
 import type { CpPreviewData } from "@/app/(app)/atp/actions";
+import { formatTitimangsa } from "@/lib/format-titimangsa";
 import { Switch } from "@/components/ui/switch";
 import { KopMadrasah } from "@/components/kop-madrasah";
 
@@ -29,11 +30,7 @@ export function CpPreviewClient({ data }: CpPreviewClientProps) {
     window.print();
   };
 
-  const tanggalFormatted = new Date().toLocaleDateString("id-ID", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
+  const tanggalFormatted = formatTitimangsa(penugasan.tahun_ajaran.tanggal_penetapan_dokumen);
 
   return (
     <>

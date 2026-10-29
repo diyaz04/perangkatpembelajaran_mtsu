@@ -157,6 +157,7 @@ export interface TahunAjaranItem {
   smt2_mulai: string;
   smt2_selesai: string;
   aktif: boolean;
+  tanggal_penetapan_dokumen: string | null;
 }
 
 export async function getTahunAjaranAction(): Promise<{ data: TahunAjaranItem[]; error?: string }> {
@@ -184,6 +185,7 @@ export async function createTahunAjaranAction(payload: {
   smt2_mulai: string;
   smt2_selesai: string;
   aktif?: boolean;
+  tanggal_penetapan_dokumen?: string | null;
 }) {
   try {
     await requireRole(["admin"]);
@@ -203,6 +205,7 @@ export async function createTahunAjaranAction(payload: {
       smt2_mulai: payload.smt2_mulai,
       smt2_selesai: payload.smt2_selesai,
       aktif: !!payload.aktif,
+      tanggal_penetapan_dokumen: payload.tanggal_penetapan_dokumen || null,
     });
 
     if (error) throw error;
@@ -224,6 +227,7 @@ export async function updateTahunAjaranAction(
     smt2_mulai: string;
     smt2_selesai: string;
     aktif?: boolean;
+    tanggal_penetapan_dokumen?: string | null;
   }
 ) {
   try {
@@ -245,6 +249,7 @@ export async function updateTahunAjaranAction(
         smt2_mulai: payload.smt2_mulai,
         smt2_selesai: payload.smt2_selesai,
         aktif: !!payload.aktif,
+        tanggal_penetapan_dokumen: payload.tanggal_penetapan_dokumen || null,
         updated_at: new Date().toISOString(),
       })
       .eq("id", id);

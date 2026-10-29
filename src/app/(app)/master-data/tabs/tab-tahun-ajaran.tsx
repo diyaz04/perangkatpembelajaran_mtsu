@@ -55,6 +55,7 @@ export function TabTahunAjaran({ initialData }: TabTahunAjaranProps) {
     smt2_mulai: "2027-01-04",
     smt2_selesai: "2027-06-25",
     aktif: false,
+    tanggal_penetapan_dokumen: "",
   });
 
   // Confirm Delete
@@ -79,6 +80,7 @@ export function TabTahunAjaran({ initialData }: TabTahunAjaranProps) {
       smt2_mulai: "2028-01-03",
       smt2_selesai: "2028-06-23",
       aktif: false,
+      tanggal_penetapan_dokumen: "",
     });
     setFormOpen(true);
   }
@@ -94,6 +96,7 @@ export function TabTahunAjaran({ initialData }: TabTahunAjaranProps) {
       smt2_mulai: item.smt2_mulai,
       smt2_selesai: item.smt2_selesai,
       aktif: item.aktif,
+      tanggal_penetapan_dokumen: item.tanggal_penetapan_dokumen || "",
     });
     setFormOpen(true);
   }
@@ -190,6 +193,18 @@ export function TabTahunAjaran({ initialData }: TabTahunAjaranProps) {
           {item.tgl_mulai} ~ {item.tgl_selesai}
         </span>
       ),
+    },
+    {
+      key: "titimangsa",
+      header: "Titimangsa Dokumen",
+      render: (item) =>
+        item.tanggal_penetapan_dokumen ? (
+          <span className="text-xs text-slate-600 font-mono">
+            {item.tanggal_penetapan_dokumen}
+          </span>
+        ) : (
+          <span className="text-xs text-slate-400 italic">Tanggal hari ini</span>
+        ),
     },
     {
       key: "actions",
@@ -394,6 +409,25 @@ export function TabTahunAjaran({ initialData }: TabTahunAjaranProps) {
                     />
                   </div>
                 </div>
+              </div>
+
+              <div className="border-t border-slate-100 pt-2 space-y-1">
+                <Label htmlFor="ta_titimangsa" className="text-xs font-medium">
+                  Titimangsa Dokumen (Tanggal Penetapan)
+                </Label>
+                <Input
+                  id="ta_titimangsa"
+                  type="date"
+                  value={form.tanggal_penetapan_dokumen}
+                  onChange={(e) =>
+                    setForm({ ...form, tanggal_penetapan_dokumen: e.target.value })
+                  }
+                />
+                <p className="text-[11px] text-slate-500">
+                  Dipakai sebagai tanggal pada blok tanda tangan dokumen TP, ATP,
+                  Prota, Prosem, dan RPP (menggantikan tanggal hari ini saat
+                  dicetak/diekspor). Kosongkan untuk tetap memakai tanggal hari ini.
+                </p>
               </div>
 
               <div className="flex items-center gap-2 pt-2">

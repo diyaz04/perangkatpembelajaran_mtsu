@@ -12,6 +12,7 @@ import {
 } from "docx";
 import type { ProsemDetailData } from "@/app/(app)/prosem/actions";
 import type { ExportDocxOptions } from "./types";
+import { formatTitimangsa } from "@/lib/format-titimangsa";
 import {
   createPageProperties,
   createKopMadrasah,
@@ -342,7 +343,12 @@ export async function buildProsemDocx(
           prosemTable,
           ...legendaParagraphs,
           new Paragraph({ spacing: { after: 160 }, children: [] }),
-          createSignaturesTable(madrasah, penugasan.guru, options),
+          createSignaturesTable(
+            madrasah,
+            penugasan.guru,
+            options,
+            formatTitimangsa(penugasan.tahun_ajaran.tanggal_penetapan_dokumen)
+          ),
         ],
       },
     ],

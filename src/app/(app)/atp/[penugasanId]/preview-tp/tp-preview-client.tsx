@@ -14,6 +14,7 @@ import {
   Target,
 } from "lucide-react";
 import type { TpPreviewData } from "@/app/(app)/atp/actions";
+import { formatTitimangsa } from "@/lib/format-titimangsa";
 import { Switch } from "@/components/ui/switch";
 import { KopMadrasah } from "@/components/kop-madrasah";
 
@@ -29,11 +30,7 @@ export function TpPreviewClient({ data }: TpPreviewClientProps) {
     window.print();
   };
 
-  const tanggalFormatted = new Date().toLocaleDateString("id-ID", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
+  const tanggalFormatted = formatTitimangsa(penugasan.tahun_ajaran.tanggal_penetapan_dokumen);
 
   return (
     <>
