@@ -15,6 +15,11 @@ import {
   buildProtaDocx,
   buildProsemDocx,
   buildRppDocx,
+  generateAtpHtml,
+  generateProtaHtml,
+  generateProsemHtml,
+  generateRppHtml,
+  generatePdfBufferFromHtml,
   type ExportDocxOptions,
   type PaperSize,
   type FontFamily,
@@ -65,6 +70,9 @@ export async function GET(
     const kopParam = url.searchParams.get("kop");
     const includeKop = kopParam === "false" || kopParam === "0" ? false : true;
 
+    const formatParam = url.searchParams.get("format")?.toLowerCase();
+    const isPdf = formatParam === "pdf";
+
     const exportOptions: ExportDocxOptions = {
       paperSize,
       fontFamily,
@@ -86,6 +94,23 @@ export async function GET(
       const { penugasan } = result.data;
       const taNama = penugasan.tahun_ajaran.nama.replace(/\//g, "-");
       const kelasRomawi = getKelasRomawi(penugasan.tingkat_kelas);
+
+      if (isPdf) {
+        const pdfFilename = sanitizeFilename(
+          `ATP_${penugasan.mapel.nama}_${kelasRomawi}_Smt1-2_${taNama}.pdf`
+        );
+        const html = generateAtpHtml(result.data);
+        const pdfBuffer = await generatePdfBufferFromHtml(html, { paperSize, landscape: true });
+        return new NextResponse(new Uint8Array(pdfBuffer), {
+          status: 200,
+          headers: {
+            "Content-Type": "application/pdf",
+            "Content-Disposition": `attachment; filename="${pdfFilename}"`,
+            "Cache-Control": "no-store",
+          },
+        });
+      }
+
       const filename = sanitizeFilename(
         `ATP_${penugasan.mapel.nama}_${kelasRomawi}_Smt1-2_${taNama}.docx`
       );
@@ -176,6 +201,23 @@ export async function GET(
       const { penugasan } = result.data;
       const taNama = penugasan.tahun_ajaran.nama.replace(/\//g, "-");
       const kelasRomawi = getKelasRomawi(penugasan.tingkat_kelas);
+
+      if (isPdf) {
+        const pdfFilename = sanitizeFilename(
+          `PROTA_${penugasan.mapel.nama}_${kelasRomawi}_${taNama}.pdf`
+        );
+        const html = generateProtaHtml(result.data);
+        const pdfBuffer = await generatePdfBufferFromHtml(html, { paperSize, landscape: false });
+        return new NextResponse(new Uint8Array(pdfBuffer), {
+          status: 200,
+          headers: {
+            "Content-Type": "application/pdf",
+            "Content-Disposition": `attachment; filename="${pdfFilename}"`,
+            "Cache-Control": "no-store",
+          },
+        });
+      }
+
       const filename = sanitizeFilename(
         `PROTA_${penugasan.mapel.nama}_${kelasRomawi}_${taNama}.docx`
       );
@@ -193,7 +235,7 @@ export async function GET(
       });
     }
 
-    // 3. Ekspor PROSEM
+    // 5. Ekspor PROSEM
     if (jenisLower === "prosem") {
       const result = await getProsemDetailAction(id, semesterNum);
       if (!result.success || !result.data) {
@@ -206,6 +248,23 @@ export async function GET(
       const { penugasan } = result.data;
       const taNama = penugasan.tahun_ajaran.nama.replace(/\//g, "-");
       const kelasRomawi = getKelasRomawi(penugasan.tingkat_kelas);
+
+      if (isPdf) {
+        const pdfFilename = sanitizeFilename(
+          `PROSEM_${penugasan.mapel.nama}_${kelasRomawi}_Smt${semesterNum}_${taNama}.pdf`
+        );
+        const html = generateProsemHtml(result.data, semesterNum);
+        const pdfBuffer = await generatePdfBufferFromHtml(html, { paperSize, landscape: true });
+        return new NextResponse(new Uint8Array(pdfBuffer), {
+          status: 200,
+          headers: {
+            "Content-Type": "application/pdf",
+            "Content-Disposition": `attachment; filename="${pdfFilename}"`,
+            "Cache-Control": "no-store",
+          },
+        });
+      }
+
       const filename = sanitizeFilename(
         `PROSEM_${penugasan.mapel.nama}_${kelasRomawi}_Smt${semesterNum}_${taNama}.docx`
       );
@@ -223,7 +282,7 @@ export async function GET(
       });
     }
 
-    // 4. Ekspor RPP / MODUL AJAR
+    // 6. Ekspor RPP / MODUL AJAR
     if (jenisLower === "rpp" || jenisLower === "modul-ajar") {
       const result = await getRppDetailAction(id);
       if (!result.success || !result.data) {
@@ -239,6 +298,22 @@ export async function GET(
       const materiKompak = (rpp.materi_pokok || "Materi")
         .slice(0, 25)
         .replace(/[^a-zA-Z0-9]/g, "_");
+
+      if (isPdf) {
+        const pdfFilename = sanitizeFilename(
+          `RPP_${penugasan.mapel.nama}_${kelasRomawi}_${materiKompak}_${taNama}.pdf`
+        );
+        const html = generateRppHtml(result.data);
+        const pdfBuffer = await generatePdfBufferFromHtml(html, { paperSize, landscape: false });
+        return new NextResponse(new Uint8Array(pdfBuffer), {
+          status: 200,
+          headers: {
+            "Content-Type": "application/pdf",
+            "Content-Disposition": `attachment; filename="${pdfFilename}"`,
+            "Cache-Control": "no-store",
+          },
+        });
+      }
 
       const filename = sanitizeFilename(
         `RPP_${penugasan.mapel.nama}_${kelasRomawi}_${materiKompak}_${taNama}.docx`

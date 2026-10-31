@@ -21,7 +21,14 @@ import {
   FileText,
   Layers,
   Sparkles,
+  ChevronDown,
 } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
 import type { BatchExportItemData } from "./actions";
 
 interface BatchExportClientProps {
@@ -41,12 +48,17 @@ export function BatchExportClient({ items }: BatchExportClientProps) {
   const [filterTingkat, setFilterTingkat] = useState<string>("all");
   const [paperSize, setPaperSize] = useState<"A4" | "F4">("A4");
   const [fontFamily, setFontFamily] = useState<"Times New Roman" | "Arial">("Times New Roman");
+  const [exportFormat, setExportFormat] = useState<"docx" | "pdf">("docx");
   const [isExporting, setIsExporting] = useState(false);
   const [downloadingTeacherId, setDownloadingTeacherId] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  // Unduh ZIP Semua Dokumen Tervalidasi Per Guru
-  const handleDownloadTeacherZip = async (guruId: string, guruNama: string) => {
+  // Unduh ZIP Semua Dokumen Tervalidasi Per Guru (Word / PDF)
+  const handleDownloadTeacherZip = async (
+    guruId: string,
+    guruNama: string,
+    format: "docx" | "pdf" = exportFormat
+  ) => {
     setDownloadingTeacherId(guruId);
     setErrorMessage(null);
     try {
@@ -55,6 +67,7 @@ export function BatchExportClient({ items }: BatchExportClientProps) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           guruId,
+          format,
           kertas: paperSize,
           font: fontFamily,
         }),
@@ -67,7 +80,7 @@ export function BatchExportClient({ items }: BatchExportClientProps) {
 
       const blob = await res.blob();
       const contentDisposition = res.headers.get("Content-Disposition");
-      let filename = `DOKUMEN_TERVALIDASI_${guruNama.replace(/\s+/g, "_")}.zip`;
+      let filename = `DOKUMEN_TERVALIDASI_${format.toUpperCase()}_${guruNama.replace(/\s+/g, "_")}.zip`;
       if (contentDisposition) {
         const match = contentDisposition.match(/filename="?([^";]+)"?/);
         if (match && match[1]) filename = match[1];
@@ -177,6 +190,7 @@ export function BatchExportClient({ items }: BatchExportClientProps) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           items: payloadItems,
+          format: exportFormat,
           kertas: paperSize,
           font: fontFamily,
         }),
@@ -188,10 +202,16 @@ export function BatchExportClient({ items }: BatchExportClientProps) {
       }
 
       const blob = await res.blob();
+      const contentDisposition = res.headers.get("Content-Disposition");
+      let filename = `PERANGKAT_AJAR_${exportFormat.toUpperCase()}_${new Date().toISOString().slice(0, 10)}.zip`;
+      if (contentDisposition) {
+        const match = contentDisposition.match(/filename="?([^";]+)"?/);
+        if (match && match[1]) filename = match[1];
+      }
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = `PERANGKAT_AJAR_KBC_${new Date().toISOString().slice(0, 10)}.zip`;
+      a.download = filename;
       document.body.appendChild(a);
       a.click();
       a.remove();
@@ -216,15 +236,28 @@ export function BatchExportClient({ items }: BatchExportClientProps) {
               </span>
             </div>
             <h3 className="text-lg font-bold text-slate-900">
-              Unduh Paket Dokumen Pembelajaran (Format ZIP / DOCX)
+              Unduh Paket Dokumen Pembelajaran (Format ZIP / Word & PDF)
             </h3>
             <p className="text-xs text-slate-500">
-              Pilih dokumen ATP, Prota, Prosem, dan Modul Ajar (RPP) untuk di-generate sekaligus dalam satu file ZIP terstruktur.
+              Pilih dokumen ATP, Prota, Prosem, dan Modul Ajar (RPP) untuk di-generate sekaligus dalam satu file ZIP terstruktur (DOCX atau PDF).
             </p>
           </div>
 
-          {/* Opsi Kertas & Font */}
+          {/* Opsi Kertas, Font & Format Dokumen */}
           <div className="flex flex-wrap items-center gap-3">
+            <div className="flex items-center gap-1.5">
+              <span className="text-xs font-semibold text-slate-600">Format:</span>
+              <Select value={exportFormat} onValueChange={(val) => val && setExportFormat(val as "docx" | "pdf")}>
+                <SelectTrigger className="h-8 text-xs w-[120px] font-medium">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="docx" className="text-xs font-medium">Word (.docx)</SelectItem>
+                  <SelectItem value="pdf" className="text-xs font-medium">PDF (.pdf)</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
             <div className="flex items-center gap-1.5">
               <span className="text-xs font-semibold text-slate-600">Kertas:</span>
               <Select value={paperSize} onValueChange={(val) => val && setPaperSize(val as "A4" | "F4")}>
@@ -309,17 +342,21 @@ export function BatchExportClient({ items }: BatchExportClientProps) {
             <Button
               disabled={selectedDocs.size === 0 || isExporting}
               onClick={handleDownloadZip}
-              className="h-9 bg-emerald-700 hover:bg-emerald-800 text-white font-medium shadow-sm w-full sm:w-auto"
+              className={`h-9 font-medium shadow-sm w-full sm:w-auto ${
+                exportFormat === "pdf"
+                  ? "bg-rose-700 hover:bg-rose-800 text-white"
+                  : "bg-emerald-700 hover:bg-emerald-800 text-white"
+              }`}
             >
               {isExporting ? (
                 <>
                   <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                  Mengompres ZIP...
+                  Mengompres ZIP ({exportFormat.toUpperCase()})...
                 </>
               ) : (
                 <>
                   <Download className="w-4 h-4 mr-2" />
-                  Unduh Paket ZIP (DOCX)
+                  Unduh Paket ZIP ({exportFormat.toUpperCase()})
                 </>
               )}
             </Button>
@@ -371,26 +408,53 @@ export function BatchExportClient({ items }: BatchExportClientProps) {
                 </div>
 
                 {item.guruId && (
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    disabled={downloadingTeacherId === item.guruId}
-                    onClick={() => handleDownloadTeacherZip(item.guruId, item.guruNama)}
-                    className="text-xs h-8 gap-1.5 border-blue-200 text-blue-700 hover:bg-blue-50 self-start sm:self-center shrink-0"
-                    title="Unduh seluruh dokumen tervalidasi milik guru ini dalam satu berkas ZIP"
-                  >
-                    {downloadingTeacherId === item.guruId ? (
-                      <>
-                        <Loader2 className="w-3.5 h-3.5 animate-spin text-blue-600" />
-                        <span>Mengompres...</span>
-                      </>
-                    ) : (
-                      <>
-                        <FileArchive className="w-3.5 h-3.5 text-blue-600" />
-                        <span>Unduh ZIP Guru Ini</span>
-                      </>
-                    )}
-                  </Button>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger
+                      render={
+                        <button
+                          type="button"
+                          disabled={downloadingTeacherId === item.guruId}
+                          className="inline-flex items-center gap-1.5 h-8 px-2.5 text-xs font-medium rounded-lg border border-blue-200 text-blue-700 hover:bg-blue-50 self-start sm:self-center shrink-0 cursor-pointer disabled:opacity-50"
+                          title="Pilih format unduhan berkas ZIP dokumen milik guru ini"
+                        />
+                      }
+                    >
+                      {downloadingTeacherId === item.guruId ? (
+                        <>
+                          <Loader2 className="w-3.5 h-3.5 animate-spin text-blue-600" />
+                          <span>Mengompres...</span>
+                        </>
+                      ) : (
+                        <>
+                          <FileArchive className="w-3.5 h-3.5 text-blue-600" />
+                          <span>Unduh ZIP Guru Ini</span>
+                          <ChevronDown className="w-3 h-3 text-blue-500 opacity-70 ml-0.5" />
+                        </>
+                      )}
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end" className="w-48 p-1.5 bg-white border border-slate-200 shadow-lg rounded-xl z-50">
+                      <DropdownMenuItem
+                        onClick={() => handleDownloadTeacherZip(item.guruId!, item.guruNama, "docx")}
+                        className="flex items-center gap-2 px-2.5 py-2 text-xs text-slate-700 hover:bg-blue-50 hover:text-blue-700 rounded-md cursor-pointer"
+                      >
+                        <FileText className="w-4 h-4 text-blue-600 shrink-0" />
+                        <div className="flex flex-col text-left">
+                          <span className="font-semibold">Format Word (.docx)</span>
+                          <span className="text-[10px] text-slate-400">Arsip ZIP file .docx</span>
+                        </div>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem
+                        onClick={() => handleDownloadTeacherZip(item.guruId!, item.guruNama, "pdf")}
+                        className="flex items-center gap-2 px-2.5 py-2 text-xs text-slate-700 hover:bg-rose-50 hover:text-rose-700 rounded-md cursor-pointer"
+                      >
+                        <FileText className="w-4 h-4 text-rose-600 shrink-0" />
+                        <div className="flex flex-col text-left">
+                          <span className="font-semibold">Format PDF (.pdf)</span>
+                          <span className="text-[10px] text-slate-400">Arsip ZIP file .pdf resmi</span>
+                        </div>
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
                 )}
               </div>
 

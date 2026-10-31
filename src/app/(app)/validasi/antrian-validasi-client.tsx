@@ -28,6 +28,12 @@ import {
   RefreshCw,
   Wand2,
 } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -398,14 +404,18 @@ export function AntrianValidasiClient({
     }
   };
 
-  // AKSI 2: Unduh ZIP Dokumen Tervalidasi Per Guru
-  const handleDownloadZipGuru = async (guruId: string, guruNama: string) => {
+  // AKSI 2: Unduh ZIP Dokumen Tervalidasi Per Guru (Word / PDF)
+  const handleDownloadZipGuru = async (
+    guruId: string,
+    guruNama: string,
+    format: "docx" | "pdf" = "docx"
+  ) => {
     setDownloadingGuruId(guruId);
     try {
       const res = await fetch("/api/export/batch", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ guruId }),
+        body: JSON.stringify({ guruId, format }),
       });
 
       if (!res.ok) {
@@ -415,7 +425,7 @@ export function AntrianValidasiClient({
 
       const blob = await res.blob();
       const contentDisposition = res.headers.get("Content-Disposition");
-      let filename = `DOKUMEN_TERVALIDASI_${guruNama.replace(/\s+/g, "_")}.zip`;
+      let filename = `DOKUMEN_TERVALIDASI_${format.toUpperCase()}_${guruNama.replace(/\s+/g, "_")}.zip`;
       if (contentDisposition) {
         const match = contentDisposition.match(/filename="?([^";]+)"?/);
         if (match && match[1]) filename = match[1];
@@ -430,7 +440,7 @@ export function AntrianValidasiClient({
       a.remove();
       window.URL.revokeObjectURL(url);
 
-      toast.success(`Berhasil mengunduh dokumen tervalidasi ${guruNama}`);
+      toast.success(`Berhasil mengunduh dokumen tervalidasi (${format.toUpperCase()}) ${guruNama}`);
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Gagal mengunduh ZIP.");
     } finally {
@@ -800,35 +810,67 @@ export function AntrianValidasiClient({
                         <span>Validasi Semua Ajuan ({diajukanCount})</span>
                       </Button>
 
-                      {/* Tombol Unduh ZIP Dokumen Tervalidasi Guru */}
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        disabled={guru.disetujuiCount === 0 || isDownloading}
-                        onClick={() => handleDownloadZipGuru(guru.guruId, guru.guruNama)}
-                        className={`text-xs h-9 gap-1.5 font-medium transition-all ${
-                          guru.disetujuiCount > 0
-                            ? "border-blue-300 text-blue-700 hover:bg-blue-50 hover:border-blue-400"
-                            : "text-slate-300 border-slate-200 cursor-not-allowed"
-                        }`}
-                        title={
-                          guru.disetujuiCount > 0
-                            ? `Unduh paket ZIP seluruh dokumen yang telah divalidasi (${guru.disetujuiCount} berkas)`
-                            : "Guru belum memiliki dokumen dengan status 'disetujui'"
-                        }
-                      >
-                        {isDownloading ? (
-                          <>
-                            <Loader2 className="w-3.5 h-3.5 animate-spin text-blue-600" />
-                            <span>Membuat ZIP...</span>
-                          </>
-                        ) : (
-                          <>
-                            <FileArchive className="w-4 h-4 text-blue-600" />
-                            <span>Unduh ZIP ({guru.disetujuiCount})</span>
-                          </>
-                        )}
-                      </Button>
+                      {/* Tombol Unduh ZIP Dokumen Tervalidasi Guru (Dropdown Word / PDF) */}
+                      {guru.disetujuiCount === 0 ? (
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          disabled
+                          className="text-xs h-9 gap-1.5 font-medium text-slate-300 border-slate-200 cursor-not-allowed"
+                          title="Guru belum memiliki dokumen dengan status 'disetujui'"
+                        >
+                          <FileArchive className="w-4 h-4 text-slate-300" />
+                          <span>Unduh ZIP (0)</span>
+                        </Button>
+                      ) : (
+                        <DropdownMenu>
+                          <DropdownMenuTrigger
+                            render={
+                              <button
+                                type="button"
+                                disabled={isDownloading}
+                                className="inline-flex items-center justify-center gap-1.5 h-9 px-3 text-xs font-medium rounded-md border border-blue-300 text-blue-700 hover:bg-blue-50 hover:border-blue-400 transition-all cursor-pointer disabled:opacity-50"
+                                title={`Pilih format unduhan berkas ZIP dokumen tervalidasi (${guru.disetujuiCount} berkas)`}
+                              />
+                            }
+                          >
+                            {isDownloading ? (
+                              <>
+                                <Loader2 className="w-3.5 h-3.5 animate-spin text-blue-600" />
+                                <span>Membuat ZIP...</span>
+                              </>
+                            ) : (
+                              <>
+                                <FileArchive className="w-4 h-4 text-blue-600" />
+                                <span>Unduh ZIP ({guru.disetujuiCount})</span>
+                                <ChevronDown className="w-3 h-3 text-blue-500 opacity-70 ml-0.5" />
+                              </>
+                            )}
+                          </DropdownMenuTrigger>
+                          <DropdownMenuContent align="end" className="w-48 p-1.5 bg-white border border-slate-200 shadow-lg rounded-xl z-50">
+                            <DropdownMenuItem
+                              onClick={() => handleDownloadZipGuru(guru.guruId, guru.guruNama, "docx")}
+                              className="flex items-center gap-2 px-2.5 py-2 text-xs text-slate-700 hover:bg-blue-50 hover:text-blue-700 rounded-md cursor-pointer"
+                            >
+                              <FileText className="w-4 h-4 text-blue-600 shrink-0" />
+                              <div className="flex flex-col text-left">
+                                <span className="font-semibold">Format Word (.docx)</span>
+                                <span className="text-[10px] text-slate-400">Arsip ZIP file .docx</span>
+                              </div>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
+                              onClick={() => handleDownloadZipGuru(guru.guruId, guru.guruNama, "pdf")}
+                              className="flex items-center gap-2 px-2.5 py-2 text-xs text-slate-700 hover:bg-rose-50 hover:text-rose-700 rounded-md cursor-pointer"
+                            >
+                              <FileText className="w-4 h-4 text-rose-600 shrink-0" />
+                              <div className="flex flex-col text-left">
+                                <span className="font-semibold">Format PDF (.pdf)</span>
+                                <span className="text-[10px] text-slate-400">Arsip ZIP file .pdf resmi</span>
+                              </div>
+                            </DropdownMenuItem>
+                          </DropdownMenuContent>
+                        </DropdownMenu>
+                      )}
 
                       {/* Tombol Buat Default Perangkat Guru */}
                       <Button

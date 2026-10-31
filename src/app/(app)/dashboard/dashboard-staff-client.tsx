@@ -30,7 +30,14 @@ import {
   Pause,
   Play,
   RotateCcw,
+  FileText,
 } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -174,14 +181,19 @@ export function DashboardStaffClient({
     }
   };
 
-  const handleDownloadTeacherZip = async (guruId: string, guruNama: string, e: React.MouseEvent) => {
-    e.stopPropagation();
+  const handleDownloadTeacherZip = async (
+    guruId: string,
+    guruNama: string,
+    format: "docx" | "pdf" = "docx",
+    e?: React.MouseEvent
+  ) => {
+    if (e) e.stopPropagation();
     setDownloadingGuruId(guruId);
     try {
       const res = await fetch("/api/export/batch", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ guruId }),
+        body: JSON.stringify({ guruId, format }),
       });
       if (!res.ok) {
         const errorJson = await res.json().catch(() => ({}));
@@ -189,7 +201,7 @@ export function DashboardStaffClient({
       }
       const blob = await res.blob();
       const contentDisposition = res.headers.get("Content-Disposition");
-      let filename = `DOKUMEN_TERVALIDASI_${guruNama.replace(/\s+/g, "_")}.zip`;
+      let filename = `DOKUMEN_TERVALIDASI_${format.toUpperCase()}_${guruNama.replace(/\s+/g, "_")}.zip`;
       if (contentDisposition) {
         const match = contentDisposition.match(/filename="?([^";]+)"?/);
         if (match && match[1]) filename = match[1];
@@ -202,7 +214,7 @@ export function DashboardStaffClient({
       a.click();
       a.remove();
       window.URL.revokeObjectURL(url);
-      toast.success(`Berhasil mengunduh dokumen tervalidasi ${guruNama}`);
+      toast.success(`Berhasil mengunduh dokumen tervalidasi (${format.toUpperCase()}) ${guruNama}`);
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Gagal mengunduh berkas ZIP");
     } finally {
@@ -907,20 +919,50 @@ export function DashboardStaffClient({
                           </div>
                         </div>
 
-                        {/* Tombol Unduh ZIP Cepat */}
-                        <div
-                          onClick={(e) => handleDownloadTeacherZip(group.guruId, group.guruNama, e)}
-                          role="button"
-                          tabIndex={0}
-                          className="hidden sm:flex items-center gap-1 px-2.5 py-1.5 rounded-lg border border-blue-200 text-blue-700 hover:bg-blue-50 text-xs font-medium transition-colors cursor-pointer"
-                          title="Unduh berkas ZIP seluruh dokumen tervalidasi milik guru ini"
-                        >
-                          {downloadingGuruId === group.guruId ? (
-                            <Loader2 className="w-3.5 h-3.5 animate-spin text-blue-600" />
-                          ) : (
-                            <FileArchive className="w-3.5 h-3.5 text-blue-600" />
-                          )}
-                          <span>Unduh ZIP</span>
+                        {/* Tombol Unduh ZIP Cepat (Pilihan Word / PDF) */}
+                        <div onClick={(e) => e.stopPropagation()} className="hidden sm:block">
+                          <DropdownMenu>
+                            <DropdownMenuTrigger
+                              render={
+                                <button
+                                  type="button"
+                                  disabled={downloadingGuruId === group.guruId}
+                                  className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg border border-blue-200 text-blue-700 hover:bg-blue-50 text-xs font-medium transition-colors cursor-pointer disabled:opacity-50"
+                                  title="Pilih format unduhan berkas ZIP seluruh dokumen tervalidasi milik guru ini"
+                                />
+                              }
+                            >
+                              {downloadingGuruId === group.guruId ? (
+                                <Loader2 className="w-3.5 h-3.5 animate-spin text-blue-600" />
+                              ) : (
+                                <FileArchive className="w-3.5 h-3.5 text-blue-600" />
+                              )}
+                              <span>Unduh ZIP</span>
+                              <ChevronDown className="w-3 h-3 text-blue-500 opacity-70 ml-0.5" />
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent align="end" className="w-48 p-1.5 bg-white border border-slate-200 shadow-lg rounded-xl z-50">
+                              <DropdownMenuItem
+                                onClick={(e) => handleDownloadTeacherZip(group.guruId, group.guruNama, "docx", e)}
+                                className="flex items-center gap-2 px-2.5 py-2 text-xs text-slate-700 hover:bg-blue-50 hover:text-blue-700 rounded-md cursor-pointer"
+                              >
+                                <FileText className="w-4 h-4 text-blue-600 shrink-0" />
+                                <div className="flex flex-col text-left">
+                                  <span className="font-semibold">Format Word (.docx)</span>
+                                  <span className="text-[10px] text-slate-400">Arsip ZIP file .docx</span>
+                                </div>
+                              </DropdownMenuItem>
+                              <DropdownMenuItem
+                                onClick={(e) => handleDownloadTeacherZip(group.guruId, group.guruNama, "pdf", e)}
+                                className="flex items-center gap-2 px-2.5 py-2 text-xs text-slate-700 hover:bg-rose-50 hover:text-rose-700 rounded-md cursor-pointer"
+                              >
+                                <FileText className="w-4 h-4 text-rose-600 shrink-0" />
+                                <div className="flex flex-col text-left">
+                                  <span className="font-semibold">Format PDF (.pdf)</span>
+                                  <span className="text-[10px] text-slate-400">Arsip ZIP file .pdf resmi</span>
+                                </div>
+                              </DropdownMenuItem>
+                            </DropdownMenuContent>
+                          </DropdownMenu>
                         </div>
 
                         {/* Tombol Buat Default Perangkat Guru */}

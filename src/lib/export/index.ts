@@ -6,4 +6,6 @@ export * from "./build-tp-docx";
 export * from "./build-prota-docx";
 export * from "./build-prosem-docx";
 export * from "./build-rpp-docx";
+export * from "./pdf-builder";
+export * from "./html-builders";
 
