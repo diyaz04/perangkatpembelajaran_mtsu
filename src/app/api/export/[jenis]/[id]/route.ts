@@ -26,6 +26,7 @@ import {
 } from "@/lib/export";
 
 export const runtime = "nodejs";
+export const maxDuration = 60;
 
 // Helper sanitasi nama file agar valid di OS Windows/Linux
 function sanitizeFilename(filename: string): string {

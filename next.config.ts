@@ -10,6 +10,7 @@ const supabaseHost = (() => {
 
 const nextConfig: NextConfig = {
   /* config options here */
+  serverExternalPackages: ["@sparticuz/chromium", "puppeteer-core"],
   experimental: {
     staleTimes: {
       dynamic: 300, // Simpan cache navigasi rute dinamis di memori browser selama 5 menit (300 detik)

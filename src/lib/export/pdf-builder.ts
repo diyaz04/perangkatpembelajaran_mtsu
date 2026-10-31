@@ -3,7 +3,7 @@ import fs from "fs";
 
 let cachedBrowser: Browser | null = null;
 
-export function findBrowserExecutable(): string {
+export function findLocalBrowserExecutable(): string | null {
   if (process.env.CHROME_PATH && fs.existsSync(process.env.CHROME_PATH)) {
     return process.env.CHROME_PATH;
   }
@@ -44,9 +44,7 @@ export function findBrowserExecutable(): string {
     }
   }
 
-  throw new Error(
-    "Tidak dapat menemukan executable browser (Chrome / Edge) di sistem untuk mengonversi dokumen ke PDF."
-  );
+  return null;
 }
 
 export async function getOrLaunchBrowser(): Promise<Browser> {
@@ -59,27 +57,49 @@ export async function getOrLaunchBrowser(): Promise<Browser> {
     }
   }
 
-  const executablePath = findBrowserExecutable();
-  cachedBrowser = await puppeteer.launch({
-    executablePath,
-    headless: true,
-    args: [
-      "--no-sandbox",
-      "--disable-setuid-sandbox",
-      "--disable-gpu",
-      "--disable-dev-shm-usage",
-      "--no-first-run",
-      "--no-zygote",
-      "--disable-extensions",
-      "--disable-background-networking",
-      "--disable-default-apps",
-      "--disable-sync",
-      "--mute-audio",
-      "--hide-scrollbars",
-    ],
-  });
+  const localPath = findLocalBrowserExecutable();
 
-  return cachedBrowser;
+  if (localPath) {
+    // 1. Jika ada browser lokal (misal saat running di Windows / Mac / Linux ber-GUI)
+    cachedBrowser = await puppeteer.launch({
+      executablePath: localPath,
+      headless: true,
+      args: [
+        "--no-sandbox",
+        "--disable-setuid-sandbox",
+        "--disable-gpu",
+        "--disable-dev-shm-usage",
+        "--no-first-run",
+        "--no-zygote",
+        "--disable-extensions",
+        "--disable-background-networking",
+        "--disable-default-apps",
+        "--disable-sync",
+        "--mute-audio",
+        "--hide-scrollbars",
+      ],
+    });
+    return cachedBrowser;
+  }
+
+  // 2. Jika di cloud serverless (Vercel / AWS Lambda / Docker) gunakan @sparticuz/chromium
+  try {
+    const chromium = (await import("@sparticuz/chromium")).default;
+    chromium.setGraphicsMode = false;
+
+    cachedBrowser = await puppeteer.launch({
+      args: chromium.args,
+      executablePath: await chromium.executablePath(),
+      headless: true,
+    });
+    return cachedBrowser;
+  } catch (err) {
+    console.error("Gagal menjalankan @sparticuz/chromium:", err);
+    throw new Error(
+      "Tidak dapat menjalankan Chromium untuk membuat PDF di server cloud: " +
+        (err instanceof Error ? err.message : String(err))
+    );
+  }
 }
 
 export interface PdfOptions {

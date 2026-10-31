@@ -22,6 +22,7 @@ import {
 } from "@/lib/export";
 
 export const runtime = "nodejs";
+export const maxDuration = 60;
 
 function sanitizeFilename(filename: string): string {
   return filename

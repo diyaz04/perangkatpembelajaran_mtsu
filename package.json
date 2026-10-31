@@ -15,6 +15,7 @@
     "@base-ui/react": "^1.9.0",
     "@hookform/resolvers": "^5.9.1",
     "@shadcn/react": "^0.3.1",
+    "@sparticuz/chromium": "^153.0.0",
     "@supabase/auth-helpers-nextjs": "^0.15.0",
     "@supabase/ssr": "^0.12.7",
     "@supabase/supabase-js": "^2.117.3",
