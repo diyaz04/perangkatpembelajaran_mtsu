@@ -383,7 +383,7 @@ export function DashboardGuruClient({
                     <span className="font-semibold text-slate-700">RPP / Modul Ajar:</span>
                   </div>
                   <span className="font-bold text-slate-900 text-left sm:text-right">
-                    {p.rppCount} dari {p.rppTarget} TP{" "}
+                    {p.rppCount} dari {p.rppTarget} RPP{" "}
                     <span className="text-emerald-600 font-semibold">({p.rppDisetujui} Disetujui)</span>
                   </span>
                 </div>

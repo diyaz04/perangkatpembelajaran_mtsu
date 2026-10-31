@@ -567,28 +567,27 @@ export async function generateDefaultPerangkatForPenugasan(
     }
 
     // =========================================================================
-    // 11. GENERATE MODUL AJAR (RPP) STANDAR KBC (BATCH INSERT)
+    // 11. GENERATE MODUL AJAR (RPP) STANDAR KBC (BATCH INSERT) - PER ELEMEN
+    // Setiap elemen dibuatkan 1 dokumen Modul Ajar (RPP) yang menaungi TP elemen tersebut
     // =========================================================================
-    const defaultPertemuan = 2;
-    const defaultTotalJp = jpPerMinggu * defaultPertemuan;
-    const rppsToCreate = [
-      { sem: 1 as const, tpList: insertedTps.filter((t) => t.semester === 1) },
-      { sem: 2 as const, tpList: insertedTps.filter((t) => t.semester === 2) },
-    ];
-
     const rppInserts: any[] = [];
     const rppMeta: Array<{
-      tp: any;
       defaultTotalJp: number;
       defaultPertemuan: number;
       uniquePcIds: string[];
       materiPokok: string;
     }> = [];
 
-    for (const rppGroup of rppsToCreate) {
-      if (rppGroup.tpList.length === 0) continue;
-      const representativeTp = rppGroup.tpList[0];
-      const materiPokok = representativeTp.lingkup_materi || representativeTp.deskripsi;
+    for (let acpIdx = 0; acpIdx < insertedAcps.length; acpIdx++) {
+      const acp = insertedAcps[acpIdx];
+      const acpTps = insertedTps.filter((t) => t.analisis_cp_id === acp.id);
+      if (acpTps.length === 0) continue;
+
+      const representativeTp = acpTps[0];
+      const materiPokok = acp.materi_pokok || representativeTp.lingkup_materi || representativeTp.deskripsi;
+      const alokasiJp = Number(acp.alokasi_jp || (jpPerMinggu * 2));
+      const jumlahPertemuan = Math.max(1, Math.round(alokasiJp / jpPerMinggu));
+
       const defaultKesiapan = generateDefaultKesiapanMurid(materiPokok, mapel.nama);
       const defaultKarakteristik = generateDefaultKarakteristik(materiPokok, mapel.nama);
       const defaultLampiran = generateDefaultLampiran(
@@ -598,14 +597,26 @@ export async function generateDefaultPerangkatForPenugasan(
         defaultModel?.nama
       );
       const defaultSpec = getModelPedagogiSpec(defaultModel?.nama);
+
       const uniquePcIds = Array.from(
-        new Set([...defaultPcIds, ...((representativeTp.panca_cinta_ids as string[]) || [])])
+        new Set([
+          ...defaultPcIds,
+          ...acpTps.flatMap((t) => (t.panca_cinta_ids as string[]) || []),
+        ])
+      );
+      const uniqueDplIds = Array.from(
+        new Set([
+          ...defaultDplIds,
+          ...acpTps.flatMap((t) => (t.dpl_ids as string[]) || []),
+        ])
       );
 
+      const tpIds = acpTps.map((t) => t.id);
+      const tujuanTeks = acpTps.map((t) => `${t.kode_tp} - ${t.deskripsi}`).join("\n\n");
+
       rppMeta.push({
-        tp: representativeTp,
-        defaultTotalJp,
-        defaultPertemuan,
+        defaultTotalJp: alokasiJp,
+        defaultPertemuan: jumlahPertemuan,
         uniquePcIds,
         materiPokok,
       });
@@ -616,14 +627,14 @@ export async function generateDefaultPerangkatForPenugasan(
         model_id: defaultModel?.id || null,
         materi_pokok: materiPokok,
         topik_pembelajaran: materiPokok,
-        alokasi_waktu: `${defaultTotalJp} JP (${defaultPertemuan} Pertemuan x ${jpPerMinggu} x 40 menit)`,
-        alokasi_jp: defaultTotalJp,
-        jumlah_pertemuan: defaultPertemuan,
+        alokasi_waktu: `${alokasiJp} JP (${jumlahPertemuan} Pertemuan x ${jpPerMinggu} x 40 menit)`,
+        alokasi_jp: alokasiJp,
+        jumlah_pertemuan: jumlahPertemuan,
         menit_per_jp: 40,
         pertemuan_ke: 1,
         versi: "lengkap" as VersiRpp,
-        tujuan_pembelajaran_ids: [representativeTp.id],
-        dimensi_profil_lulusan_ids: defaultDplIds,
+        tujuan_pembelajaran_ids: tpIds,
+        dimensi_profil_lulusan_ids: uniqueDplIds,
         panca_cinta_ids: uniquePcIds,
         materi_kbc_ids: [],
         metode_pembelajaran: defaultSpec.rekomendasi_metode,
@@ -631,7 +642,7 @@ export async function generateDefaultPerangkatForPenugasan(
         benang_merah_kbc: defaultKarakteristik.benang_merah_kbc,
         kesiapan_murid: defaultKesiapan as any,
         lampiran: defaultLampiran as any,
-        tujuan_pembelajaran_teks: representativeTp.deskripsi,
+        tujuan_pembelajaran_teks: tujuanTeks,
         lingkungan_belajar_fisik: "Ruang kelas yang nyaman, tertata rapi, dan mendukung diskusi kolaboratif.",
         budaya_belajar: "Budaya saling memuliakan, empati, kebebasan berpendapat dengan santun, dan cinta ilmu.",
         status: targetStatus,

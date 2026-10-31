@@ -942,11 +942,12 @@ export async function getRekapKelengkapanAction(): Promise<{
 
     const penugasanIds = penugasanList.map((p) => p.id);
 
-    const [atpRes, protaRes, prosemRes, rppRes, tpRes] = await Promise.all([
+    const [atpRes, protaRes, prosemRes, rppRes, acpRes, tpRes] = await Promise.all([
       adminClient.from("atp").select("id, penugasan_id, status").in("penugasan_id", penugasanIds),
       adminClient.from("prota").select("id, penugasan_id, status").in("penugasan_id", penugasanIds),
       adminClient.from("prosem").select("id, penugasan_id, semester, status").in("penugasan_id", penugasanIds),
       adminClient.from("rpp").select("id, penugasan_id, status, tujuan_pembelajaran_ids").in("penugasan_id", penugasanIds),
+      adminClient.from("analisis_cp").select("id, penugasan_id").in("penugasan_id", penugasanIds),
       adminClient.from("tujuan_pembelajaran").select("id, analisis_cp!inner(penugasan_id)").in("analisis_cp.penugasan_id", penugasanIds),
     ]);
 
@@ -967,7 +968,15 @@ export async function getRekapKelengkapanAction(): Promise<{
       rppMap.set(rp.penugasan_id, cur);
     });
 
-    // Hitung total TP per penugasan sebagai target RPP
+    // Hitung total elemen (Analisis CP) per penugasan sebagai target RPP modul ajar
+    const acpCountMap = new Map<string, number>();
+    (acpRes.data || []).forEach((item) => {
+      if (item.penugasan_id) {
+        acpCountMap.set(item.penugasan_id, (acpCountMap.get(item.penugasan_id) || 0) + 1);
+      }
+    });
+
+    // Hitung total TP per penugasan sebagai fallback
     const tpCountMap = new Map<string, number>();
     (tpRes.data || []).forEach((item) => {
       const pid = (item.analisis_cp as { penugasan_id?: string })?.penugasan_id;
@@ -991,7 +1000,8 @@ export async function getRekapKelengkapanAction(): Promise<{
       const prosem1 = prosem1Map.get(p.id);
       const prosem2 = prosem2Map.get(p.id);
       const rpps = rppMap.get(p.id) || [];
-      const tpTarget = tpCountMap.get(p.id) || 4; // default minimum 4 TP per mapel jika belum diset
+      // Target RPP per mapel berbasis jumlah elemen Analisis CP (atau estimasi dari TP jika belum ada ACP)
+      const rppTarget = acpCountMap.get(p.id) || (tpCountMap.get(p.id) ? Math.ceil((tpCountMap.get(p.id) || 0) / 2) : 4);
 
       if (atp?.status === "diajukan") totalAntrianValidasi++;
       if (prota?.status === "diajukan") totalAntrianValidasi++;
@@ -1023,7 +1033,7 @@ export async function getRekapKelengkapanAction(): Promise<{
       const rppDisetujui = rpps.filter((r) => r.status === "disetujui").length;
       totalDokumenDisetujui += rppDisetujui;
 
-      const rppRatio = tpTarget > 0 ? Math.min(1, rpps.length / tpTarget) : 0;
+      const rppRatio = rppTarget > 0 ? Math.min(1, rpps.length / rppTarget) : 0;
       skorPenugasan += Math.round(rppRatio * 30);
 
       totalDokumenBobot += skorPenugasan;
@@ -1041,7 +1051,7 @@ export async function getRekapKelengkapanAction(): Promise<{
         prosem1Status: (prosem1?.status as DocStatus) || "belum",
         prosem2Status: (prosem2?.status as DocStatus) || "belum",
         rppCount: rpps.length,
-        rppTarget: tpTarget,
+        rppTarget: rppTarget,
         rppDisetujuiCount: rppDisetujui,
         persentaseSelesai: Math.min(100, skorPenugasan),
       };

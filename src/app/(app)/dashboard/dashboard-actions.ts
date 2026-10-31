@@ -104,11 +104,12 @@ export async function getDashboardGuruDataAction(): Promise<{
     const penugasanIds = penugasanRows.map((p) => p.id);
 
     // 3. Query dokumen penugasan guru secara paralel
-    const [atpRes, protaRes, prosemRes, rppRes, tpRes] = await Promise.all([
+    const [atpRes, protaRes, prosemRes, rppRes, acpRes, tpRes] = await Promise.all([
       adminClient.from("atp").select("id, penugasan_id, status, catatan_validator, updated_at").in("penugasan_id", penugasanIds),
       adminClient.from("prota").select("id, penugasan_id, status, catatan_validator, updated_at").in("penugasan_id", penugasanIds),
       adminClient.from("prosem").select("id, penugasan_id, semester, status, catatan_validator, updated_at").in("penugasan_id", penugasanIds),
       adminClient.from("rpp").select("id, penugasan_id, materi_pokok, status, catatan_validator, updated_at").in("penugasan_id", penugasanIds),
+      adminClient.from("analisis_cp").select("id, penugasan_id").in("penugasan_id", penugasanIds),
       adminClient.from("tujuan_pembelajaran").select("id, analisis_cp!inner(penugasan_id)").in("analisis_cp.penugasan_id", penugasanIds),
     ]);
 
@@ -127,6 +128,13 @@ export async function getDashboardGuruDataAction(): Promise<{
       const cur = rppMap.get(rp.penugasan_id) || [];
       cur.push(rp);
       rppMap.set(rp.penugasan_id, cur);
+    });
+
+    const acpCountMap = new Map<string, number>();
+    (acpRes.data || []).forEach((item) => {
+      if (item.penugasan_id) {
+        acpCountMap.set(item.penugasan_id, (acpCountMap.get(item.penugasan_id) || 0) + 1);
+      }
     });
 
     const tpCountMap = new Map<string, number>();
@@ -151,7 +159,7 @@ export async function getDashboardGuruDataAction(): Promise<{
       const prosem1 = prosem1Map.get(p.id);
       const prosem2 = prosem2Map.get(p.id);
       const rpps = rppMap.get(p.id) || [];
-      const tpTarget = tpCountMap.get(p.id) || 4;
+      const rppTarget = acpCountMap.get(p.id) || (tpCountMap.get(p.id) ? Math.ceil((tpCountMap.get(p.id) || 0) / 2) : 4);
 
       // Cek dokumen revisi
       if (atp?.status === "revisi") {
@@ -284,7 +292,7 @@ export async function getDashboardGuruDataAction(): Promise<{
       else if (prosem2?.status === "diajukan") skor += 8;
 
       const rppDisetujui = rpps.filter((r) => r.status === "disetujui").length;
-      const rppRatio = tpTarget > 0 ? Math.min(1, rpps.length / tpTarget) : 0;
+      const rppRatio = rppTarget > 0 ? Math.min(1, rpps.length / rppTarget) : 0;
       skor += Math.round(rppRatio * 30);
 
       return {
@@ -298,7 +306,7 @@ export async function getDashboardGuruDataAction(): Promise<{
         prosem1: { id: prosem1?.id || null, status: (prosem1?.status as DocStatus) || "belum" },
         prosem2: { id: prosem2?.id || null, status: (prosem2?.status as DocStatus) || "belum" },
         rppCount: rpps.length,
-        rppTarget: tpTarget,
+        rppTarget: rppTarget,
         rppDisetujui,
         persentaseSelesai: Math.min(100, skor),
       };

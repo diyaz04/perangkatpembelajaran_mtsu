@@ -1048,7 +1048,7 @@ export function DashboardStaffClient({
                                       title="Buka RPP / Modul Ajar"
                                     >
                                       <span className="font-bold text-slate-800 block">
-                                        {item.rppCount} / {item.rppTarget} TP
+                                        {item.rppCount} / {item.rppTarget} RPP
                                       </span>
                                       <span className="text-[10px] font-semibold text-emerald-600 block mt-0.5">
                                         ({item.rppDisetujuiCount} disetujui)
@@ -1165,7 +1165,7 @@ export function DashboardStaffClient({
                         <td className="p-3 text-center">
                           <Link href={`/modul-ajar`}>
                             <span className="font-bold text-slate-800 block">
-                              {item.rppCount} / {item.rppTarget} TP
+                              {item.rppCount} / {item.rppTarget} RPP
                             </span>
                             <span className="text-[10px] font-semibold text-emerald-600 block mt-0.5">
                               ({item.rppDisetujuiCount} disetujui)
