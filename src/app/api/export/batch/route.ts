@@ -46,6 +46,7 @@ interface BatchExportItem {
 
 interface ProcessExportParams {
   guruId?: string;
+  penugasanId?: string;
   items?: BatchExportItem[];
   kertas?: string;
   font?: string;
@@ -78,8 +79,95 @@ async function processZipExport(params: ProcessExportParams) {
   let itemsToExport: BatchExportItem[] = params.items || [];
   let zipFilename = `PERANGKAT_AJAR_KBC_${isPdf ? "PDF_" : "WORD_"}${new Date().toISOString().slice(0, 10)}.zip`;
 
-  // JIKA EKSPOR PER GURU (DOKUMEN TERVALIDASI)
-  if (params.guruId) {
+  // JIKA EKSPOR PER PENUGASAN (DOKUMEN TERVALIDASI SATU MAPEL/KELAS)
+  if (params.penugasanId) {
+    const { data: penugasan, error: pErr } = await adminClient
+      .from("penugasan")
+      .select(`
+        id,
+        tingkat_kelas,
+        rombel,
+        guru_id,
+        mapel ( id, nama, kode ),
+        profiles ( id, nama_lengkap, nip ),
+        tahun_ajaran ( id, nama )
+      `)
+      .eq("id", params.penugasanId)
+      .single();
+
+    if (pErr || !penugasan) {
+      return NextResponse.json(
+        { error: "Data penugasan tidak ditemukan." },
+        { status: 404 }
+      );
+    }
+
+    const [atpRes, protaRes, prosemRes, rppRes] = await Promise.all([
+      adminClient
+        .from("atp")
+        .select("id, penugasan_id")
+        .eq("penugasan_id", params.penugasanId)
+        .eq("status", "disetujui"),
+      adminClient
+        .from("prota")
+        .select("id, penugasan_id")
+        .eq("penugasan_id", params.penugasanId)
+        .eq("status", "disetujui"),
+      adminClient
+        .from("prosem")
+        .select("id, penugasan_id, semester")
+        .eq("penugasan_id", params.penugasanId)
+        .eq("status", "disetujui"),
+      adminClient
+        .from("rpp")
+        .select("id, penugasan_id, materi_pokok")
+        .eq("penugasan_id", params.penugasanId)
+        .eq("status", "disetujui"),
+    ]);
+
+    const collectedItems: BatchExportItem[] = [];
+
+    (atpRes.data || []).forEach((row) => {
+      collectedItems.push({ jenis: "atp", id: row.penugasan_id });
+    });
+
+    (protaRes.data || []).forEach((row) => {
+      collectedItems.push({ jenis: "prota", id: row.penugasan_id });
+    });
+
+    (prosemRes.data || []).forEach((row) => {
+      collectedItems.push({
+        jenis: "prosem",
+        id: row.penugasan_id,
+        semester: row.semester as 1 | 2,
+      });
+    });
+
+    (rppRes.data || []).forEach((row) => {
+      collectedItems.push({ jenis: "rpp", id: row.id });
+    });
+
+    if (collectedItems.length === 0) {
+      return NextResponse.json(
+        {
+          error: `Belum ada berkas yang disetujui (tervalidasi) untuk mata pelajaran ini. Silakan telaah dan validasi berkas ajuan guru terlebih dahulu.`,
+        },
+        { status: 400 }
+      );
+    }
+
+    itemsToExport = collectedItems;
+
+    const mapelObj = penugasan.mapel as { nama?: string; kode?: string } | null;
+    const guruObj = penugasan.profiles as { nama_lengkap?: string; nip?: string } | null;
+    const mapelNama = mapelObj?.nama || "Mapel";
+    const guruNama = guruObj?.nama_lengkap || "Guru";
+    const cleanGuru = sanitizeFilename(guruNama);
+    const cleanMapel = sanitizeFilename(mapelNama);
+    const kelasRomawi = getKelasRomawi(penugasan.tingkat_kelas);
+
+    zipFilename = `PERANGKAT_${isPdf ? "PDF_" : "WORD_"}${cleanMapel}_Kelas_${kelasRomawi}_${cleanGuru}.zip`;
+  } else if (params.guruId) {
     // 1. Ambil data guru
     const { data: guruProfile, error: gErr } = await adminClient
       .from("profiles")
@@ -219,128 +307,135 @@ async function processZipExport(params: ProcessExportParams) {
   let processedCount = 0;
   const itemErrors: string[] = [];
 
-  for (const item of itemsToExport) {
-    try {
-      const jenis = item.jenis.toLowerCase();
+  // Proses dokumen secara paralel dalam chunk untuk efisiensi kecepatan dan memori
+  const CONCURRENCY = 4;
+  for (let i = 0; i < itemsToExport.length; i += CONCURRENCY) {
+    const chunk = itemsToExport.slice(i, i + CONCURRENCY);
+    await Promise.all(
+      chunk.map(async (item) => {
+        try {
+          const jenis = item.jenis.toLowerCase();
 
-      if (jenis === "atp") {
-        const res = await getAtpPreviewDataAction(item.id);
-        if (res.success && res.data) {
-          const { penugasan } = res.data;
-          const taNama = penugasan.tahun_ajaran.nama.replace(/\//g, "-");
-          const kelasRomawi = getKelasRomawi(penugasan.tingkat_kelas);
+          if (jenis === "atp") {
+            const res = await getAtpPreviewDataAction(item.id);
+            if (res.success && res.data) {
+              const { penugasan } = res.data;
+              const taNama = penugasan.tahun_ajaran.nama.replace(/\//g, "-");
+              const kelasRomawi = getKelasRomawi(penugasan.tingkat_kelas);
 
-          if (isPdf) {
-            const filename = sanitizeFilename(
-              `ATP_${penugasan.mapel.nama}_${kelasRomawi}_${taNama}.pdf`
-            );
-            const html = generateAtpHtml(res.data);
-            const buffer = await generatePdfBufferFromHtml(html, { landscape: true, paperSize });
-            const zipPath = getUniqueZipPath("ATP", filename);
-            zip.file(zipPath, buffer);
-          } else {
-            const filename = sanitizeFilename(
-              `ATP_${penugasan.mapel.nama}_${kelasRomawi}_${taNama}.docx`
-            );
-            const buffer = await buildAtpDocx(res.data, exportOptions);
-            const zipPath = getUniqueZipPath("ATP", filename);
-            zip.file(zipPath, buffer);
+              if (isPdf) {
+                const filename = sanitizeFilename(
+                  `ATP_${penugasan.mapel.nama}_${kelasRomawi}_${taNama}.pdf`
+                );
+                const html = generateAtpHtml(res.data);
+                const buffer = await generatePdfBufferFromHtml(html, { landscape: true, paperSize });
+                const zipPath = getUniqueZipPath("ATP", filename);
+                zip.file(zipPath, buffer);
+              } else {
+                const filename = sanitizeFilename(
+                  `ATP_${penugasan.mapel.nama}_${kelasRomawi}_${taNama}.docx`
+                );
+                const buffer = await buildAtpDocx(res.data, exportOptions);
+                const zipPath = getUniqueZipPath("ATP", filename);
+                zip.file(zipPath, buffer);
+              }
+              processedCount++;
+            } else {
+              itemErrors.push(`ATP (${res.error || "Data tidak ditemukan"})`);
+            }
+          } else if (jenis === "prota") {
+            const res = await getProtaDetailAction(item.id);
+            if (res.success && res.data) {
+              const { penugasan } = res.data;
+              const taNama = penugasan.tahun_ajaran.nama.replace(/\//g, "-");
+              const kelasRomawi = getKelasRomawi(penugasan.tingkat_kelas);
+
+              if (isPdf) {
+                const filename = sanitizeFilename(
+                  `PROTA_${penugasan.mapel.nama}_${kelasRomawi}_${taNama}.pdf`
+                );
+                const html = generateProtaHtml(res.data);
+                const buffer = await generatePdfBufferFromHtml(html, { landscape: false, paperSize });
+                const zipPath = getUniqueZipPath("PROTA", filename);
+                zip.file(zipPath, buffer);
+              } else {
+                const filename = sanitizeFilename(
+                  `PROTA_${penugasan.mapel.nama}_${kelasRomawi}_${taNama}.docx`
+                );
+                const buffer = await buildProtaDocx(res.data, exportOptions);
+                const zipPath = getUniqueZipPath("PROTA", filename);
+                zip.file(zipPath, buffer);
+              }
+              processedCount++;
+            } else {
+              itemErrors.push(`PROTA (${res.error || "Data tidak ditemukan"})`);
+            }
+          } else if (jenis === "prosem") {
+            const sem: 1 | 2 = item.semester === 2 ? 2 : 1;
+            const res = await getProsemDetailAction(item.id, sem);
+            if (res.success && res.data) {
+              const { penugasan } = res.data;
+              const taNama = penugasan.tahun_ajaran.nama.replace(/\//g, "-");
+              const kelasRomawi = getKelasRomawi(penugasan.tingkat_kelas);
+
+              if (isPdf) {
+                const filename = sanitizeFilename(
+                  `PROSEM_${penugasan.mapel.nama}_${kelasRomawi}_Smt${sem}_${taNama}.pdf`
+                );
+                const html = generateProsemHtml(res.data, sem);
+                const buffer = await generatePdfBufferFromHtml(html, { landscape: true, paperSize });
+                const zipPath = getUniqueZipPath("PROSEM", filename);
+                zip.file(zipPath, buffer);
+              } else {
+                const filename = sanitizeFilename(
+                  `PROSEM_${penugasan.mapel.nama}_${kelasRomawi}_Smt${sem}_${taNama}.docx`
+                );
+                const buffer = await buildProsemDocx(res.data, sem, exportOptions);
+                const zipPath = getUniqueZipPath("PROSEM", filename);
+                zip.file(zipPath, buffer);
+              }
+              processedCount++;
+            } else {
+              itemErrors.push(`PROSEM Smt${sem} (${res.error || "Data tidak ditemukan"})`);
+            }
+          } else if (jenis === "rpp" || jenis === "modul-ajar") {
+            const res = await getRppDetailAction(item.id);
+            if (res.success && res.data) {
+              const { penugasan, rpp } = res.data;
+              const taNama = penugasan.tahun_ajaran.nama.replace(/\//g, "-");
+              const kelasRomawi = getKelasRomawi(penugasan.tingkat_kelas);
+              const materiKompak = (rpp.materi_pokok || "Materi")
+                .slice(0, 30)
+                .replace(/[^a-zA-Z0-9]/g, "_");
+
+              if (isPdf) {
+                const filename = sanitizeFilename(
+                  `RPP_${penugasan.mapel.nama}_${kelasRomawi}_${materiKompak}_${taNama}.pdf`
+                );
+                const html = generateRppHtml(res.data);
+                const buffer = await generatePdfBufferFromHtml(html, { landscape: false, paperSize });
+                const zipPath = getUniqueZipPath("RPP_MODUL_AJAR", filename);
+                zip.file(zipPath, buffer);
+              } else {
+                const filename = sanitizeFilename(
+                  `RPP_${penugasan.mapel.nama}_${kelasRomawi}_${materiKompak}_${taNama}.docx`
+                );
+                const buffer = await buildRppDocx(res.data, exportOptions);
+                const zipPath = getUniqueZipPath("RPP_MODUL_AJAR", filename);
+                zip.file(zipPath, buffer);
+              }
+              processedCount++;
+            } else {
+              itemErrors.push(`RPP (${res.error || "Data tidak ditemukan"})`);
+            }
           }
-          processedCount++;
-        } else {
-          itemErrors.push(`ATP (${res.error || "Data tidak ditemukan"})`);
+        } catch (err) {
+          const errMsg = err instanceof Error ? err.message : String(err);
+          console.error(`Gagal memproses item batch export ${item.jenis} ${item.id}:`, err);
+          itemErrors.push(`${item.jenis.toUpperCase()}: ${errMsg}`);
         }
-      } else if (jenis === "prota") {
-        const res = await getProtaDetailAction(item.id);
-        if (res.success && res.data) {
-          const { penugasan } = res.data;
-          const taNama = penugasan.tahun_ajaran.nama.replace(/\//g, "-");
-          const kelasRomawi = getKelasRomawi(penugasan.tingkat_kelas);
-
-          if (isPdf) {
-            const filename = sanitizeFilename(
-              `PROTA_${penugasan.mapel.nama}_${kelasRomawi}_${taNama}.pdf`
-            );
-            const html = generateProtaHtml(res.data);
-            const buffer = await generatePdfBufferFromHtml(html, { landscape: false, paperSize });
-            const zipPath = getUniqueZipPath("PROTA", filename);
-            zip.file(zipPath, buffer);
-          } else {
-            const filename = sanitizeFilename(
-              `PROTA_${penugasan.mapel.nama}_${kelasRomawi}_${taNama}.docx`
-            );
-            const buffer = await buildProtaDocx(res.data, exportOptions);
-            const zipPath = getUniqueZipPath("PROTA", filename);
-            zip.file(zipPath, buffer);
-          }
-          processedCount++;
-        } else {
-          itemErrors.push(`PROTA (${res.error || "Data tidak ditemukan"})`);
-        }
-      } else if (jenis === "prosem") {
-        const sem: 1 | 2 = item.semester === 2 ? 2 : 1;
-        const res = await getProsemDetailAction(item.id, sem);
-        if (res.success && res.data) {
-          const { penugasan } = res.data;
-          const taNama = penugasan.tahun_ajaran.nama.replace(/\//g, "-");
-          const kelasRomawi = getKelasRomawi(penugasan.tingkat_kelas);
-
-          if (isPdf) {
-            const filename = sanitizeFilename(
-              `PROSEM_${penugasan.mapel.nama}_${kelasRomawi}_Smt${sem}_${taNama}.pdf`
-            );
-            const html = generateProsemHtml(res.data, sem);
-            const buffer = await generatePdfBufferFromHtml(html, { landscape: true, paperSize });
-            const zipPath = getUniqueZipPath("PROSEM", filename);
-            zip.file(zipPath, buffer);
-          } else {
-            const filename = sanitizeFilename(
-              `PROSEM_${penugasan.mapel.nama}_${kelasRomawi}_Smt${sem}_${taNama}.docx`
-            );
-            const buffer = await buildProsemDocx(res.data, sem, exportOptions);
-            const zipPath = getUniqueZipPath("PROSEM", filename);
-            zip.file(zipPath, buffer);
-          }
-          processedCount++;
-        } else {
-          itemErrors.push(`PROSEM Smt${sem} (${res.error || "Data tidak ditemukan"})`);
-        }
-      } else if (jenis === "rpp" || jenis === "modul-ajar") {
-        const res = await getRppDetailAction(item.id);
-        if (res.success && res.data) {
-          const { penugasan, rpp } = res.data;
-          const taNama = penugasan.tahun_ajaran.nama.replace(/\//g, "-");
-          const kelasRomawi = getKelasRomawi(penugasan.tingkat_kelas);
-          const materiKompak = (rpp.materi_pokok || "Materi")
-            .slice(0, 30)
-            .replace(/[^a-zA-Z0-9]/g, "_");
-
-          if (isPdf) {
-            const filename = sanitizeFilename(
-              `RPP_${penugasan.mapel.nama}_${kelasRomawi}_${materiKompak}_${taNama}.pdf`
-            );
-            const html = generateRppHtml(res.data);
-            const buffer = await generatePdfBufferFromHtml(html, { landscape: false, paperSize });
-            const zipPath = getUniqueZipPath("RPP_MODUL_AJAR", filename);
-            zip.file(zipPath, buffer);
-          } else {
-            const filename = sanitizeFilename(
-              `RPP_${penugasan.mapel.nama}_${kelasRomawi}_${materiKompak}_${taNama}.docx`
-            );
-            const buffer = await buildRppDocx(res.data, exportOptions);
-            const zipPath = getUniqueZipPath("RPP_MODUL_AJAR", filename);
-            zip.file(zipPath, buffer);
-          }
-          processedCount++;
-        } else {
-          itemErrors.push(`RPP (${res.error || "Data tidak ditemukan"})`);
-        }
-      }
-    } catch (err) {
-      const errMsg = err instanceof Error ? err.message : String(err);
-      console.error(`Gagal memproses item batch export ${item.jenis} ${item.id}:`, err);
-      itemErrors.push(`${item.jenis.toUpperCase()}: ${errMsg}`);
-    }
+      })
+    );
   }
 
   if (processedCount === 0) {
@@ -351,7 +446,11 @@ async function processZipExport(params: ProcessExportParams) {
     );
   }
 
-  const zipBuffer = await zip.generateAsync({ type: "nodebuffer" });
+  const zipBuffer = await zip.generateAsync({
+    type: "nodebuffer",
+    compression: "DEFLATE",
+    compressionOptions: { level: 1 },
+  });
 
   return new NextResponse(new Uint8Array(zipBuffer), {
     status: 200,
@@ -377,11 +476,12 @@ export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
     const guruId = searchParams.get("guruId") || undefined;
+    const penugasanId = searchParams.get("penugasanId") || undefined;
     const kertas = searchParams.get("kertas") || undefined;
     const font = searchParams.get("font") || undefined;
     const format = (searchParams.get("format") as "docx" | "pdf" | "word") || undefined;
 
-    return await processZipExport({ guruId, kertas, font, format });
+    return await processZipExport({ guruId, penugasanId, kertas, font, format });
   } catch (error) {
     const message = error instanceof Error ? error.message : "Terjadi kesalahan server saat ekspor batch.";
     return NextResponse.json({ error: message }, { status: 500 });
