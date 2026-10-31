@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import {
   CheckCircle2,
   Clock,
@@ -19,13 +20,31 @@ import {
   Folder,
   LayoutGrid,
   Layers,
+  FileArchive,
+  Loader2,
+  Wand2,
+  Sparkles,
+  CheckCheck,
 } from "lucide-react";
+import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from "@/components/ui/dialog";
 import { DashboardHeroBanner } from "@/components/dashboard-hero-banner";
 import { getAvatarInfo } from "@/lib/avatar";
+import {
+  generateDefaultPerangkatGuruAction,
+  generateDefaultPerangkatMassalAction,
+} from "@/lib/generator/default-perangkat";
 import type { DashboardStaffData, RekapKelengkapanGuru } from "@/lib/validasi/actions";
 import type { DocStatus } from "@/types/database";
 
@@ -41,9 +60,58 @@ export function DashboardStaffClient({
   namaPengguna,
   roleLabel = "Administrator",
 }: DashboardStaffClientProps) {
+  const router = useRouter();
   const [search, setSearch] = useState("");
   const [viewMode, setViewMode] = useState<"bertingkat" | "tabel">("bertingkat");
   const [openGuruIds, setOpenGuruIds] = useState<Record<string, boolean>>({});
+  const [downloadingGuruId, setDownloadingGuruId] = useState<string | null>(null);
+
+  // State Modal Auto-Generate Perangkat Default
+  const [modalGuru, setModalGuru] = useState<{
+    guruId: string;
+    guruNama: string;
+    avgProgress: number;
+    penugasanCount: number;
+  } | null>(null);
+  const [modalMassalOpen, setModalMassalOpen] = useState(false);
+  const [autoSubmitOption, setAutoSubmitOption] = useState(true);
+  const [isGenerating, setIsGenerating] = useState(false);
+
+  const handleDownloadTeacherZip = async (guruId: string, guruNama: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    setDownloadingGuruId(guruId);
+    try {
+      const res = await fetch("/api/export/batch", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ guruId }),
+      });
+      if (!res.ok) {
+        const errorJson = await res.json().catch(() => ({}));
+        throw new Error(errorJson.error || "Gagal mengunduh ZIP tervalidasi.");
+      }
+      const blob = await res.blob();
+      const contentDisposition = res.headers.get("Content-Disposition");
+      let filename = `DOKUMEN_TERVALIDASI_${guruNama.replace(/\s+/g, "_")}.zip`;
+      if (contentDisposition) {
+        const match = contentDisposition.match(/filename="?([^";]+)"?/);
+        if (match && match[1]) filename = match[1];
+      }
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      window.URL.revokeObjectURL(url);
+      toast.success(`Berhasil mengunduh dokumen tervalidasi ${guruNama}`);
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : "Gagal mengunduh berkas ZIP");
+    } finally {
+      setDownloadingGuruId(null);
+    }
+  };
 
   const {
     totalAntrianValidasi,
@@ -101,6 +169,60 @@ export function DashboardStaffClient({
 
     return result.sort((a, b) => a.guruNama.localeCompare(b.guruNama));
   }, [filteredRekap]);
+
+  // Guru yang progresnya masih belum lengkap (< 100%)
+  const guruBelumLengkap = useMemo(() => {
+    return groupedByGuru.filter((g) => g.avgProgress < 100);
+  }, [groupedByGuru]);
+
+  const handleConfirmGenerateGuru = async () => {
+    if (!modalGuru) return;
+    setIsGenerating(true);
+    try {
+      const res = await generateDefaultPerangkatGuruAction(modalGuru.guruId, {
+        autoSubmit: autoSubmitOption,
+      });
+
+      if (!res.success) {
+        toast.error(res.error || "Gagal membuat perangkat pembelajaran default.");
+      } else {
+        toast.success(
+          `Berhasil membuatkan seluruh perangkat default untuk ${modalGuru.guruNama} (${res.totalTp} TP, ${res.totalRpp} Modul Ajar)`
+        );
+        setModalGuru(null);
+        router.refresh();
+      }
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : "Terjadi kesalahan sistem.");
+    } finally {
+      setIsGenerating(false);
+    }
+  };
+
+  const handleConfirmGenerateMassal = async () => {
+    if (guruBelumLengkap.length === 0) return;
+    setIsGenerating(true);
+    try {
+      const targetGuruIds = guruBelumLengkap.map((g) => g.guruId);
+      const res = await generateDefaultPerangkatMassalAction(targetGuruIds, {
+        autoSubmit: autoSubmitOption,
+      });
+
+      if (!res.success) {
+        toast.error(res.error || "Gagal membuat perangkat massal.");
+      } else {
+        toast.success(
+          `Berhasil membuatkan perangkat default untuk ${res.guruCount || targetGuruIds.length} guru (${res.penugasanCount || 0} penugasan kelas)`
+        );
+        setModalMassalOpen(false);
+        router.refresh();
+      }
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : "Terjadi kesalahan sistem.");
+    } finally {
+      setIsGenerating(false);
+    }
+  };
 
   const toggleGuru = (guruId: string) => {
     setOpenGuruIds((prev) => ({
@@ -352,6 +474,19 @@ export function DashboardStaffClient({
                 Export XLSX
               </Button>
             </a>
+
+            {guruBelumLengkap.length > 0 && (
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={() => setModalMassalOpen(true)}
+                className="border-amber-300 bg-amber-50/70 text-amber-800 hover:bg-amber-100 font-medium text-xs rounded-xl shadow-2xs gap-1.5 h-9 px-3.5 transition-colors cursor-pointer"
+                title="Buatkan otomatis seluruh dokumen default untuk guru yang progresnya masih rendah"
+              >
+                <Wand2 className="w-3.5 h-3.5 text-amber-600" />
+                <span>Auto-Generate Default ({guruBelumLengkap.length})</span>
+              </Button>
+            )}
           </div>
         </div>
 
@@ -439,8 +574,8 @@ export function DashboardStaffClient({
                         </div>
                       </div>
 
-                      {/* Progres Rata-rata Guru & Chevron */}
-                      <div className="flex items-center gap-3 shrink-0">
+                      {/* Progres Rata-rata Guru, Tombol Unduh ZIP & Chevron */}
+                      <div className="flex items-center gap-2 sm:gap-3 shrink-0">
                         <div className="hidden sm:block text-right min-w-[100px]">
                           <span className="text-xs font-bold text-slate-900 block">
                             {group.avgProgress}% Selesai
@@ -448,6 +583,50 @@ export function DashboardStaffClient({
                           <div className="w-24 mt-1">
                             <Progress value={group.avgProgress} className="h-1.5 bg-slate-100" />
                           </div>
+                        </div>
+
+                        {/* Tombol Unduh ZIP Cepat */}
+                        <div
+                          onClick={(e) => handleDownloadTeacherZip(group.guruId, group.guruNama, e)}
+                          role="button"
+                          tabIndex={0}
+                          className="hidden sm:flex items-center gap-1 px-2.5 py-1.5 rounded-lg border border-blue-200 text-blue-700 hover:bg-blue-50 text-xs font-medium transition-colors cursor-pointer"
+                          title="Unduh berkas ZIP seluruh dokumen tervalidasi milik guru ini"
+                        >
+                          {downloadingGuruId === group.guruId ? (
+                            <Loader2 className="w-3.5 h-3.5 animate-spin text-blue-600" />
+                          ) : (
+                            <FileArchive className="w-3.5 h-3.5 text-blue-600" />
+                          )}
+                          <span>Unduh ZIP</span>
+                        </div>
+
+                        {/* Tombol Buat Default Perangkat Guru */}
+                        <div
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setModalGuru({
+                              guruId: group.guruId,
+                              guruNama: group.guruNama,
+                              avgProgress: group.avgProgress,
+                              penugasanCount: group.items.length,
+                            });
+                          }}
+                          role="button"
+                          tabIndex={0}
+                          className={`hidden md:flex items-center gap-1 px-2.5 py-1.5 rounded-lg border text-xs font-medium transition-colors cursor-pointer ${
+                            group.avgProgress < 100
+                              ? "border-amber-300 bg-amber-50/80 text-amber-900 hover:bg-amber-100"
+                              : "border-slate-200 text-slate-600 hover:bg-slate-50"
+                          }`}
+                          title={
+                            group.avgProgress < 100
+                              ? "Progres guru ini belum 100%. Klik untuk membuatkan otomatis seluruh dokumen default (ATP, Prota, Prosem, RPP)."
+                              : "Generate ulang perangkat default untuk guru ini"
+                          }
+                        >
+                          <Wand2 className="w-3.5 h-3.5 text-amber-600" />
+                          <span>Buat Default</span>
                         </div>
 
                         <div className="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-600 transition-transform">
@@ -690,6 +869,199 @@ export function DashboardStaffClient({
           </div>
         )}
       </div>
+
+      {/* ========================================================================= */}
+      {/* DIALOG AUTO-GENERATE PERANGKAT DEFAULT (SATU GURU) */}
+      {/* ========================================================================= */}
+      <Dialog open={!!modalGuru} onOpenChange={(open) => !open && setModalGuru(null)}>
+        <DialogContent className="sm:max-w-lg">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2 text-slate-900">
+              <Wand2 className="w-5 h-5 text-amber-600" />
+              <span>Buat Default Seluruh Perangkat Guru</span>
+            </DialogTitle>
+            <DialogDescription className="text-xs text-slate-500">
+              Sistem akan secara otomatis menyusun seluruh dokumen perangkat ajar lengkap (ATP, Prota, Prosem, dan Modul Ajar) sesuai standar Kurikulum Berbasis Cinta (KBC).
+            </DialogDescription>
+          </DialogHeader>
+
+          {modalGuru && (
+            <div className="space-y-4 py-2 text-xs">
+              <div className="p-3.5 bg-amber-50/80 border border-amber-200 rounded-xl space-y-1.5">
+                <div className="flex items-center justify-between">
+                  <span className="font-bold text-amber-950 text-sm">{modalGuru.guruNama}</span>
+                  <Badge className="bg-amber-600 text-white text-[11px]">
+                    Progres: {modalGuru.avgProgress}%
+                  </Badge>
+                </div>
+                <p className="text-amber-800">
+                  Meliputi <strong>{modalGuru.penugasanCount} penugasan kelas</strong> yang ditugaskan kepada guru ini.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-slate-200 p-3 bg-slate-50/60 space-y-2">
+                <p className="font-semibold text-slate-800">Dokumen yang otomatis dihasilkan:</p>
+                <ul className="space-y-1 text-slate-600 pl-4 list-disc">
+                  <li><strong>Alur Tujuan Pembelajaran (ATP)</strong>: Analisis CP & Tujuan Pembelajaran operasional.</li>
+                  <li><strong>Program Tahunan (Prota)</strong>: Distribusi materi dan alokasi JP per semester.</li>
+                  <li><strong>Program Semester (Prosem)</strong>: Matriks alokasi mingguan efektif Semester 1 & 2.</li>
+                  <li><strong>Modul Ajar / RPP KBC</strong>: Perangkat ajar lengkap dengan sintaks pedagogi kasih sayang.</li>
+                </ul>
+              </div>
+
+              <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl text-blue-900 space-y-1">
+                <span className="font-semibold block">💡 Rumus Alokasi JP Per Elemen (ATP):</span>
+                <p className="text-blue-800">
+                  Alokasi JP per elemen dibagi rata secara otomatis berdasarkan target JP tahunan kalender pendidikan dibagi jumlah elemen CP, serta terdistribusi seimbang ke Semester 1 dan 2.
+                </p>
+              </div>
+
+              <label className="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer select-none">
+                <input
+                  type="checkbox"
+                  checked={autoSubmitOption}
+                  onChange={(e) => setAutoSubmitOption(e.target.checked)}
+                  className="rounded text-emerald-600 focus:ring-emerald-500 h-4 w-4"
+                />
+                <span className="text-xs text-slate-700 font-medium">
+                  Langsung ajukan dokumen (status <strong>Diajukan</strong>) agar siap ditelaah & divalidasi.
+                </span>
+              </label>
+            </div>
+          )}
+
+          <DialogFooter className="gap-2 sm:gap-0">
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              disabled={isGenerating}
+              onClick={() => setModalGuru(null)}
+              className="text-xs"
+            >
+              Batal
+            </Button>
+            <Button
+              type="button"
+              size="sm"
+              disabled={isGenerating}
+              onClick={handleConfirmGenerateGuru}
+              className="bg-amber-600 hover:bg-amber-700 text-white text-xs gap-1.5"
+            >
+              {isGenerating ? (
+                <>
+                  <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                  <span>Sedang Menyusun...</span>
+                </>
+              ) : (
+                <>
+                  <Sparkles className="w-3.5 h-3.5" />
+                  <span>Buatkan Perangkat Sekarang</span>
+                </>
+              )}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      {/* ========================================================================= */}
+      {/* DIALOG AUTO-GENERATE MASSAL (SEMUA GURU BELUM LENGKAP) */}
+      {/* ========================================================================= */}
+      <Dialog open={modalMassalOpen} onOpenChange={(open) => !open && setModalMassalOpen(false)}>
+        <DialogContent className="sm:max-w-xl">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2 text-slate-900">
+              <Wand2 className="w-5 h-5 text-amber-600" />
+              <span>Generate Default Massal untuk Guru Belum Lengkap</span>
+            </DialogTitle>
+            <DialogDescription className="text-xs text-slate-500">
+              Menyusun sekaligus seluruh dokumen perangkat ajar bagi seluruh guru yang progresnya masih rendah (&lt; 100%).
+            </DialogDescription>
+          </DialogHeader>
+
+          <div className="space-y-4 py-2 text-xs">
+            <div className="p-3 bg-amber-50/80 border border-amber-200 rounded-xl flex items-center justify-between">
+              <div>
+                <p className="font-bold text-amber-950 text-sm">
+                  {guruBelumLengkap.length} Guru Memerlukan Pembuatan
+                </p>
+                <p className="text-amber-800 text-[11px] mt-0.5">
+                  Total {guruBelumLengkap.reduce((acc, g) => acc + g.items.length, 0)} penugasan kelas yang belum lengkap.
+                </p>
+              </div>
+              <Badge className="bg-amber-600 text-white text-xs font-semibold">
+                {guruBelumLengkap.length} Guru
+              </Badge>
+            </div>
+
+            {/* List Guru yang Belum Lengkap */}
+            <div className="max-h-52 overflow-y-auto rounded-xl border border-slate-200 divide-y divide-slate-100 bg-white">
+              {guruBelumLengkap.map((g, idx) => (
+                <div key={g.guruId} className="p-2.5 flex items-center justify-between text-xs">
+                  <div className="flex items-center gap-2">
+                    <span className="text-slate-400 font-mono text-[11px] w-5 text-center">
+                      {idx + 1}.
+                    </span>
+                    <div>
+                      <span className="font-semibold text-slate-800 block">{g.guruNama}</span>
+                      <span className="text-[11px] text-slate-400">
+                        {g.items.length} Penugasan ({g.items.map((it) => it.mapelNama).join(", ")})
+                      </span>
+                    </div>
+                  </div>
+                  <Badge variant="outline" className="text-rose-700 bg-rose-50 border-rose-200 text-[11px]">
+                    {g.avgProgress}% Selesai
+                  </Badge>
+                </div>
+              ))}
+            </div>
+
+            <label className="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer select-none">
+              <input
+                type="checkbox"
+                checked={autoSubmitOption}
+                onChange={(e) => setAutoSubmitOption(e.target.checked)}
+                className="rounded text-emerald-600 focus:ring-emerald-500 h-4 w-4"
+              />
+              <span className="text-xs text-slate-700 font-medium">
+                Langsung ajukan seluruh dokumen ke antrian validasi (Status: <strong>Diajukan</strong>).
+              </span>
+            </label>
+          </div>
+
+          <DialogFooter className="gap-2 sm:gap-0">
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              disabled={isGenerating}
+              onClick={() => setModalMassalOpen(false)}
+              className="text-xs"
+            >
+              Batal
+            </Button>
+            <Button
+              type="button"
+              size="sm"
+              disabled={isGenerating}
+              onClick={handleConfirmGenerateMassal}
+              className="bg-amber-600 hover:bg-amber-700 text-white text-xs gap-1.5"
+            >
+              {isGenerating ? (
+                <>
+                  <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                  <span>Memproses Seluruh Guru...</span>
+                </>
+              ) : (
+                <>
+                  <Wand2 className="w-3.5 h-3.5" />
+                  <span>Generate Sekarang ({guruBelumLengkap.length} Guru)</span>
+                </>
+              )}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

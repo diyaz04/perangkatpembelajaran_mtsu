@@ -42,7 +42,51 @@ export function BatchExportClient({ items }: BatchExportClientProps) {
   const [paperSize, setPaperSize] = useState<"A4" | "F4">("A4");
   const [fontFamily, setFontFamily] = useState<"Times New Roman" | "Arial">("Times New Roman");
   const [isExporting, setIsExporting] = useState(false);
+  const [downloadingTeacherId, setDownloadingTeacherId] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  // Unduh ZIP Semua Dokumen Tervalidasi Per Guru
+  const handleDownloadTeacherZip = async (guruId: string, guruNama: string) => {
+    setDownloadingTeacherId(guruId);
+    setErrorMessage(null);
+    try {
+      const res = await fetch("/api/export/batch", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          guruId,
+          kertas: paperSize,
+          font: fontFamily,
+        }),
+      });
+
+      if (!res.ok) {
+        const errorJson = await res.json().catch(() => ({}));
+        throw new Error(errorJson.error || "Gagal mengunduh berkas ZIP guru.");
+      }
+
+      const blob = await res.blob();
+      const contentDisposition = res.headers.get("Content-Disposition");
+      let filename = `DOKUMEN_TERVALIDASI_${guruNama.replace(/\s+/g, "_")}.zip`;
+      if (contentDisposition) {
+        const match = contentDisposition.match(/filename="?([^";]+)"?/);
+        if (match && match[1]) filename = match[1];
+      }
+
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      window.URL.revokeObjectURL(url);
+    } catch (err) {
+      setErrorMessage(err instanceof Error ? err.message : "Terjadi kesalahan saat unduh ZIP.");
+    } finally {
+      setDownloadingTeacherId(null);
+    }
+  };
 
   // Filter items
   const filteredItems = items.filter((item) => {
@@ -308,7 +352,7 @@ export function BatchExportClient({ items }: BatchExportClientProps) {
               className="bg-white rounded-xl border border-slate-200 p-5 shadow-xs space-y-4 hover:border-slate-300 transition-colors"
             >
               {/* Header Kartu Penugasan */}
-              <div className="flex items-start justify-between gap-3 pb-3 border-b border-slate-100">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100">
                 <div>
                   <div className="flex items-center gap-2">
                     <Badge variant="outline" className="text-[10px] bg-slate-50 font-bold">
@@ -325,6 +369,29 @@ export function BatchExportClient({ items }: BatchExportClientProps) {
                     Guru: {item.guruNama}
                   </p>
                 </div>
+
+                {item.guruId && (
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    disabled={downloadingTeacherId === item.guruId}
+                    onClick={() => handleDownloadTeacherZip(item.guruId, item.guruNama)}
+                    className="text-xs h-8 gap-1.5 border-blue-200 text-blue-700 hover:bg-blue-50 self-start sm:self-center shrink-0"
+                    title="Unduh seluruh dokumen tervalidasi milik guru ini dalam satu berkas ZIP"
+                  >
+                    {downloadingTeacherId === item.guruId ? (
+                      <>
+                        <Loader2 className="w-3.5 h-3.5 animate-spin text-blue-600" />
+                        <span>Mengompres...</span>
+                      </>
+                    ) : (
+                      <>
+                        <FileArchive className="w-3.5 h-3.5 text-blue-600" />
+                        <span>Unduh ZIP Guru Ini</span>
+                      </>
+                    )}
+                  </Button>
+                )}
               </div>
 
               {/* Pilihan Dokumen Perangkat Ajar */}

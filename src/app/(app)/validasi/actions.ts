@@ -5,7 +5,9 @@ import { getCurrentUser } from "@/lib/auth";
 
 export interface BatchExportItemData {
   penugasanId: string;
+  guruId: string;
   guruNama: string;
+  guruNip: string | null;
   mapelNama: string;
   mapelKode: string;
   tingkatKelas: number;
@@ -100,7 +102,9 @@ export async function getBatchExportDataAction(): Promise<{
 
       return {
         penugasanId: p.id,
+        guruId: p.guru_id,
         guruNama: guruData?.nama_lengkap || "Guru",
+        guruNip: guruData?.nip || null,
         mapelNama: mapelData?.nama || "Mata Pelajaran",
         mapelKode: mapelData?.kode || "",
         tingkatKelas: p.tingkat_kelas,

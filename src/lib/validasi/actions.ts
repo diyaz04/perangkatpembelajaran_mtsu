@@ -278,6 +278,218 @@ export async function approveDokumenAction(
 }
 
 /**
+ * Menyetujui sekumpulan dokumen sekaligus (Bulk Approval)
+ */
+export async function approveBulkDokumenAction(
+  items: Array<{ dokumenTipe: DokumenTipe; dokumenId: string }>,
+  catatan?: string
+): Promise<{ success: boolean; count?: number; error?: string }> {
+  try {
+    const session = await getCurrentUser();
+    if (!session) {
+      return { success: false, error: "Sesi tidak valid." };
+    }
+
+    if (session.role === "guru") {
+      return { success: false, error: "Hanya Waka Kurikulum, Kepala Madrasah, atau Admin yang berhak menyetujui dokumen." };
+    }
+
+    if (!items || items.length === 0) {
+      return { success: false, error: "Tidak ada dokumen yang dipilih." };
+    }
+
+    const adminClient = createAdminClient();
+    let approvedCount = 0;
+    const defaultCatatan =
+      catatan?.trim() || "Dokumen telah ditelaah dan disetujui kolektif sesuai regulasi Kemenag & standar KBC.";
+
+    for (const item of items) {
+      const tableName = item.dokumenTipe === "analisis_cp" ? "analisis_cp" : item.dokumenTipe;
+      const { data: existingDoc } = await adminClient
+        .from(tableName as "rpp" | "atp" | "prota" | "prosem")
+        .select("id, status")
+        .eq("id", item.dokumenId)
+        .single();
+
+      if (!existingDoc) continue;
+
+      const statusSebelum = existingDoc.status as DocStatus;
+
+      const { error: upErr } = await updateDokumenStatus(
+        adminClient,
+        tableName,
+        item.dokumenId,
+        "disetujui",
+        defaultCatatan
+      );
+
+      if (!upErr) {
+        approvedCount++;
+        await recordRiwayatValidasi({
+          dokumenTipe: item.dokumenTipe,
+          dokumenId: item.dokumenId,
+          validatorId: session.user.id,
+          statusSebelum,
+          statusSesudah: "disetujui",
+          catatan: defaultCatatan,
+        });
+      }
+    }
+
+    safeRevalidate("/validasi");
+    safeRevalidate("/");
+    safeRevalidate("/dashboard");
+    safeRevalidate("/atp");
+    safeRevalidate("/prota");
+    safeRevalidate("/prosem");
+    safeRevalidate("/modul-ajar");
+
+    return { success: true, count: approvedCount };
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : "Kesalahan sistem.";
+    return { success: false, error: msg };
+  }
+}
+
+/**
+ * Menyetujui langsung SEMUA berkas ajuan (status 'diajukan') milik satu guru tertentu
+ */
+export async function approveSemuaAjuanGuruAction(
+  guruId: string,
+  catatan?: string
+): Promise<{
+  success: boolean;
+  count?: number;
+  approvedTitles?: string[];
+  error?: string;
+}> {
+  try {
+    const session = await getCurrentUser();
+    if (!session) {
+      return { success: false, error: "Sesi tidak valid." };
+    }
+
+    if (session.role === "guru") {
+      return { success: false, error: "Hanya Waka Kurikulum, Kepala Madrasah, atau Admin yang berhak menyetujui dokumen." };
+    }
+
+    const adminClient = createAdminClient();
+
+    // 1. Ambil tahun ajaran aktif
+    const { data: taAktif } = await adminClient
+      .from("tahun_ajaran")
+      .select("id")
+      .eq("aktif", true)
+      .maybeSingle();
+
+    if (!taAktif) {
+      return { success: false, error: "Tahun ajaran aktif belum ditentukan." };
+    }
+
+    // 2. Ambil penugasan guru di tahun ajaran aktif
+    const { data: penugasanList, error: pErr } = await adminClient
+      .from("penugasan")
+      .select("id, tingkat_kelas, mapel(nama, kode)")
+      .eq("guru_id", guruId)
+      .eq("tahun_ajaran_id", taAktif.id);
+
+    if (pErr || !penugasanList || penugasanList.length === 0) {
+      return { success: false, error: "Penugasan guru tidak ditemukan pada tahun ajaran aktif." };
+    }
+
+    const penugasanIds = penugasanList.map((p) => p.id);
+
+    // 3. Ambil seluruh dokumen berstatus 'diajukan' untuk penugasan ini
+    const [atpRes, protaRes, prosemRes, rppRes] = await Promise.all([
+      adminClient.from("atp").select("id, penugasan_id").in("penugasan_id", penugasanIds).eq("status", "diajukan"),
+      adminClient.from("prota").select("id, penugasan_id").in("penugasan_id", penugasanIds).eq("status", "diajukan"),
+      adminClient.from("prosem").select("id, penugasan_id, semester").in("penugasan_id", penugasanIds).eq("status", "diajukan"),
+      adminClient.from("rpp").select("id, penugasan_id, materi_pokok").in("penugasan_id", penugasanIds).eq("status", "diajukan"),
+    ]);
+
+    const itemsToApprove: Array<{ dokumenTipe: DokumenTipe; dokumenId: string; judul: string }> = [];
+    const penMap = new Map(penugasanList.map((p) => [p.id, p]));
+
+    (atpRes.data || []).forEach((row) => {
+      const p = penMap.get(row.penugasan_id);
+      const mNama = Array.isArray(p?.mapel) ? p.mapel[0]?.nama : p?.mapel?.nama;
+      itemsToApprove.push({
+        dokumenTipe: "atp",
+        dokumenId: row.id,
+        judul: `ATP - ${mNama || "Mapel"} Kelas ${p?.tingkat_kelas || ""}`,
+      });
+    });
+
+    (protaRes.data || []).forEach((row) => {
+      const p = penMap.get(row.penugasan_id);
+      const mNama = Array.isArray(p?.mapel) ? p.mapel[0]?.nama : p?.mapel?.nama;
+      itemsToApprove.push({
+        dokumenTipe: "prota",
+        dokumenId: row.id,
+        judul: `Prota - ${mNama || "Mapel"} Kelas ${p?.tingkat_kelas || ""}`,
+      });
+    });
+
+    (prosemRes.data || []).forEach((row) => {
+      const p = penMap.get(row.penugasan_id);
+      const mNama = Array.isArray(p?.mapel) ? p.mapel[0]?.nama : p?.mapel?.nama;
+      itemsToApprove.push({
+        dokumenTipe: "prosem",
+        dokumenId: row.id,
+        judul: `Prosem Smt ${row.semester} - ${mNama || "Mapel"} Kelas ${p?.tingkat_kelas || ""}`,
+      });
+    });
+
+    (rppRes.data || []).forEach((row) => {
+      itemsToApprove.push({
+        dokumenTipe: "rpp",
+        dokumenId: row.id,
+        judul: `Modul Ajar/RPP: ${row.materi_pokok}`,
+      });
+    });
+
+    if (itemsToApprove.length === 0) {
+      return {
+        success: false,
+        error: "Tidak ada berkas ajuan (berstatus 'diajukan') yang menunggu validasi untuk guru ini.",
+      };
+    }
+
+    const defaultCatatan =
+      catatan?.trim() || "Dokumen telah ditelaah dan disetujui kolektif sesuai regulasi Kemenag & standar KBC.";
+
+    for (const item of itemsToApprove) {
+      await updateDokumenStatus(adminClient, item.dokumenTipe, item.dokumenId, "disetujui", defaultCatatan);
+      await recordRiwayatValidasi({
+        dokumenTipe: item.dokumenTipe,
+        dokumenId: item.dokumenId,
+        validatorId: session.user.id,
+        statusSebelum: "diajukan",
+        statusSesudah: "disetujui",
+        catatan: defaultCatatan,
+      });
+    }
+
+    safeRevalidate("/validasi");
+    safeRevalidate("/");
+    safeRevalidate("/dashboard");
+    safeRevalidate("/atp");
+    safeRevalidate("/prota");
+    safeRevalidate("/prosem");
+    safeRevalidate("/modul-ajar");
+
+    return {
+      success: true,
+      count: itemsToApprove.length,
+      approvedTitles: itemsToApprove.map((i) => i.judul),
+    };
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : "Kesalahan sistem.";
+    return { success: false, error: msg };
+  }
+}
+
+/**
  * Meminta revisi dokumen oleh Waka Kurikulum, Kepala Madrasah, atau Admin
  */
 export async function requestRevisiAction(
@@ -424,6 +636,7 @@ export interface AntrianDokumenItem {
   dokumen_tipe: DokumenTipe;
   judul: string;
   penugasan_id: string;
+  guru_id: string;
   guru_nama: string;
   guru_nip: string | null;
   mapel_nama: string;
@@ -506,6 +719,7 @@ export async function getAntrianValidasiAction(filter?: {
         dokumen_tipe: "atp",
         judul: `Alur Tujuan Pembelajaran (ATP) - ${m?.nama || "Mapel"} Kelas ${p.tingkat_kelas}`,
         penugasan_id: p.id,
+        guru_id: p.guru_id,
         guru_nama: g?.nama_lengkap || "Guru",
         guru_nip: g?.nip || null,
         mapel_nama: m?.nama || "-",
@@ -529,6 +743,7 @@ export async function getAntrianValidasiAction(filter?: {
         dokumen_tipe: "prota",
         judul: `Program Tahunan (Prota) - ${m?.nama || "Mapel"} Kelas ${p.tingkat_kelas}`,
         penugasan_id: p.id,
+        guru_id: p.guru_id,
         guru_nama: g?.nama_lengkap || "Guru",
         guru_nip: g?.nip || null,
         mapel_nama: m?.nama || "-",
@@ -552,6 +767,7 @@ export async function getAntrianValidasiAction(filter?: {
         dokumen_tipe: "prosem",
         judul: `Program Semester ${row.semester} (Prosem) - ${m?.nama || "Mapel"} Kelas ${p.tingkat_kelas}`,
         penugasan_id: p.id,
+        guru_id: p.guru_id,
         guru_nama: g?.nama_lengkap || "Guru",
         guru_nip: g?.nip || null,
         mapel_nama: m?.nama || "-",
@@ -575,6 +791,7 @@ export async function getAntrianValidasiAction(filter?: {
         dokumen_tipe: "rpp",
         judul: `RPP / Modul Ajar: ${row.materi_pokok}`,
         penugasan_id: p.id,
+        guru_id: p.guru_id,
         guru_nama: g?.nama_lengkap || "Guru",
         guru_nip: g?.nip || null,
         mapel_nama: m?.nama || "-",
