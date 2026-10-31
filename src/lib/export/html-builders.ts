@@ -119,8 +119,8 @@ export function generateAtpHtml(data: PreviewData): string {
         <td>${escapeHtml(item.materi_pokok)}</td>
         <td style="text-align: center;">${item.alokasi_jp}</td>
         <td style="text-align: center;">${item.semester}</td>
-        <td>${escapeHtml(item.panca_cinta.join(", "))}</td>
-        <td>${escapeHtml(item.dpl.join(", "))}</td>
+        <td>${escapeHtml((Array.isArray(item.panca_cinta) ? item.panca_cinta : []).join(", "))}</td>
+        <td>${escapeHtml((Array.isArray(item.dpl) ? item.dpl : []).join(", "))}</td>
       </tr>
     `
     )
@@ -435,17 +435,18 @@ export function generateProsemHtml(data: ProsemDetailData, semester: 1 | 2): str
 // =============================================================================
 export function generateRppHtml(data: RppDetailData): string {
   const { rpp, langkahList, penugasan, madrasah, master } = data;
-  const modelTerpilih = master.models.find((m) => m.id === rpp.model_id) || master.models[0];
-  const dplSelected = master.dpl
+  const models = master?.models || [];
+  const modelTerpilih = models.find((m) => m.id === rpp.model_id) || models[0];
+  const dplSelected = (master?.dpl || [])
     .filter((d) => (rpp.dimensi_profil_lulusan_ids || []).includes(d.id))
     .map((d) => `${d.kode}: ${d.nama}`);
-  const pcSelected = master.pancaCinta
+  const pcSelected = (master?.pancaCinta || [])
     .filter((pc) => (rpp.panca_cinta_ids || []).includes(pc.id))
     .map((pc) => `${pc.kode}: ${pc.nama}`);
 
   // Render langkah pembelajaran per pertemuan
   const pertemuanMap = new Map<number, typeof langkahList>();
-  langkahList.forEach((l) => {
+  (langkahList || []).forEach((l) => {
     const list = pertemuanMap.get(l.pertemuan_ke) || [];
     list.push(l);
     pertemuanMap.set(l.pertemuan_ke, list);

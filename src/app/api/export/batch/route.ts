@@ -216,6 +216,7 @@ async function processZipExport(params: ProcessExportParams) {
   }
 
   let processedCount = 0;
+  const itemErrors: string[] = [];
 
   for (const item of itemsToExport) {
     try {
@@ -245,6 +246,8 @@ async function processZipExport(params: ProcessExportParams) {
             zip.file(zipPath, buffer);
           }
           processedCount++;
+        } else {
+          itemErrors.push(`ATP (${res.error || "Data tidak ditemukan"})`);
         }
       } else if (jenis === "prota") {
         const res = await getProtaDetailAction(item.id);
@@ -270,6 +273,8 @@ async function processZipExport(params: ProcessExportParams) {
             zip.file(zipPath, buffer);
           }
           processedCount++;
+        } else {
+          itemErrors.push(`PROTA (${res.error || "Data tidak ditemukan"})`);
         }
       } else if (jenis === "prosem") {
         const sem: 1 | 2 = item.semester === 2 ? 2 : 1;
@@ -296,6 +301,8 @@ async function processZipExport(params: ProcessExportParams) {
             zip.file(zipPath, buffer);
           }
           processedCount++;
+        } else {
+          itemErrors.push(`PROSEM Smt${sem} (${res.error || "Data tidak ditemukan"})`);
         }
       } else if (jenis === "rpp" || jenis === "modul-ajar") {
         const res = await getRppDetailAction(item.id);
@@ -324,16 +331,21 @@ async function processZipExport(params: ProcessExportParams) {
             zip.file(zipPath, buffer);
           }
           processedCount++;
+        } else {
+          itemErrors.push(`RPP (${res.error || "Data tidak ditemukan"})`);
         }
       }
     } catch (err) {
+      const errMsg = err instanceof Error ? err.message : String(err);
       console.error(`Gagal memproses item batch export ${item.jenis} ${item.id}:`, err);
+      itemErrors.push(`${item.jenis.toUpperCase()}: ${errMsg}`);
     }
   }
 
   if (processedCount === 0) {
+    const detail = itemErrors.length > 0 ? ` (${itemErrors.slice(0, 3).join("; ")})` : "";
     return NextResponse.json(
-      { error: "Tidak ada dokumen yang berhasil diekspor. Periksa kembali status dokumen." },
+      { error: `Tidak ada dokumen yang berhasil diekspor. Periksa kembali status dokumen.${detail}` },
       { status: 400 }
     );
   }

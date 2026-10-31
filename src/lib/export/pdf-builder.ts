@@ -11,13 +11,22 @@ export function findBrowserExecutable(): string {
     return process.env.PUPPETEER_EXECUTABLE_PATH;
   }
 
+  const localAppData = process.env.LOCALAPPDATA || "";
+  const programFiles = process.env.ProgramFiles || "C:\\Program Files";
+  const programFilesX86 = process.env["ProgramFiles(x86)"] || "C:\\Program Files (x86)";
+
   const candidatePaths = [
-    // Windows Chrome
-    "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
-    "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
-    // Windows Edge
-    "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
-    "C:\\Program Files\\Microsoft\\Edge\\Application\\msedge.exe",
+    // Windows Chrome (Standard & User Local)
+    `${programFiles}\\Google\\Chrome\\Application\\chrome.exe`,
+    `${programFilesX86}\\Google\\Chrome\\Application\\chrome.exe`,
+    localAppData ? `${localAppData}\\Google\\Chrome\\Application\\chrome.exe` : "",
+    // Windows Edge (Standard & User Local)
+    `${programFiles}\\Microsoft\\Edge\\Application\\msedge.exe`,
+    `${programFilesX86}\\Microsoft\\Edge\\Application\\msedge.exe`,
+    localAppData ? `${localAppData}\\Microsoft\\Edge\\Application\\msedge.exe` : "",
+    // Windows Brave
+    `${programFiles}\\BraveSoftware\\Brave-Browser\\Application\\brave.exe`,
+    `${programFilesX86}\\BraveSoftware\\Brave-Browser\\Application\\brave.exe`,
     // Linux
     "/usr/bin/google-chrome",
     "/usr/bin/google-chrome-stable",
@@ -27,7 +36,7 @@ export function findBrowserExecutable(): string {
     // macOS
     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
     "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge",
-  ];
+  ].filter(Boolean);
 
   for (const path of candidatePaths) {
     if (fs.existsSync(/* turbopackIgnore: true */ path)) {
@@ -42,7 +51,12 @@ export function findBrowserExecutable(): string {
 
 export async function getOrLaunchBrowser(): Promise<Browser> {
   if (cachedBrowser && cachedBrowser.connected) {
-    return cachedBrowser;
+    try {
+      await cachedBrowser.version();
+      return cachedBrowser;
+    } catch {
+      cachedBrowser = null;
+    }
   }
 
   const executablePath = findBrowserExecutable();
@@ -56,6 +70,12 @@ export async function getOrLaunchBrowser(): Promise<Browser> {
       "--disable-dev-shm-usage",
       "--no-first-run",
       "--no-zygote",
+      "--disable-extensions",
+      "--disable-background-networking",
+      "--disable-default-apps",
+      "--disable-sync",
+      "--mute-audio",
+      "--hide-scrollbars",
     ],
   });
 
@@ -85,19 +105,17 @@ export async function generatePdfBufferFromHtml(
 
     // F4 / Folio: 215mm x 330mm, A4: 210mm x 297mm
     const isF4 = options.paperSize === "F4";
-    const width = isF4 ? "215mm" : "210mm";
-    const height = isF4 ? "330mm" : "297mm";
-
     const defaultMargins = {
-      top: "15mm",
-      bottom: "15mm",
-      left: "15mm",
-      right: "15mm",
+      top: "12mm",
+      bottom: "12mm",
+      left: "12mm",
+      right: "12mm",
     };
 
     const pdfUint8 = await page.pdf({
-      width: options.landscape ? height : width,
-      height: options.landscape ? width : height,
+      format: isF4 ? undefined : "A4",
+      width: isF4 ? (options.landscape ? "330mm" : "215mm") : undefined,
+      height: isF4 ? (options.landscape ? "215mm" : "330mm") : undefined,
       landscape: options.landscape || false,
       printBackground: true,
       margin: options.margins || defaultMargins,
