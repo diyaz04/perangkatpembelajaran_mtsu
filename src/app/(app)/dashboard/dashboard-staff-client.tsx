@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
@@ -27,6 +27,9 @@ import {
   Sparkles,
   CheckCheck,
   PartyPopper,
+  Pause,
+  Play,
+  RotateCcw,
 } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -122,6 +125,54 @@ export function DashboardStaffClient({
   const [teacherStatusMap, setTeacherStatusMap] = useState<
     Record<string, "pending" | "processing" | "success" | "error">
   >({});
+  const [batchLimit, setBatchLimit] = useState<number>(0); // 0 = Semua, 5 = 5 Guru, 10 = 10 Guru
+  const isPausedRef = useRef(false);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const callGenerateGuru = async (guruId: string, autoSubmit: boolean) => {
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 55000);
+      const res = await fetch("/api/generator/default", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "guru", guruId, autoSubmit }),
+        signal: controller.signal,
+      });
+      clearTimeout(timeoutId);
+
+      if (!res.ok) {
+        const errJson = await res.json().catch(() => ({}));
+        throw new Error(errJson.error || `HTTP ${res.status}`);
+      }
+      return await res.json();
+    } catch (err) {
+      console.warn("API route fallback ke server action:", err);
+      return await generateDefaultPerangkatGuruAction(guruId, { autoSubmit });
+    }
+  };
+
+  const callGeneratePenugasan = async (penugasanId: string, autoSubmit: boolean) => {
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 55000);
+      const res = await fetch("/api/generator/default", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "penugasan", penugasanId, autoSubmit }),
+        signal: controller.signal,
+      });
+      clearTimeout(timeoutId);
+
+      if (!res.ok) {
+        const errJson = await res.json().catch(() => ({}));
+        throw new Error(errJson.error || `HTTP ${res.status}`);
+      }
+      return await res.json();
+    } catch (err) {
+      return await generateDefaultPerangkatForPenugasan(penugasanId, { autoSubmit });
+    }
+  };
 
   const handleDownloadTeacherZip = async (guruId: string, guruNama: string, e: React.MouseEvent) => {
     e.stopPropagation();
@@ -249,9 +300,7 @@ export function DashboardStaffClient({
             isDone: false,
           });
 
-          const res = await generateDefaultPerangkatForPenugasan(item.penugasanId, {
-            autoSubmit: autoSubmitOption,
-          });
+          const res = await callGeneratePenugasan(item.penugasanId, autoSubmitOption);
 
           if (res.success) {
             totalTpAcc += res.jumlahTp || 0;
@@ -283,9 +332,7 @@ export function DashboardStaffClient({
           isDone: false,
         });
 
-        const res = await generateDefaultPerangkatGuruAction(modalGuru.guruId, {
-          autoSubmit: autoSubmitOption,
-        });
+        const res = await callGenerateGuru(modalGuru.guruId, autoSubmitOption);
 
         if (!res.success) {
           toast.error(res.error || "Gagal membuat perangkat pembelajaran default.");
@@ -315,58 +362,76 @@ export function DashboardStaffClient({
     }
   };
 
-  const handleConfirmGenerateMassal = async () => {
+  const handleConfirmGenerateMassal = async (resumeOnly = false) => {
     if (guruBelumLengkap.length === 0) return;
     setIsGenerating(true);
+    isPausedRef.current = false;
+    setIsPaused(false);
 
-    const initialStatus: Record<string, "pending" | "processing" | "success" | "error"> = {};
-    guruBelumLengkap.forEach((g) => {
-      initialStatus[g.guruId] = "pending";
-    });
-    setTeacherStatusMap(initialStatus);
+    // Tentukan daftar target guru yang akan diproses
+    let targets = [...guruBelumLengkap];
+    if (resumeOnly) {
+      targets = targets.filter((g) => teacherStatusMap[g.guruId] !== "success");
+    } else {
+      const initialStatus: Record<string, "pending" | "processing" | "success" | "error"> = {};
+      guruBelumLengkap.forEach((g) => {
+        initialStatus[g.guruId] = "pending";
+      });
+      setTeacherStatusMap(initialStatus);
+    }
 
-    setMassalProgress({
+    if (batchLimit > 0) {
+      targets = targets.slice(0, batchLimit);
+    }
+
+    if (targets.length === 0) {
+      setIsGenerating(false);
+      toast.info("Seluruh guru yang dipilih telah selesai dibuatkan.");
+      return;
+    }
+
+    let successCount = resumeOnly ? massalProgress.successCount : 0;
+    let failCount = 0;
+
+    setMassalProgress((prev) => ({
       isActive: true,
       currentIndex: 0,
-      total: guruBelumLengkap.length,
+      total: targets.length,
       currentGuruId: null,
       currentGuruNama: "",
       currentMapelInfo: "",
       percent: 0,
       isDone: false,
-      successCount: 0,
+      successCount,
       failCount: 0,
-    });
+    }));
 
-    let successCount = 0;
-    let failCount = 0;
+    for (let i = 0; i < targets.length; i++) {
+      if (isPausedRef.current) {
+        toast.info("Pembuatan dijeda. Anda dapat melanjutkannya kapan saja.");
+        break;
+      }
 
-    for (let i = 0; i < guruBelumLengkap.length; i++) {
-      const g = guruBelumLengkap[i];
+      const g = targets[i];
       const mapelInfo = g.items
         .map((it) => `${it.mapelNama} (Kls ${it.tingkatKelas})`)
         .join(", ");
 
-      // Update current teacher yang sedang diproses
       setTeacherStatusMap((prev) => ({
         ...prev,
         [g.guruId]: "processing",
       }));
 
-      setMassalProgress({
-        isActive: true,
+      setMassalProgress((prev) => ({
+        ...prev,
         currentIndex: i + 1,
-        total: guruBelumLengkap.length,
+        total: targets.length,
         currentGuruId: g.guruId,
         currentGuruNama: g.guruNama,
         currentMapelInfo: mapelInfo,
-        percent: Math.round((i / guruBelumLengkap.length) * 100),
-        isDone: false,
-        successCount,
-        failCount,
-      });
+        percent: Math.round((i / targets.length) * 100),
+      }));
 
-      // Smooth scroll ke row guru yang sedang diproses
       setTimeout(() => {
         const el = document.getElementById(`massal-guru-item-${g.guruId}`);
         if (el) {
@@ -375,9 +440,7 @@ export function DashboardStaffClient({
       }, 50);
 
       try {
-        const res = await generateDefaultPerangkatGuruAction(g.guruId, {
-          autoSubmit: autoSubmitOption,
-        });
+        const res = await callGenerateGuru(g.guruId, autoSubmitOption);
 
         if (res.success) {
           successCount++;
@@ -391,6 +454,7 @@ export function DashboardStaffClient({
             ...prev,
             [g.guruId]: "error",
           }));
+          console.warn(`Galat pada guru ${g.guruNama}:`, res.error);
         }
       } catch (err) {
         failCount++;
@@ -398,36 +462,66 @@ export function DashboardStaffClient({
           ...prev,
           [g.guruId]: "error",
         }));
+        console.warn(`Exception guru ${g.guruNama}:`, err);
       }
 
       setMassalProgress((prev) => ({
         ...prev,
-        percent: Math.round(((i + 1) / guruBelumLengkap.length) * 100),
+        percent: Math.round(((i + 1) / targets.length) * 100),
         successCount,
         failCount,
       }));
+
+      // Jeda 120ms agar browser & event loop rileks
+      await new Promise((r) => setTimeout(r, 120));
     }
+
+    const completedNaturally = !isPausedRef.current;
 
     setMassalProgress((prev) => ({
       ...prev,
       isActive: true,
-      currentIndex: guruBelumLengkap.length,
+      currentIndex: targets.length,
       currentGuruId: null,
       currentGuruNama: "",
       currentMapelInfo: "",
-      percent: 100,
-      isDone: true,
+      percent: completedNaturally ? 100 : prev.percent,
+      isDone: completedNaturally,
       successCount,
       failCount,
     }));
 
     setIsGenerating(false);
 
-    toast.success(
-      `Selesai memproses perangkat pembelajaran default! (${successCount} berhasil${
-        failCount > 0 ? `, ${failCount} gagal` : ""
-      })`
-    );
+    if (completedNaturally) {
+      toast.success(
+        `Selesai memproses perangkat pembelajaran! (${successCount} berhasil${
+          failCount > 0 ? `, ${failCount} gagal` : ""
+        })`
+      );
+    }
+  };
+
+  const handlePauseMassal = () => {
+    isPausedRef.current = true;
+    setIsPaused(true);
+  };
+
+  const handleRetryGuru = async (guruId: string) => {
+    setTeacherStatusMap((prev) => ({ ...prev, [guruId]: "processing" }));
+    try {
+      const res = await callGenerateGuru(guruId, autoSubmitOption);
+      if (res.success) {
+        setTeacherStatusMap((prev) => ({ ...prev, [guruId]: "success" }));
+        toast.success("Berhasil membuatkan perangkat untuk guru ini.");
+      } else {
+        setTeacherStatusMap((prev) => ({ ...prev, [guruId]: "error" }));
+        toast.error(res.error || "Gagal membuat perangkat.");
+      }
+    } catch {
+      setTeacherStatusMap((prev) => ({ ...prev, [guruId]: "error" }));
+      toast.error("Terjadi galat koneksi.");
+    }
   };
 
   const handleCloseMassalModal = () => {
@@ -1455,10 +1549,22 @@ export function DashboardStaffClient({
                             <span>Selesai</span>
                           </Badge>
                         ) : status === "error" ? (
-                          <Badge className="bg-rose-100 text-rose-800 border-rose-200 text-[11px] gap-1">
-                            <AlertCircle className="w-3 h-3 text-rose-600" />
-                            <span>Gagal</span>
-                          </Badge>
+                          <div className="flex items-center gap-1.5">
+                            <Badge className="bg-rose-100 text-rose-800 border-rose-200 text-[11px] gap-1">
+                              <AlertCircle className="w-3 h-3 text-rose-600" />
+                              <span>Gagal</span>
+                            </Badge>
+                            {!isGenerating && (
+                              <button
+                                type="button"
+                                onClick={() => handleRetryGuru(g.guruId)}
+                                className="text-[11px] text-amber-700 font-semibold underline hover:text-amber-900 cursor-pointer"
+                                title="Coba buatkan ulang untuk guru ini"
+                              >
+                                Coba lagi
+                              </button>
+                            )}
+                          </div>
                         ) : isGenerating ? (
                           <Badge
                             variant="outline"
@@ -1483,17 +1589,49 @@ export function DashboardStaffClient({
             </div>
 
             {!isGenerating && !massalProgress.isDone && (
-              <label className="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer select-none">
-                <input
-                  type="checkbox"
-                  checked={autoSubmitOption}
-                  onChange={(e) => setAutoSubmitOption(e.target.checked)}
-                  className="rounded text-emerald-600 focus:ring-emerald-500 h-4 w-4"
-                />
-                <span className="text-xs text-slate-700 font-medium">
-                  Langsung ajukan seluruh dokumen ke antrian validasi (Status: <strong>Diajukan</strong>).
-                </span>
-              </label>
+              <>
+                {/* Opsi Batch Limit untuk Mencegah Timeout */}
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 rounded-xl border border-slate-200 bg-slate-50/70">
+                  <div>
+                    <span className="font-semibold text-slate-800 block text-xs">Porsi Pembuatan:</span>
+                    <span className="text-[11px] text-slate-500">
+                      Bisa diproses bertahap per batch agar server tetap ringan
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    {[
+                      { val: 0, label: "Semua Sekaligus" },
+                      { val: 5, label: "5 Guru" },
+                      { val: 10, label: "10 Guru" },
+                    ].map((opt) => (
+                      <button
+                        key={opt.val}
+                        type="button"
+                        onClick={() => setBatchLimit(opt.val)}
+                        className={`px-2.5 py-1 text-[11px] rounded-lg font-medium transition-colors cursor-pointer ${
+                          batchLimit === opt.val
+                            ? "bg-amber-600 text-white shadow-2xs font-semibold"
+                            : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-100"
+                        }`}
+                      >
+                        {opt.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <label className="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer select-none">
+                  <input
+                    type="checkbox"
+                    checked={autoSubmitOption}
+                    onChange={(e) => setAutoSubmitOption(e.target.checked)}
+                    className="rounded text-emerald-600 focus:ring-emerald-500 h-4 w-4"
+                  />
+                  <span className="text-xs text-slate-700 font-medium">
+                    Langsung ajukan seluruh dokumen ke antrian validasi (Status: <strong>Diajukan</strong>).
+                  </span>
+                </label>
+              </>
             )}
           </div>
 
@@ -1508,39 +1646,82 @@ export function DashboardStaffClient({
                 <CheckCheck className="w-4 h-4" />
                 <span>Tutup & Perbarui Tampilan Dashboard</span>
               </Button>
+            ) : isGenerating ? (
+              <div className="w-full flex items-center justify-between gap-2">
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={handlePauseMassal}
+                  className="text-xs gap-1.5 border-amber-300 text-amber-800 hover:bg-amber-50"
+                  title="Jeda sementara antrean pembuatan perangkat"
+                >
+                  <Pause className="w-3.5 h-3.5 text-amber-600" />
+                  <span>Jeda Sementara</span>
+                </Button>
+                <Button
+                  type="button"
+                  size="sm"
+                  disabled={true}
+                  className="bg-amber-600 text-white text-xs gap-1.5"
+                >
+                  <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                  <span>
+                    Sedang Membuat ({massalProgress.currentIndex}/{massalProgress.total})...
+                  </span>
+                </Button>
+              </div>
             ) : (
               <>
                 <Button
                   type="button"
                   variant="outline"
                   size="sm"
-                  disabled={isGenerating}
                   onClick={handleCloseMassalModal}
                   className="text-xs"
                 >
-                  Batal
+                  {Object.values(teacherStatusMap).some((s) => s === "success")
+                    ? "Tutup & Refresh"
+                    : "Batal"}
                 </Button>
-                <Button
-                  type="button"
-                  size="sm"
-                  disabled={isGenerating}
-                  onClick={handleConfirmGenerateMassal}
-                  className="bg-amber-600 hover:bg-amber-700 text-white text-xs gap-1.5"
-                >
-                  {isGenerating ? (
-                    <>
-                      <Loader2 className="w-3.5 h-3.5 animate-spin" />
-                      <span>
-                        Sedang Membuat ({massalProgress.currentIndex}/{massalProgress.total})...
-                      </span>
-                    </>
-                  ) : (
-                    <>
-                      <Wand2 className="w-3.5 h-3.5" />
-                      <span>Generate Sekarang ({guruBelumLengkap.length} Guru)</span>
-                    </>
-                  )}
-                </Button>
+
+                {/* Tombol Lanjutkan jika ada yang dijeda atau gagal */}
+                {guruBelumLengkap.some((g) => teacherStatusMap[g.guruId] === "error" || teacherStatusMap[g.guruId] === "pending") &&
+                Object.values(teacherStatusMap).some((s) => s === "success") ? (
+                  <Button
+                    type="button"
+                    size="sm"
+                    onClick={() => handleConfirmGenerateMassal(true)}
+                    className="bg-amber-600 hover:bg-amber-700 text-white text-xs gap-1.5"
+                  >
+                    <Play className="w-3.5 h-3.5" />
+                    <span>
+                      Lanjutkan Sisa (
+                      {
+                        guruBelumLengkap.filter(
+                          (g) => teacherStatusMap[g.guruId] !== "success"
+                        ).length
+                      }{" "}
+                      Guru)
+                    </span>
+                  </Button>
+                ) : (
+                  <Button
+                    type="button"
+                    size="sm"
+                    onClick={() => handleConfirmGenerateMassal(false)}
+                    className="bg-amber-600 hover:bg-amber-700 text-white text-xs gap-1.5"
+                  >
+                    <Wand2 className="w-3.5 h-3.5" />
+                    <span>
+                      Generate Sekarang (
+                      {batchLimit > 0
+                        ? `${Math.min(batchLimit, guruBelumLengkap.length)} Guru`
+                        : `${guruBelumLengkap.length} Guru`}
+                      )
+                    </span>
+                  </Button>
+                )}
               </>
             )}
           </DialogFooter>

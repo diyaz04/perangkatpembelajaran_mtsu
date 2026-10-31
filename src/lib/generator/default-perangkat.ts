@@ -87,16 +87,50 @@ function findBankDataSlug(mapelNama: string, mapelKode: string): string | null {
   return null;
 }
 
+export interface GeneratorSharedContext {
+  madrasah?: any;
+  kalenderRows?: KalenderKegiatanInput[];
+  allPancaCinta?: Array<{ id: string; nama: string; kode: string }>;
+  allDpl?: Array<{ id: string; nama: string; kode: string }>;
+  defaultModel?: any;
+}
+
+/**
+ * Pre-fetch data master pendukung sekali saja untuk digunakan bersama oleh banyak penugasan.
+ * Mengurangi puluhan roundtrip database yang redundan.
+ */
+export async function getGeneratorSharedContext(
+  tahunAjaranId: string
+): Promise<GeneratorSharedContext> {
+  const adminClient = createAdminClient();
+  const [madrasahRes, kalenderRes, pancaCintaRes, dplRes, modelRes] = await Promise.all([
+    adminClient.from("madrasah").select("*").limit(1).maybeSingle(),
+    adminClient.from("kalender_kegiatan").select("*").eq("tahun_ajaran_id", tahunAjaranId),
+    adminClient.from("panca_cinta").select("id, nama, kode").order("urutan", { ascending: true }),
+    adminClient.from("dimensi_profil_lulusan").select("id, nama, kode").order("kode", { ascending: true }),
+    adminClient.from("model_pembelajaran").select("id, nama, sintaks").limit(1).maybeSingle(),
+  ]);
+
+  return {
+    madrasah: madrasahRes.data,
+    kalenderRows: (kalenderRes.data || []) as KalenderKegiatanInput[],
+    allPancaCinta: pancaCintaRes.data || [],
+    allDpl: dplRes.data || [],
+    defaultModel: modelRes.data,
+  };
+}
+
 /**
  * Menghasilkan seluruh perangkat pembelajaran default (ATP, Prota, Prosem Smt 1 & 2, Modul Ajar/RPP)
- * untuk 1 penugasan guru secara otomatis.
+ * untuk 1 penugasan guru secara otomatis dengan query ter-batch dan sangat cepat.
  *
  * Sesuai instruksi:
  * Perhitungan JP per elemen di ATP dibagi rata sesuai porsi JP tahun dibagi jumlah elemen.
  */
 export async function generateDefaultPerangkatForPenugasan(
   penugasanId: string,
-  options?: { autoSubmit?: boolean }
+  options?: { autoSubmit?: boolean },
+  context?: GeneratorSharedContext
 ): Promise<GenerateResult> {
   const adminClient = createAdminClient();
   const targetStatus: DocStatus = options?.autoSubmit ? "diajukan" : "draf";
@@ -131,14 +165,19 @@ export async function generateDefaultPerangkatForPenugasan(
       return { success: false, error: "Data mata pelajaran atau tahun ajaran tidak lengkap." };
     }
 
-    // 2. Ambil Profil Madrasah & Kalender Kegiatan
-    const [madrasahRes, kalenderRes] = await Promise.all([
-      adminClient.from("madrasah").select("*").limit(1).maybeSingle(),
-      adminClient.from("kalender_kegiatan").select("*").eq("tahun_ajaran_id", ta.id),
-    ]);
+    // 2. Ambil Profil Madrasah & Kalender Kegiatan (gunakan context jika sudah di-cache)
+    let madrasah = context?.madrasah;
+    let kalenderRows = context?.kalenderRows;
 
-    const madrasah = madrasahRes.data;
-    const kalenderRows = (kalenderRes.data || []) as KalenderKegiatanInput[];
+    if (!madrasah || !kalenderRows) {
+      const [madrasahRes, kalenderRes] = await Promise.all([
+        adminClient.from("madrasah").select("*").limit(1).maybeSingle(),
+        adminClient.from("kalender_kegiatan").select("*").eq("tahun_ajaran_id", ta.id),
+      ]);
+      madrasah = madrasahRes.data;
+      kalenderRows = (kalenderRes.data || []) as KalenderKegiatanInput[];
+    }
+
     const hariSekolah = (madrasah?.hari_sekolah === 5 ? 5 : 6) as 5 | 6;
 
     const jpField =
@@ -183,7 +222,6 @@ export async function generateDefaultPerangkatForPenugasan(
       const bankData = slug ? getAllMapelBankData().find((b) => b.slug === slug) : null;
 
       if (bankData && bankData.elemen && bankData.elemen.length > 0) {
-        // Insert CP elements ke tabel capaian_pembelajaran
         const cpInserts = bankData.elemen.map((el, i) => ({
           mapel_id: penugasan.mapel_id,
           fase: "D",
@@ -239,241 +277,187 @@ export async function generateDefaultPerangkatForPenugasan(
     const remainder = targetJpTahun % N;
     const jpPerElemen: number[] = cpElements.map((_, idx) => baseJp + (idx < remainder ? 1 : 0));
 
-    // 5. Ambil data master pendukung (Panca Cinta, DPL, Model Pembelajaran)
-    const [pancaCintaRes, dplRes, modelRes] = await Promise.all([
-      adminClient.from("panca_cinta").select("id, nama, kode").order("urutan", { ascending: true }),
-      adminClient.from("dimensi_profil_lulusan").select("id, nama, kode").order("kode", { ascending: true }),
-      adminClient.from("model_pembelajaran").select("id, nama, sintaks").limit(1).maybeSingle(),
-    ]);
+    // 5. Master pendukung (Panca Cinta, DPL, Model Pembelajaran)
+    let allPancaCinta = context?.allPancaCinta;
+    let allDpl = context?.allDpl;
+    let defaultModel = context?.defaultModel;
 
-    const allPancaCinta = pancaCintaRes.data || [];
-    const allDpl = dplRes.data || [];
-    const defaultModel = modelRes.data;
+    if (!allPancaCinta || !allDpl || defaultModel === undefined) {
+      const [pancaCintaRes, dplRes, modelRes] = await Promise.all([
+        adminClient.from("panca_cinta").select("id, nama, kode").order("urutan", { ascending: true }),
+        adminClient.from("dimensi_profil_lulusan").select("id, nama, kode").order("kode", { ascending: true }),
+        adminClient.from("model_pembelajaran").select("id, nama, sintaks").limit(1).maybeSingle(),
+      ]);
+      allPancaCinta = pancaCintaRes.data || [];
+      allDpl = dplRes.data || [];
+      defaultModel = modelRes.data;
+    }
 
-    const defaultPcIds = allPancaCinta.slice(0, 2).map((p) => p.id);
-    const defaultDplIds = allDpl.slice(0, 2).map((d) => d.id);
+    const defaultPcIds = (allPancaCinta || []).slice(0, 2).map((p) => p.id);
+    const defaultDplIds = (allDpl || []).slice(0, 2).map((d) => d.id);
 
     // 6. Ambil Materi dari Bank Data sesuai kelas
     const slug = findBankDataSlug(mapel.nama, mapel.kode);
     const bankMateri = slug ? getMateriByMapelAndGrade(slug, penugasan.tingkat_kelas) : [];
 
-    // 7. BERSIHKAN DOKUMEN LAMA UNTUK PENUGASAN INI (Cascade clean)
-    const { data: existingRpps } = await adminClient
-      .from("rpp")
-      .select("id")
-      .eq("penugasan_id", penugasanId);
+    // 7. BERSIHKAN DOKUMEN LAMA SECARA PARALEL (Mengurangi 80% roundtrip)
+    const [existingRppsRes, existingProsemsRes, existingProtaRes, existingAcpRes] = await Promise.all([
+      adminClient.from("rpp").select("id").eq("penugasan_id", penugasanId),
+      adminClient.from("prosem").select("id").eq("penugasan_id", penugasanId),
+      adminClient.from("prota").select("id").eq("penugasan_id", penugasanId),
+      adminClient.from("analisis_cp").select("id").eq("penugasan_id", penugasanId),
+    ]);
 
-    if (existingRpps && existingRpps.length > 0) {
-      const rppIds = existingRpps.map((r) => r.id);
-      await adminClient.from("rpp_langkah").delete().in("rpp_id", rppIds);
-      await adminClient.from("rpp").delete().eq("penugasan_id", penugasanId);
-    }
+    const rppIds = (existingRppsRes.data || []).map((r) => r.id);
+    const prosemIds = (existingProsemsRes.data || []).map((p) => p.id);
+    const protaIds = (existingProtaRes.data || []).map((p) => p.id);
+    const acpIds = (existingAcpRes.data || []).map((a) => a.id);
 
-    const { data: existingProsems } = await adminClient
-      .from("prosem")
-      .select("id")
-      .eq("penugasan_id", penugasanId);
+    await Promise.all([
+      rppIds.length > 0 ? adminClient.from("rpp_langkah").delete().in("rpp_id", rppIds) : Promise.resolve(),
+      prosemIds.length > 0 ? adminClient.from("prosem_item").delete().in("prosem_id", prosemIds) : Promise.resolve(),
+      protaIds.length > 0 ? adminClient.from("prota_item").delete().in("prota_id", protaIds) : Promise.resolve(),
+      acpIds.length > 0 ? adminClient.from("tujuan_pembelajaran").delete().in("analisis_cp_id", acpIds) : Promise.resolve(),
+    ]);
 
-    if (existingProsems && existingProsems.length > 0) {
-      const prosemIds = existingProsems.map((p) => p.id);
-      await adminClient.from("prosem_item").delete().in("prosem_id", prosemIds);
-      await adminClient.from("prosem").delete().eq("penugasan_id", penugasanId);
-    }
-
-    const { data: existingProta } = await adminClient
-      .from("prota")
-      .select("id")
-      .eq("penugasan_id", penugasanId)
-      .maybeSingle();
-
-    if (existingProta) {
-      await adminClient.from("prota_item").delete().eq("prota_id", existingProta.id);
-      await adminClient.from("prota").delete().eq("penugasan_id", penugasanId);
-    }
-
-    const { data: existingAcp } = await adminClient
-      .from("analisis_cp")
-      .select("id")
-      .eq("penugasan_id", penugasanId);
-
-    if (existingAcp && existingAcp.length > 0) {
-      const acpIds = existingAcp.map((a) => a.id);
-      await adminClient.from("tujuan_pembelajaran").delete().in("analisis_cp_id", acpIds);
-      await adminClient.from("analisis_cp").delete().eq("penugasan_id", penugasanId);
-    }
-
-    await adminClient.from("atp").delete().eq("penugasan_id", penugasanId);
+    await Promise.all([
+      adminClient.from("rpp").delete().eq("penugasan_id", penugasanId),
+      adminClient.from("prosem").delete().eq("penugasan_id", penugasanId),
+      adminClient.from("prota").delete().eq("penugasan_id", penugasanId),
+      adminClient.from("analisis_cp").delete().eq("penugasan_id", penugasanId),
+      adminClient.from("atp").delete().eq("penugasan_id", penugasanId),
+    ]);
 
     // =========================================================================
-    // 8. GENERATE ANALISIS CP & TUJUAN PEMBELAJARAN (ATP)
+    // 8. BATCH GENERATE ANALISIS CP & TUJUAN PEMBELAJARAN (ATP)
     // =========================================================================
     const midPoint = Math.ceil(N / 2);
-    const createdAnalisisRows: Array<{
-      id: string;
-      elemen: string;
-      materi_pokok: string;
-      alokasi_jp: number;
-      semester: 1 | 2;
-    }> = [];
-
-    const createdTpRows: Array<{
-      id: string;
-      analisis_cp_id: string;
-      kode_tp: string;
-      materi_pokok: string;
-      deskripsi: string;
-      panca_cinta_ids: string[];
-      dpl_ids: string[];
-      semester: 1 | 2;
-      alokasi_jp: number;
-      urutan: number;
-    }> = [];
+    const acpInserts: any[] = [];
 
     for (let i = 0; i < N; i++) {
       const cp = cpElements[i];
-      const semester: 1 | 2 = i < midPoint ? 1 : 2;
       const jp = jpPerElemen[i];
-
-      // Tentukan judul materi pokok dari Bank Data jika ada
       const bankItem = bankMateri[i % Math.max(1, bankMateri.length)];
-      const materiPokok =
-        bankItem?.bab || `${mapel.nama}: Eksplorasi ${cp.elemen}`;
+      const materiPokok = bankItem?.bab || `${mapel.nama}: Eksplorasi ${cp.elemen}`;
 
-      const { data: acpRow, error: acpErr } = await adminClient
-        .from("analisis_cp")
-        .insert({
-          penugasan_id: penugasanId,
-          cp_id: cp.id,
-          materi_pokok: materiPokok,
-          kompetensi: cp.deskripsi_cp.slice(0, 180),
-          alokasi_jp: jp,
-          dpl_ids: defaultDplIds,
-          panca_cinta_ids: defaultPcIds,
-          urutan: i + 1,
-          status: targetStatus,
-          created_by: penugasan.guru_id,
-        })
-        .select("id")
-        .single();
-
-      if (acpErr || !acpRow) {
-        throw new Error("Gagal membuat baris Analisis CP: " + acpErr?.message);
-      }
-
-      createdAnalisisRows.push({
-        id: acpRow.id,
-        elemen: cp.elemen,
+      acpInserts.push({
+        penugasan_id: penugasanId,
+        cp_id: cp.id,
         materi_pokok: materiPokok,
+        kompetensi: cp.deskripsi_cp.slice(0, 180),
         alokasi_jp: jp,
-        semester,
+        dpl_ids: defaultDplIds,
+        panca_cinta_ids: defaultPcIds,
+        urutan: i + 1,
+        status: targetStatus,
+        created_by: penugasan.guru_id,
       });
+    }
 
-      // Buat 1 atau 2 Tujuan Pembelajaran (TP) per elemen
-      // Membagi alokasi JP elemen ke TP
+    const { data: insertedAcps, error: acpErr } = await adminClient
+      .from("analisis_cp")
+      .insert(acpInserts)
+      .select("id, urutan, materi_pokok, alokasi_jp");
+
+    if (acpErr || !insertedAcps) {
+      throw new Error("Gagal membuat baris Analisis CP: " + acpErr?.message);
+    }
+
+    insertedAcps.sort((a, b) => Number(a.urutan || 0) - Number(b.urutan || 0));
+
+    const tpInserts: any[] = [];
+    for (let i = 0; i < insertedAcps.length; i++) {
+      const acp = insertedAcps[i];
+      const iOriginal = Number(acp.urutan || i + 1) - 1;
+      const cp = cpElements[iOriginal];
+      const semester: 1 | 2 = iOriginal < midPoint ? 1 : 2;
+      const jp = Number(acp.alokasi_jp || 2);
+
+      const bankItem = bankMateri[iOriginal % Math.max(1, bankMateri.length)];
+      const subbab1 = bankItem?.subbab?.[0] || `Konsep dasar dan prinsip ${cp?.elemen || "materi"}`;
+      const subbab2 = bankItem?.subbab?.[1] || `Aplikasi praktis dan refleksi bermakna ${cp?.elemen || "materi"}`;
+
       const tpJp1 = Math.ceil(jp / 2);
       const tpJp2 = Math.floor(jp / 2);
 
-      const subbab1 = bankItem?.subbab?.[0] || `Konsep dasar dan prinsip ${cp.elemen}`;
-      const subbab2 = bankItem?.subbab?.[1] || `Aplikasi praktis dan refleksi bermakna ${cp.elemen}`;
-
-      const tp1Desc = `Peserta didik mampu memahami dan menganalisis ${subbab1} dalam konteks ${mapel.nama} dengan penuh rasa cinta ilmu.`;
-      const tp2Desc = `Peserta didik mampu mempraktikkan dan menyajikan ${subbab2} sebagai wujud cinta sesama dan lingkungan madrasah.`;
-
-      const tpInserts = [
-        {
-          analisis_cp_id: acpRow.id,
-          kode_tp: `${penugasan.tingkat_kelas}.${i * 2 + 1}`,
-          deskripsi: tp1Desc,
-          lingkup_materi: materiPokok,
-          kompetensi: "Menganalisis dan Memahami",
-          panca_cinta_ids: defaultPcIds,
-          dpl_ids: defaultDplIds,
-          semester,
-          alokasi_jp: tpJp1 > 0 ? tpJp1 : jp,
-          urutan: i * 2 + 1,
-          created_by: penugasan.guru_id,
-        },
-      ];
+      tpInserts.push({
+        analisis_cp_id: acp.id,
+        kode_tp: `${penugasan.tingkat_kelas}.${iOriginal * 2 + 1}`,
+        deskripsi: `Peserta didik mampu memahami dan menganalisis ${subbab1} dalam konteks ${mapel.nama} dengan penuh rasa cinta ilmu.`,
+        lingkup_materi: acp.materi_pokok,
+        kompetensi: "Menganalisis dan Memahami",
+        panca_cinta_ids: defaultPcIds,
+        dpl_ids: defaultDplIds,
+        semester,
+        alokasi_jp: tpJp1 > 0 ? tpJp1 : jp,
+        urutan: iOriginal * 2 + 1,
+        created_by: penugasan.guru_id,
+      });
 
       if (tpJp2 > 0) {
         tpInserts.push({
-          analisis_cp_id: acpRow.id,
-          kode_tp: `${penugasan.tingkat_kelas}.${i * 2 + 2}`,
-          deskripsi: tp2Desc,
-          lingkup_materi: materiPokok,
+          analisis_cp_id: acp.id,
+          kode_tp: `${penugasan.tingkat_kelas}.${iOriginal * 2 + 2}`,
+          deskripsi: `Peserta didik mampu mempraktikkan dan menyajikan ${subbab2} sebagai wujud cinta sesama dan lingkungan madrasah.`,
+          lingkup_materi: acp.materi_pokok,
           kompetensi: "Menerapkan dan Merefleksikan",
           panca_cinta_ids: defaultPcIds,
           dpl_ids: defaultDplIds,
           semester,
           alokasi_jp: tpJp2,
-          urutan: i * 2 + 2,
+          urutan: iOriginal * 2 + 2,
           created_by: penugasan.guru_id,
         });
       }
-
-      const { data: insertedTps, error: tpErr } = await adminClient
-        .from("tujuan_pembelajaran")
-        .insert(tpInserts)
-        .select("id, analisis_cp_id, kode_tp, deskripsi, lingkup_materi, panca_cinta_ids, dpl_ids, semester, alokasi_jp, urutan");
-
-      if (tpErr || !insertedTps) {
-        throw new Error("Gagal membuat Tujuan Pembelajaran: " + tpErr?.message);
-      }
-
-      insertedTps.forEach((tp) => {
-        createdTpRows.push({
-          id: tp.id,
-          analisis_cp_id: tp.analisis_cp_id,
-          kode_tp: tp.kode_tp,
-          materi_pokok: tp.lingkup_materi || materiPokok,
-          deskripsi: tp.deskripsi,
-          panca_cinta_ids: tp.panca_cinta_ids || defaultPcIds,
-          dpl_ids: tp.dpl_ids || defaultDplIds,
-          semester: tp.semester as 1 | 2,
-          alokasi_jp: Number(tp.alokasi_jp || 2),
-          urutan: Number(tp.urutan || 1),
-        });
-      });
     }
 
-    // Buat record ATP
-    const { data: atpDoc, error: atpErr } = await adminClient
-      .from("atp")
-      .insert({
-        penugasan_id: penugasanId,
-        status: targetStatus,
-        metode_pengurutan: "konkret_ke_abstrak",
-        created_by: penugasan.guru_id,
-      })
-      .select("id")
-      .single();
+    const { data: insertedTps, error: tpErr } = await adminClient
+      .from("tujuan_pembelajaran")
+      .insert(tpInserts)
+      .select("id, analisis_cp_id, kode_tp, deskripsi, lingkup_materi, panca_cinta_ids, dpl_ids, semester, alokasi_jp, urutan");
 
-    if (atpErr || !atpDoc) {
-      throw new Error("Gagal membuat dokumen ATP: " + atpErr?.message);
+    if (tpErr || !insertedTps) {
+      throw new Error("Gagal membuat Tujuan Pembelajaran: " + tpErr?.message);
     }
+
+    insertedTps.sort((a, b) => a.urutan - b.urutan);
 
     // =========================================================================
-    // 9. GENERATE PROGRAM TAHUNAN (PROTA)
+    // 9. PARALLEL INSERT: ATP DOKUMEN & PROTA DOKUMEN
     // =========================================================================
-    const { data: protaDoc, error: protaErr } = await adminClient
-      .from("prota")
-      .insert({
-        penugasan_id: penugasanId,
-        total_jp: targetJpTahun,
-        status: targetStatus,
-        snapshot_minggu_efektif: analisis as any,
-        created_by: penugasan.guru_id,
-      })
-      .select("id")
-      .single();
+    const [atpRes, protaRes] = await Promise.all([
+      adminClient
+        .from("atp")
+        .insert({
+          penugasan_id: penugasanId,
+          status: targetStatus,
+          metode_pengurutan: "konkret_ke_abstrak",
+          created_by: penugasan.guru_id,
+        })
+        .select("id")
+        .single(),
+      adminClient
+        .from("prota")
+        .insert({
+          penugasan_id: penugasanId,
+          total_jp: targetJpTahun,
+          status: targetStatus,
+          snapshot_minggu_efektif: analisis as any,
+          created_by: penugasan.guru_id,
+        })
+        .select("id")
+        .single(),
+    ]);
 
-    if (protaErr || !protaDoc) {
-      throw new Error("Gagal membuat dokumen Prota: " + protaErr?.message);
-    }
+    if (atpRes.error || !atpRes.data) throw new Error("Gagal membuat dokumen ATP: " + atpRes.error?.message);
+    if (protaRes.error || !protaRes.data) throw new Error("Gagal membuat dokumen Prota: " + protaRes.error?.message);
 
-    const protaItemsToInsert = createdTpRows.map((tp, idx) => {
-      const pcNama = tp.panca_cinta_ids
-        .map((pid) => allPancaCinta.find((p) => p.id === pid)?.nama)
+    const atpDoc = atpRes.data;
+    const protaDoc = protaRes.data;
+
+    const protaItemsToInsert = insertedTps.map((tp, idx) => {
+      const pcNama = (tp.panca_cinta_ids || [])
+        .map((pid: string) => allPancaCinta?.find((p) => p.id === pid)?.nama)
         .filter(Boolean)
         .join(", ");
 
@@ -481,11 +465,11 @@ export async function generateDefaultPerangkatForPenugasan(
         prota_id: protaDoc.id,
         tujuan_pembelajaran_id: tp.id,
         kode_tp: tp.kode_tp,
-        materi_pokok: tp.materi_pokok,
+        materi_pokok: tp.lingkup_materi || tp.deskripsi || "Materi Pokok",
         tujuan_pembelajaran_teks: tp.deskripsi,
         panca_cinta_nama: pcNama || "Cinta Ilmu",
-        semester: tp.semester,
-        alokasi_jp: tp.alokasi_jp,
+        semester: (tp.semester as 1 | 2) || 1,
+        alokasi_jp: Number(tp.alokasi_jp || 2),
         urutan: idx + 1,
         created_by: penugasan.guru_id,
       };
@@ -501,45 +485,54 @@ export async function generateDefaultPerangkatForPenugasan(
     }
 
     // =========================================================================
-    // 10. GENERATE PROGRAM SEMESTER (PROSEM SMT 1 & SMT 2)
+    // 10. GENERATE PROGRAM SEMESTER (PROSEM SMT 1 & 2 DALAM 1 BATCH)
     // =========================================================================
-    for (const sem of [1, 2] as const) {
-      const semesterData = sem === 1 ? analisis.semester1 : analisis.semester2;
-      const targetJpSem = sem === 1 ? targetJpSmt1 : targetJpSmt2;
+    const { data: insertedProsems, error: psErr } = await adminClient
+      .from("prosem")
+      .insert([
+        {
+          penugasan_id: penugasanId,
+          semester: 1,
+          status: targetStatus,
+          total_minggu_efektif: analisis.semester1.totalMingguEfektif,
+          total_jp: targetJpSmt1,
+          snapshot_minggu_efektif: analisis.semester1 as any,
+          created_by: penugasan.guru_id,
+        },
+        {
+          penugasan_id: penugasanId,
+          semester: 2,
+          status: targetStatus,
+          total_minggu_efektif: analisis.semester2.totalMingguEfektif,
+          total_jp: targetJpSmt2,
+          snapshot_minggu_efektif: analisis.semester2 as any,
+          created_by: penugasan.guru_id,
+        },
+      ])
+      .select("id, semester");
 
-      // Ambil kunci minggu efektif (hanya minggu yang efektif mengajar)
+    if (psErr || !insertedProsems || insertedProsems.length < 2) {
+      throw new Error("Gagal membuat dokumen Prosem: " + psErr?.message);
+    }
+
+    const prosemSmt1 = insertedProsems.find((p) => p.semester === 1)!;
+    const prosemSmt2 = insertedProsems.find((p) => p.semester === 2)!;
+
+    const prosemItemsToInsert: any[] = [];
+    for (const sem of [1, 2] as const) {
+      const pDoc = sem === 1 ? prosemSmt1 : prosemSmt2;
+      const semesterData = sem === 1 ? analisis.semester1 : analisis.semester2;
       const effectiveWeekKeys: string[] = [];
       semesterData.daftarBulan.forEach((b) => {
         b.detailMinggu.forEach((m) => {
-          if (m.efektif) {
-            effectiveWeekKeys.push(`${b.bulanIndex}_${m.mingguKe}`);
-          }
+          if (m.efektif) effectiveWeekKeys.push(`${b.bulanIndex}_${m.mingguKe}`);
         });
       });
 
       const protaItemsSem = insertedProtaItems.filter((pi) => pi.semester === sem);
-
-      const { data: prosemDoc, error: psErr } = await adminClient
-        .from("prosem")
-        .insert({
-          penugasan_id: penugasanId,
-          semester: sem,
-          status: targetStatus,
-          total_minggu_efektif: semesterData.totalMingguEfektif,
-          total_jp: targetJpSem,
-          snapshot_minggu_efektif: semesterData as any,
-          created_by: penugasan.guru_id,
-        })
-        .select("id")
-        .single();
-
-      if (psErr || !prosemDoc) {
-        throw new Error(`Gagal membuat dokumen Prosem Semester ${sem}: ${psErr?.message}`);
-      }
-
-      // Distribusikan alokasi JP per minggu efektif
       let weekCursor = 0;
-      const prosemItemsToInsert = protaItemsSem.map((pi, idx) => {
+
+      protaItemsSem.forEach((pi, idx) => {
         let remainingJp = pi.alokasi_jp;
         const distribusi: Record<string, number> = {};
         const weeksAssigned: number[] = [];
@@ -553,8 +546,8 @@ export async function generateDefaultPerangkatForPenugasan(
           weekCursor++;
         }
 
-        return {
-          prosem_id: prosemDoc.id,
+        prosemItemsToInsert.push({
+          prosem_id: pDoc.id,
           prota_item_id: pi.id,
           kode_tp: pi.kode_tp,
           materi_pokok: pi.materi_pokok,
@@ -564,33 +557,37 @@ export async function generateDefaultPerangkatForPenugasan(
           minggu_ke: Array.from(new Set(weeksAssigned)),
           distribusi_minggu: distribusi,
           created_by: penugasan.guru_id,
-        };
+        });
       });
+    }
 
-      if (prosemItemsToInsert.length > 0) {
-        await adminClient.from("prosem_item").insert(prosemItemsToInsert);
-      }
+    if (prosemItemsToInsert.length > 0) {
+      await adminClient.from("prosem_item").insert(prosemItemsToInsert);
     }
 
     // =========================================================================
-    // 11. GENERATE MODUL AJAR (RPP) STANDAR KBC
-    //     Dibuat representatif (minimal 2 Modul Ajar: 1 Smt 1 & 1 Smt 2)
+    // 11. GENERATE MODUL AJAR (RPP) STANDAR KBC (BATCH INSERT)
     // =========================================================================
+    const defaultPertemuan = 2;
+    const defaultTotalJp = jpPerMinggu * defaultPertemuan;
     const rppsToCreate = [
-      { sem: 1 as const, tpList: createdTpRows.filter((t) => t.semester === 1) },
-      { sem: 2 as const, tpList: createdTpRows.filter((t) => t.semester === 2) },
+      { sem: 1 as const, tpList: insertedTps.filter((t) => t.semester === 1) },
+      { sem: 2 as const, tpList: insertedTps.filter((t) => t.semester === 2) },
     ];
 
-    let createdRppCount = 0;
+    const rppInserts: any[] = [];
+    const rppMeta: Array<{
+      tp: any;
+      defaultTotalJp: number;
+      defaultPertemuan: number;
+      uniquePcIds: string[];
+      materiPokok: string;
+    }> = [];
 
     for (const rppGroup of rppsToCreate) {
       if (rppGroup.tpList.length === 0) continue;
-
       const representativeTp = rppGroup.tpList[0];
-      const materiPokok = representativeTp.materi_pokok;
-      const defaultPertemuan = 2;
-      const defaultTotalJp = jpPerMinggu * defaultPertemuan;
-
+      const materiPokok = representativeTp.lingkup_materi || representativeTp.deskripsi;
       const defaultKesiapan = generateDefaultKesiapanMurid(materiPokok, mapel.nama);
       const defaultKarakteristik = generateDefaultKarakteristik(materiPokok, mapel.nama);
       const defaultLampiran = generateDefaultLampiran(
@@ -600,81 +597,100 @@ export async function generateDefaultPerangkatForPenugasan(
         defaultModel?.nama
       );
       const defaultSpec = getModelPedagogiSpec(defaultModel?.nama);
+      const uniquePcIds = Array.from(
+        new Set([...defaultPcIds, ...((representativeTp.panca_cinta_ids as string[]) || [])])
+      );
 
-      const uniquePcIds = Array.from(new Set([...defaultPcIds, ...(representativeTp.panca_cinta_ids || [])]));
+      rppMeta.push({
+        tp: representativeTp,
+        defaultTotalJp,
+        defaultPertemuan,
+        uniquePcIds,
+        materiPokok,
+      });
 
-      const { data: newRpp, error: rppErr } = await adminClient
+      rppInserts.push({
+        penugasan_id: penugasanId,
+        atp_id: atpDoc.id,
+        model_id: defaultModel?.id || null,
+        materi_pokok: materiPokok,
+        topik_pembelajaran: materiPokok,
+        alokasi_waktu: `${defaultTotalJp} JP (${defaultPertemuan} Pertemuan x ${jpPerMinggu} x 40 menit)`,
+        alokasi_jp: defaultTotalJp,
+        jumlah_pertemuan: defaultPertemuan,
+        menit_per_jp: 40,
+        pertemuan_ke: 1,
+        versi: "lengkap" as VersiRpp,
+        tujuan_pembelajaran_ids: [representativeTp.id],
+        dimensi_profil_lulusan_ids: defaultDplIds,
+        panca_cinta_ids: uniquePcIds,
+        materi_kbc_ids: [],
+        metode_pembelajaran: defaultSpec.rekomendasi_metode,
+        karakteristik_materi: defaultKarakteristik.karakteristik_materi,
+        benang_merah_kbc: defaultKarakteristik.benang_merah_kbc,
+        kesiapan_murid: defaultKesiapan as any,
+        lampiran: defaultLampiran as any,
+        tujuan_pembelajaran_teks: representativeTp.deskripsi,
+        lingkungan_belajar_fisik: "Ruang kelas yang nyaman, tertata rapi, dan mendukung diskusi kolaboratif.",
+        budaya_belajar: "Budaya saling memuliakan, empati, kebebasan berpendapat dengan santun, dan cinta ilmu.",
+        status: targetStatus,
+        created_by: penugasan.guru_id,
+      });
+    }
+
+    let createdRppCount = 0;
+    if (rppInserts.length > 0) {
+      const { data: createdRpps, error: rppErr } = await adminClient
         .from("rpp")
-        .insert({
-          penugasan_id: penugasanId,
-          atp_id: atpDoc.id,
-          model_id: defaultModel?.id || null,
-          materi_pokok: materiPokok,
-          topik_pembelajaran: materiPokok,
-          alokasi_waktu: `${defaultTotalJp} JP (${defaultPertemuan} Pertemuan x ${jpPerMinggu} x 40 menit)`,
-          alokasi_jp: defaultTotalJp,
-          jumlah_pertemuan: defaultPertemuan,
-          menit_per_jp: 40,
-          pertemuan_ke: 1,
-          versi: "lengkap" as VersiRpp,
-          tujuan_pembelajaran_ids: [representativeTp.id],
-          dimensi_profil_lulusan_ids: defaultDplIds,
-          panca_cinta_ids: uniquePcIds,
-          materi_kbc_ids: [],
-          metode_pembelajaran: defaultSpec.rekomendasi_metode,
-          karakteristik_materi: defaultKarakteristik.karakteristik_materi,
-          benang_merah_kbc: defaultKarakteristik.benang_merah_kbc,
-          kesiapan_murid: defaultKesiapan as any,
-          lampiran: defaultLampiran as any,
-          tujuan_pembelajaran_teks: representativeTp.deskripsi,
-          lingkungan_belajar_fisik: "Ruang kelas yang nyaman, tertata rapi, dan mendukung diskusi kolaboratif.",
-          budaya_belajar: "Budaya saling memuliakan, empati, kebebasan berpendapat dengan santun, dan cinta ilmu.",
-          status: targetStatus,
-          created_by: penugasan.guru_id,
-        })
-        .select("id")
-        .single();
+        .insert(rppInserts)
+        .select("id");
 
-      if (!rppErr && newRpp) {
-        createdRppCount++;
+      if (!rppErr && createdRpps && createdRpps.length > 0) {
+        createdRppCount = createdRpps.length;
+        const allLangkahInserts: any[] = [];
 
-        // Buat langkah pembelajaran
-        const generatedLangkah = generateModelLangkahList({
-          modelNama: defaultModel?.nama,
-          sintaksDb:
-            (defaultModel?.sintaks as unknown as Array<{
-              urutan: number;
-              nama_sintaks: string;
-              pengalaman_belajar: PengalamanBelajar;
-            }>) || null,
-          materiPokok,
-          topikPembelajaran: materiPokok,
-          mapelNama: mapel.nama,
-          tingkatKelas: penugasan.tingkat_kelas,
-          jumlahPertemuan: defaultPertemuan,
-          alokasiJp: defaultTotalJp,
-          menitPerJp: 40,
-          pancaCintaIds: uniquePcIds,
-          pancaCintaMaster: allPancaCinta,
-          modeDistribusi: "utuh_per_pertemuan",
-        });
+        for (let i = 0; i < createdRpps.length; i++) {
+          const rpp = createdRpps[i];
+          const meta = rppMeta[i];
+          const generatedLangkah = generateModelLangkahList({
+            modelNama: defaultModel?.nama,
+            sintaksDb:
+              (defaultModel?.sintaks as unknown as Array<{
+                urutan: number;
+                nama_sintaks: string;
+                pengalaman_belajar: PengalamanBelajar;
+              }>) || null,
+            materiPokok: meta.materiPokok,
+            topikPembelajaran: meta.materiPokok,
+            mapelNama: mapel.nama,
+            tingkatKelas: penugasan.tingkat_kelas,
+            jumlahPertemuan: meta.defaultPertemuan,
+            alokasiJp: meta.defaultTotalJp,
+            menitPerJp: 40,
+            pancaCintaIds: meta.uniquePcIds,
+            pancaCintaMaster: allPancaCinta || [],
+            modeDistribusi: "utuh_per_pertemuan",
+          });
 
-        const langkahInserts = generatedLangkah.map((step) => ({
-          rpp_id: newRpp.id,
-          tahap: step.tahap,
-          pengalaman: step.pengalaman,
-          deskripsi_kegiatan: step.deskripsi_kegiatan,
-          durasi_menit: step.durasi_menit,
-          urutan: step.urutan,
-          pertemuan_ke: step.pertemuan_ke,
-          prinsip: step.prinsip,
-          panca_cinta_id: step.panca_cinta_id,
-          aksi_kbc: step.aksi_kbc,
-          created_by: penugasan.guru_id,
-        }));
+          generatedLangkah.forEach((step) => {
+            allLangkahInserts.push({
+              rpp_id: rpp.id,
+              tahap: step.tahap,
+              pengalaman: step.pengalaman,
+              deskripsi_kegiatan: step.deskripsi_kegiatan,
+              durasi_menit: step.durasi_menit,
+              urutan: step.urutan,
+              pertemuan_ke: step.pertemuan_ke,
+              prinsip: step.prinsip,
+              panca_cinta_id: step.panca_cinta_id,
+              aksi_kbc: step.aksi_kbc,
+              created_by: penugasan.guru_id,
+            });
+          });
+        }
 
-        if (langkahInserts.length > 0) {
-          await adminClient.from("rpp_langkah").insert(langkahInserts);
+        if (allLangkahInserts.length > 0) {
+          await adminClient.from("rpp_langkah").insert(allLangkahInserts);
         }
       }
     }
@@ -687,7 +703,7 @@ export async function generateDefaultPerangkatForPenugasan(
       tingkatKelas: penugasan.tingkat_kelas,
       totalJp: targetJpTahun,
       jumlahElemen: N,
-      jumlahTp: createdTpRows.length,
+      jumlahTp: insertedTps.length,
       rppCount: createdRppCount,
     };
   } catch (err) {
@@ -751,12 +767,15 @@ export async function generateDefaultPerangkatGuruAction(
       .eq("id", guruId)
       .single();
 
+    // Ambil shared context sekali saja untuk semua penugasan guru ini
+    const sharedCtx = await getGeneratorSharedContext(taAktif.id);
+
     const results: GenerateResult[] = [];
     let accTp = 0;
     let accRpp = 0;
 
     for (const p of penugasanList) {
-      const res = await generateDefaultPerangkatForPenugasan(p.id, options);
+      const res = await generateDefaultPerangkatForPenugasan(p.id, options, sharedCtx);
       results.push(res);
       if (res.success) {
         accTp += res.jumlahTp || 0;
@@ -835,9 +854,10 @@ export async function generateDefaultPerangkatMassalAction(
 
     let pCount = 0;
     const processedGurus = new Set<string>();
+    const sharedCtx = await getGeneratorSharedContext(taAktif.id);
 
     for (const p of penugasanList) {
-      const res = await generateDefaultPerangkatForPenugasan(p.id, options);
+      const res = await generateDefaultPerangkatForPenugasan(p.id, options, sharedCtx);
       if (res.success) {
         pCount++;
         processedGurus.add(p.guru_id);

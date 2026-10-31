@@ -353,9 +353,23 @@ export function AntrianValidasiClient({
         isDone: false,
       });
 
-      const res = await generateDefaultPerangkatGuruAction(defaultModalGuru.guruId, {
-        autoSubmit: autoSubmitDefault,
-      });
+      let res: any;
+      try {
+        const fetchRes = await fetch("/api/generator/default", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            action: "guru",
+            guruId: defaultModalGuru.guruId,
+            autoSubmit: autoSubmitDefault,
+          }),
+        });
+        res = await fetchRes.json();
+      } catch {
+        res = await generateDefaultPerangkatGuruAction(defaultModalGuru.guruId, {
+          autoSubmit: autoSubmitDefault,
+        });
+      }
 
       if (!res.success) {
         toast.error(res.error || "Gagal membuat perangkat pembelajaran default.");
