@@ -32,6 +32,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
+import { Progress } from "@/components/ui/progress";
 import {
   Select,
   SelectContent,
@@ -100,6 +101,17 @@ export function AntrianValidasiClient({
   } | null>(null);
   const [isGeneratingDefault, setIsGeneratingDefault] = useState(false);
   const [autoSubmitDefault, setAutoSubmitDefault] = useState(true);
+  const [defaultProgress, setDefaultProgress] = useState<{
+    isActive: boolean;
+    stepText: string;
+    percent: number;
+    isDone: boolean;
+  }>({
+    isActive: false,
+    stepText: "",
+    percent: 0,
+    isDone: false,
+  });
 
   // State download ZIP
   const [downloadingGuruId, setDownloadingGuruId] = useState<string | null>(null);
@@ -327,22 +339,46 @@ export function AntrianValidasiClient({
   const handleConfirmGenerateDefault = async () => {
     if (!defaultModalGuru) return;
     setIsGeneratingDefault(true);
+    setDefaultProgress({
+      isActive: true,
+      stepText: `Sedang menyiapkan data perangkat untuk ${defaultModalGuru.guruNama}...`,
+      percent: 25,
+      isDone: false,
+    });
     try {
+      setDefaultProgress({
+        isActive: true,
+        stepText: "Membagi JP tahunan ke elemen CP & menyusun ATP, Prota, Prosem, Modul Ajar...",
+        percent: 55,
+        isDone: false,
+      });
+
       const res = await generateDefaultPerangkatGuruAction(defaultModalGuru.guruId, {
         autoSubmit: autoSubmitDefault,
       });
 
       if (!res.success) {
         toast.error(res.error || "Gagal membuat perangkat pembelajaran default.");
+        setDefaultProgress({ isActive: false, stepText: "", percent: 0, isDone: false });
       } else {
+        setDefaultProgress({
+          isActive: true,
+          stepText: "Selesai menyusun seluruh berkas perangkat pembelajaran!",
+          percent: 100,
+          isDone: true,
+        });
         toast.success(
           `Berhasil menyusun perangkat default untuk ${defaultModalGuru.guruNama} (${res.totalTp} TP, ${res.totalRpp} Modul Ajar)`
         );
-        setDefaultModalGuru(null);
-        router.refresh();
+        setTimeout(() => {
+          setDefaultModalGuru(null);
+          setDefaultProgress({ isActive: false, stepText: "", percent: 0, isDone: false });
+          router.refresh();
+        }, 1200);
       }
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Terjadi kesalahan sistem.");
+      setDefaultProgress({ isActive: false, stepText: "", percent: 0, isDone: false });
     } finally {
       setIsGeneratingDefault(false);
     }
@@ -1183,7 +1219,15 @@ export function AntrianValidasiClient({
       </Dialog>
 
       {/* DIALOG AUTO-GENERATE PERANGKAT DEFAULT GURU */}
-      <Dialog open={!!defaultModalGuru} onOpenChange={(open) => !open && setDefaultModalGuru(null)}>
+      <Dialog
+        open={!!defaultModalGuru}
+        onOpenChange={(open) => {
+          if (!open && !isGeneratingDefault) {
+            setDefaultModalGuru(null);
+            setDefaultProgress({ isActive: false, stepText: "", percent: 0, isDone: false });
+          }
+        }}
+      >
         <DialogContent className="sm:max-w-lg">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2 text-slate-900">
@@ -1197,64 +1241,131 @@ export function AntrianValidasiClient({
 
           {defaultModalGuru && (
             <div className="space-y-4 py-2 text-xs">
-              <div className="p-3.5 bg-amber-50/80 border border-amber-200 rounded-xl space-y-1">
-                <span className="font-bold text-amber-950 text-sm block">{defaultModalGuru.guruNama}</span>
-                <p className="text-amber-800">
-                  Meliputi <strong>{defaultModalGuru.penugasanCount} penugasan kelas</strong> yang diampu oleh guru ini.
-                </p>
-              </div>
+              {defaultProgress.isActive ? (
+                <div className="p-4 bg-gradient-to-br from-amber-50 to-orange-50/50 border-2 border-amber-300 rounded-2xl shadow-sm space-y-3">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2 min-w-0">
+                      <div className="w-7 h-7 rounded-lg bg-amber-500/20 text-amber-800 flex items-center justify-center font-bold shrink-0">
+                        {defaultProgress.isDone ? (
+                          <CheckCheck className="w-4 h-4 text-emerald-600" />
+                        ) : (
+                          <Loader2 className="w-4 h-4 animate-spin text-amber-700" />
+                        )}
+                      </div>
+                      <div className="min-w-0">
+                        <span className="text-[11px] font-semibold text-amber-700 uppercase tracking-wider block">
+                          {defaultProgress.isDone ? "Selesai" : "Sedang Menyusun"}
+                        </span>
+                        <span className="font-bold text-amber-950 text-sm block truncate">
+                          {defaultModalGuru.guruNama}
+                        </span>
+                      </div>
+                    </div>
+                    <Badge
+                      className={`${
+                        defaultProgress.isDone ? "bg-emerald-600" : "bg-amber-600"
+                      } text-white font-mono text-xs px-2.5 py-0.5 shrink-0`}
+                    >
+                      {defaultProgress.percent}%
+                    </Badge>
+                  </div>
 
-              <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl text-blue-900 space-y-1">
-                <span className="font-semibold block">💡 Aturan Pembagian JP per Elemen (ATP):</span>
-                <p className="text-blue-800">
-                  Perhitungan alokasi JP per elemen dibagi rata otomatis dari porsi JP tahunan kalender pendidikan dibagi jumlah elemen CP, serta dibagi merata ke Semester 1 dan 2.
-                </p>
-              </div>
+                  <div className="space-y-1">
+                    <div className="flex justify-between text-[11px] text-amber-800 font-medium">
+                      <span>{defaultProgress.stepText}</span>
+                      <span className="font-bold">{defaultProgress.percent}%</span>
+                    </div>
+                    <Progress
+                      value={defaultProgress.percent}
+                      className={`h-2.5 ${
+                        defaultProgress.isDone ? "bg-emerald-200" : "bg-amber-200/60"
+                      }`}
+                    />
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <div className="p-3.5 bg-amber-50/80 border border-amber-200 rounded-xl space-y-1">
+                    <span className="font-bold text-amber-950 text-sm block">{defaultModalGuru.guruNama}</span>
+                    <p className="text-amber-800">
+                      Meliputi <strong>{defaultModalGuru.penugasanCount} penugasan kelas</strong> yang diampu oleh guru ini.
+                    </p>
+                  </div>
 
-              <label className="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer select-none">
-                <input
-                  type="checkbox"
-                  checked={autoSubmitDefault}
-                  onChange={(e) => setAutoSubmitDefault(e.target.checked)}
-                  className="rounded text-emerald-600 focus:ring-emerald-500 h-4 w-4"
-                />
-                <span className="text-xs text-slate-700 font-medium">
-                  Langsung ajukan dokumen ke antrian validasi (Status: <strong>Diajukan</strong>).
-                </span>
-              </label>
+                  <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl text-blue-900 space-y-1">
+                    <span className="font-semibold block">💡 Aturan Pembagian JP per Elemen (ATP):</span>
+                    <p className="text-blue-800">
+                      Perhitungan alokasi JP per elemen dibagi rata otomatis dari porsi JP tahunan kalender pendidikan dibagi jumlah elemen CP, serta dibagi merata ke Semester 1 dan 2.
+                    </p>
+                  </div>
+
+                  <label className="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer select-none">
+                    <input
+                      type="checkbox"
+                      checked={autoSubmitDefault}
+                      onChange={(e) => setAutoSubmitDefault(e.target.checked)}
+                      className="rounded text-emerald-600 focus:ring-emerald-500 h-4 w-4"
+                    />
+                    <span className="text-xs text-slate-700 font-medium">
+                      Langsung ajukan dokumen ke antrian validasi (Status: <strong>Diajukan</strong>).
+                    </span>
+                  </label>
+                </>
+              )}
             </div>
           )}
 
           <DialogFooter className="gap-2 sm:gap-0">
-            <Button
-              type="button"
-              variant="outline"
-              size="sm"
-              disabled={isGeneratingDefault}
-              onClick={() => setDefaultModalGuru(null)}
-              className="text-xs"
-            >
-              Batal
-            </Button>
-            <Button
-              type="button"
-              size="sm"
-              disabled={isGeneratingDefault}
-              onClick={handleConfirmGenerateDefault}
-              className="bg-amber-600 hover:bg-amber-700 text-white text-xs gap-1.5"
-            >
-              {isGeneratingDefault ? (
-                <>
-                  <Loader2 className="w-3.5 h-3.5 animate-spin" />
-                  <span>Sedang Menyusun...</span>
-                </>
-              ) : (
-                <>
-                  <Wand2 className="w-3.5 h-3.5" />
-                  <span>Buatkan Perangkat Sekarang</span>
-                </>
-              )}
-            </Button>
+            {defaultProgress.isDone ? (
+              <Button
+                type="button"
+                size="sm"
+                onClick={() => {
+                  setDefaultModalGuru(null);
+                  setDefaultProgress({ isActive: false, stepText: "", percent: 0, isDone: false });
+                  router.refresh();
+                }}
+                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs gap-1.5 h-9 font-semibold"
+              >
+                <CheckCheck className="w-4 h-4" />
+                <span>Selesai & Tutup</span>
+              </Button>
+            ) : (
+              <>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  disabled={isGeneratingDefault}
+                  onClick={() => {
+                    setDefaultModalGuru(null);
+                    setDefaultProgress({ isActive: false, stepText: "", percent: 0, isDone: false });
+                  }}
+                  className="text-xs"
+                >
+                  Batal
+                </Button>
+                <Button
+                  type="button"
+                  size="sm"
+                  disabled={isGeneratingDefault}
+                  onClick={handleConfirmGenerateDefault}
+                  className="bg-amber-600 hover:bg-amber-700 text-white text-xs gap-1.5"
+                >
+                  {isGeneratingDefault ? (
+                    <>
+                      <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                      <span>Sedang Menyusun...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Wand2 className="w-3.5 h-3.5" />
+                      <span>Buatkan Perangkat Sekarang</span>
+                    </>
+                  )}
+                </Button>
+              </>
+            )}
           </DialogFooter>
         </DialogContent>
       </Dialog>
