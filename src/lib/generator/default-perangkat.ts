@@ -430,6 +430,7 @@ export async function generateDefaultPerangkatForPenugasan(
         .from("atp")
         .insert({
           penugasan_id: penugasanId,
+          semester: 1,
           status: targetStatus,
           metode_pengurutan: "konkret_ke_abstrak",
           created_by: penugasan.guru_id,
