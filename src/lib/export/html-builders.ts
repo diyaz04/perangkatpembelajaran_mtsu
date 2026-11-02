@@ -71,13 +71,13 @@ const BASE_STYLES = `
     color: #0f172a;
     margin: 0;
     padding: 0;
-    font-size: 11px;
+    font-size: 10.5px;
     line-height: 1.4;
   }
   table {
     width: 100%;
     border-collapse: collapse;
-    margin: 10px 0;
+    margin: 8px 0;
   }
   th, td {
     border: 1px solid #334155;
@@ -103,6 +103,47 @@ const BASE_STYLES = `
     margin-top: 15px;
     margin-bottom: 6px;
     border-left: 4px solid #059669;
+  }
+  .rpp-box {
+    border: 1.5px solid #0f172a;
+    margin-top: 12px;
+    margin-bottom: 15px;
+  }
+  .rpp-section-header {
+    background-color: #e2e8f0;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 5px 8px;
+    border-top: 1.5px solid #0f172a;
+    border-bottom: 1px solid #0f172a;
+    text-transform: uppercase;
+    color: #0f172a;
+  }
+  .rpp-section-header:first-child {
+    border-top: none;
+  }
+  .rpp-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 !important;
+  }
+  .rpp-table td {
+    border: 1px solid #64748b;
+    padding: 5px 8px;
+    font-size: 10px;
+  }
+  .rpp-table th {
+    border: 1px solid #64748b;
+    background-color: #f1f5f9;
+    padding: 5px 8px;
+    font-size: 9.5px;
+  }
+  .rpp-label {
+    width: 25%;
+    font-weight: bold;
+    background-color: #f8fafc;
+    color: #1e293b;
+    border-right: 1px solid #64748b;
   }
 `;
 
@@ -438,13 +479,15 @@ export function generateProsemHtml(data: ProsemDetailData, semester: 1 | 2, opti
 }
 
 // =============================================================================
-// 4. RPP / MODUL AJAR HTML
+// 4. RPP / MODUL AJAR HTML (TABEL BERGARIS RESMI STANDAR KMA 1503 & KBC)
 // =============================================================================
 export function generateRppHtml(data: RppDetailData, options?: HtmlExportOptions): string {
   const { rpp, langkahList, penugasan, madrasah, master } = data;
   const includeKop = options?.includeKop !== false;
   const models = master?.models || [];
   const modelTerpilih = models.find((m) => m.id === rpp.model_id) || models[0];
+  const activeSpec = getModelPedagogiSpec(modelTerpilih?.nama);
+
   const dplSelected = (master?.dpl || [])
     .filter((d) => (rpp.dimensi_profil_lulusan_ids || []).includes(d.id))
     .map((d) => `${d.kode}: ${d.nama}`);
@@ -452,50 +495,87 @@ export function generateRppHtml(data: RppDetailData, options?: HtmlExportOptions
     .filter((pc) => (rpp.panca_cinta_ids || []).includes(pc.id))
     .map((pc) => `${pc.kode}: ${pc.nama}`);
 
-  // Render langkah pembelajaran per pertemuan
-  const pertemuanMap = new Map<number, typeof langkahList>();
-  (langkahList || []).forEach((l) => {
-    const list = pertemuanMap.get(l.pertemuan_ke) || [];
-    list.push(l);
-    pertemuanMap.set(l.pertemuan_ke, list);
-  });
+  // Kelompokkan langkah per pertemuan
+  const rawPertemuan = (langkahList || []).map((l) => l.pertemuan_ke);
+  const pertemuanList = Array.from(new Set(rawPertemuan)).sort((a, b) => a - b);
+  if (pertemuanList.length === 0) {
+    const totalP = rpp.jumlah_pertemuan && rpp.jumlah_pertemuan > 0 ? rpp.jumlah_pertemuan : 1;
+    for (let i = 1; i <= totalP; i++) {
+      pertemuanList.push(i);
+    }
+  }
 
-  let langkahHtml = "";
-  Array.from(pertemuanMap.keys())
-    .sort((a, b) => a - b)
-    .forEach((pert) => {
-      const steps = pertemuanMap.get(pert) || [];
-      const awal = steps.filter((s) => s.tahap === "awal");
-      const inti = steps.filter((s) => s.tahap === "inti");
-      const penutup = steps.filter((s) => s.tahap === "penutup");
+  let langkahPertemuanTables = "";
+  pertemuanList.forEach((pNum) => {
+    const steps = (langkahList || []).filter((l) => l.pertemuan_ke === pNum);
+    const totalMenit = steps.reduce((sum, l) => sum + Number(l.durasi_menit || 0), 0);
 
-      langkahHtml += `
-        <div style="margin-top: 15px; border: 1px solid #cbd5e1; border-radius: 6px; padding: 10px; background: #fafafa;">
-          <div style="font-weight: bold; font-size: 12px; color: #047857; margin-bottom: 8px;">PERTEMUAN KE-${pert}</div>
+    let rowsHtml = "";
+    steps.forEach((l, idx) => {
+      const pcObj = (master?.pancaCinta || []).find((p) => p.id === l.panca_cinta_id);
+      const parsed = parseLangkahDeskripsi(l.deskripsi_kegiatan);
 
-          <div style="margin-bottom: 8px;">
-            <strong style="color: #1e293b;">A. Kegiatan Pendahuluan</strong>
-            <ul style="margin: 4px 0 8px 20px; padding: 0;">
-              ${awal.map((s) => `<li>${escapeHtml(s.deskripsi_kegiatan)} (${s.durasi_menit} menit)</li>`).join("")}
-            </ul>
-          </div>
+      let aktivitasContent = "";
+      if (parsed.sintaksHeader) {
+        aktivitasContent += `<div style="margin-bottom: 3px;"><span style="background: #ecfdf5; border: 1px solid #a7f3d0; color: #065f46; font-size: 8.5px; font-weight: bold; padding: 1px 4px; border-radius: 3px;">${escapeHtml(parsed.sintaksHeader)}</span></div>`;
+      }
 
-          <div style="margin-bottom: 8px;">
-            <strong style="color: #1e293b;">B. Kegiatan Inti (${escapeHtml(modelTerpilih?.nama || "Sintaks Model")})</strong>
-            <ul style="margin: 4px 0 8px 20px; padding: 0;">
-              ${inti.map((s) => `<li><strong>[${escapeHtml(s.pengalaman || "Inti")}]</strong> ${escapeHtml(s.deskripsi_kegiatan)} (${s.durasi_menit} menit)</li>`).join("")}
-            </ul>
-          </div>
+      if (parsed.aktivitasGuru || parsed.aktivitasMurid) {
+        if (parsed.aktivitasGuru) {
+          aktivitasContent += `<div style="margin-bottom: 2px;"><strong style="color: #0f172a;">• Aktivitas Guru:</strong> <span style="color: #334155;">${escapeHtml(parsed.aktivitasGuru)}</span></div>`;
+        }
+        if (parsed.aktivitasMurid) {
+          aktivitasContent += `<div style="margin-bottom: 2px;"><strong style="color: #047857;">• Aktivitas Murid:</strong> <span style="color: #334155;">${escapeHtml(parsed.aktivitasMurid)}</span></div>`;
+        }
+      } else {
+        aktivitasContent += `<div style="white-space: pre-wrap; color: #334155;">${escapeHtml(parsed.isiUtama)}</div>`;
+      }
 
-          <div>
-            <strong style="color: #1e293b;">C. Kegiatan Penutup</strong>
-            <ul style="margin: 4px 0 8px 20px; padding: 0;">
-              ${penutup.map((s) => `<li>${escapeHtml(s.deskripsi_kegiatan)} (${s.durasi_menit} menit)</li>`).join("")}
-            </ul>
-          </div>
-        </div>
+      if (l.aksi_kbc) {
+        aktivitasContent += `<div style="font-style: italic; color: #9f1239; font-size: 8.5px; margin-top: 3px;">❤️ <strong>Aksi Cinta Guru:</strong> ${escapeHtml(l.aksi_kbc)}</div>`;
+      }
+
+      rowsHtml += `
+        <tr style="page-break-inside: avoid;">
+          <td style="text-align: center; font-weight: bold; width: 5%;">${idx + 1}</td>
+          <td style="width: 14%; text-align: center;">
+            <span style="font-weight: bold; font-size: 9px; text-transform: uppercase; color: #047857;">[${escapeHtml(l.tahap)}]</span>
+          </td>
+          <td style="width: 56%; font-size: 9.5px; line-height: 1.35;">
+            ${aktivitasContent}
+          </td>
+          <td style="width: 15%; text-align: center; font-size: 8.5px;">
+            <div style="font-weight: 600; text-transform: capitalize;">${escapeHtml(l.pengalaman || "-")}</div>
+            ${pcObj ? `<div style="color: #9f1239; font-weight: bold; margin-top: 2px;">[${escapeHtml(pcObj.kode)}]</div>` : ""}
+          </td>
+          <td style="text-align: center; font-weight: bold; width: 10%; font-size: 9.5px;">${l.durasi_menit}&apos;</td>
+        </tr>
       `;
     });
+
+    langkahPertemuanTables += `
+      <div style="margin-top: 8px; page-break-inside: avoid;">
+        <div style="background: #f1f5f9; font-weight: bold; font-size: 9.5px; padding: 4px 8px; border: 1px solid #64748b; border-bottom: none; display: flex; justify-content: space-between;">
+          <span>PERTEMUAN KE-${pNum} — MODEL: ${escapeHtml((modelTerpilih?.nama || "Pembelajaran Mendalam").toUpperCase())}</span>
+          <span>Alokasi Waktu: ${totalMenit} Menit</span>
+        </div>
+        <table class="rpp-table" style="margin-top: 0; margin-bottom: 6px;">
+          <thead>
+            <tr>
+              <th style="width: 5%;">No</th>
+              <th style="width: 14%;">Tahap</th>
+              <th style="width: 56%;">Sintaks & Rincian Pengalaman Pembelajaran</th>
+              <th style="width: 15%;">Pengalaman (3M)</th>
+              <th style="width: 10%;">Durasi</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${rowsHtml || `<tr><td colspan="5" style="text-align: center; font-style: italic; color: #64748b;">Belum ada langkah kegiatan.</td></tr>`}
+          </tbody>
+        </table>
+      </div>
+    `;
+  });
 
   return `
     <!DOCTYPE html>
@@ -505,86 +585,218 @@ export function generateRppHtml(data: RppDetailData, options?: HtmlExportOptions
         <title>Modul Ajar - ${escapeHtml(rpp.materi_pokok)}</title>
         <style>
           ${BASE_STYLES}
-          @page { size: portrait; margin: 15mm; }
+          @page { size: portrait; margin: 12mm; }
         </style>
       </head>
       <body>
         ${includeKop ? renderKop(madrasah) : '<div style="margin-top: 10px;"></div>'}
 
-        <div style="text-align: center; margin-bottom: 15px;">
-          <h2 style="margin: 0; font-size: 15px; text-transform: uppercase; font-weight: bold;">MODUL AJAR / RENCANA PELAKSANAAN PEMBELAJARAN (RPP)</h2>
-          <div style="font-size: 12px; font-weight: 600; color: #047857;">PEMBELAJARAN MENDALAM TERINTEGRASI KURIKULUM BERBASIS CINTA (KBC)</div>
+        <div style="text-align: center; margin-bottom: 12px;">
+          <h2 style="margin: 0; font-size: 14px; text-transform: uppercase; font-weight: 900; letter-spacing: 0.5px;">MODUL AJAR / RENCANA PELAKSANAAN PEMBELAJARAN (RPP)</h2>
+          <div style="font-size: 11px; font-weight: bold; color: #047857; margin-top: 2px;">PEMBELAJARAN MENDALAM TERINTEGRASI KURIKULUM BERBASIS CINTA (KBC)</div>
+          <div style="font-size: 9px; font-weight: 600; color: #475569; margin-top: 1px;">Standar Regulasi KMA 1503 Tahun 2025 • Format Tabel Resmi</div>
         </div>
 
-        <table class="identitas-table" style="width: 100%; margin-bottom: 12px;">
-          <tr>
-            <td style="width: 22%;">Satuan Pendidikan</td>
-            <td style="width: 40%;">: <strong>${escapeHtml(madrasah.nama)}</strong></td>
-            <td style="width: 15%;">Kelas / Smt</td>
-            <td style="width: 23%;">: Kelas ${penugasan.tingkat_kelas} (${escapeHtml(penugasan.rombel)})</td>
-          </tr>
-          <tr>
-            <td>Mata Pelajaran</td>
-            <td>: <strong>${escapeHtml(penugasan.mapel.nama)}</strong></td>
-            <td>Alokasi Waktu</td>
-            <td>: ${rpp.alokasi_jp} JP (${rpp.jumlah_pertemuan} Pertemuan)</td>
-          </tr>
-          <tr>
-            <td>Materi Pokok</td>
-            <td>: <strong>${escapeHtml(rpp.materi_pokok)}</strong></td>
-            <td>Tahun Pelajaran</td>
-            <td>: ${escapeHtml(penugasan.tahun_ajaran.nama)}</td>
-          </tr>
-          <tr>
-            <td>Model Pembelajaran</td>
-            <td colspan="3">: ${escapeHtml(modelTerpilih?.nama || "Pembelajaran Mendalam")}</td>
-          </tr>
-        </table>
+        <div class="rpp-box">
+          <!-- A. SPESIFIKASI DOKUMEN -->
+          <div class="rpp-section-header">A. SPESIFIKASI DOKUMEN / IDENTITAS MODUL</div>
+          <table class="rpp-table">
+            <tbody>
+              <tr>
+                <td class="rpp-label">Satuan Pendidikan</td>
+                <td style="font-weight: bold; width: 75%;">${escapeHtml(madrasah.nama)}</td>
+              </tr>
+              <tr>
+                <td class="rpp-label">Mata Pelajaran & Kode</td>
+                <td style="font-weight: bold;">${escapeHtml(penugasan.mapel.nama)} (${escapeHtml(penugasan.mapel.kode)})</td>
+              </tr>
+              <tr>
+                <td class="rpp-label">Fase / Kelas / Rombel</td>
+                <td>Fase D • Kelas ${penugasan.tingkat_kelas} (${escapeHtml(penugasan.rombel)})</td>
+              </tr>
+              <tr>
+                <td class="rpp-label">Lingkup Materi Pokok</td>
+                <td style="font-weight: 900; color: #0f172a;">${escapeHtml(rpp.materi_pokok)}</td>
+              </tr>
+              <tr>
+                <td class="rpp-label">Alokasi Waktu</td>
+                <td>${escapeHtml(rpp.alokasi_waktu || `${rpp.alokasi_jp} JP (${rpp.jumlah_pertemuan} Pertemuan)`)}</td>
+              </tr>
+              <tr>
+                <td class="rpp-label">Guru Pengampu</td>
+                <td>
+                  ${escapeHtml(penugasan.guru.nama_lengkap)}${penugasan.guru.gelar ? `, ${escapeHtml(penugasan.guru.gelar)}` : ""}
+                  ${penugasan.guru.nip ? ` (NIP. ${escapeHtml(penugasan.guru.nip)})` : ""}
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-        <!-- I. INFORMASI UMUM -->
-        <div class="section-title">I. INFORMASI UMUM</div>
-        <table class="identitas-table" style="width: 100%;">
-          <tr>
-            <td style="width: 25%; font-weight: bold;">A. Dimensi Profil Lulusan</td>
-            <td>: ${escapeHtml(dplSelected.join("; ") || "-")}</td>
-          </tr>
-          <tr>
-            <td style="font-weight: bold;">B. Nilai Panca Cinta (KBC)</td>
-            <td>: ${escapeHtml(pcSelected.join("; ") || "-")}</td>
-          </tr>
-          <tr>
-            <td style="font-weight: bold;">C. Kesiapan Belajar Murid</td>
-            <td>: ${escapeHtml(rpp.kesiapan_murid ? JSON.stringify(rpp.kesiapan_murid) : "Terdiferensiasi berdasarkan kesiapan belajar awal.")}</td>
-          </tr>
-          <tr>
-            <td style="font-weight: bold;">D. Sarana & Prasarana</td>
-            <td>: ${escapeHtml(rpp.lingkungan_belajar_fisik || "Ruang kelas, buku teks, alat peraga/media.")}</td>
-          </tr>
-        </table>
+          <!-- B. IDENTIFIKASI PEMBELAJARAN -->
+          <div class="rpp-section-header">B. IDENTIFIKASI PEMBELAJARAN</div>
+          <table class="rpp-table">
+            <tbody>
+              ${
+                rpp.kesiapan_murid?.pengetahuan_awal || rpp.kesiapan_murid?.minat
+                  ? `
+                <tr>
+                  <td class="rpp-label">Kesiapan Belajar Murid</td>
+                  <td>
+                    ${rpp.kesiapan_murid?.pengetahuan_awal ? `<div><strong>Pengetahuan Awal:</strong> ${escapeHtml(rpp.kesiapan_murid.pengetahuan_awal)}</div>` : ""}
+                    ${rpp.kesiapan_murid?.minat ? `<div style="margin-top: 2px;"><strong>Minat Murid:</strong> ${escapeHtml(rpp.kesiapan_murid.minat)}</div>` : ""}
+                    ${rpp.kesiapan_murid?.strategi_asesmen_awal ? `<div style="margin-top: 2px;"><strong>Strategi Diagnostik Awal:</strong> ${escapeHtml(rpp.kesiapan_murid.strategi_asesmen_awal)}</div>` : ""}
+                  </td>
+                </tr>
+              `
+                  : ""
+              }
+              <tr>
+                <td class="rpp-label">Karakteristik Materi</td>
+                <td>${escapeHtml(rpp.karakteristik_materi || "-")}</td>
+              </tr>
+              <tr>
+                <td class="rpp-label">Dimensi Profil Lulusan (DPL)</td>
+                <td>${escapeHtml(dplSelected.join("; ") || "-")}</td>
+              </tr>
+              <tr>
+                <td class="rpp-label">Topik Panca Cinta KBC</td>
+                <td style="font-weight: bold; color: #9f1239;">${escapeHtml(pcSelected.join("; ") || "-")}</td>
+              </tr>
+              <tr>
+                <td class="rpp-label">Benang Merah Nilai Cinta (KBC)</td>
+                <td style="font-style: italic;">${escapeHtml(rpp.benang_merah_kbc || "-")}</td>
+              </tr>
+            </tbody>
+          </table>
 
-        <!-- II. KOMPONEN INTI -->
-        <div class="section-title">II. KOMPONEN INTI</div>
-        <div style="margin-bottom: 8px;">
-          <strong>A. Tujuan Pembelajaran (TP)</strong>
-          <div style="white-space: pre-wrap; margin-left: 12px; margin-top: 4px;">${escapeHtml(rpp.tujuan_pembelajaran_teks || "-")}</div>
-        </div>
-        <div style="margin-bottom: 8px;">
-          <strong>B. Karakteristik & Benang Merah KBC</strong>
-          <div style="margin-left: 12px; margin-top: 4px;">${escapeHtml(rpp.benang_merah_kbc || rpp.karakteristik_materi || "-")}</div>
-        </div>
+          <!-- C. DESAIN PEMBELAJARAN -->
+          <div class="rpp-section-header">C. DESAIN PEMBELAJARAN</div>
+          <table class="rpp-table">
+            <tbody>
+              <tr>
+                <td class="rpp-label">Tujuan Pembelajaran (TP)</td>
+                <td style="white-space: pre-wrap; font-weight: 500;">${escapeHtml(rpp.tujuan_pembelajaran_teks || "-")}</td>
+              </tr>
+              ${
+                rpp.lintas_disiplin_ilmu
+                  ? `
+                <tr>
+                  <td class="rpp-label">Lintas Disiplin Ilmu</td>
+                  <td>${escapeHtml(rpp.lintas_disiplin_ilmu)}</td>
+                </tr>
+              `
+                  : ""
+              }
+              <tr>
+                <td class="rpp-label">Model & Metode Pembelajaran</td>
+                <td>
+                  <strong>Model:</strong> ${escapeHtml(modelTerpilih?.nama || "Pembelajaran Mendalam")}
+                  ${rpp.metode_pembelajaran && rpp.metode_pembelajaran.length > 0 ? ` • <strong>Metode:</strong> ${escapeHtml(rpp.metode_pembelajaran.join(", "))}` : ""}
+                </td>
+              </tr>
+              <tr>
+                <td class="rpp-label">Lingkungan & Budaya Belajar</td>
+                <td>
+                  <strong>Fisik:</strong> ${escapeHtml(rpp.lingkungan_belajar_fisik || "-")} • 
+                  <strong>Budaya:</strong> ${escapeHtml(rpp.budaya_belajar || "-")}
+                  ${rpp.pemanfaatan_digital ? ` • <strong>Teknologi:</strong> ${escapeHtml(rpp.pemanfaatan_digital)}` : ""}
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-        <div style="margin-bottom: 8px;">
-          <strong>C. Langkah-Langkah Pembelajaran</strong>
-          ${langkahHtml}
-        </div>
-
-        <div style="margin-bottom: 8px;">
-          <strong>D. Asesmen Pembelajaran</strong>
-          <div style="margin-left: 12px; margin-top: 4px;">
-            1. Asesmen Awal: Diagnostik non-kognitif & kognitif singkat.<br />
-            2. Asesmen Formatif: Observasi diskusi, unjuk kerja, dan refleksi berkala.<br />
-            3. Asesmen Sumatif: Tes tertulis / penugasan produk akhir materi.
+          <!-- D. PENGALAMAN BELAJAR -->
+          <div class="rpp-section-header">
+            D. PENGALAMAN BELAJAR (${escapeHtml(activeSpec.nama_resmi.toUpperCase())})
           </div>
+          <div style="padding: 6px 8px; border-bottom: 1px solid #64748b;">
+            <div style="font-size: 9.5px; font-weight: bold; color: #047857; margin-bottom: 4px;">
+              Alur Pengalaman: ${escapeHtml(activeSpec.format_pengalaman_label)}
+            </div>
+            ${langkahPertemuanTables}
+          </div>
+
+          <!-- E. RANCANGAN ASESMEN -->
+          <div class="rpp-section-header">E. RANCANGAN ASESMEN PEMBELAJARAN</div>
+          <table class="rpp-table">
+            <tbody>
+              <tr>
+                <td class="rpp-label">Asesmen Awal (Diagnostik)</td>
+                <td>${escapeHtml(rpp.asesmen_awal || "Diagnostik kesiapan belajar murid di awal materi.")}</td>
+              </tr>
+              <tr>
+                <td class="rpp-label">Asesmen Proses (Formatif)</td>
+                <td>${escapeHtml(rpp.asesmen_proses || "Observasi diskusi, performa unjuk kerja, dan refleksi berkala.")}</td>
+              </tr>
+              <tr>
+                <td class="rpp-label">Asesmen Akhir (Sumatif)</td>
+                <td>${escapeHtml(rpp.asesmen_akhir || "Tes tertulis / penilaian produk portofolio.")}</td>
+              </tr>
+              ${
+                rpp.kktp
+                  ? `
+                <tr>
+                  <td class="rpp-label">Kriteria Ketercapaian (KKTP)</td>
+                  <td>${escapeHtml(rpp.kktp)}</td>
+                </tr>
+              `
+                  : ""
+              }
+            </tbody>
+          </table>
+
+          <!-- F. LAMPIRAN -->
+          ${
+            rpp.lampiran?.lkpd || rpp.lampiran?.bahan_bacaan || rpp.lampiran?.glosarium || rpp.lampiran?.daftar_pustaka
+              ? `
+            <div class="rpp-section-header">F. LAMPIRAN MODUL AJAR</div>
+            <table class="rpp-table">
+              <tbody>
+                ${
+                  rpp.lampiran?.lkpd
+                    ? `
+                  <tr>
+                    <td class="rpp-label">Lembar Kerja Murid (LKPD)</td>
+                    <td style="white-space: pre-wrap; font-size: 9.5px;">${escapeHtml(rpp.lampiran.lkpd)}</td>
+                  </tr>
+                `
+                    : ""
+                }
+                ${
+                  rpp.lampiran?.bahan_bacaan
+                    ? `
+                  <tr>
+                    <td class="rpp-label">Bahan Bacaan</td>
+                    <td style="white-space: pre-wrap; font-size: 9.5px;">${escapeHtml(rpp.lampiran.bahan_bacaan)}</td>
+                  </tr>
+                `
+                    : ""
+                }
+                ${
+                  rpp.lampiran?.glosarium
+                    ? `
+                  <tr>
+                    <td class="rpp-label">Glosarium (Daftar Istilah)</td>
+                    <td style="white-space: pre-wrap; font-size: 9.5px;">${escapeHtml(rpp.lampiran.glosarium)}</td>
+                  </tr>
+                `
+                    : ""
+                }
+                ${
+                  rpp.lampiran?.daftar_pustaka
+                    ? `
+                  <tr>
+                    <td class="rpp-label">Daftar Pustaka</td>
+                    <td style="white-space: pre-wrap; font-size: 9.5px;">${escapeHtml(rpp.lampiran.daftar_pustaka)}</td>
+                  </tr>
+                `
+                    : ""
+                }
+              </tbody>
+            </table>
+          `
+              : ""
+          }
         </div>
 
         ${renderSignatures(madrasah, penugasan, penugasan.tahun_ajaran.tanggal_penetapan_dokumen)}
