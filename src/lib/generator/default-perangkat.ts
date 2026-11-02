@@ -120,6 +120,12 @@ export async function getGeneratorSharedContext(
   };
 }
 
+export interface DefaultPerangkatOptions {
+  autoSubmit?: boolean;
+  targetStatus?: DocStatus;
+  preserveStatus?: boolean;
+}
+
 /**
  * Menghasilkan seluruh perangkat pembelajaran default (ATP, Prota, Prosem Smt 1 & 2, Modul Ajar/RPP)
  * untuk 1 penugasan guru secara otomatis dengan query ter-batch dan sangat cepat.
@@ -129,11 +135,11 @@ export async function getGeneratorSharedContext(
  */
 export async function generateDefaultPerangkatForPenugasan(
   penugasanId: string,
-  options?: { autoSubmit?: boolean },
+  options?: DefaultPerangkatOptions,
   context?: GeneratorSharedContext
 ): Promise<GenerateResult> {
   const adminClient = createAdminClient();
-  const targetStatus: DocStatus = options?.autoSubmit ? "diajukan" : "draf";
+  let targetStatus: DocStatus = options?.targetStatus || (options?.autoSubmit ? "diajukan" : "draf");
 
   try {
     // 1. Ambil data penugasan lengkap
@@ -301,12 +307,29 @@ export async function generateDefaultPerangkatForPenugasan(
     const bankMateri = slug ? getMateriByMapelAndGrade(slug, penugasan.tingkat_kelas) : [];
 
     // 7. BERSIHKAN DOKUMEN LAMA SECARA PARALEL (Mengurangi 80% roundtrip)
-    const [existingRppsRes, existingProsemsRes, existingProtaRes, existingAcpRes] = await Promise.all([
-      adminClient.from("rpp").select("id").eq("penugasan_id", penugasanId),
-      adminClient.from("prosem").select("id").eq("penugasan_id", penugasanId),
-      adminClient.from("prota").select("id").eq("penugasan_id", penugasanId),
-      adminClient.from("analisis_cp").select("id").eq("penugasan_id", penugasanId),
+    const [existingRppsRes, existingProsemsRes, existingProtaRes, existingAcpRes, existingAtpRes] = await Promise.all([
+      adminClient.from("rpp").select("id, status").eq("penugasan_id", penugasanId),
+      adminClient.from("prosem").select("id, status").eq("penugasan_id", penugasanId),
+      adminClient.from("prota").select("id, status").eq("penugasan_id", penugasanId),
+      adminClient.from("analisis_cp").select("id, status").eq("penugasan_id", penugasanId),
+      adminClient.from("atp").select("id, status").eq("penugasan_id", penugasanId),
     ]);
+
+    if (options?.preserveStatus) {
+      const allPrevStatuses = [
+        ...(existingAtpRes.data || []).map((x) => x.status),
+        ...(existingProtaRes.data || []).map((x) => x.status),
+        ...(existingProsemsRes.data || []).map((x) => x.status),
+        ...(existingRppsRes.data || []).map((x) => x.status),
+        ...(existingAcpRes.data || []).map((x) => x.status),
+      ].filter(Boolean);
+
+      if (allPrevStatuses.some((s) => s === "disetujui")) {
+        targetStatus = "disetujui";
+      } else if (allPrevStatuses.some((s) => s === "diajukan")) {
+        targetStatus = "diajukan";
+      }
+    }
 
     const rppIds = (existingRppsRes.data || []).map((r) => r.id);
     const prosemIds = (existingProsemsRes.data || []).map((p) => p.id);
@@ -712,7 +735,7 @@ export async function generateDefaultPerangkatForPenugasan(
  */
 export async function generateDefaultPerangkatGuruAction(
   guruId: string,
-  options?: { autoSubmit?: boolean }
+  options?: DefaultPerangkatOptions
 ): Promise<{
   success: boolean;
   guruNama?: string;
@@ -804,7 +827,7 @@ export async function generateDefaultPerangkatGuruAction(
  */
 export async function generateDefaultPerangkatMassalAction(
   guruIds?: string[],
-  options?: { autoSubmit?: boolean }
+  options?: DefaultPerangkatOptions
 ): Promise<{
   success: boolean;
   guruCount?: number;

@@ -23,19 +23,21 @@ export async function POST(req: Request) {
     }
 
     const body = await req.json().catch(() => ({}));
-    const { action, guruId, penugasanId, autoSubmit } = body;
+    const { action, guruId, penugasanId, autoSubmit, targetStatus, preserveStatus } = body;
+
+    const options = {
+      autoSubmit: Boolean(autoSubmit),
+      targetStatus,
+      preserveStatus: Boolean(preserveStatus),
+    };
 
     if (action === "penugasan" && penugasanId) {
-      const res = await generateDefaultPerangkatForPenugasan(penugasanId, {
-        autoSubmit: Boolean(autoSubmit),
-      });
+      const res = await generateDefaultPerangkatForPenugasan(penugasanId, options);
       return NextResponse.json(res);
     }
 
     if (action === "guru" && guruId) {
-      const res = await generateDefaultPerangkatGuruAction(guruId, {
-        autoSubmit: Boolean(autoSubmit),
-      });
+      const res = await generateDefaultPerangkatGuruAction(guruId, options);
       return NextResponse.json(res);
     }
 
