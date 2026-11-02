@@ -365,6 +365,7 @@ export async function generateDefaultPerangkatForPenugasan(
 
     insertedAcps.sort((a, b) => Number(a.urutan || 0) - Number(b.urutan || 0));
 
+    // Setiap bab/elemen menghasilkan tepat 1 Tujuan Pembelajaran (TP) dengan alokasi JP penuh
     const tpInserts: any[] = [];
     for (let i = 0; i < insertedAcps.length; i++) {
       const acp = insertedAcps[i];
@@ -374,41 +375,23 @@ export async function generateDefaultPerangkatForPenugasan(
       const jp = Number(acp.alokasi_jp || 2);
 
       const bankItem = bankMateri[iOriginal % Math.max(1, bankMateri.length)];
-      const subbab1 = bankItem?.subbab?.[0] || `Konsep dasar dan prinsip ${cp?.elemen || "materi"}`;
-      const subbab2 = bankItem?.subbab?.[1] || `Aplikasi praktis dan refleksi bermakna ${cp?.elemen || "materi"}`;
-
-      const tpJp1 = Math.ceil(jp / 2);
-      const tpJp2 = Math.floor(jp / 2);
+      const subbabSummary = bankItem?.subbab && bankItem.subbab.length > 0
+        ? ` yang mencakup ${bankItem.subbab.map((s) => s.replace(/^[A-Z]\.\s*/, "").trim()).slice(0, 3).join(", ")}`
+        : "";
 
       tpInserts.push({
         analisis_cp_id: acp.id,
-        kode_tp: `${penugasan.tingkat_kelas}.${iOriginal * 2 + 1}`,
-        deskripsi: `Peserta didik mampu memahami dan menganalisis ${subbab1} dalam konteks ${mapel.nama} dengan penuh rasa cinta ilmu.`,
+        kode_tp: `${penugasan.tingkat_kelas}.${i + 1}`,
+        deskripsi: `Peserta didik mampu memahami, menganalisis, dan mempraktikkan materi ${acp.materi_pokok}${subbabSummary} dalam konteks ${mapel.nama} dengan penuh rasa cinta ilmu.`,
         lingkup_materi: acp.materi_pokok,
-        kompetensi: "Menganalisis dan Memahami",
+        kompetensi: "Memahami, Menganalisis, dan Mempraktikkan",
         panca_cinta_ids: defaultPcIds,
         dpl_ids: defaultDplIds,
         semester,
-        alokasi_jp: tpJp1 > 0 ? tpJp1 : jp,
-        urutan: iOriginal * 2 + 1,
+        alokasi_jp: jp,
+        urutan: i + 1,
         created_by: penugasan.guru_id,
       });
-
-      if (tpJp2 > 0) {
-        tpInserts.push({
-          analisis_cp_id: acp.id,
-          kode_tp: `${penugasan.tingkat_kelas}.${iOriginal * 2 + 2}`,
-          deskripsi: `Peserta didik mampu mempraktikkan dan menyajikan ${subbab2} sebagai wujud cinta sesama dan lingkungan madrasah.`,
-          lingkup_materi: acp.materi_pokok,
-          kompetensi: "Menerapkan dan Merefleksikan",
-          panca_cinta_ids: defaultPcIds,
-          dpl_ids: defaultDplIds,
-          semester,
-          alokasi_jp: tpJp2,
-          urutan: iOriginal * 2 + 2,
-          created_by: penugasan.guru_id,
-        });
-      }
     }
 
     const { data: insertedTps, error: tpErr } = await adminClient
