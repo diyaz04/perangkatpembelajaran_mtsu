@@ -1,5 +1,6 @@
 import puppeteer, { Browser } from "puppeteer-core";
 import fs from "fs";
+import path from "path";
 
 let cachedBrowser: Browser | null = null;
 
@@ -87,9 +88,29 @@ export async function getOrLaunchBrowser(): Promise<Browser> {
     const chromium = (await import("@sparticuz/chromium")).default;
     chromium.setGraphicsMode = false;
 
+    // Deteksi berbagai kemungkinan path folder bin di lingkungan serverless/Vercel
+    const candidateBinPaths = [
+      path.join(process.cwd(), "node_modules", "@sparticuz", "chromium", "bin"),
+      path.join(process.cwd(), ".next", "server", "node_modules", "@sparticuz", "chromium", "bin"),
+      path.join("/var", "task", "node_modules", "@sparticuz", "chromium", "bin"),
+      path.resolve("node_modules", "@sparticuz", "chromium", "bin"),
+    ];
+
+    let binPath: string | undefined = undefined;
+    for (const candidate of candidateBinPaths) {
+      if (fs.existsSync(/* turbopackIgnore: true */ candidate)) {
+        binPath = candidate;
+        break;
+      }
+    }
+
+    const execPath = binPath
+      ? await chromium.executablePath(binPath)
+      : await chromium.executablePath();
+
     cachedBrowser = await puppeteer.launch({
       args: chromium.args,
-      executablePath: await chromium.executablePath(),
+      executablePath: execPath,
       headless: true,
     });
     return cachedBrowser;
