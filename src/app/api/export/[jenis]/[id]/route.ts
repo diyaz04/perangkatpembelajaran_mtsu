@@ -100,7 +100,7 @@ export async function GET(
         const pdfFilename = sanitizeFilename(
           `ATP_${penugasan.mapel.nama}_${kelasRomawi}_Smt1-2_${taNama}.pdf`
         );
-        const html = generateAtpHtml(result.data);
+        const html = generateAtpHtml(result.data, { includeKop });
         const pdfBuffer = await generatePdfBufferFromHtml(html, { paperSize, landscape: true });
         return new NextResponse(new Uint8Array(pdfBuffer), {
           status: 200,
@@ -207,7 +207,7 @@ export async function GET(
         const pdfFilename = sanitizeFilename(
           `PROTA_${penugasan.mapel.nama}_${kelasRomawi}_${taNama}.pdf`
         );
-        const html = generateProtaHtml(result.data);
+        const html = generateProtaHtml(result.data, { includeKop });
         const pdfBuffer = await generatePdfBufferFromHtml(html, { paperSize, landscape: false });
         return new NextResponse(new Uint8Array(pdfBuffer), {
           status: 200,
@@ -254,7 +254,7 @@ export async function GET(
         const pdfFilename = sanitizeFilename(
           `PROSEM_${penugasan.mapel.nama}_${kelasRomawi}_Smt${semesterNum}_${taNama}.pdf`
         );
-        const html = generateProsemHtml(result.data, semesterNum);
+        const html = generateProsemHtml(result.data, semesterNum, { includeKop });
         const pdfBuffer = await generatePdfBufferFromHtml(html, { paperSize, landscape: true });
         return new NextResponse(new Uint8Array(pdfBuffer), {
           status: 200,
@@ -304,7 +304,7 @@ export async function GET(
         const pdfFilename = sanitizeFilename(
           `RPP_${penugasan.mapel.nama}_${kelasRomawi}_${materiKompak}_${taNama}.pdf`
         );
-        const html = generateRppHtml(result.data);
+        const html = generateRppHtml(result.data, { includeKop });
         const pdfBuffer = await generatePdfBufferFromHtml(html, { paperSize, landscape: false });
         return new NextResponse(new Uint8Array(pdfBuffer), {
           status: 200,

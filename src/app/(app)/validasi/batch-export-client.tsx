@@ -49,6 +49,7 @@ export function BatchExportClient({ items }: BatchExportClientProps) {
   const [paperSize, setPaperSize] = useState<"A4" | "F4">("A4");
   const [fontFamily, setFontFamily] = useState<"Times New Roman" | "Arial">("Times New Roman");
   const [exportFormat, setExportFormat] = useState<"docx" | "pdf">("docx");
+  const [includeKop, setIncludeKop] = useState<boolean>(true);
   const [isExporting, setIsExporting] = useState(false);
   const [downloadingKey, setDownloadingKey] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -57,9 +58,10 @@ export function BatchExportClient({ items }: BatchExportClientProps) {
   const handleDownloadPenugasanZip = async (
     penugasanId: string,
     mapelNama: string,
-    format: "docx" | "pdf" = exportFormat
+    format: "docx" | "pdf" = exportFormat,
+    kop: boolean = includeKop
   ) => {
-    setDownloadingKey(`penugasan-${penugasanId}-${format}`);
+    setDownloadingKey(`penugasan-${penugasanId}-${format}-${kop ? "kop" : "nokop"}`);
     setErrorMessage(null);
     try {
       const res = await fetch("/api/export/batch", {
@@ -70,6 +72,7 @@ export function BatchExportClient({ items }: BatchExportClientProps) {
           format,
           kertas: paperSize,
           font: fontFamily,
+          kop,
         }),
       });
 
@@ -80,7 +83,7 @@ export function BatchExportClient({ items }: BatchExportClientProps) {
 
       const blob = await res.blob();
       const contentDisposition = res.headers.get("Content-Disposition");
-      let filename = `PERANGKAT_${format.toUpperCase()}_${mapelNama.replace(/\s+/g, "_")}.zip`;
+      let filename = `PERANGKAT_${format.toUpperCase()}_${kop ? "DENGAN_KOP_" : "TANPA_KOP_"}${mapelNama.replace(/\s+/g, "_")}.zip`;
       if (contentDisposition) {
         const match = contentDisposition.match(/filename="?([^";]+)"?/);
         if (match && match[1]) filename = match[1];
@@ -105,9 +108,10 @@ export function BatchExportClient({ items }: BatchExportClientProps) {
   const handleDownloadTeacherZip = async (
     guruId: string,
     guruNama: string,
-    format: "docx" | "pdf" = exportFormat
+    format: "docx" | "pdf" = exportFormat,
+    kop: boolean = includeKop
   ) => {
-    setDownloadingKey(`guru-${guruId}-${format}`);
+    setDownloadingKey(`guru-${guruId}-${format}-${kop ? "kop" : "nokop"}`);
     setErrorMessage(null);
     try {
       const res = await fetch("/api/export/batch", {
@@ -118,6 +122,7 @@ export function BatchExportClient({ items }: BatchExportClientProps) {
           format,
           kertas: paperSize,
           font: fontFamily,
+          kop,
         }),
       });
 
@@ -128,7 +133,7 @@ export function BatchExportClient({ items }: BatchExportClientProps) {
 
       const blob = await res.blob();
       const contentDisposition = res.headers.get("Content-Disposition");
-      let filename = `DOKUMEN_TERVALIDASI_${format.toUpperCase()}_${guruNama.replace(/\s+/g, "_")}.zip`;
+      let filename = `DOKUMEN_TERVALIDASI_${format.toUpperCase()}_${kop ? "DENGAN_KOP_" : "TANPA_KOP_"}${guruNama.replace(/\s+/g, "_")}.zip`;
       if (contentDisposition) {
         const match = contentDisposition.match(/filename="?([^";]+)"?/);
         if (match && match[1]) filename = match[1];
@@ -241,6 +246,7 @@ export function BatchExportClient({ items }: BatchExportClientProps) {
           format: exportFormat,
           kertas: paperSize,
           font: fontFamily,
+          kop: includeKop,
         }),
       });
 
@@ -328,6 +334,22 @@ export function BatchExportClient({ items }: BatchExportClientProps) {
                 <SelectContent>
                   <SelectItem value="Times New Roman" className="text-xs">Times New Roman</SelectItem>
                   <SelectItem value="Arial" className="text-xs">Arial</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="flex items-center gap-1.5">
+              <span className="text-xs font-semibold text-slate-600">Kop Surat:</span>
+              <Select
+                value={includeKop ? "dengan" : "tanpa"}
+                onValueChange={(val) => setIncludeKop(val === "dengan")}
+              >
+                <SelectTrigger className="h-8 text-xs w-[125px]">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="dengan" className="text-xs font-medium">Dengan Kop</SelectItem>
+                  <SelectItem value="tanpa" className="text-xs font-medium">Tanpa Kop</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -481,28 +503,38 @@ export function BatchExportClient({ items }: BatchExportClientProps) {
                         </>
                       )}
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end" className="w-56 p-1.5 bg-white border border-slate-200 shadow-lg rounded-xl z-50">
+                    <DropdownMenuContent align="end" className="w-64 p-1.5 bg-white border border-slate-200 shadow-lg rounded-xl z-50">
                       <div className="px-2 py-1 text-[10px] font-bold text-slate-400 uppercase tracking-wider">
                         Mapel Ini ({item.mapelKode || item.mapelNama})
                       </div>
                       <DropdownMenuItem
-                        onClick={() => handleDownloadPenugasanZip(item.penugasanId, item.mapelNama, "docx")}
+                        onClick={() => handleDownloadPenugasanZip(item.penugasanId, item.mapelNama, "docx", includeKop)}
                         className="flex items-center gap-2 px-2.5 py-1.5 text-xs text-slate-700 hover:bg-blue-50 hover:text-blue-700 rounded-md cursor-pointer"
                       >
                         <FileText className="w-4 h-4 text-blue-600 shrink-0" />
                         <div className="flex flex-col text-left">
-                          <span className="font-semibold">Unduh Mapel Ini (.docx)</span>
-                          <span className="text-[10px] text-slate-400">Khusus mapel & kelas ini</span>
+                          <span className="font-semibold">Unduh Mapel (.docx)</span>
+                          <span className="text-[10px] text-slate-400">Format Word (.docx)</span>
                         </div>
                       </DropdownMenuItem>
                       <DropdownMenuItem
-                        onClick={() => handleDownloadPenugasanZip(item.penugasanId, item.mapelNama, "pdf")}
+                        onClick={() => handleDownloadPenugasanZip(item.penugasanId, item.mapelNama, "pdf", true)}
                         className="flex items-center gap-2 px-2.5 py-1.5 text-xs text-slate-700 hover:bg-rose-50 hover:text-rose-700 rounded-md cursor-pointer"
                       >
                         <FileText className="w-4 h-4 text-rose-600 shrink-0" />
                         <div className="flex flex-col text-left">
-                          <span className="font-semibold">Unduh Mapel Ini (.pdf)</span>
-                          <span className="text-[10px] text-slate-400">Format PDF siap cetak</span>
+                          <span className="font-semibold">Unduh Mapel PDF (Dengan Kop)</span>
+                          <span className="text-[10px] text-slate-400">PDF resmi dengan kop madrasah</span>
+                        </div>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem
+                        onClick={() => handleDownloadPenugasanZip(item.penugasanId, item.mapelNama, "pdf", false)}
+                        className="flex items-center gap-2 px-2.5 py-1.5 text-xs text-slate-700 hover:bg-rose-50 hover:text-rose-700 rounded-md cursor-pointer"
+                      >
+                        <FileText className="w-4 h-4 text-rose-500 shrink-0 opacity-80" />
+                        <div className="flex flex-col text-left">
+                          <span className="font-semibold">Unduh Mapel PDF (Tanpa Kop)</span>
+                          <span className="text-[10px] text-slate-400">PDF polos tanpa kop surat</span>
                         </div>
                       </DropdownMenuItem>
 
@@ -513,23 +545,33 @@ export function BatchExportClient({ items }: BatchExportClientProps) {
                             Semua Mapel Guru
                           </div>
                           <DropdownMenuItem
-                            onClick={() => handleDownloadTeacherZip(item.guruId!, item.guruNama, "docx")}
+                            onClick={() => handleDownloadTeacherZip(item.guruId!, item.guruNama, "docx", includeKop)}
                             className="flex items-center gap-2 px-2.5 py-1.5 text-xs text-slate-700 hover:bg-blue-50 hover:text-blue-700 rounded-md cursor-pointer"
                           >
                             <FileArchive className="w-4 h-4 text-blue-600 shrink-0" />
                             <div className="flex flex-col text-left">
-                              <span className="font-semibold">Semua Mapel Guru (.docx)</span>
+                              <span className="font-semibold">Semua Mapel (.docx)</span>
                               <span className="text-[10px] text-slate-400">Seluruh tugas {item.guruNama.split(" ")[0]}</span>
                             </div>
                           </DropdownMenuItem>
                           <DropdownMenuItem
-                            onClick={() => handleDownloadTeacherZip(item.guruId!, item.guruNama, "pdf")}
+                            onClick={() => handleDownloadTeacherZip(item.guruId!, item.guruNama, "pdf", true)}
                             className="flex items-center gap-2 px-2.5 py-1.5 text-xs text-slate-700 hover:bg-rose-50 hover:text-rose-700 rounded-md cursor-pointer"
                           >
                             <FileArchive className="w-4 h-4 text-rose-600 shrink-0" />
                             <div className="flex flex-col text-left">
-                              <span className="font-semibold">Semua Mapel Guru (.pdf)</span>
-                              <span className="text-[10px] text-slate-400">Seluruh tugas {item.guruNama.split(" ")[0]}</span>
+                              <span className="font-semibold">Semua Mapel PDF (Dengan Kop)</span>
+                              <span className="text-[10px] text-slate-400">Seluruh tugas dengan kop</span>
+                            </div>
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            onClick={() => handleDownloadTeacherZip(item.guruId!, item.guruNama, "pdf", false)}
+                            className="flex items-center gap-2 px-2.5 py-1.5 text-xs text-slate-700 hover:bg-rose-50 hover:text-rose-700 rounded-md cursor-pointer"
+                          >
+                            <FileArchive className="w-4 h-4 text-rose-500 shrink-0 opacity-80" />
+                            <div className="flex flex-col text-left">
+                              <span className="font-semibold">Semua Mapel PDF (Tanpa Kop)</span>
+                              <span className="text-[10px] text-slate-400">Seluruh tugas tanpa kop</span>
                             </div>
                           </DropdownMenuItem>
                         </>

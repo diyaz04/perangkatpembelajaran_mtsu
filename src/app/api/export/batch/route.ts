@@ -50,6 +50,7 @@ interface ProcessExportParams {
   items?: BatchExportItem[];
   kertas?: string;
   font?: string;
+  kop?: boolean | string;
   format?: "docx" | "pdf" | "word";
 }
 
@@ -68,9 +69,19 @@ async function processZipExport(params: ProcessExportParams) {
   const fontParam = params.font?.toLowerCase();
   const fontFamily: FontFamily = fontParam === "arial" ? "Arial" : "Times New Roman";
 
+  const kopParam = params.kop;
+  const includeKop =
+    kopParam === false ||
+    kopParam === "false" ||
+    kopParam === "0" ||
+    kopParam === "tanpa"
+      ? false
+      : true;
+
   const exportOptions: ExportDocxOptions = {
     paperSize,
     fontFamily,
+    includeKop,
   };
 
   const isPdf = params.format?.toLowerCase() === "pdf";
@@ -327,7 +338,7 @@ async function processZipExport(params: ProcessExportParams) {
                 const filename = sanitizeFilename(
                   `ATP_${penugasan.mapel.nama}_${kelasRomawi}_${taNama}.pdf`
                 );
-                const html = generateAtpHtml(res.data);
+                const html = generateAtpHtml(res.data, { includeKop });
                 const buffer = await generatePdfBufferFromHtml(html, { landscape: true, paperSize });
                 const zipPath = getUniqueZipPath("ATP", filename);
                 zip.file(zipPath, buffer);
@@ -354,7 +365,7 @@ async function processZipExport(params: ProcessExportParams) {
                 const filename = sanitizeFilename(
                   `PROTA_${penugasan.mapel.nama}_${kelasRomawi}_${taNama}.pdf`
                 );
-                const html = generateProtaHtml(res.data);
+                const html = generateProtaHtml(res.data, { includeKop });
                 const buffer = await generatePdfBufferFromHtml(html, { landscape: false, paperSize });
                 const zipPath = getUniqueZipPath("PROTA", filename);
                 zip.file(zipPath, buffer);
@@ -382,7 +393,7 @@ async function processZipExport(params: ProcessExportParams) {
                 const filename = sanitizeFilename(
                   `PROSEM_${penugasan.mapel.nama}_${kelasRomawi}_Smt${sem}_${taNama}.pdf`
                 );
-                const html = generateProsemHtml(res.data, sem);
+                const html = generateProsemHtml(res.data, sem, { includeKop });
                 const buffer = await generatePdfBufferFromHtml(html, { landscape: true, paperSize });
                 const zipPath = getUniqueZipPath("PROSEM", filename);
                 zip.file(zipPath, buffer);
@@ -412,7 +423,7 @@ async function processZipExport(params: ProcessExportParams) {
                 const filename = sanitizeFilename(
                   `RPP_${penugasan.mapel.nama}_${kelasRomawi}_${materiKompak}_${taNama}.pdf`
                 );
-                const html = generateRppHtml(res.data);
+                const html = generateRppHtml(res.data, { includeKop });
                 const buffer = await generatePdfBufferFromHtml(html, { landscape: false, paperSize });
                 const zipPath = getUniqueZipPath("RPP_MODUL_AJAR", filename);
                 zip.file(zipPath, buffer);
@@ -479,9 +490,10 @@ export async function GET(request: NextRequest) {
     const penugasanId = searchParams.get("penugasanId") || undefined;
     const kertas = searchParams.get("kertas") || undefined;
     const font = searchParams.get("font") || undefined;
+    const kop = searchParams.get("kop") || undefined;
     const format = (searchParams.get("format") as "docx" | "pdf" | "word") || undefined;
 
-    return await processZipExport({ guruId, penugasanId, kertas, font, format });
+    return await processZipExport({ guruId, penugasanId, kertas, font, kop, format });
   } catch (error) {
     const message = error instanceof Error ? error.message : "Terjadi kesalahan server saat ekspor batch.";
     return NextResponse.json({ error: message }, { status: 500 });

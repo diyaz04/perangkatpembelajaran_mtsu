@@ -324,6 +324,14 @@ export function ProsemPreviewClient({
               <Download className="w-4 h-4 mr-2 text-emerald-700" />
               Unduh DOCX
             </a>
+            <a
+              href={`/api/export/prosem/${penugasanId}?semester=${semester}&format=pdf&kop=${showKop}`}
+              className={buttonVariants({ variant: "outline", size: "sm" }) + " flex-1 sm:flex-none border-rose-300 hover:bg-rose-50 text-rose-800 font-medium"}
+              download
+            >
+              <Download className="w-4 h-4 mr-2 text-rose-700" />
+              Unduh PDF
+            </a>
             <Button
               onClick={handlePrint}
               className="flex-1 sm:flex-none bg-emerald-700 hover:bg-emerald-800 text-white font-medium shadow-sm"

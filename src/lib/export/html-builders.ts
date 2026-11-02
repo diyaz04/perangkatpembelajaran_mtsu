@@ -5,6 +5,10 @@ import type { RppDetailData } from "@/app/(app)/modul-ajar/actions";
 import { formatTitimangsa } from "@/lib/format-titimangsa";
 import { getModelPedagogiSpec, parseLangkahDeskripsi } from "@/lib/rpp-model-pedagogi";
 
+export interface HtmlExportOptions {
+  includeKop?: boolean;
+}
+
 function escapeHtml(str: string | null | undefined): string {
   if (!str) return "";
   return str
@@ -105,8 +109,9 @@ const BASE_STYLES = `
 // =============================================================================
 // 1. ATP HTML
 // =============================================================================
-export function generateAtpHtml(data: PreviewData): string {
+export function generateAtpHtml(data: PreviewData, options?: HtmlExportOptions): string {
   const { madrasah, penugasan, items, summary } = data;
+  const includeKop = options?.includeKop !== false;
 
   const rows = items
     .map(
@@ -138,7 +143,7 @@ export function generateAtpHtml(data: PreviewData): string {
         </style>
       </head>
       <body>
-        ${renderKop(madrasah)}
+        ${includeKop ? renderKop(madrasah) : '<div style="margin-top: 10px;"></div>'}
 
         <div style="text-align: center; margin-bottom: 15px;">
           <h2 style="margin: 0; font-size: 15px; text-transform: uppercase; font-weight: bold;">ALUR TUJUAN PEMBELAJARAN (ATP)</h2>
@@ -201,8 +206,9 @@ export function generateAtpHtml(data: PreviewData): string {
 // =============================================================================
 // 2. PROTA HTML
 // =============================================================================
-export function generateProtaHtml(data: ProtaDetailData): string {
+export function generateProtaHtml(data: ProtaDetailData, options?: HtmlExportOptions): string {
   const { madrasah, penugasan, prota, items } = data;
+  const includeKop = options?.includeKop !== false;
   const totalJp = prota?.total_jp ?? items.reduce((sum, it) => sum + (it.alokasi_jp || 0), 0);
 
   const smt1Items = items.filter((it) => it.semester === 1);
@@ -247,7 +253,7 @@ export function generateProtaHtml(data: ProtaDetailData): string {
         </style>
       </head>
       <body>
-        ${renderKop(madrasah)}
+        ${includeKop ? renderKop(madrasah) : '<div style="margin-top: 10px;"></div>'}
 
         <div style="text-align: center; margin-bottom: 15px;">
           <h2 style="margin: 0; font-size: 15px; text-transform: uppercase; font-weight: bold;">PROGRAM TAHUNAN (PROTA)</h2>
@@ -304,7 +310,7 @@ export function generateProtaHtml(data: ProtaDetailData): string {
 // =============================================================================
 // 3. PROSEM HTML
 // =============================================================================
-export function generateProsemHtml(data: ProsemDetailData, semester: 1 | 2): string {
+export function generateProsemHtml(data: ProsemDetailData, semester: 1 | 2, options?: HtmlExportOptions): string {
   const {
     madrasah,
     penugasan,
@@ -314,6 +320,7 @@ export function generateProsemHtml(data: ProsemDetailData, semester: 1 | 2): str
     jpEfektifSemester,
     mingguEfektifSemester,
   } = data;
+  const includeKop = options?.includeKop !== false;
 
   const totalJp = prosem?.total_jp ?? items.reduce((sum, it) => sum + (it.alokasi_jp || 0), 0);
 
@@ -384,7 +391,7 @@ export function generateProsemHtml(data: ProsemDetailData, semester: 1 | 2): str
         </style>
       </head>
       <body>
-        ${renderKop(madrasah)}
+        ${includeKop ? renderKop(madrasah) : '<div style="margin-top: 10px;"></div>'}
 
         <div style="text-align: center; margin-bottom: 15px;">
           <h2 style="margin: 0; font-size: 15px; text-transform: uppercase; font-weight: bold;">PROGRAM SEMESTER (PROSEM)</h2>
@@ -433,8 +440,9 @@ export function generateProsemHtml(data: ProsemDetailData, semester: 1 | 2): str
 // =============================================================================
 // 4. RPP / MODUL AJAR HTML
 // =============================================================================
-export function generateRppHtml(data: RppDetailData): string {
+export function generateRppHtml(data: RppDetailData, options?: HtmlExportOptions): string {
   const { rpp, langkahList, penugasan, madrasah, master } = data;
+  const includeKop = options?.includeKop !== false;
   const models = master?.models || [];
   const modelTerpilih = models.find((m) => m.id === rpp.model_id) || models[0];
   const dplSelected = (master?.dpl || [])
@@ -501,7 +509,7 @@ export function generateRppHtml(data: RppDetailData): string {
         </style>
       </head>
       <body>
-        ${renderKop(madrasah)}
+        ${includeKop ? renderKop(madrasah) : '<div style="margin-top: 10px;"></div>'}
 
         <div style="text-align: center; margin-bottom: 15px;">
           <h2 style="margin: 0; font-size: 15px; text-transform: uppercase; font-weight: bold;">MODUL AJAR / RENCANA PELAKSANAAN PEMBELAJARAN (RPP)</h2>
